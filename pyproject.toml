@@ -10,7 +10,6 @@ requires-python = ">=3.11"
 
 [tool.setuptools]
 # 存根包位于仓库根的 maya-stubs/ 子目录（PEP 561 布局 B：{name}-stubs）
-package-dir = { "" = "maya-stubs" }
 packages = ["maya-stubs", "maya-stubs.api"]
 
 [tool.setuptools.package-data]
