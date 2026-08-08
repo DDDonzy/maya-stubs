@@ -2,7 +2,7 @@
 # https://help.autodesk.com/cloudhelp/ENU/MayaCRE-Tech-Docs/CommandsPython/
 from typing import Any, overload
 
-def aaf2fcp(*args: Any, deleteFile: bool = ..., df: bool = ..., dstPath: str = ..., dst: str = ..., getFileName: int = ..., gfn: int = ..., progress: int = ..., pr: int = ..., srcFile: str = ..., src: str = ..., terminate: int = ..., t: int = ..., waitCompletion: int = ..., wc: int = ..., **kwargs: Any) -> str:
+def aaf2fcp(*args, **kwargs) -> str:
     """Flags:
     - `deleteFile` `df`: *bool*
     - `dstPath` `dst`: *str*
@@ -93,8 +93,8 @@ def about(*args: Any, q: bool, date: bool) -> bool: ...
 @overload
 def about(*args: Any, q: bool, d: bool) -> bool: ...
 @overload
-def about(*args: Any, **kwargs: Any) -> str: ...
-def about(*args: Any, **kwargs: Any) -> Any:
+def about(*args, **kwargs) -> str: ...
+def about(*args, **kwargs) -> str:
     """Flags:
     - `apiVersion` `api`: *bool*
     - `application` `a`: *bool*
@@ -236,8 +236,8 @@ def addAttr(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def addAttr(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def addAttr(*args: Any, **kwargs: Any) -> None: ...
-def addAttr(*args: Any, **kwargs: Any) -> Any:
+def addAttr(*args, **kwargs) -> None: ...
+def addAttr(*args, **kwargs) -> None:
     """Flags:
     - `attributeType` `at`: *str*
     - `binaryTag` `bt`: *str*
@@ -358,8 +358,8 @@ def addExtension(*args: Any, q: bool, enforcingUniqueName: bool) -> bool: ...
 @overload
 def addExtension(*args: Any, q: bool, eun: bool) -> bool: ...
 @overload
-def addExtension(*args: Any, **kwargs: Any) -> None: ...
-def addExtension(*args: Any, **kwargs: Any) -> Any:
+def addExtension(*args, **kwargs) -> None: ...
+def addExtension(*args, **kwargs) -> None:
     """Flags:
     - `attributeType` `at`: *str*
     - `binaryTag` `bt`: *str*
@@ -425,8 +425,8 @@ def addMetadata(*args: Any, q: bool, scene: bool) -> bool: ...
 @overload
 def addMetadata(*args: Any, q: bool, scn: bool) -> bool: ...
 @overload
-def addMetadata(*args: Any, **kwargs: Any) -> list[str]: ...
-def addMetadata(*args: Any, **kwargs: Any) -> Any:
+def addMetadata(*args, **kwargs) -> list[str]: ...
+def addMetadata(*args, **kwargs) -> list[str]:
     """Flags:
     - `channelName` `cn`: *str*
     - `channelType` `cht`: *str*
@@ -440,12 +440,12 @@ def affectedNet(*args: Any, q: bool, type: bool) -> str: ...
 @overload
 def affectedNet(*args: Any, q: bool, t: bool) -> str: ...
 @overload
-def affectedNet(*args: Any, **kwargs: Any) -> None: ...
-def affectedNet(*args: Any, **kwargs: Any) -> Any:
+def affectedNet(*args, **kwargs) -> None: ...
+def affectedNet(*args, **kwargs) -> None:
     """Flags:
     - `type` `t`: *str*
     """
-def affects(*args: Any, by: bool = ..., type: str = ..., t: str = ..., **kwargs: Any) -> str:
+def affects(*args, **kwargs) -> str:
     """Flags:
     - `by`: *bool*
     - `type` `t`: *str*
@@ -491,8 +491,8 @@ def aimConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def aimConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def aimConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def aimConstraint(*args: Any, **kwargs: Any) -> Any:
+def aimConstraint(*args, **kwargs) -> list[str]: ...
+def aimConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `aimVector` `aim`: *Any*
     - `layer` `l`: *str*
@@ -514,12 +514,12 @@ def aliasAttr(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def aliasAttr(*args: Any, q: bool, rm: bool) -> bool: ...
 @overload
-def aliasAttr(*args: Any, **kwargs: Any) -> list[str]: ...
-def aliasAttr(*args: Any, **kwargs: Any) -> Any:
+def aliasAttr(*args, **kwargs) -> list[str]: ...
+def aliasAttr(*args, **kwargs) -> list[str]:
     """Flags:
     - `remove` `rm`: *bool*
     """
-def align(*args: Any, alignToLead: bool = ..., atl: bool = ..., coordinateSystem: str = ..., cs: str = ..., xAxis: str = ..., x: str = ..., yAxis: str = ..., y: str = ..., zAxis: str = ..., z: str = ..., **kwargs: Any) -> bool:
+def align(*args, **kwargs) -> bool:
     """Flags:
     - `alignToLead` `atl`: *bool*
     - `coordinateSystem` `cs`: *str*
@@ -568,8 +568,8 @@ def alignCtx(*args: Any, q: bool, showAlignTouch: bool) -> bool: ...
 @overload
 def alignCtx(*args: Any, q: bool, sat: bool) -> bool: ...
 @overload
-def alignCtx(*args: Any, **kwargs: Any) -> str: ...
-def alignCtx(*args: Any, **kwargs: Any) -> Any:
+def alignCtx(*args, **kwargs) -> str: ...
+def alignCtx(*args, **kwargs) -> str:
     """Flags:
     - `align` `a`: *bool*
     - `anchorFirstObject` `afo`: *bool*
@@ -663,8 +663,8 @@ def alignCurve(*args: Any, q: bool, tangentContinuity: bool) -> bool: ...
 @overload
 def alignCurve(*args: Any, q: bool, tc: bool) -> bool: ...
 @overload
-def alignCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def alignCurve(*args: Any, **kwargs: Any) -> Any:
+def alignCurve(*args, **kwargs) -> list[str]: ...
+def alignCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `attach` `at`: *bool*
     - `caching` `cch`: *bool*
@@ -768,8 +768,8 @@ def alignSurface(*args: Any, q: bool, reverse2: bool) -> bool: ...
 @overload
 def alignSurface(*args: Any, q: bool, rv2: bool) -> bool: ...
 @overload
-def alignSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def alignSurface(*args: Any, **kwargs: Any) -> Any:
+def alignSurface(*args, **kwargs) -> list[str]: ...
+def alignSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `attach` `at`: *bool*
     - `caching` `cch`: *bool*
@@ -796,7 +796,7 @@ def alignSurface(*args: Any, **kwargs: Any) -> Any:
     - `tangentScale2` `ts2`: *float*
     - `twist` `tw`: *bool*
     """
-def allNodeTypes(*args: Any, includeAbstract: bool = ..., ia: bool = ..., **kwargs: Any) -> list[str]:
+def allNodeTypes(*args, **kwargs) -> list[str]:
     """Flags:
     - `includeAbstract` `ia`: *bool*
     """
@@ -843,8 +843,8 @@ def ambientLight(*args: Any, q: bool, useRayTraceShadows: bool) -> bool: ...
 @overload
 def ambientLight(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def ambientLight(*args: Any, **kwargs: Any) -> float: ...
-def ambientLight(*args: Any, **kwargs: Any) -> Any:
+def ambientLight(*args, **kwargs) -> float: ...
+def ambientLight(*args, **kwargs) -> float:
     """Flags:
     - `ambientShade` `ambientShade`: *float*
     - `discRadius` `drs`: *float*
@@ -860,7 +860,7 @@ def ambientLight(*args: Any, **kwargs: Any) -> Any:
     - `softShadow` `ss`: *bool*
     - `useRayTraceShadows` `rs`: *bool*
     """
-def angleBetween(*args: Any, caching: bool = ..., cch: bool = ..., constructionHistory: bool = ..., ch: bool = ..., euler: bool = ..., er: bool = ..., nodeState: int = ..., nds: int = ..., vector1: list[float] = ..., v1: list[float] = ..., vector1X: float = ..., v1x: float = ..., vector1Y: float = ..., v1y: float = ..., vector1Z: float = ..., v1z: float = ..., vector2: list[float] = ..., v2: list[float] = ..., vector2X: float = ..., v2x: float = ..., vector2Y: float = ..., v2y: float = ..., vector2Z: float = ..., v2z: float = ..., **kwargs: Any) -> list[float]:
+def angleBetween(*args, **kwargs) -> list[float]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -956,8 +956,8 @@ def animCurveEditor(*args: Any, q: bool, lockPlayRangeShades: bool) -> str: ...
 @overload
 def animCurveEditor(*args: Any, q: bool, lpr: bool) -> str: ...
 @overload
-def animCurveEditor(*args: Any, **kwargs: Any) -> str: ...
-def animCurveEditor(*args: Any, **kwargs: Any) -> Any:
+def animCurveEditor(*args, **kwargs) -> str: ...
+def animCurveEditor(*args, **kwargs) -> str:
     """Flags:
     - `areCurvesSelected` `acs`: *bool*
     - `autoFit` `af`: *str*
@@ -1047,8 +1047,8 @@ def animDisplay(*args: Any, q: bool, refAnimCurvesEditable: bool) -> bool: ...
 @overload
 def animDisplay(*args: Any, q: bool, rae: bool) -> bool: ...
 @overload
-def animDisplay(*args: Any, **kwargs: Any) -> None: ...
-def animDisplay(*args: Any, **kwargs: Any) -> Any:
+def animDisplay(*args, **kwargs) -> None: ...
+def animDisplay(*args, **kwargs) -> None:
     """Flags:
     - `modelUpdate` `upd`: *str*
     - `refAnimCurvesEditable` `rae`: *bool*
@@ -1136,8 +1136,8 @@ def animLayer(*args: Any, q: bool, baseAnimCurves: bool) -> bool: ...
 @overload
 def animLayer(*args: Any, q: bool, bac: bool) -> bool: ...
 @overload
-def animLayer(*args: Any, **kwargs: Any) -> str: ...
-def animLayer(*args: Any, **kwargs: Any) -> Any:
+def animLayer(*args, **kwargs) -> str: ...
+def animLayer(*args, **kwargs) -> str:
     """Flags:
     - `addRelatedKG` `akg`: *bool*
     - `addSelectedObjects` `aso`: *bool*
@@ -1211,8 +1211,8 @@ def animView(*args: Any, q: bool, previousView: bool) -> bool: ...
 @overload
 def animView(*args: Any, q: bool, pv: bool) -> bool: ...
 @overload
-def animView(*args: Any, **kwargs: Any) -> None: ...
-def animView(*args: Any, **kwargs: Any) -> Any:
+def animView(*args, **kwargs) -> None: ...
+def animView(*args, **kwargs) -> None:
     """Flags:
     - `endTime` `et`: *float*
     - `maxValue` `max`: *float*
@@ -1221,7 +1221,7 @@ def animView(*args: Any, **kwargs: Any) -> Any:
     - `previousView` `pv`: *bool*
     - `startTime` `st`: *float*
     """
-def annotate(*args: Any, point: list[float] = ..., p: list[float] = ..., text: str = ..., tx: str = ..., **kwargs: Any) -> str:
+def annotate(*args, **kwargs) -> str:
     """Flags:
     - `point` `p`: *list[float]*
     - `text` `tx`: *str*
@@ -1251,8 +1251,8 @@ def appHome(*args: Any, q: bool, visible: bool) -> bool: ...
 @overload
 def appHome(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def appHome(*args: Any, **kwargs: Any) -> None: ...
-def appHome(*args: Any, **kwargs: Any) -> Any:
+def appHome(*args, **kwargs) -> None: ...
+def appHome(*args, **kwargs) -> None:
     """Flags:
     - `iconVisible` `iv`: *bool*
     - `instrument` `i`: *str*
@@ -1261,18 +1261,18 @@ def appHome(*args: Any, **kwargs: Any) -> Any:
     - `updateRecentFiles` `urf`: *bool*
     - `visible` `v`: *bool*
     """
-def applyAttrPattern(*args: Any, nodeType: str = ..., nt: str = ..., patternName: str = ..., pn: str = ..., **kwargs: Any) -> int:
+def applyAttrPattern(*args, **kwargs) -> int:
     """Flags:
     - `nodeType` `nt`: *str*
     - `patternName` `pn`: *str*
     """
-def applyMetadata(*args: Any, format: str = ..., fmt: str = ..., scene: bool = ..., scn: bool = ..., value: str = ..., v: str = ..., **kwargs: Any) -> Any:
+def applyMetadata(*args, **kwargs) -> Any:
     """Flags:
     - `format` `fmt`: *str*
     - `scene` `scn`: *bool*
     - `value` `v`: *str*
     """
-def applyTake(*args: Any, channel: str = ..., c: str = ..., device: str = ..., d: str = ..., filter: str = ..., f: str = ..., preview: bool = ..., p: bool = ..., recurseChannel: bool = ..., rc: bool = ..., reset: bool = ..., r: bool = ..., specifyChannel: bool = ..., sc: bool = ..., startTime: float = ..., st: float = ..., **kwargs: Any) -> None:
+def applyTake(*args, **kwargs) -> None:
     """Flags:
     - `channel` `c`: *str*
     - `device` `d`: *str*
@@ -1308,8 +1308,8 @@ def arcLenDimContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def arcLenDimContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def arcLenDimContext(*args: Any, **kwargs: Any) -> str: ...
-def arcLenDimContext(*args: Any, **kwargs: Any) -> Any:
+def arcLenDimContext(*args, **kwargs) -> str: ...
+def arcLenDimContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -1318,7 +1318,7 @@ def arcLenDimContext(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def arcLengthDimension(*args: Any) -> str: ...
+def arcLengthDimension(*args, **kwargs) -> str: ...
 @overload
 def arclen(*args: Any, q: bool, nodeState: bool) -> int: ...
 @overload
@@ -1332,14 +1332,14 @@ def arclen(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def arclen(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def arclen(*args: Any, **kwargs: Any) -> float: ...
-def arclen(*args: Any, **kwargs: Any) -> Any:
+def arclen(*args, **kwargs) -> float: ...
+def arclen(*args, **kwargs) -> float:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
     - `nodeState` `nds`: *int*
     """
-def art3dPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., alphablendmode: str = ..., abm: str = ..., assigntxt: bool = ..., ast: bool = ..., attrnames: str = ..., atn: str = ..., brushalignment: bool = ..., bra: bool = ..., brushdepth: float = ..., bd: float = ..., brushfeedback: bool = ..., brf: bool = ..., brushtype: str = ..., brt: str = ..., clear: bool = ..., clr: bool = ..., commonattr: str = ..., cat: str = ..., dragSlider: str = ..., dsl: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., extendFillColor: bool = ..., efc: bool = ..., fileformat: str = ..., eff: str = ..., filetxtaspectratio: float = ..., far: float = ..., filetxtsizex: int = ..., ftx: int = ..., filetxtsizey: int = ..., fty: int = ..., floodOpacity: float = ..., fop: float = ..., floodall: bool = ..., fal: bool = ..., floodselect: bool = ..., fsl: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., keepaspectratio: bool = ..., kar: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., name: str = ..., n: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., painttxtattr: str = ..., pta: str = ..., painttxtattrname: str = ..., ptn: str = ..., pfxScale: float = ..., psc: float = ..., pfxWidth: float = ..., pwd: float = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., pressureMapping1: int = ..., pm1: int = ..., pressureMapping2: int = ..., pm2: int = ..., pressureMapping3: int = ..., pm3: int = ..., pressureMax1: float = ..., px1: float = ..., pressureMax2: float = ..., px2: float = ..., pressureMax3: float = ..., px3: float = ..., pressureMin1: float = ..., ps1: float = ..., pressureMin2: float = ..., ps2: float = ..., pressureMin3: float = ..., ps3: float = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., reloadtexfile: bool = ..., rtf: bool = ..., resizeratio: float = ..., rr: float = ..., resizetxt: bool = ..., rft: bool = ..., rgbcolor: Any = ..., rgb: Any = ..., rgbflood: Any = ..., fc: Any = ..., saveTextureOnStroke: bool = ..., sts: bool = ..., saveonstroke: bool = ..., sos: bool = ..., savetexture: bool = ..., stx: bool = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., shadernames: str = ..., hnm: str = ..., shapeattr: bool = ..., spa: bool = ..., shapenames: str = ..., shn: str = ..., showactive: bool = ..., sa: bool = ..., soloAsDiffuse: bool = ..., sod: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., textureFilenames: bool = ..., tfn: bool = ..., updateEraseTex: bool = ..., uet: bool = ..., usepressure: bool = ..., up: bool = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> None:
+def art3dPaintCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `alphablendmode` `abm`: *str*
@@ -1437,7 +1437,7 @@ def art3dPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., alphablen
     - `usepressure` `up`: *bool*
     - `worldRadius` `wlR`: *float*
     """
-def artAttrCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListChangedProc: str = ..., alp: str = ..., afterStrokeCmd: str = ..., asc: str = ..., alphaclamp: str = ..., alc: str = ..., alphaclamplower: float = ..., acl: float = ..., alphaclampupper: float = ..., acu: float = ..., attrSelected: str = ..., asl: str = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clamp: str = ..., cl: str = ..., clamplower: float = ..., cll: float = ..., clampupper: float = ..., clu: float = ..., clear: bool = ..., clr: bool = ..., colorAlphaValue: float = ..., cl1: float = ..., colorRGBAValue: Any = ..., cl4: Any = ..., colorRGBValue: Any = ..., cl3: Any = ..., colorRamp: str = ..., cr: str = ..., colorfeedback: bool = ..., cf: bool = ..., colorfeedbackOverride: bool = ..., cfo: bool = ..., colorrangelower: float = ..., crl: float = ..., colorrangeupper: float = ..., cru: float = ..., dataTypeIndex: int = ..., dti: int = ..., disablelighting: bool = ..., dl: bool = ..., dragSlider: str = ..., dsl: str = ..., duringStrokeCmd: str = ..., dsk: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., filterNodes: bool = ..., fon: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., interactiveUpdate: bool = ..., iu: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., maxvalue: float = ..., mxv: float = ..., minvalue: float = ..., miv: float = ..., name: str = ..., n: str = ..., numericColorRamp: str = ..., ncr: str = ..., numericDisplayColor: Any = ..., ndc: Any = ..., numericDisplayPrecision: int = ..., ndp: int = ..., numericMaxColor: Any = ..., nxc: Any = ..., numericMinColor: Any = ..., nmc: Any = ..., objattrArray: str = ..., oaa: str = ..., objattrArrayNoMenu: str = ..., oan: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintNodeArray: str = ..., pna: str = ..., paintattrselected: str = ..., pas: str = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., selectedattroper: str = ..., sao: str = ..., showactive: bool = ..., sa: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toolOffProc: str = ..., tfp: str = ..., toolOnProc: str = ..., top: str = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., useNumericColorRamp: bool = ..., unr: bool = ..., useNumericDisplay: bool = ..., und: bool = ..., usepressure: bool = ..., up: bool = ..., value: float = ..., val: float = ..., whichTool: str = ..., wst: str = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> str:
+def artAttrCtx(*args, **kwargs) -> str:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `activeListChangedProc` `alp`: *str*
@@ -1541,7 +1541,7 @@ def artAttrCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListCh
     - `whichTool` `wst`: *str*
     - `worldRadius` `wlR`: *float*
     """
-def artAttrPaintVertexCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListChangedProc: str = ..., alp: str = ..., alphaclamp: str = ..., alc: str = ..., alphaclamplower: float = ..., acl: float = ..., alphaclampupper: float = ..., acu: float = ..., attrSelected: str = ..., asl: str = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clamp: str = ..., cl: str = ..., clamplower: float = ..., cll: float = ..., clampupper: float = ..., clu: float = ..., clear: bool = ..., clr: bool = ..., colorAlphaValue: float = ..., cl1: float = ..., colorRGBAValue: Any = ..., cl4: Any = ..., colorRGBValue: Any = ..., cl3: Any = ..., colorRamp: str = ..., cr: str = ..., colorfeedback: bool = ..., cf: bool = ..., colorfeedbackOverride: bool = ..., cfo: bool = ..., colorrangelower: float = ..., crl: float = ..., colorrangeupper: float = ..., cru: float = ..., dataTypeIndex: int = ..., dti: int = ..., disablelighting: bool = ..., dl: bool = ..., dragSlider: str = ..., dsl: str = ..., duringStrokeCmd: str = ..., dsk: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., filterNodes: bool = ..., fon: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., interactiveUpdate: bool = ..., iu: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., maxvalue: float = ..., mxv: float = ..., minvalue: float = ..., miv: float = ..., name: str = ..., n: str = ..., numericColorRamp: str = ..., ncr: str = ..., numericDisplayColor: Any = ..., ndc: Any = ..., numericDisplayPrecision: int = ..., ndp: int = ..., numericMaxColor: Any = ..., nxc: Any = ..., numericMinColor: Any = ..., nmc: Any = ..., objattrArray: str = ..., oaa: str = ..., objattrArrayNoMenu: str = ..., oan: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintChannel: str = ..., pch: str = ..., paintComponent: int = ..., pc: int = ..., paintNodeArray: str = ..., pna: str = ..., paintNumChannels: int = ..., pnc: int = ..., paintRGBA: bool = ..., pc4: bool = ..., paintVertexFace: bool = ..., pvf: bool = ..., paintattrselected: str = ..., pas: str = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., selectedattroper: str = ..., sao: str = ..., showactive: bool = ..., sa: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toolOffProc: str = ..., tfp: str = ..., toolOnProc: str = ..., top: str = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., useNumericColorRamp: bool = ..., unr: bool = ..., useNumericDisplay: bool = ..., und: bool = ..., usepressure: bool = ..., up: bool = ..., value: float = ..., val: float = ..., vertexColorRange: bool = ..., vcr: bool = ..., vertexColorRangeLower: float = ..., vcl: float = ..., vertexColorRangeUpper: float = ..., vcu: float = ..., whichTool: str = ..., wst: str = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> None:
+def artAttrPaintVertexCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `activeListChangedProc` `alp`: *str*
@@ -1652,7 +1652,7 @@ def artAttrPaintVertexCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., a
     - `whichTool` `wst`: *str*
     - `worldRadius` `wlR`: *float*
     """
-def artAttrSkinPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListChangedProc: str = ..., alp: str = ..., alphaclamp: str = ..., alc: str = ..., alphaclamplower: float = ..., acl: float = ..., alphaclampupper: float = ..., acu: float = ..., attrSelected: str = ..., asl: str = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clamp: str = ..., cl: str = ..., clamplower: float = ..., cll: float = ..., clampupper: float = ..., clu: float = ..., clear: bool = ..., clr: bool = ..., colorAlphaValue: float = ..., cl1: float = ..., colorRGBAValue: Any = ..., cl4: Any = ..., colorRGBValue: Any = ..., cl3: Any = ..., colorRamp: str = ..., cr: str = ..., colorfeedback: bool = ..., cf: bool = ..., colorfeedbackOverride: bool = ..., cfo: bool = ..., colorrangelower: float = ..., crl: float = ..., colorrangeupper: float = ..., cru: float = ..., dataTypeIndex: int = ..., dti: int = ..., disablelighting: bool = ..., dl: bool = ..., dragSlider: str = ..., dsl: str = ..., duringStrokeCmd: str = ..., dsk: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., filterNodes: bool = ..., fon: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., influence: str = ..., inf: str = ..., interactiveUpdate: bool = ..., iu: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., maxvalue: float = ..., mxv: float = ..., minvalue: float = ..., miv: float = ..., name: str = ..., n: str = ..., numericColorRamp: str = ..., ncr: str = ..., numericDisplayColor: Any = ..., ndc: Any = ..., numericDisplayPrecision: int = ..., ndp: int = ..., numericMaxColor: Any = ..., nxc: Any = ..., numericMinColor: Any = ..., nmc: Any = ..., objattrArray: str = ..., oaa: str = ..., objattrArrayNoMenu: str = ..., oan: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintNodeArray: str = ..., pna: str = ..., paintSelectMode: int = ..., psm: int = ..., paintattrselected: str = ..., pas: str = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., selectedattroper: str = ..., sao: str = ..., showactive: bool = ..., sa: bool = ..., skinPaintMode: int = ..., spm: int = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toolOffProc: str = ..., tfp: str = ..., toolOnProc: str = ..., top: str = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., useNumericColorRamp: bool = ..., unr: bool = ..., useNumericDisplay: bool = ..., und: bool = ..., usepressure: bool = ..., up: bool = ..., value: float = ..., val: float = ..., whichTool: str = ..., wst: str = ..., worldRadius: float = ..., wlR: float = ..., xrayJoints: bool = ..., xry: bool = ..., **kwargs: Any) -> None:
+def artAttrSkinPaintCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `activeListChangedProc` `alp`: *str*
@@ -1759,14 +1759,14 @@ def artAttrSkinPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., act
     - `worldRadius` `wlR`: *float*
     - `xrayJoints` `xry`: *bool*
     """
-def artAttrTool(*args: Any, add: str = ..., exists: str = ..., ex: str = ..., remove: str = ..., rm: str = ..., **kwargs: Any) -> None:
+def artAttrTool(*args, **kwargs) -> None:
     """Flags:
     - `add`: *str*
     - `exists` `ex`: *str*
     - `remove` `rm`: *str*
     """
-def artBuildPaintMenu(*args: Any) -> None: ...
-def artPuttyCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListChangedProc: str = ..., alp: str = ..., alphaclamp: str = ..., alc: str = ..., alphaclamplower: float = ..., acl: float = ..., alphaclampupper: float = ..., acu: float = ..., attrSelected: str = ..., asl: str = ..., autosmooth: bool = ..., asm: bool = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushStrength: float = ..., bs: float = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clamp: str = ..., cl: str = ..., clamplower: float = ..., cll: float = ..., clampupper: float = ..., clu: float = ..., clear: bool = ..., clr: bool = ..., collapsecvtol: float = ..., clc: float = ..., colorAlphaValue: float = ..., cl1: float = ..., colorRGBAValue: Any = ..., cl4: Any = ..., colorRGBValue: Any = ..., cl3: Any = ..., colorRamp: str = ..., cr: str = ..., colorfeedback: bool = ..., cf: bool = ..., colorfeedbackOverride: bool = ..., cfo: bool = ..., colorrangelower: float = ..., crl: float = ..., colorrangeupper: float = ..., cru: float = ..., dataTypeIndex: int = ..., dti: int = ..., disablelighting: bool = ..., dl: bool = ..., dispdecr: bool = ..., dde: bool = ..., dispincr: bool = ..., din: bool = ..., dragSlider: str = ..., dsl: str = ..., duringStrokeCmd: str = ..., dsk: str = ..., dynclonemode: bool = ..., dcm: bool = ..., erasesrfupd: bool = ..., eut: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., filterNodes: bool = ..., fon: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., interactiveUpdate: bool = ..., iu: bool = ..., invertrefvector: bool = ..., irv: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., maxdisp: float = ..., md: float = ..., maxvalue: float = ..., mxv: float = ..., minvalue: float = ..., miv: float = ..., mouldtypehead: str = ..., mth: str = ..., mouldtypemouse: str = ..., mtm: str = ..., mouldtypetail: str = ..., mtt: str = ..., name: str = ..., n: str = ..., numericColorRamp: str = ..., ncr: str = ..., numericDisplayColor: Any = ..., ndc: Any = ..., numericDisplayPrecision: int = ..., ndp: int = ..., numericMaxColor: Any = ..., nxc: Any = ..., numericMinColor: Any = ..., nmc: Any = ..., objattrArray: str = ..., oaa: str = ..., objattrArrayNoMenu: str = ..., oan: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintNodeArray: str = ..., pna: str = ..., paintattrselected: str = ..., pas: str = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., polecv: bool = ..., pcv: bool = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., refsurface: bool = ..., rs: bool = ..., refvector: str = ..., rv: str = ..., refvectoru: float = ..., rvu: float = ..., refvectorv: float = ..., rvv: float = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., selectedattroper: str = ..., sao: str = ..., showactive: bool = ..., sa: bool = ..., smoothiters: int = ..., si: int = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., stitchcorner: bool = ..., stc: bool = ..., stitchedgeflood: bool = ..., sef: bool = ..., stitchtype: str = ..., stt: str = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toolOffProc: str = ..., tfp: str = ..., toolOnProc: str = ..., top: str = ..., updateerasesrf: bool = ..., ues: bool = ..., updaterefsrf: bool = ..., urs: bool = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., useNumericColorRamp: bool = ..., unr: bool = ..., useNumericDisplay: bool = ..., und: bool = ..., usepressure: bool = ..., up: bool = ..., value: float = ..., val: float = ..., whichTool: str = ..., wst: str = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> None:
+def artBuildPaintMenu(*args, **kwargs) -> None: ...
+def artPuttyCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `activeListChangedProc` `alp`: *str*
@@ -1891,7 +1891,7 @@ def artPuttyCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListC
     - `whichTool` `wst`: *str*
     - `worldRadius` `wlR`: *float*
     """
-def artSelectCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., addselection: bool = ..., ads: bool = ..., afterStrokeCmd: str = ..., asc: str = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clear: bool = ..., clr: bool = ..., dragSlider: str = ..., dsl: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., importthreshold: float = ..., ift: float = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., name: str = ..., n: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectall: bool = ..., sal: bool = ..., selectclonesource: bool = ..., scs: bool = ..., selectop: str = ..., sop: str = ..., showactive: bool = ..., sa: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toggleall: bool = ..., tal: bool = ..., unselectall: bool = ..., ual: bool = ..., usepressure: bool = ..., up: bool = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> None:
+def artSelectCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `addselection` `ads`: *bool*
@@ -1958,7 +1958,7 @@ def artSelectCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., addselecti
     - `usepressure` `up`: *bool*
     - `worldRadius` `wlR`: *float*
     """
-def artSetPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., clear: bool = ..., clr: bool = ..., dragSlider: str = ..., dsl: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., name: str = ..., n: str = ..., objectsetnames: str = ..., osn: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., setcolorfeedback: bool = ..., scf: bool = ..., setdisplaycvs: bool = ..., dcv: bool = ..., setopertype: str = ..., sot: str = ..., settomodify: str = ..., stm: str = ..., showactive: bool = ..., sa: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., usepressure: bool = ..., up: bool = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> None:
+def artSetPaintCtx(*args, **kwargs) -> None:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `brushalignment` `bra`: *bool*
@@ -2013,7 +2013,7 @@ def artSetPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., brushali
     - `usepressure` `up`: *bool*
     - `worldRadius` `wlR`: *float*
     """
-def artUserPaintCtx(*args: Any, accopacity: bool = ..., aco: bool = ..., activeListChangedProc: str = ..., alp: str = ..., afterStrokeCmd: str = ..., asc: str = ..., alphaclamp: str = ..., alc: str = ..., alphaclamplower: float = ..., acl: float = ..., alphaclampupper: float = ..., acu: float = ..., attrSelected: str = ..., asl: str = ..., beforeStrokeCmd: str = ..., bsc: str = ..., brushalignment: bool = ..., bra: bool = ..., brushfeedback: bool = ..., brf: bool = ..., chunkCommand: str = ..., cc: str = ..., clamp: str = ..., cl: str = ..., clamplower: float = ..., cll: float = ..., clampupper: float = ..., clu: float = ..., clear: bool = ..., clr: bool = ..., colorAlphaValue: float = ..., cl1: float = ..., colorRGBAValue: Any = ..., cl4: Any = ..., colorRGBValue: Any = ..., cl3: Any = ..., colorRamp: str = ..., cr: str = ..., colorfeedback: bool = ..., cf: bool = ..., colorfeedbackOverride: bool = ..., cfo: bool = ..., colorrangelower: float = ..., crl: float = ..., colorrangeupper: float = ..., cru: float = ..., dataTypeIndex: int = ..., dti: int = ..., disablelighting: bool = ..., dl: bool = ..., dragSlider: str = ..., dsl: str = ..., duringStrokeCmd: str = ..., dsk: str = ..., dynclonemode: bool = ..., dcm: bool = ..., exists: bool = ..., ex: bool = ..., expandfilename: bool = ..., eef: bool = ..., exportaspectratio: float = ..., ear: float = ..., exportfilemode: str = ..., efm: str = ..., exportfilesave: str = ..., esf: str = ..., exportfilesizex: int = ..., fsx: int = ..., exportfilesizey: int = ..., fsy: int = ..., exportfiletype: str = ..., eft: str = ..., filterNodes: bool = ..., fon: bool = ..., finalizeCmd: str = ..., fc: str = ..., fullpaths: bool = ..., fp: bool = ..., getArrayAttrCommand: str = ..., gac: str = ..., getSurfaceCommand: str = ..., gsc: str = ..., getValueCommand: str = ..., gvc: str = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., importfileload: str = ..., ifl: str = ..., importfilemode: str = ..., ifm: str = ..., importreassign: bool = ..., irm: bool = ..., initializeCmd: str = ..., ic: str = ..., interactiveUpdate: bool = ..., iu: bool = ..., lastRecorderCmd: str = ..., lrc: str = ..., lastStampName: str = ..., lsn: str = ..., lowerradius: float = ..., lr: float = ..., makeStroke: int = ..., mst: int = ..., mappressure: str = ..., mp: str = ..., maxvalue: float = ..., mxv: float = ..., minvalue: float = ..., miv: float = ..., name: str = ..., n: str = ..., numericColorRamp: str = ..., ncr: str = ..., numericDisplayColor: Any = ..., ndc: Any = ..., numericDisplayPrecision: int = ..., ndp: int = ..., numericMaxColor: Any = ..., nxc: Any = ..., numericMinColor: Any = ..., nmc: Any = ..., objattrArray: str = ..., oaa: str = ..., objattrArrayNoMenu: str = ..., oan: str = ..., opacity: float = ..., op: float = ..., outline: bool = ..., o: bool = ..., outwhilepaint: bool = ..., owp: bool = ..., paintNodeArray: str = ..., pna: str = ..., paintattrselected: str = ..., pas: str = ..., paintmode: str = ..., pm: str = ..., paintoperationtype: str = ..., pot: str = ..., pickColor: bool = ..., pcm: bool = ..., pickValue: bool = ..., pv: bool = ..., playbackCursor: Any = ..., plc: Any = ..., playbackPressure: float = ..., plp: float = ..., preserveclonesource: bool = ..., pcs: bool = ..., profileShapeFile: str = ..., psf: str = ..., projective: bool = ..., prm: bool = ..., radius: float = ..., r: float = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., record: bool = ..., rec: bool = ..., reflection: bool = ..., rn: bool = ..., reflectionaboutorigin: bool = ..., rno: bool = ..., reflectionaxis: str = ..., ra: str = ..., screenRadius: float = ..., scR: float = ..., selectclonesource: bool = ..., scs: bool = ..., selectedattroper: str = ..., sao: str = ..., setArrayValueCommand: str = ..., sac: str = ..., setValueCommand: str = ..., svc: str = ..., showactive: bool = ..., sa: bool = ..., stampDepth: float = ..., stD: float = ..., stampProfile: str = ..., stP: str = ..., stampSpacing: float = ..., stS: float = ..., strokesmooth: str = ..., ssm: str = ..., surfaceConformedBrushVertices: bool = ..., scv: bool = ..., tablet: bool = ..., tab: bool = ..., tangentOutline: bool = ..., to: bool = ..., toolCleanupCmd: str = ..., tcc: str = ..., toolOffProc: str = ..., tfp: str = ..., toolOnProc: str = ..., top: str = ..., toolSetupCmd: str = ..., tsc: str = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., useNumericColorRamp: bool = ..., unr: bool = ..., useNumericDisplay: bool = ..., und: bool = ..., usepressure: bool = ..., up: bool = ..., value: float = ..., val: float = ..., whichTool: str = ..., wst: str = ..., worldRadius: float = ..., wlR: float = ..., **kwargs: Any) -> str:
+def artUserPaintCtx(*args, **kwargs) -> str:
     """Flags:
     - `accopacity` `aco`: *bool*
     - `activeListChangedProc` `alp`: *str*
@@ -2157,8 +2157,8 @@ def arubaNurbsToPoly(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def arubaNurbsToPoly(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def arubaNurbsToPoly(*args: Any, **kwargs: Any) -> list[str]: ...
-def arubaNurbsToPoly(*args: Any, **kwargs: Any) -> Any:
+def arubaNurbsToPoly(*args, **kwargs) -> list[str]: ...
+def arubaNurbsToPoly(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -2247,8 +2247,8 @@ def assembly(*args: Any, q: bool, repName: bool) -> str: ...
 @overload
 def assembly(*args: Any, q: bool, rnm: bool) -> str: ...
 @overload
-def assembly(*args: Any, **kwargs: Any) -> None: ...
-def assembly(*args: Any, **kwargs: Any) -> Any:
+def assembly(*args, **kwargs) -> None: ...
+def assembly(*args, **kwargs) -> None:
     """Flags:
     - `active` `a`: *str*
     - `activeLabel` `al`: *str*
@@ -2362,8 +2362,8 @@ def assignCommand(*args: Any, q: bool, numElements: bool) -> bool: ...
 @overload
 def assignCommand(*args: Any, q: bool, num: bool) -> bool: ...
 @overload
-def assignCommand(*args: Any, **kwargs: Any) -> None: ...
-def assignCommand(*args: Any, **kwargs: Any) -> Any:
+def assignCommand(*args, **kwargs) -> None: ...
+def assignCommand(*args, **kwargs) -> None:
     """Flags:
     - `addDivider` `ad`: *str*
     - `altModifier` `alt`: *bool*
@@ -2389,7 +2389,7 @@ def assignCommand(*args: Any, **kwargs: Any) -> Any:
     - `sortByKey` `sbk`: *bool*
     - `sourceUserCommands` `suc`: *bool*
     """
-def assignInputDevice(*args: Any, clutch: str = ..., c: str = ..., continuous: bool = ..., ct: bool = ..., device: str = ..., d: str = ..., immediate: bool = ..., im: bool = ..., multiple: bool = ..., m: bool = ..., **kwargs: Any) -> str:
+def assignInputDevice(*args, **kwargs) -> str:
     """Flags:
     - `clutch` `c`: *str*
     - `continuous` `ct`: *bool*
@@ -2410,8 +2410,8 @@ def assignViewportFactories(*args: Any, q: bool, textureFactory: bool) -> str: .
 @overload
 def assignViewportFactories(*args: Any, q: bool, tf: bool) -> str: ...
 @overload
-def assignViewportFactories(*args: Any, **kwargs: Any) -> None: ...
-def assignViewportFactories(*args: Any, **kwargs: Any) -> Any:
+def assignViewportFactories(*args, **kwargs) -> None: ...
+def assignViewportFactories(*args, **kwargs) -> None:
     """Flags:
     - `materialFactory` `mf`: *str*
     - `nodeType` `nt`: *str*
@@ -2470,8 +2470,8 @@ def attachCurve(*args: Any, q: bool, reverse2: bool) -> bool: ...
 @overload
 def attachCurve(*args: Any, q: bool, rv2: bool) -> bool: ...
 @overload
-def attachCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def attachCurve(*args: Any, **kwargs: Any) -> Any:
+def attachCurve(*args, **kwargs) -> list[str]: ...
+def attachCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `blendBias` `bb`: *float*
     - `blendKnotInsertion` `bki`: *bool*
@@ -2487,7 +2487,7 @@ def attachCurve(*args: Any, **kwargs: Any) -> Any:
     - `reverse1` `rv1`: *bool*
     - `reverse2` `rv2`: *bool*
     """
-def attachDeviceAttr(*args: Any, attribute: str = ..., at: str = ..., axis: str = ..., ax: str = ..., camera: bool = ..., cam: bool = ..., cameraRotate: bool = ..., cr: bool = ..., cameraTranslate: bool = ..., ct: bool = ..., clutch: str = ..., c: str = ..., device: str = ..., d: str = ..., selection: bool = ..., sl: bool = ..., **kwargs: Any) -> None:
+def attachDeviceAttr(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `at`: *str*
     - `axis` `ax`: *str*
@@ -2567,8 +2567,8 @@ def attachSurface(*args: Any, q: bool, twist: bool) -> bool: ...
 @overload
 def attachSurface(*args: Any, q: bool, tw: bool) -> bool: ...
 @overload
-def attachSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def attachSurface(*args: Any, **kwargs: Any) -> Any:
+def attachSurface(*args, **kwargs) -> list[str]: ...
+def attachSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `blendBias` `bb`: *float*
     - `blendKnotInsertion` `bki`: *bool*
@@ -2669,8 +2669,8 @@ def attrColorSliderGrp(*args: Any, q: bool, statusBarMessage: bool) -> str: ...
 @overload
 def attrColorSliderGrp(*args: Any, q: bool, sbm: bool) -> str: ...
 @overload
-def attrColorSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrColorSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def attrColorSliderGrp(*args, **kwargs) -> str: ...
+def attrColorSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -2773,8 +2773,8 @@ def attrControlGrp(*args: Any, q: bool, preventOverride: bool) -> bool: ...
 @overload
 def attrControlGrp(*args: Any, q: bool, po: bool) -> bool: ...
 @overload
-def attrControlGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrControlGrp(*args: Any, **kwargs: Any) -> Any:
+def attrControlGrp(*args, **kwargs) -> str: ...
+def attrControlGrp(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `attribute` `a`: *str*
@@ -2867,8 +2867,8 @@ def attrEnumOptionMenu(*args: Any, q: bool, isObscured: bool) -> bool: ...
 @overload
 def attrEnumOptionMenu(*args: Any, q: bool, io: bool) -> bool: ...
 @overload
-def attrEnumOptionMenu(*args: Any, **kwargs: Any) -> str: ...
-def attrEnumOptionMenu(*args: Any, **kwargs: Any) -> Any:
+def attrEnumOptionMenu(*args, **kwargs) -> str: ...
+def attrEnumOptionMenu(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `attribute` `at`: *str*
@@ -2981,8 +2981,8 @@ def attrEnumOptionMenuGrp(*args: Any, q: bool, useTemplate: bool) -> str: ...
 @overload
 def attrEnumOptionMenuGrp(*args: Any, q: bool, ut: bool) -> str: ...
 @overload
-def attrEnumOptionMenuGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrEnumOptionMenuGrp(*args: Any, **kwargs: Any) -> Any:
+def attrEnumOptionMenuGrp(*args, **kwargs) -> str: ...
+def attrEnumOptionMenuGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -3125,8 +3125,8 @@ def attrFieldGrp(*args: Any, q: bool, height: bool) -> int: ...
 @overload
 def attrFieldGrp(*args: Any, q: bool, h: bool) -> int: ...
 @overload
-def attrFieldGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrFieldGrp(*args: Any, **kwargs: Any) -> Any:
+def attrFieldGrp(*args, **kwargs) -> str: ...
+def attrFieldGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -3280,8 +3280,8 @@ def attrFieldSliderGrp(*args: Any, q: bool, fieldMinValue: bool) -> float: ...
 @overload
 def attrFieldSliderGrp(*args: Any, q: bool, fmn: bool) -> float: ...
 @overload
-def attrFieldSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrFieldSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def attrFieldSliderGrp(*args, **kwargs) -> str: ...
+def attrFieldSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -3438,8 +3438,8 @@ def attrNavigationControlGrp(*args: Any, q: bool, docTag: bool) -> str: ...
 @overload
 def attrNavigationControlGrp(*args: Any, q: bool, dtg: bool) -> str: ...
 @overload
-def attrNavigationControlGrp(*args: Any, **kwargs: Any) -> str: ...
-def attrNavigationControlGrp(*args: Any, **kwargs: Any) -> Any:
+def attrNavigationControlGrp(*args, **kwargs) -> str: ...
+def attrNavigationControlGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -3517,7 +3517,7 @@ def attrNavigationControlGrp(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def attributeInfo(*args: Any, allAttributes: bool = ..., all: bool = ..., bool: bool = ..., b: bool = ..., enumerated: bool = ..., e: bool = ..., hidden: bool = ..., h: bool = ..., inherited: bool = ..., internal: bool = ..., i: bool = ..., leaf: bool = ..., l: bool = ..., logicalAnd: bool = ..., multi: bool = ..., m: bool = ..., short: bool = ..., s: bool = ..., type: str = ..., t: str = ..., userInterface: bool = ..., ui: bool = ..., writable: bool = ..., w: bool = ..., **kwargs: Any) -> list[str]:
+def attributeInfo(*args, **kwargs) -> list[str]:
     """Flags:
     - `allAttributes` `all`: *bool*
     - `bool` `b`: *bool*
@@ -3533,7 +3533,7 @@ def attributeInfo(*args: Any, allAttributes: bool = ..., all: bool = ..., bool: 
     - `userInterface` `ui`: *bool*
     - `writable` `w`: *bool*
     """
-def attributeMenu(*args: Any, beginMenu: bool = ..., beg: bool = ..., editor: str = ..., edt: str = ..., finishMenu: bool = ..., fsh: bool = ..., inputs: bool = ..., inp: bool = ..., plug: str = ..., p: str = ..., regPulldownMenuCommand: str = ..., rpm: str = ..., unregPulldownMenuCommand: int = ..., upm: int = ..., **kwargs: Any) -> str:
+def attributeMenu(*args, **kwargs) -> str:
     """Flags:
     - `beginMenu` `beg`: *bool*
     - `editor` `edt`: *str*
@@ -3543,14 +3543,14 @@ def attributeMenu(*args: Any, beginMenu: bool = ..., beg: bool = ..., editor: st
     - `regPulldownMenuCommand` `rpm`: *str*
     - `unregPulldownMenuCommand` `upm`: *int*
     """
-def attributeName(*args: Any, leaf: bool = ..., lf: bool = ..., long: bool = ..., l: bool = ..., nice: bool = ..., n: bool = ..., short: bool = ..., s: bool = ..., **kwargs: Any) -> str:
+def attributeName(*args, **kwargs) -> str:
     """Flags:
     - `leaf` `lf`: *bool*
     - `long` `l`: *bool*
     - `nice` `n`: *bool*
     - `short` `s`: *bool*
     """
-def attributeQuery(*args: Any, affectsAppearance: bool = ..., aa: bool = ..., affectsWorldspace: bool = ..., aws: bool = ..., attributeType: bool = ..., at: bool = ..., cachedInternally: bool = ..., ci: bool = ..., categories: bool = ..., ct: bool = ..., channelBox: bool = ..., ch: bool = ..., connectable: bool = ..., c: bool = ..., enforcingUniqueName: bool = ..., eun: bool = ..., enum: bool = ..., e: bool = ..., exists: bool = ..., ex: bool = ..., hidden: bool = ..., h: bool = ..., indeterminant: bool = ..., idt: bool = ..., indexMatters: bool = ..., im: bool = ..., internal: bool = ..., i: bool = ..., internalGet: bool = ..., ig: bool = ..., internalSet: bool = ..., keyable: bool = ..., k: bool = ..., listChildren: bool = ..., lc: bool = ..., listDefault: bool = ..., ld: bool = ..., listEnum: bool = ..., le: bool = ..., listParent: bool = ..., lp: bool = ..., listSiblings: bool = ..., ls: bool = ..., localizedListEnum: bool = ..., lz: bool = ..., longName: bool = ..., ln: bool = ..., maxExists: bool = ..., mxe: bool = ..., maximum: bool = ..., max: bool = ..., message: bool = ..., msg: bool = ..., minExists: bool = ..., mne: bool = ..., minimum: bool = ..., min: bool = ..., multi: bool = ..., m: bool = ..., niceName: bool = ..., nn: bool = ..., node: str = ..., n: str = ..., numberOfChildren: bool = ..., nc: bool = ..., range: bool = ..., r: bool = ..., rangeExists: bool = ..., re: bool = ..., readable: bool = ..., rd: bool = ..., renderSource: bool = ..., rs: bool = ..., shortName: bool = ..., sn: bool = ..., softMax: bool = ..., smx: bool = ..., softMaxExists: bool = ..., sxe: bool = ..., softMin: bool = ..., smn: bool = ..., softMinExists: bool = ..., sme: bool = ..., softRange: bool = ..., s: bool = ..., softRangeExists: bool = ..., se: bool = ..., storable: bool = ..., st: bool = ..., type: str = ..., typ: str = ..., typeExact: str = ..., tex: str = ..., usedAsColor: bool = ..., uac: bool = ..., usedAsFilename: bool = ..., uaf: bool = ..., usesMultiBuilder: bool = ..., umb: bool = ..., worldspace: bool = ..., ws: bool = ..., writable: bool = ..., w: bool = ..., **kwargs: Any) -> list[float]:
+def attributeQuery(*args, **kwargs) -> list[float]:
     """Flags:
     - `affectsAppearance` `aa`: *bool*
     - `affectsWorldspace` `aws`: *bool*
@@ -3650,8 +3650,8 @@ def audioTrack(*args: Any, q: bool, unsolo: bool) -> bool: ...
 @overload
 def audioTrack(*args: Any, q: bool, uso: bool) -> bool: ...
 @overload
-def audioTrack(*args: Any, **kwargs: Any) -> None: ...
-def audioTrack(*args: Any, **kwargs: Any) -> Any:
+def audioTrack(*args, **kwargs) -> None: ...
+def audioTrack(*args, **kwargs) -> None:
     """Flags:
     - `insertTrack` `it`: *int*
     - `lock` `l`: *bool*
@@ -3687,8 +3687,8 @@ def autoKeyframe(*args: Any, q: bool, state: bool) -> bool: ...
 @overload
 def autoKeyframe(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def autoKeyframe(*args: Any, **kwargs: Any) -> int: ...
-def autoKeyframe(*args: Any, **kwargs: Any) -> Any:
+def autoKeyframe(*args, **kwargs) -> int: ...
+def autoKeyframe(*args, **kwargs) -> int:
     """Flags:
     - `addAttr` `aa`: *str*
     - `characterOption` `co`: *str*
@@ -3696,7 +3696,7 @@ def autoKeyframe(*args: Any, **kwargs: Any) -> Any:
     - `noReset` `nr`: *bool*
     - `state` `st`: *bool*
     """
-def autoPlace(*args: Any, useMouse: bool = ..., um: bool = ..., **kwargs: Any) -> list[float]:
+def autoPlace(*args, **kwargs) -> list[float]:
     """Flags:
     - `useMouse` `um`: *bool*
     """
@@ -3737,8 +3737,8 @@ def autoSave(*args: Any, q: bool, prompt: bool) -> bool: ...
 @overload
 def autoSave(*args: Any, q: bool, prm: bool) -> bool: ...
 @overload
-def autoSave(*args: Any, **kwargs: Any) -> None: ...
-def autoSave(*args: Any, **kwargs: Any) -> Any:
+def autoSave(*args, **kwargs) -> None: ...
+def autoSave(*args, **kwargs) -> None:
     """Flags:
     - `destination` `dst`: *int*
     - `destinationFolder` `df`: *bool*
@@ -3767,22 +3767,22 @@ def backgroundEvaluationManager(*args: Any, q: bool, resume: bool) -> bool: ...
 @overload
 def backgroundEvaluationManager(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def backgroundEvaluationManager(*args: Any, **kwargs: Any) -> None: ...
-def backgroundEvaluationManager(*args: Any, **kwargs: Any) -> Any:
+def backgroundEvaluationManager(*args, **kwargs) -> None: ...
+def backgroundEvaluationManager(*args, **kwargs) -> None:
     """Flags:
     - `interrupt` `i`: *bool*
     - `mode` `m`: *str*
     - `pause` `p`: *bool*
     - `resume` `r`: *bool*
     """
-def bakeClip(*args: Any, blend: Any = ..., b: Any = ..., clipIndex: int = ..., ci: int = ..., keepOriginals: bool = ..., k: bool = ..., name: str = ..., n: str = ..., **kwargs: Any) -> str:
+def bakeClip(*args, **kwargs) -> str:
     """Flags:
     - `blend` `b`: *Any*
     - `clipIndex` `ci`: *int*
     - `keepOriginals` `k`: *bool*
     - `name` `n`: *str*
     """
-def bakeDeformer(*args: Any, bakeRangeOfMotion: bool = ..., brm: bool = ..., colorizeSkeleton: bool = ..., cs: bool = ..., customRangeOfMotion: float = ..., rom: float = ..., dstMeshName: str = ..., dm: str = ..., dstSkeletonName: str = ..., ds: str = ..., hierarchy: bool = ..., hi: bool = ..., influences: list[str] = ..., i: list[str] = ..., maxInfluences: int = ..., mi: int = ..., pruneWeights: float = ..., pw: float = ..., smoothWeights: int = ..., sw: int = ..., srcMeshName: str = ..., sm: str = ..., srcSkeletonName: str = ..., ss: str = ..., **kwargs: Any) -> str:
+def bakeDeformer(*args, **kwargs) -> str:
     """Flags:
     - `bakeRangeOfMotion` `brm`: *bool*
     - `colorizeSkeleton` `cs`: *bool*
@@ -3818,8 +3818,8 @@ def bakePartialHistory(*args: Any, q: bool, prePostDeformers: bool) -> bool: ...
 @overload
 def bakePartialHistory(*args: Any, q: bool, ppt: bool) -> bool: ...
 @overload
-def bakePartialHistory(*args: Any, **kwargs: Any) -> str: ...
-def bakePartialHistory(*args: Any, **kwargs: Any) -> Any:
+def bakePartialHistory(*args, **kwargs) -> str: ...
+def bakePartialHistory(*args, **kwargs) -> str:
     """Flags:
     - `allShapes` `all`: *bool*
     - `postSmooth` `nps`: *bool*
@@ -3906,8 +3906,8 @@ def bakeResults(*args: Any, q: bool, simulation: bool) -> bool: ...
 @overload
 def bakeResults(*args: Any, q: bool, sm: bool) -> bool: ...
 @overload
-def bakeResults(*args: Any, **kwargs: Any) -> int: ...
-def bakeResults(*args: Any, **kwargs: Any) -> Any:
+def bakeResults(*args, **kwargs) -> int: ...
+def bakeResults(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -4011,8 +4011,8 @@ def bakeSimulation(*args: Any, q: bool, sparseAnimCurveBake: bool) -> bool: ...
 @overload
 def bakeSimulation(*args: Any, q: bool, sac: bool) -> bool: ...
 @overload
-def bakeSimulation(*args: Any, **kwargs: Any) -> None: ...
-def bakeSimulation(*args: Any, **kwargs: Any) -> Any:
+def bakeSimulation(*args, **kwargs) -> None: ...
+def bakeSimulation(*args, **kwargs) -> None:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -4069,8 +4069,8 @@ def baseTemplate(*args: Any, q: bool, unload: bool) -> bool: ...
 @overload
 def baseTemplate(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def baseTemplate(*args: Any, **kwargs: Any) -> None: ...
-def baseTemplate(*args: Any, **kwargs: Any) -> Any:
+def baseTemplate(*args, **kwargs) -> None: ...
+def baseTemplate(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `fileName` `fn`: *str*
@@ -4106,8 +4106,8 @@ def baseView(*args: Any, q: bool, viewList: bool) -> bool: ...
 @overload
 def baseView(*args: Any, q: bool, vl: bool) -> bool: ...
 @overload
-def baseView(*args: Any, **kwargs: Any) -> None: ...
-def baseView(*args: Any, **kwargs: Any) -> Any:
+def baseView(*args, **kwargs) -> None: ...
+def baseView(*args, **kwargs) -> None:
     """Flags:
     - `itemInfo` `ii`: *str*
     - `itemList` `il`: *bool*
@@ -4116,7 +4116,7 @@ def baseView(*args: Any, **kwargs: Any) -> Any:
     - `viewList` `vl`: *bool*
     - `viewName` `vn`: *str*
     """
-def batchRender(*args: Any, filename: str = ..., f: str = ..., melCommand: str = ..., mc: str = ..., numProcs: int = ..., n: int = ..., preRenderCommand: str = ..., prc: str = ..., remoteRenderMachine: str = ..., rm: str = ..., renderCommandOptions: str = ..., rco: str = ..., showImage: bool = ..., si: bool = ..., status: str = ..., st: str = ..., useRemoteRender: bool = ..., um: bool = ..., useStandalone: bool = ..., us: bool = ..., verbosity: int = ..., v: int = ..., **kwargs: Any) -> None:
+def batchRender(*args, **kwargs) -> None:
     """Flags:
     - `filename` `f`: *str*
     - `melCommand` `mc`: *str*
@@ -4191,8 +4191,8 @@ def bevel(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def bevel(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def bevel(*args: Any, **kwargs: Any) -> list[str]: ...
-def bevel(*args: Any, **kwargs: Any) -> Any:
+def bevel(*args, **kwargs) -> list[str]: ...
+def bevel(*args, **kwargs) -> list[str]:
     """Flags:
     - `bevelShapeType` `bst`: *int*
     - `caching` `cch`: *bool*
@@ -4253,8 +4253,8 @@ def bevelPlus(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def bevelPlus(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def bevelPlus(*args: Any, **kwargs: Any) -> list[str]: ...
-def bevelPlus(*args: Any, **kwargs: Any) -> Any:
+def bevelPlus(*args, **kwargs) -> list[str]: ...
+def bevelPlus(*args, **kwargs) -> list[str]:
     """Flags:
     - `bevelInside` `bin`: *bool*
     - `capSides` `cap`: *int*
@@ -4268,17 +4268,17 @@ def bevelPlus(*args: Any, **kwargs: Any) -> Any:
     - `polygon` `po`: *int*
     - `range` `rn`: *bool*
     """
-def bezierAnchorPreset(*args: Any, preset: int = ..., p: int = ..., **kwargs: Any) -> int:
+def bezierAnchorPreset(*args, **kwargs) -> int:
     """Flags:
     - `preset` `p`: *int*
     """
-def bezierAnchorState(*args: Any, even: bool = ..., ev: bool = ..., smooth: bool = ..., sm: bool = ..., **kwargs: Any) -> int:
+def bezierAnchorState(*args, **kwargs) -> int:
     """Flags:
     - `even` `ev`: *bool*
     - `smooth` `sm`: *bool*
     """
-def bezierCurveToNurbs(*args: Any) -> list[str]: ...
-def bezierInfo(*args: Any, anchorFromCV: int = ..., afc: int = ..., cvFromAnchor: int = ..., cfa: int = ..., isAnchorSelected: bool = ..., ias: bool = ..., isTangentSelected: bool = ..., its: bool = ..., onlyAnchorsSelected: bool = ..., oas: bool = ..., onlyTangentsSelected: bool = ..., ots: bool = ..., **kwargs: Any) -> int:
+def bezierCurveToNurbs(*args, **kwargs) -> list[str]: ...
+def bezierInfo(*args, **kwargs) -> int:
     """Flags:
     - `anchorFromCV` `afc`: *int*
     - `cvFromAnchor` `cfa`: *int*
@@ -4320,8 +4320,8 @@ def binMembership(*args: Any, q: bool, notifyChanged: bool) -> bool: ...
 @overload
 def binMembership(*args: Any, q: bool, nfc: bool) -> bool: ...
 @overload
-def binMembership(*args: Any, **kwargs: Any) -> bool: ...
-def binMembership(*args: Any, **kwargs: Any) -> Any:
+def binMembership(*args, **kwargs) -> bool: ...
+def binMembership(*args, **kwargs) -> bool:
     """Flags:
     - `addToBin` `add`: *str*
     - `exists` `ex`: *str*
@@ -4389,8 +4389,8 @@ def bindSkin(*args: Any, q: bool, unlock: bool) -> bool: ...
 @overload
 def bindSkin(*args: Any, q: bool, ul: bool) -> bool: ...
 @overload
-def bindSkin(*args: Any, **kwargs: Any) -> str: ...
-def bindSkin(*args: Any, **kwargs: Any) -> Any:
+def bindSkin(*args, **kwargs) -> str: ...
+def bindSkin(*args, **kwargs) -> str:
     """Flags:
     - `byClosestPoint` `bcp`: *bool*
     - `byPartition` `bp`: *bool*
@@ -4488,8 +4488,8 @@ def blend2(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def blend2(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def blend2(*args: Any, **kwargs: Any) -> list[str]: ...
-def blend2(*args: Any, **kwargs: Any) -> Any:
+def blend2(*args, **kwargs) -> list[str]: ...
+def blend2(*args, **kwargs) -> list[str]:
     """Flags:
     - `autoAnchor` `aa`: *bool*
     - `autoNormal` `an`: *bool*
@@ -4593,8 +4593,8 @@ def blendShape(*args: Any, q: bool, afterReference: bool) -> bool: ...
 @overload
 def blendShape(*args: Any, q: bool, ar: bool) -> bool: ...
 @overload
-def blendShape(*args: Any, **kwargs: Any) -> list[str]: ...
-def blendShape(*args: Any, **kwargs: Any) -> Any:
+def blendShape(*args, **kwargs) -> list[str]: ...
+def blendShape(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -4647,7 +4647,7 @@ def blendShape(*args: Any, **kwargs: Any) -> Any:
     - `weight` `w`: *Any*
     - `weightCount` `wc`: *int*
     """
-def blendShapeEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectionConnection: str = ..., slc: str = ..., stateString: bool = ..., sts: bool = ..., targetControlList: bool = ..., tcl: bool = ..., targetList: bool = ..., tl: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., verticalSliders: bool = ..., vs: bool = ..., **kwargs: Any) -> str:
+def blendShapeEditor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -4670,7 +4670,7 @@ def blendShapeEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTem
     - `useTemplate` `ut`: *str*
     - `verticalSliders` `vs`: *bool*
     """
-def blendShapePanel(*args: Any, blendShapeEditor: bool = ..., be: bool = ..., control: bool = ..., ctl: bool = ..., copy: str = ..., cp: str = ..., createString: bool = ..., cs: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., editString: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., init: bool = ..., isUnique: bool = ..., iu: bool = ..., label: str = ..., l: str = ..., menuBarRepeatLast: bool = ..., mrl: bool = ..., menuBarVisible: bool = ..., mbv: bool = ..., needsInit: bool = ..., ni: bool = ..., parent: str = ..., p: str = ..., popupMenuProcedure: str = ..., pmp: str = ..., replacePanel: str = ..., rp: str = ..., tearOff: bool = ..., to: bool = ..., tearOffCopy: str = ..., toc: str = ..., tearOffRestore: bool = ..., tor: bool = ..., unParent: bool = ..., up: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def blendShapePanel(*args, **kwargs) -> str:
     """Flags:
     - `blendShapeEditor` `be`: *bool*
     - `control` `ctl`: *bool*
@@ -4732,8 +4732,8 @@ def blendTwoAttr(*args: Any, q: bool, shape: bool) -> bool: ...
 @overload
 def blendTwoAttr(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def blendTwoAttr(*args: Any, **kwargs: Any) -> list[str]: ...
-def blendTwoAttr(*args: Any, **kwargs: Any) -> Any:
+def blendTwoAttr(*args, **kwargs) -> list[str]: ...
+def blendTwoAttr(*args, **kwargs) -> list[str]:
     """Flags:
     - `attribute` `at`: *str*
     - `attribute0` `at0`: *str*
@@ -4774,8 +4774,8 @@ def blindDataType(*args: Any, q: bool, typeNames: bool) -> bool: ...
 @overload
 def blindDataType(*args: Any, q: bool, tn: bool) -> bool: ...
 @overload
-def blindDataType(*args: Any, **kwargs: Any) -> str: ...
-def blindDataType(*args: Any, **kwargs: Any) -> Any:
+def blindDataType(*args, **kwargs) -> str: ...
+def blindDataType(*args, **kwargs) -> str:
     """Flags:
     - `dataType` `dt`: *str*
     - `longDataName` `ldn`: *str*
@@ -4867,8 +4867,8 @@ def boneLattice(*args: Any, q: bool, geometryIndices: bool) -> bool: ...
 @overload
 def boneLattice(*args: Any, q: bool, gi: bool) -> bool: ...
 @overload
-def boneLattice(*args: Any, **kwargs: Any) -> str: ...
-def boneLattice(*args: Any, **kwargs: Any) -> Any:
+def boneLattice(*args, **kwargs) -> str: ...
+def boneLattice(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -4938,8 +4938,8 @@ def boundary(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def boundary(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def boundary(*args: Any, **kwargs: Any) -> list[str]: ...
-def boundary(*args: Any, **kwargs: Any) -> Any:
+def boundary(*args, **kwargs) -> list[str]: ...
+def boundary(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -4985,8 +4985,8 @@ def boxDollyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def boxDollyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def boxDollyCtx(*args: Any, **kwargs: Any) -> str: ...
-def boxDollyCtx(*args: Any, **kwargs: Any) -> Any:
+def boxDollyCtx(*args, **kwargs) -> str: ...
+def boxDollyCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `exists` `ex`: *bool*
@@ -5026,8 +5026,8 @@ def boxZoomCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def boxZoomCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def boxZoomCtx(*args: Any, **kwargs: Any) -> str: ...
-def boxZoomCtx(*args: Any, **kwargs: Any) -> Any:
+def boxZoomCtx(*args, **kwargs) -> str: ...
+def boxZoomCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -5088,8 +5088,8 @@ def bufferCurve(*args: Any, q: bool, useReferencedCurve: bool) -> bool: ...
 @overload
 def bufferCurve(*args: Any, q: bool, urc: bool) -> bool: ...
 @overload
-def bufferCurve(*args: Any, **kwargs: Any) -> int: ...
-def bufferCurve(*args: Any, **kwargs: Any) -> Any:
+def bufferCurve(*args, **kwargs) -> int: ...
+def bufferCurve(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -5105,12 +5105,12 @@ def bufferCurve(*args: Any, **kwargs: Any) -> Any:
     - `time` `t`: *float*
     - `useReferencedCurve` `urc`: *bool*
     """
-def buildBookmarkMenu(*args: Any, editor: str = ..., ed: str = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> None:
+def buildBookmarkMenu(*args, **kwargs) -> None:
     """Flags:
     - `editor` `ed`: *str*
     - `type` `typ`: *str*
     """
-def buildKeyframeMenu(*args: Any) -> None: ...
+def buildKeyframeMenu(*args, **kwargs) -> None: ...
 @overload
 def button(*args: Any, q: bool, align: bool) -> str: ...
 @overload
@@ -5192,8 +5192,8 @@ def button(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def button(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def button(*args: Any, **kwargs: Any) -> str: ...
-def button(*args: Any, **kwargs: Any) -> Any:
+def button(*args, **kwargs) -> str: ...
+def button(*args, **kwargs) -> str:
     """Flags:
     - `actOnPress` `aop`: *bool*
     - `actionIsSubstitute` `ais`: *bool*
@@ -5227,7 +5227,7 @@ def button(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def buttonManip(*args: Any, icon: str = ..., i: str = ..., **kwargs: Any) -> None:
+def buttonManip(*args, **kwargs) -> None:
     """Flags:
     - `icon` `i`: *str*
     """
@@ -5312,8 +5312,8 @@ def cacheEvaluator(*args: Any, q: bool, dynamicsSupportActive: bool) -> bool: ..
 @overload
 def cacheEvaluator(*args: Any, q: bool, dsa: bool) -> bool: ...
 @overload
-def cacheEvaluator(*args: Any, **kwargs: Any) -> str: ...
-def cacheEvaluator(*args: Any, **kwargs: Any) -> Any:
+def cacheEvaluator(*args, **kwargs) -> str: ...
+def cacheEvaluator(*args, **kwargs) -> str:
     """Flags:
     - `cacheFillMode` `cfm`: *str*
     - `cacheFillOrder` `cfo`: *str*
@@ -5435,8 +5435,8 @@ def cacheFile(*args: Any, q: bool, pointsAndNormals: bool) -> str: ...
 @overload
 def cacheFile(*args: Any, q: bool, pan: bool) -> str: ...
 @overload
-def cacheFile(*args: Any, **kwargs: Any) -> str: ...
-def cacheFile(*args: Any, **kwargs: Any) -> Any:
+def cacheFile(*args, **kwargs) -> str: ...
+def cacheFile(*args, **kwargs) -> str:
     """Flags:
     - `appendFrame` `apf`: *bool*
     - `attachFile` `af`: *bool*
@@ -5515,8 +5515,8 @@ def cacheFileCombine(*args: Any, q: bool, nextAvailable: bool) -> bool: ...
 @overload
 def cacheFileCombine(*args: Any, q: bool, na: bool) -> bool: ...
 @overload
-def cacheFileCombine(*args: Any, **kwargs: Any) -> str: ...
-def cacheFileCombine(*args: Any, **kwargs: Any) -> Any:
+def cacheFileCombine(*args, **kwargs) -> str: ...
+def cacheFileCombine(*args, **kwargs) -> str:
     """Flags:
     - `cacheIndex` `ci`: *bool*
     - `channelName` `cnm`: *str*
@@ -5540,8 +5540,8 @@ def cacheFileMerge(*args: Any, q: bool, geometry: bool) -> bool: ...
 @overload
 def cacheFileMerge(*args: Any, q: bool, g: bool) -> bool: ...
 @overload
-def cacheFileMerge(*args: Any, **kwargs: Any) -> list[float]: ...
-def cacheFileMerge(*args: Any, **kwargs: Any) -> Any:
+def cacheFileMerge(*args, **kwargs) -> list[float]: ...
+def cacheFileMerge(*args, **kwargs) -> list[float]:
     """Flags:
     - `endTime` `et`: *float*
     - `geometry` `g`: *bool*
@@ -5576,8 +5576,8 @@ def cacheFileTrack(*args: Any, q: bool, solo: bool) -> bool: ...
 @overload
 def cacheFileTrack(*args: Any, q: bool, so: bool) -> bool: ...
 @overload
-def cacheFileTrack(*args: Any, **kwargs: Any) -> None: ...
-def cacheFileTrack(*args: Any, **kwargs: Any) -> Any:
+def cacheFileTrack(*args, **kwargs) -> None: ...
+def cacheFileTrack(*args, **kwargs) -> None:
     """Flags:
     - `insertTrack` `it`: *int*
     - `lock` `l`: *bool*
@@ -5587,7 +5587,7 @@ def cacheFileTrack(*args: Any, **kwargs: Any) -> Any:
     - `solo` `so`: *bool*
     - `track` `t`: *int*
     """
-def callbacks(*args: Any, addCallback: str = ..., ac: str = ..., clearAllCallbacks: bool = ..., cac: bool = ..., clearCallbacks: bool = ..., cc: bool = ..., describeHooks: bool = ..., dh: bool = ..., dumpCallbacks: bool = ..., dc: bool = ..., executeCallbacks: bool = ..., ec: bool = ..., hook: str = ..., h: str = ..., listCallbacks: bool = ..., lc: bool = ..., owner: str = ..., o: str = ..., removeCallback: str = ..., rc: str = ..., **kwargs: Any) -> list[str]:
+def callbacks(*args, **kwargs) -> list[str]:
     """Flags:
     - `addCallback` `ac`: *str*
     - `clearAllCallbacks` `cac`: *bool*
@@ -5681,8 +5681,8 @@ def camera(*args: Any, q: bool, horizontalRollPivot: bool) -> float: ...
 @overload
 def camera(*args: Any, q: bool, hrp: bool) -> float: ...
 @overload
-def camera(*args: Any, **kwargs: Any) -> list[str]: ...
-def camera(*args: Any, **kwargs: Any) -> Any:
+def camera(*args, **kwargs) -> list[str]: ...
+def camera(*args, **kwargs) -> list[str]:
     """Flags:
     - `aspectRatio` `ar`: *float*
     - `cameraScale` `cs`: *float*
@@ -5798,8 +5798,8 @@ def cameraSet(*args: Any, q: bool, numLayers: bool) -> bool: ...
 @overload
 def cameraSet(*args: Any, q: bool, nl: bool) -> bool: ...
 @overload
-def cameraSet(*args: Any, **kwargs: Any) -> str: ...
-def cameraSet(*args: Any, **kwargs: Any) -> Any:
+def cameraSet(*args, **kwargs) -> str: ...
+def cameraSet(*args, **kwargs) -> str:
     """Flags:
     - `active` `a`: *bool*
     - `appendTo` `atl`: *bool*
@@ -5814,7 +5814,7 @@ def cameraSet(*args: Any, **kwargs: Any) -> Any:
     - `objectSet` `os`: *str*
     - `order` `o`: *int*
     """
-def cameraView(*args: Any, addBookmark: bool = ..., ab: bool = ..., animate: bool = ..., an: bool = ..., bookmarkType: int = ..., typ: int = ..., camera: str = ..., c: str = ..., name: str = ..., n: str = ..., removeBookmark: bool = ..., rb: bool = ..., setCamera: bool = ..., sc: bool = ..., setView: bool = ..., sv: bool = ..., **kwargs: Any) -> str:
+def cameraView(*args, **kwargs) -> str:
     """Flags:
     - `addBookmark` `ab`: *bool*
     - `animate` `an`: *bool*
@@ -5825,8 +5825,8 @@ def cameraView(*args: Any, addBookmark: bool = ..., ab: bool = ..., animate: boo
     - `setCamera` `sc`: *bool*
     - `setView` `sv`: *bool*
     """
-def canCreateCaddyManip(*args: Any) -> bool: ...
-def canCreateManip(*args: Any) -> bool: ...
+def canCreateCaddyManip(*args, **kwargs) -> bool: ...
+def canCreateManip(*args, **kwargs) -> bool: ...
 @overload
 def canvas(*args: Any, q: bool, annotation: bool) -> str: ...
 @overload
@@ -5908,8 +5908,8 @@ def canvas(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def canvas(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def canvas(*args: Any, **kwargs: Any) -> str: ...
-def canvas(*args: Any, **kwargs: Any) -> Any:
+def canvas(*args, **kwargs) -> str: ...
+def canvas(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -5940,12 +5940,12 @@ def canvas(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def changeSubdivComponentDisplayLevel(*args: Any, level: int = ..., l: int = ..., relative: bool = ..., r: bool = ..., **kwargs: Any) -> int:
+def changeSubdivComponentDisplayLevel(*args, **kwargs) -> int:
     """Flags:
     - `level` `l`: *int*
     - `relative` `r`: *bool*
     """
-def changeSubdivRegion(*args: Any, action: int = ..., a: int = ..., level: int = ..., l: int = ..., **kwargs: Any) -> bool:
+def changeSubdivRegion(*args, **kwargs) -> bool:
     """Flags:
     - `action` `a`: *int*
     - `level` `l`: *int*
@@ -6031,8 +6031,8 @@ def channelBox(*args: Any, q: bool, speed: bool) -> float: ...
 @overload
 def channelBox(*args: Any, q: bool, spd: bool) -> float: ...
 @overload
-def channelBox(*args: Any, **kwargs: Any) -> str: ...
-def channelBox(*args: Any, **kwargs: Any) -> Any:
+def channelBox(*args, **kwargs) -> str: ...
+def channelBox(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `attrBgColor` `bc`: *Any*
@@ -6178,8 +6178,8 @@ def character(*args: Any, q: bool, userAlias: bool) -> str: ...
 @overload
 def character(*args: Any, q: bool, ua: bool) -> str: ...
 @overload
-def character(*args: Any, **kwargs: Any) -> str: ...
-def character(*args: Any, **kwargs: Any) -> Any:
+def character(*args, **kwargs) -> str: ...
+def character(*args, **kwargs) -> str:
     """Flags:
     - `addElement` `add`: *str*
     - `addOffsetObject` `aoo`: *str*
@@ -6227,8 +6227,8 @@ def characterMap(*args: Any, q: bool, proposedMapping: bool) -> bool: ...
 @overload
 def characterMap(*args: Any, q: bool, pm: bool) -> bool: ...
 @overload
-def characterMap(*args: Any, **kwargs: Any) -> str: ...
-def characterMap(*args: Any, **kwargs: Any) -> Any:
+def characterMap(*args, **kwargs) -> str: ...
+def characterMap(*args, **kwargs) -> str:
     """Flags:
     - `mapAttr` `ma`: *Any*
     - `mapMethod` `mm`: *str*
@@ -6307,8 +6307,8 @@ def characterize(*args: Any, q: bool, placeNewPivot: bool) -> bool: ...
 @overload
 def characterize(*args: Any, q: bool, pnp: bool) -> bool: ...
 @overload
-def characterize(*args: Any, **kwargs: Any) -> str: ...
-def characterize(*args: Any, **kwargs: Any) -> Any:
+def characterize(*args, **kwargs) -> str: ...
+def characterize(*args, **kwargs) -> str:
     """Flags:
     - `activatePivot` `apv`: *bool*
     - `addAuxEffector` `aae`: *bool*
@@ -6409,8 +6409,8 @@ def checkBox(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def checkBox(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def checkBox(*args: Any, **kwargs: Any) -> str: ...
-def checkBox(*args: Any, **kwargs: Any) -> Any:
+def checkBox(*args, **kwargs) -> str: ...
+def checkBox(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -6527,8 +6527,8 @@ def checkBoxGrp(*args: Any, q: bool, height: bool) -> int: ...
 @overload
 def checkBoxGrp(*args: Any, q: bool, h: bool) -> int: ...
 @overload
-def checkBoxGrp(*args: Any, **kwargs: Any) -> str: ...
-def checkBoxGrp(*args: Any, **kwargs: Any) -> Any:
+def checkBoxGrp(*args, **kwargs) -> str: ...
+def checkBoxGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -6624,7 +6624,7 @@ def checkBoxGrp(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def checkDefaultRenderGlobals(*args: Any) -> None: ...
+def checkDefaultRenderGlobals(*args, **kwargs) -> None: ...
 @overload
 def choice(*args: Any, q: bool, attribute: bool) -> str: ...
 @overload
@@ -6656,8 +6656,8 @@ def choice(*args: Any, q: bool, shape: bool) -> bool: ...
 @overload
 def choice(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def choice(*args: Any, **kwargs: Any) -> list[str]: ...
-def choice(*args: Any, **kwargs: Any) -> Any:
+def choice(*args, **kwargs) -> list[str]: ...
+def choice(*args, **kwargs) -> list[str]:
     """Flags:
     - `attribute` `at`: *str*
     - `controlPoints` `cp`: *bool*
@@ -6749,8 +6749,8 @@ def circle(*args: Any, q: bool, caching: bool) -> bool: ...
 @overload
 def circle(*args: Any, q: bool, cch: bool) -> bool: ...
 @overload
-def circle(*args: Any, **kwargs: Any) -> list[str]: ...
-def circle(*args: Any, **kwargs: Any) -> Any:
+def circle(*args, **kwargs) -> list[str]: ...
+def circle(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `center` `c`: *list[float]*
@@ -6818,8 +6818,8 @@ def circularFillet(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def circularFillet(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def circularFillet(*args: Any, **kwargs: Any) -> list[str]: ...
-def circularFillet(*args: Any, **kwargs: Any) -> Any:
+def circularFillet(*args, **kwargs) -> list[str]: ...
+def circularFillet(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -6832,7 +6832,7 @@ def circularFillet(*args: Any, **kwargs: Any) -> Any:
     - `secondaryRadius` `sr`: *float*
     - `tangentTolerance` `tt`: *float*
     """
-def clearCache(*args: Any, allNodes: bool = ..., all: bool = ..., computed: bool = ..., c: bool = ..., dirty: bool = ..., d: bool = ..., **kwargs: Any) -> int:
+def clearCache(*args, **kwargs) -> int:
     """Flags:
     - `allNodes` `all`: *bool*
     - `computed` `c`: *bool*
@@ -6919,8 +6919,8 @@ def clip(*args: Any, q: bool, defaultAbsolute: bool) -> bool: ...
 @overload
 def clip(*args: Any, q: bool, da: bool) -> bool: ...
 @overload
-def clip(*args: Any, **kwargs: Any) -> list[str]: ...
-def clip(*args: Any, **kwargs: Any) -> Any:
+def clip(*args, **kwargs) -> list[str]: ...
+def clip(*args, **kwargs) -> list[str]:
     """Flags:
     - `absolute` `abs`: *bool*
     - `absoluteRotations` `abr`: *bool*
@@ -7038,8 +7038,8 @@ def clipEditor(*args: Any, q: bool, menuContext: bool) -> str: ...
 @overload
 def clipEditor(*args: Any, q: bool, mc: bool) -> str: ...
 @overload
-def clipEditor(*args: Any, **kwargs: Any) -> str: ...
-def clipEditor(*args: Any, **kwargs: Any) -> Any:
+def clipEditor(*args, **kwargs) -> str: ...
+def clipEditor(*args, **kwargs) -> str:
     """Flags:
     - `allTrackHeights` `th`: *int*
     - `autoFit` `af`: *str*
@@ -7111,8 +7111,8 @@ def clipEditorCurrentTimeCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def clipEditorCurrentTimeCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def clipEditorCurrentTimeCtx(*args: Any, **kwargs: Any) -> str: ...
-def clipEditorCurrentTimeCtx(*args: Any, **kwargs: Any) -> Any:
+def clipEditorCurrentTimeCtx(*args, **kwargs) -> str: ...
+def clipEditorCurrentTimeCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -7121,7 +7121,7 @@ def clipEditorCurrentTimeCtx(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def clipMatching(*args: Any, clipDst: Any = ..., cd: Any = ..., clipSrc: Any = ..., cs: Any = ..., matchRotation: int = ..., mr: int = ..., matchTranslation: int = ..., mt: int = ..., **kwargs: Any) -> None:
+def clipMatching(*args, **kwargs) -> None:
     """Flags:
     - `clipDst` `cd`: *Any*
     - `clipSrc` `cs`: *Any*
@@ -7207,8 +7207,8 @@ def clipSchedule(*args: Any, q: bool, weight: bool) -> float: ...
 @overload
 def clipSchedule(*args: Any, q: bool, w: bool) -> float: ...
 @overload
-def clipSchedule(*args: Any, **kwargs: Any) -> str: ...
-def clipSchedule(*args: Any, **kwargs: Any) -> Any:
+def clipSchedule(*args, **kwargs) -> str: ...
+def clipSchedule(*args, **kwargs) -> str:
     """Flags:
     - `allAbsolute` `aa`: *bool*
     - `allRelative` `ar`: *bool*
@@ -7332,8 +7332,8 @@ def clipSchedulerOutliner(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def clipSchedulerOutliner(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def clipSchedulerOutliner(*args: Any, **kwargs: Any) -> str: ...
-def clipSchedulerOutliner(*args: Any, **kwargs: Any) -> Any:
+def clipSchedulerOutliner(*args, **kwargs) -> str: ...
+def clipSchedulerOutliner(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -7407,8 +7407,8 @@ def closeCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def closeCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def closeCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def closeCurve(*args: Any, **kwargs: Any) -> Any:
+def closeCurve(*args, **kwargs) -> list[str]: ...
+def closeCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `blendBias` `bb`: *float*
     - `blendKnotInsertion` `bki`: *bool*
@@ -7467,8 +7467,8 @@ def closeSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def closeSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def closeSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def closeSurface(*args: Any, **kwargs: Any) -> Any:
+def closeSurface(*args, **kwargs) -> list[str]: ...
+def closeSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `blendBias` `bb`: *float*
     - `blendKnotInsertion` `bki`: *bool*
@@ -7561,8 +7561,8 @@ def cluster(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def cluster(*args: Any, q: bool, rm: bool) -> bool: ...
 @overload
-def cluster(*args: Any, **kwargs: Any) -> list[str]: ...
-def cluster(*args: Any, **kwargs: Any) -> Any:
+def cluster(*args, **kwargs) -> list[str]: ...
+def cluster(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -7607,8 +7607,8 @@ def cmdFileOutput(*args: Any, q: bool, closeAll: bool) -> bool: ...
 @overload
 def cmdFileOutput(*args: Any, q: bool, ca: bool) -> bool: ...
 @overload
-def cmdFileOutput(*args: Any, **kwargs: Any) -> int: ...
-def cmdFileOutput(*args: Any, **kwargs: Any) -> Any:
+def cmdFileOutput(*args, **kwargs) -> int: ...
+def cmdFileOutput(*args, **kwargs) -> int:
     """Flags:
     - `close` `c`: *int*
     - `closeAll` `ca`: *bool*
@@ -7696,8 +7696,8 @@ def cmdScrollFieldExecuter(*args: Any, q: bool, searchString: bool) -> str: ...
 @overload
 def cmdScrollFieldExecuter(*args: Any, q: bool, ss: bool) -> str: ...
 @overload
-def cmdScrollFieldExecuter(*args: Any, **kwargs: Any) -> str: ...
-def cmdScrollFieldExecuter(*args: Any, **kwargs: Any) -> Any:
+def cmdScrollFieldExecuter(*args, **kwargs) -> str: ...
+def cmdScrollFieldExecuter(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `appendText` `at`: *str*
@@ -7854,8 +7854,8 @@ def cmdScrollFieldReporter(*args: Any, q: bool, enable: bool) -> bool: ...
 @overload
 def cmdScrollFieldReporter(*args: Any, q: bool, en: bool) -> bool: ...
 @overload
-def cmdScrollFieldReporter(*args: Any, **kwargs: Any) -> str: ...
-def cmdScrollFieldReporter(*args: Any, **kwargs: Any) -> Any:
+def cmdScrollFieldReporter(*args, **kwargs) -> str: ...
+def cmdScrollFieldReporter(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -7985,8 +7985,8 @@ def cmdShell(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def cmdShell(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def cmdShell(*args: Any, **kwargs: Any) -> str: ...
-def cmdShell(*args: Any, **kwargs: Any) -> Any:
+def cmdShell(*args, **kwargs) -> str: ...
+def cmdShell(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -8019,8 +8019,8 @@ def cmdShell(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def coarsenSubdivSelectionList(*args: Any) -> bool: ...
-def color(*args: Any, rgbColor: Any = ..., rgb: Any = ..., userDefined: int = ..., ud: int = ..., **kwargs: Any) -> None:
+def coarsenSubdivSelectionList(*args, **kwargs) -> bool: ...
+def color(*args, **kwargs) -> None:
     """Flags:
     - `rgbColor` `rgb`: *Any*
     - `userDefined` `ud`: *int*
@@ -8050,8 +8050,8 @@ def colorEditor(*args: Any, q: bool, useVpColorPicker: bool) -> bool: ...
 @overload
 def colorEditor(*args: Any, q: bool, vcp: bool) -> bool: ...
 @overload
-def colorEditor(*args: Any, **kwargs: Any) -> str: ...
-def colorEditor(*args: Any, **kwargs: Any) -> Any:
+def colorEditor(*args, **kwargs) -> str: ...
+def colorEditor(*args, **kwargs) -> str:
     """Flags:
     - `alpha` `a`: *float*
     - `hsvValue` `hsv`: *Any*
@@ -8088,8 +8088,8 @@ def colorIndex(*args: Any, q: bool, userColor: bool) -> bool: ...
 @overload
 def colorIndex(*args: Any, q: bool, uc: bool) -> bool: ...
 @overload
-def colorIndex(*args: Any, **kwargs: Any) -> int: ...
-def colorIndex(*args: Any, **kwargs: Any) -> Any:
+def colorIndex(*args, **kwargs) -> int: ...
+def colorIndex(*args, **kwargs) -> int:
     """Flags:
     - `active` `atv`: *bool*
     - `dormant` `dor`: *bool*
@@ -8179,8 +8179,8 @@ def colorIndexSliderGrp(*args: Any, q: bool, label: bool) -> str: ...
 @overload
 def colorIndexSliderGrp(*args: Any, q: bool, l: bool) -> str: ...
 @overload
-def colorIndexSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def colorIndexSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def colorIndexSliderGrp(*args, **kwargs) -> str: ...
+def colorIndexSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -8329,8 +8329,8 @@ def colorInputWidgetGrp(*args: Any, q: bool, statusBarMessage: bool) -> str: ...
 @overload
 def colorInputWidgetGrp(*args: Any, q: bool, sbm: bool) -> str: ...
 @overload
-def colorInputWidgetGrp(*args: Any, **kwargs: Any) -> str: ...
-def colorInputWidgetGrp(*args: Any, **kwargs: Any) -> Any:
+def colorInputWidgetGrp(*args, **kwargs) -> str: ...
+def colorInputWidgetGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -8395,7 +8395,7 @@ def colorInputWidgetGrp(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def colorManagementCatalog(*args: Any, addTransform: str = ..., adt: str = ..., editUserTransformPath: str = ..., eut: str = ..., listSupportedExtensions: bool = ..., lse: bool = ..., listTransformConnections: bool = ..., ltc: bool = ..., path: str = ..., pth: str = ..., queryUserTransformPath: bool = ..., qut: bool = ..., removeTransform: str = ..., rmt: str = ..., transformConnection: str = ..., tcn: str = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> None:
+def colorManagementCatalog(*args, **kwargs) -> None:
     """Flags:
     - `addTransform` `adt`: *str*
     - `editUserTransformPath` `eut`: *str*
@@ -8407,7 +8407,7 @@ def colorManagementCatalog(*args: Any, addTransform: str = ..., adt: str = ..., 
     - `transformConnection` `tcn`: *str*
     - `type` `typ`: *str*
     """
-def colorManagementConvert(*args: Any, toDisplaySpace: Any = ..., tds: Any = ..., **kwargs: Any) -> None:
+def colorManagementConvert(*args, **kwargs) -> None:
     """Flags:
     - `toDisplaySpace` `tds`: *Any*
     """
@@ -8476,8 +8476,8 @@ def colorManagementFileRules(*args: Any, q: bool, save: bool) -> bool: ...
 @overload
 def colorManagementFileRules(*args: Any, q: bool, sav: bool) -> bool: ...
 @overload
-def colorManagementFileRules(*args: Any, **kwargs: Any) -> None: ...
-def colorManagementFileRules(*args: Any, **kwargs: Any) -> Any:
+def colorManagementFileRules(*args, **kwargs) -> None: ...
+def colorManagementFileRules(*args, **kwargs) -> None:
     """Flags:
     - `addRule` `add`: *str*
     - `colorSpace` `cs`: *str*
@@ -8577,8 +8577,8 @@ def colorManagementPrefs(*args: Any, q: bool, renderingSpaceName: bool) -> str: 
 @overload
 def colorManagementPrefs(*args: Any, q: bool, rsn: bool) -> str: ...
 @overload
-def colorManagementPrefs(*args: Any, **kwargs: Any) -> None: ...
-def colorManagementPrefs(*args: Any, **kwargs: Any) -> Any:
+def colorManagementPrefs(*args, **kwargs) -> None: ...
+def colorManagementPrefs(*args, **kwargs) -> None:
     """Flags:
     - `cmConfigFileEnabled` `cfe`: *bool*
     - `cmEnabled` `cme`: *bool*
@@ -8706,8 +8706,8 @@ def colorSliderButtonGrp(*args: Any, q: bool, height: bool) -> int: ...
 @overload
 def colorSliderButtonGrp(*args: Any, q: bool, h: bool) -> int: ...
 @overload
-def colorSliderButtonGrp(*args: Any, **kwargs: Any) -> str: ...
-def colorSliderButtonGrp(*args: Any, **kwargs: Any) -> Any:
+def colorSliderButtonGrp(*args, **kwargs) -> str: ...
+def colorSliderButtonGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -8861,8 +8861,8 @@ def colorSliderGrp(*args: Any, q: bool, parent: bool) -> str: ...
 @overload
 def colorSliderGrp(*args: Any, q: bool, p: bool) -> str: ...
 @overload
-def colorSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def colorSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def colorSliderGrp(*args, **kwargs) -> str: ...
+def colorSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -9011,8 +9011,8 @@ def columnLayout(*args: Any, q: bool, enableBackground: bool) -> bool: ...
 @overload
 def columnLayout(*args: Any, q: bool, ebg: bool) -> bool: ...
 @overload
-def columnLayout(*args: Any, **kwargs: Any) -> str: ...
-def columnLayout(*args: Any, **kwargs: Any) -> Any:
+def columnLayout(*args, **kwargs) -> str: ...
+def columnLayout(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *bool*
     - `annotation` `ann`: *str*
@@ -9092,8 +9092,8 @@ def combinationShape(*args: Any, q: bool, removeDriver: bool) -> bool: ...
 @overload
 def combinationShape(*args: Any, q: bool, rmd: bool) -> bool: ...
 @overload
-def combinationShape(*args: Any, **kwargs: Any) -> Any: ...
-def combinationShape(*args: Any, **kwargs: Any) -> Any:
+def combinationShape(*args, **kwargs) -> Any: ...
+def combinationShape(*args, **kwargs) -> Any:
     """Flags:
     - `addDriver` `add`: *bool*
     - `allDrivers` `ald`: *bool*
@@ -9123,8 +9123,8 @@ def commandEcho(*args: Any, q: bool, state: bool) -> bool: ...
 @overload
 def commandEcho(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def commandEcho(*args: Any, **kwargs: Any) -> None: ...
-def commandEcho(*args: Any, **kwargs: Any) -> Any:
+def commandEcho(*args, **kwargs) -> None: ...
+def commandEcho(*args, **kwargs) -> None:
     """Flags:
     - `addFilter` `af`: *list[str]*
     - `filter` `f`: *list[str]*
@@ -9212,8 +9212,8 @@ def commandLine(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def commandLine(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def commandLine(*args: Any, **kwargs: Any) -> str: ...
-def commandLine(*args: Any, **kwargs: Any) -> Any:
+def commandLine(*args, **kwargs) -> str: ...
+def commandLine(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -9269,8 +9269,8 @@ def commandLogging(*args: Any, q: bool, resetLogFile: bool) -> bool: ...
 @overload
 def commandLogging(*args: Any, q: bool, rl: bool) -> bool: ...
 @overload
-def commandLogging(*args: Any, **kwargs: Any) -> None: ...
-def commandLogging(*args: Any, **kwargs: Any) -> Any:
+def commandLogging(*args, **kwargs) -> None: ...
+def commandLogging(*args, **kwargs) -> None:
     """Flags:
     - `historySize` `hs`: *int*
     - `logCommands` `lc`: *bool*
@@ -9323,8 +9323,8 @@ def commandPort(*args: Any, q: bool, securityWarning: bool) -> bool: ...
 @overload
 def commandPort(*args: Any, q: bool, sw: bool) -> bool: ...
 @overload
-def commandPort(*args: Any, **kwargs: Any) -> bool: ...
-def commandPort(*args: Any, **kwargs: Any) -> Any:
+def commandPort(*args, **kwargs) -> bool: ...
+def commandPort(*args, **kwargs) -> bool:
     """Flags:
     - `bufferSize` `bs`: *int*
     - `close` `cl`: *bool*
@@ -9419,8 +9419,8 @@ def componentBox(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def componentBox(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def componentBox(*args: Any, **kwargs: Any) -> str: ...
-def componentBox(*args: Any, **kwargs: Any) -> Any:
+def componentBox(*args, **kwargs) -> str: ...
+def componentBox(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -9536,8 +9536,8 @@ def componentEditor(*args: Any, q: bool, control: bool) -> bool: ...
 @overload
 def componentEditor(*args: Any, q: bool, ctl: bool) -> bool: ...
 @overload
-def componentEditor(*args: Any, **kwargs: Any) -> str: ...
-def componentEditor(*args: Any, **kwargs: Any) -> Any:
+def componentEditor(*args, **kwargs) -> str: ...
+def componentEditor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `currentSkinCluster` `csc`: *str*
@@ -9579,7 +9579,7 @@ def componentEditor(*args: Any, **kwargs: Any) -> Any:
     - `updateMainConnection` `upd`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def componentTag(*args: Any, create: bool = ..., cr: bool = ..., delete: bool = ..., d: bool = ..., injectionLocation: str = ..., il: str = ..., modify: str = ..., m: str = ..., newTagName: str = ..., ntn: str = ..., queryEdit: bool = ..., qe: bool = ..., rename: bool = ..., rn: bool = ..., tagName: str = ..., tn: str = ..., uniqueTagName: bool = ..., utn: bool = ..., **kwargs: Any) -> Any:
+def componentTag(*args, **kwargs) -> Any:
     """Flags:
     - `create` `cr`: *bool*
     - `delete` `d`: *bool*
@@ -9610,8 +9610,8 @@ def condition(*args: Any, q: bool, state: bool) -> bool: ...
 @overload
 def condition(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def condition(*args: Any, **kwargs: Any) -> None: ...
-def condition(*args: Any, **kwargs: Any) -> Any:
+def condition(*args, **kwargs) -> None: ...
+def condition(*args, **kwargs) -> None:
     """Flags:
     - `delete` `delete`: *bool*
     - `dependency` `d`: *str*
@@ -9692,8 +9692,8 @@ def cone(*args: Any, q: bool, useTolerance: bool) -> bool: ...
 @overload
 def cone(*args: Any, q: bool, ut: bool) -> bool: ...
 @overload
-def cone(*args: Any, **kwargs: Any) -> list[str]: ...
-def cone(*args: Any, **kwargs: Any) -> Any:
+def cone(*args, **kwargs) -> list[str]: ...
+def cone(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -9714,7 +9714,7 @@ def cone(*args: Any, **kwargs: Any) -> Any:
     - `useOldInitBehaviour` `oib`: *bool*
     - `useTolerance` `ut`: *bool*
     """
-def confirmDialog(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., button: str = ..., b: str = ..., cancelButton: str = ..., cb: str = ..., defaultButton: str = ..., db: str = ..., detailedMessage: str = ..., dm: str = ..., dismissString: str = ..., ds: str = ..., icon: str = ..., icn: str = ..., message: str = ..., m: str = ..., messageAlign: str = ..., ma: str = ..., parent: str = ..., p: str = ..., title: str = ..., t: str = ..., **kwargs: Any) -> str:
+def confirmDialog(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -9729,26 +9729,26 @@ def confirmDialog(*args: Any, annotation: str = ..., ann: str = ..., backgroundC
     - `parent` `p`: *str*
     - `title` `t`: *str*
     """
-def connectAttr(*args: Any, force: bool = ..., f: bool = ..., lock: bool = ..., l: bool = ..., nextAvailable: bool = ..., na: bool = ..., referenceDest: str = ..., rd: str = ..., **kwargs: Any) -> str:
+def connectAttr(*args, **kwargs) -> str:
     """Flags:
     - `force` `f`: *bool*
     - `lock` `l`: *bool*
     - `nextAvailable` `na`: *bool*
     - `referenceDest` `rd`: *str*
     """
-def connectControl(*args: Any, fileName: bool = ..., fi: bool = ..., index: int = ..., preventContextualMenu: bool = ..., pcm: bool = ..., preventOverride: bool = ..., po: bool = ..., **kwargs: Any) -> None:
+def connectControl(*args, **kwargs) -> None:
     """Flags:
     - `fileName` `fi`: *bool*
     - `index` `index`: *int*
     - `preventContextualMenu` `pcm`: *bool*
     - `preventOverride` `po`: *bool*
     """
-def connectJoint(*args: Any, connectMode: bool = ..., cm: bool = ..., parentMode: bool = ..., pm: bool = ..., **kwargs: Any) -> None:
+def connectJoint(*args, **kwargs) -> None:
     """Flags:
     - `connectMode` `cm`: *bool*
     - `parentMode` `pm`: *bool*
     """
-def connectionInfo(*args: Any, destinationFromSource: bool = ..., dfs: bool = ..., getExactDestination: bool = ..., ged: bool = ..., getExactSource: bool = ..., ges: bool = ..., getLockedAncestor: bool = ..., gla: bool = ..., isDestination: bool = ..., id: bool = ..., isExactDestination: bool = ..., ied: bool = ..., isExactSource: bool = ..., ies: bool = ..., isLocked: bool = ..., il: bool = ..., isSource: bool = ..., sourceFromDestination: bool = ..., sfd: bool = ..., **kwargs: Any) -> bool:
+def connectionInfo(*args, **kwargs) -> bool:
     """Flags:
     - `destinationFromSource` `dfs`: *bool*
     - `getExactDestination` `ged`: *bool*
@@ -9766,8 +9766,8 @@ def constructionHistory(*args: Any, q: bool, toggle: bool) -> bool: ...
 @overload
 def constructionHistory(*args: Any, q: bool, tgl: bool) -> bool: ...
 @overload
-def constructionHistory(*args: Any, **kwargs: Any) -> None: ...
-def constructionHistory(*args: Any, **kwargs: Any) -> Any:
+def constructionHistory(*args, **kwargs) -> None: ...
+def constructionHistory(*args, **kwargs) -> None:
     """Flags:
     - `toggle` `tgl`: *bool*
     """
@@ -9852,8 +9852,8 @@ def container(*args: Any, q: bool, force: bool) -> bool: ...
 @overload
 def container(*args: Any, q: bool, f: bool) -> bool: ...
 @overload
-def container(*args: Any, **kwargs: Any) -> str: ...
-def container(*args: Any, **kwargs: Any) -> Any:
+def container(*args, **kwargs) -> str: ...
+def container(*args, **kwargs) -> str:
     """Flags:
     - `addNode` `an`: *list[str]*
     - `asset` `a`: *list[str]*
@@ -9921,8 +9921,8 @@ def containerBind(*args: Any, q: bool, preview: bool) -> bool: ...
 @overload
 def containerBind(*args: Any, q: bool, p: bool) -> bool: ...
 @overload
-def containerBind(*args: Any, **kwargs: Any) -> None: ...
-def containerBind(*args: Any, **kwargs: Any) -> Any:
+def containerBind(*args, **kwargs) -> None: ...
+def containerBind(*args, **kwargs) -> None:
     """Flags:
     - `allNames` `all`: *bool*
     - `bindingSet` `bs`: *str*
@@ -9940,8 +9940,8 @@ def containerProxy(*args: Any, q: bool, type: bool) -> str: ...
 @overload
 def containerProxy(*args: Any, q: bool, typ: bool) -> str: ...
 @overload
-def containerProxy(*args: Any, **kwargs: Any) -> None: ...
-def containerProxy(*args: Any, **kwargs: Any) -> Any:
+def containerProxy(*args, **kwargs) -> None: ...
+def containerProxy(*args, **kwargs) -> None:
     """Flags:
     - `fromTemplate` `ft`: *str*
     - `type` `typ`: *str*
@@ -9971,8 +9971,8 @@ def containerPublish(*args: Any, q: bool, outConnections: bool) -> bool: ...
 @overload
 def containerPublish(*args: Any, q: bool, oc: bool) -> bool: ...
 @overload
-def containerPublish(*args: Any, **kwargs: Any) -> None: ...
-def containerPublish(*args: Any, **kwargs: Any) -> Any:
+def containerPublish(*args, **kwargs) -> None: ...
+def containerPublish(*args, **kwargs) -> None:
     """Flags:
     - `bindNode` `bn`: *Any*
     - `bindTemplateStandins` `bts`: *bool*
@@ -10064,8 +10064,8 @@ def containerTemplate(*args: Any, q: bool, allKeyable: bool) -> bool: ...
 @overload
 def containerTemplate(*args: Any, q: bool, ak: bool) -> bool: ...
 @overload
-def containerTemplate(*args: Any, **kwargs: Any) -> None: ...
-def containerTemplate(*args: Any, **kwargs: Any) -> Any:
+def containerTemplate(*args, **kwargs) -> None: ...
+def containerTemplate(*args, **kwargs) -> None:
     """Flags:
     - `addBindingSet` `abs`: *str*
     - `addNames` `an`: *bool*
@@ -10126,8 +10126,8 @@ def containerView(*args: Any, q: bool, viewList: bool) -> bool: ...
 @overload
 def containerView(*args: Any, q: bool, vl: bool) -> bool: ...
 @overload
-def containerView(*args: Any, **kwargs: Any) -> None: ...
-def containerView(*args: Any, **kwargs: Any) -> Any:
+def containerView(*args, **kwargs) -> None: ...
+def containerView(*args, **kwargs) -> None:
     """Flags:
     - `itemInfo` `ii`: *str*
     - `itemList` `il`: *bool*
@@ -10217,8 +10217,8 @@ def contentBrowser(*args: Any, q: bool, stateString: bool) -> bool: ...
 @overload
 def contentBrowser(*args: Any, q: bool, sts: bool) -> bool: ...
 @overload
-def contentBrowser(*args: Any, **kwargs: Any) -> str: ...
-def contentBrowser(*args: Any, **kwargs: Any) -> Any:
+def contentBrowser(*args, **kwargs) -> str: ...
+def contentBrowser(*args, **kwargs) -> str:
     """Flags:
     - `addContentPath` `acp`: *str*
     - `context` `ctx`: *Any*
@@ -10274,8 +10274,8 @@ def contextInfo(*args: Any, q: bool, title: bool) -> bool: ...
 @overload
 def contextInfo(*args: Any, q: bool, t: bool) -> bool: ...
 @overload
-def contextInfo(*args: Any, **kwargs: Any) -> str: ...
-def contextInfo(*args: Any, **kwargs: Any) -> Any:
+def contextInfo(*args, **kwargs) -> str: ...
+def contextInfo(*args, **kwargs) -> str:
     """Flags:
     - `c` `c`: *bool*
     - `escapeContext` `esc`: *bool*
@@ -10366,8 +10366,8 @@ def control(*args: Any, q: bool, numberOfPopupMenus: bool) -> bool: ...
 @overload
 def control(*args: Any, q: bool, npm: bool) -> bool: ...
 @overload
-def control(*args: Any, **kwargs: Any) -> None: ...
-def control(*args: Any, **kwargs: Any) -> Any:
+def control(*args, **kwargs) -> None: ...
+def control(*args, **kwargs) -> None:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -10440,8 +10440,8 @@ def controller(*args: Any, q: bool, unparent: bool) -> bool: ...
 @overload
 def controller(*args: Any, q: bool, unp: bool) -> bool: ...
 @overload
-def controller(*args: Any, **kwargs: Any) -> str: ...
-def controller(*args: Any, **kwargs: Any) -> Any:
+def controller(*args, **kwargs) -> str: ...
+def controller(*args, **kwargs) -> str:
     """Flags:
     - `allControllers` `ac`: *bool*
     - `children` `cld`: *bool*
@@ -10472,8 +10472,8 @@ def convertIffToPsd(*args: Any, q: bool, yResolution: bool) -> int: ...
 @overload
 def convertIffToPsd(*args: Any, q: bool, yr: bool) -> int: ...
 @overload
-def convertIffToPsd(*args: Any, **kwargs: Any) -> None: ...
-def convertIffToPsd(*args: Any, **kwargs: Any) -> Any:
+def convertIffToPsd(*args, **kwargs) -> None: ...
+def convertIffToPsd(*args, **kwargs) -> None:
     """Flags:
     - `iffFileName` `ifn`: *str*
     - `psdFileName` `pfn`: *str*
@@ -10561,8 +10561,8 @@ def convertSolidTx(*args: Any, q: bool, shadows: bool) -> bool: ...
 @overload
 def convertSolidTx(*args: Any, q: bool, sh: bool) -> bool: ...
 @overload
-def convertSolidTx(*args: Any, **kwargs: Any) -> list[str]: ...
-def convertSolidTx(*args: Any, **kwargs: Any) -> Any:
+def convertSolidTx(*args, **kwargs) -> list[str]: ...
+def convertSolidTx(*args, **kwargs) -> list[str]:
     """Flags:
     - `alpha` `al`: *bool*
     - `antiAlias` `aa`: *bool*
@@ -10588,12 +10588,12 @@ def convertSolidTx(*args: Any, **kwargs: Any) -> Any:
     - `uvRange` `uvr`: *Any*
     - `uvSetName` `uv`: *str*
     """
-def convertTessellation(*args: Any, allCameras: bool = ..., acm: bool = ..., camera: str = ..., cam: str = ..., **kwargs: Any) -> bool:
+def convertTessellation(*args, **kwargs) -> bool:
     """Flags:
     - `allCameras` `acm`: *bool*
     - `camera` `cam`: *str*
     """
-def convertUnit(*args: Any, fromUnit: str = ..., f: str = ..., toUnit: str = ..., t: str = ..., **kwargs: Any) -> Any:
+def convertUnit(*args, **kwargs) -> Any:
     """Flags:
     - `fromUnit` `f`: *str*
     - `toUnit` `t`: *str*
@@ -10627,8 +10627,8 @@ def copyAttr(*args: Any, q: bool, values: bool) -> bool: ...
 @overload
 def copyAttr(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def copyAttr(*args: Any, **kwargs: Any) -> None: ...
-def copyAttr(*args: Any, **kwargs: Any) -> Any:
+def copyAttr(*args, **kwargs) -> None: ...
+def copyAttr(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `at`: *str*
     - `containerParentChild` `cpc`: *bool*
@@ -10675,8 +10675,8 @@ def copyDeformerWeights(*args: Any, q: bool, smooth: bool) -> bool: ...
 @overload
 def copyDeformerWeights(*args: Any, q: bool, sm: bool) -> bool: ...
 @overload
-def copyDeformerWeights(*args: Any, **kwargs: Any) -> None: ...
-def copyDeformerWeights(*args: Any, **kwargs: Any) -> Any:
+def copyDeformerWeights(*args, **kwargs) -> None: ...
+def copyDeformerWeights(*args, **kwargs) -> None:
     """Flags:
     - `destinationDeformer` `dd`: *str*
     - `destinationShape` `ds`: *str*
@@ -10689,8 +10689,8 @@ def copyDeformerWeights(*args: Any, **kwargs: Any) -> Any:
     - `surfaceAssociation` `sa`: *str*
     - `uvSpace` `uv`: *Any*
     """
-def copyFlexor(*args: Any) -> str: ...
-def copyKey(*args: Any, animLayer: str = ..., al: str = ..., animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., clipboard: str = ..., cb: str = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., forceIndependentEulerAngles: bool = ..., fea: bool = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., option: str = ..., o: str = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., **kwargs: Any) -> int:
+def copyFlexor(*args, **kwargs) -> str: ...
+def copyKey(*args, **kwargs) -> int:
     """Flags:
     - `animLayer` `al`: *str*
     - `animation` `an`: *str*
@@ -10755,8 +10755,8 @@ def copySkinWeights(*args: Any, q: bool, smooth: bool) -> bool: ...
 @overload
 def copySkinWeights(*args: Any, q: bool, sm: bool) -> bool: ...
 @overload
-def copySkinWeights(*args: Any, **kwargs: Any) -> None: ...
-def copySkinWeights(*args: Any, **kwargs: Any) -> Any:
+def copySkinWeights(*args, **kwargs) -> None: ...
+def copySkinWeights(*args, **kwargs) -> None:
     """Flags:
     - `destinationSkin` `ds`: *str*
     - `influenceAssociation` `ia`: *str*
@@ -10785,20 +10785,20 @@ def crashInfo(*args: Any, q: bool, savedBeforeCrash: bool) -> bool: ...
 @overload
 def crashInfo(*args: Any, q: bool, sbc: bool) -> bool: ...
 @overload
-def crashInfo(*args: Any, **kwargs: Any) -> None: ...
-def crashInfo(*args: Any, **kwargs: Any) -> Any:
+def crashInfo(*args, **kwargs) -> None: ...
+def crashInfo(*args, **kwargs) -> None:
     """Flags:
     - `crashFile` `cf`: *bool*
     - `crashLog` `cl`: *bool*
     - `savedBeforeCrash` `sbc`: *bool*
     """
-def createAttrPatterns(*args: Any, patternDefinition: str = ..., pd: str = ..., patternFile: str = ..., pf: str = ..., patternType: str = ..., pt: str = ..., **kwargs: Any) -> str:
+def createAttrPatterns(*args, **kwargs) -> str:
     """Flags:
     - `patternDefinition` `pd`: *str*
     - `patternFile` `pf`: *str*
     - `patternType` `pt`: *str*
     """
-def createDisplayLayer(*args: Any, empty: bool = ..., e: bool = ..., makeCurrent: bool = ..., mc: bool = ..., name: str = ..., n: str = ..., noRecurse: bool = ..., nr: bool = ..., number: int = ..., num: int = ..., **kwargs: Any) -> str:
+def createDisplayLayer(*args, **kwargs) -> str:
     """Flags:
     - `empty` `e`: *bool*
     - `makeCurrent` `mc`: *bool*
@@ -10806,26 +10806,26 @@ def createDisplayLayer(*args: Any, empty: bool = ..., e: bool = ..., makeCurrent
     - `noRecurse` `nr`: *bool*
     - `number` `num`: *int*
     """
-def createEditor(*args: Any, noCloseOnDelete: bool = ..., nc: bool = ..., queueForDelete: bool = ..., qfd: bool = ..., **kwargs: Any) -> None:
+def createEditor(*args, **kwargs) -> None:
     """Flags:
     - `noCloseOnDelete` `nc`: *bool*
     - `queueForDelete` `qfd`: *bool*
     """
-def createLayeredPsdFile(*args: Any, imageFileName: Any = ..., ifn: Any = ..., psdFileName: str = ..., psf: str = ..., xResolution: int = ..., xr: int = ..., yResolution: int = ..., yr: int = ..., **kwargs: Any) -> None:
+def createLayeredPsdFile(*args, **kwargs) -> None:
     """Flags:
     - `imageFileName` `ifn`: *Any*
     - `psdFileName` `psf`: *str*
     - `xResolution` `xr`: *int*
     - `yResolution` `yr`: *int*
     """
-def createNode(*args: Any, name: str = ..., n: str = ..., parent: str = ..., p: str = ..., shared: bool = ..., s: bool = ..., skipSelect: bool = ..., ss: bool = ..., **kwargs: Any) -> str:
+def createNode(*args, **kwargs) -> str:
     """Flags:
     - `name` `n`: *str*
     - `parent` `p`: *str*
     - `shared` `s`: *bool*
     - `skipSelect` `ss`: *bool*
     """
-def createRenderLayer(*args: Any, empty: bool = ..., e: bool = ..., g: bool = ..., makeCurrent: bool = ..., mc: bool = ..., name: str = ..., n: str = ..., noRecurse: bool = ..., nr: bool = ..., number: int = ..., num: int = ..., **kwargs: Any) -> str:
+def createRenderLayer(*args, **kwargs) -> str:
     """Flags:
     - `empty` `e`: *bool*
     - `g` `g`: *bool*
@@ -10834,22 +10834,22 @@ def createRenderLayer(*args: Any, empty: bool = ..., e: bool = ..., g: bool = ..
     - `noRecurse` `nr`: *bool*
     - `number` `num`: *int*
     """
-def createSubdivRegion(*args: Any) -> bool: ...
-def ctxAbort(*args: Any) -> None: ...
-def ctxCompletion(*args: Any) -> None: ...
-def ctxEditMode(*args: Any, buttonDown: bool = ..., btd: bool = ..., buttonUp: bool = ..., btu: bool = ..., **kwargs: Any) -> None:
+def createSubdivRegion(*args, **kwargs) -> bool: ...
+def ctxAbort(*args, **kwargs) -> None: ...
+def ctxCompletion(*args, **kwargs) -> None: ...
+def ctxEditMode(*args, **kwargs) -> None:
     """Flags:
     - `buttonDown` `btd`: *bool*
     - `buttonUp` `btu`: *bool*
     """
-def ctxTraverse(*args: Any, down: bool = ..., d: bool = ..., left: bool = ..., l: bool = ..., right: bool = ..., r: bool = ..., up: bool = ..., **kwargs: Any) -> None:
+def ctxTraverse(*args, **kwargs) -> None:
     """Flags:
     - `down` `d`: *bool*
     - `left` `l`: *bool*
     - `right` `r`: *bool*
     - `up` `up`: *bool*
     """
-def currentCtx(*args: Any) -> str: ...
+def currentCtx(*args, **kwargs) -> str: ...
 @overload
 def currentTime(*args: Any, q: bool, sequencer: bool) -> bool: ...
 @overload
@@ -10859,8 +10859,8 @@ def currentTime(*args: Any, q: bool, update: bool) -> bool: ...
 @overload
 def currentTime(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def currentTime(*args: Any, **kwargs: Any) -> float: ...
-def currentTime(*args: Any, **kwargs: Any) -> Any:
+def currentTime(*args, **kwargs) -> float: ...
+def currentTime(*args, **kwargs) -> float:
     """Flags:
     - `sequencer` `seq`: *bool*
     - `update` `u`: *bool*
@@ -10890,8 +10890,8 @@ def currentTimeCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def currentTimeCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def currentTimeCtx(*args: Any, **kwargs: Any) -> str: ...
-def currentTimeCtx(*args: Any, **kwargs: Any) -> Any:
+def currentTimeCtx(*args, **kwargs) -> str: ...
+def currentTimeCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -10921,8 +10921,8 @@ def currentUnit(*args: Any, q: bool, updateAnimation: bool) -> bool: ...
 @overload
 def currentUnit(*args: Any, q: bool, ua: bool) -> bool: ...
 @overload
-def currentUnit(*args: Any, **kwargs: Any) -> str: ...
-def currentUnit(*args: Any, **kwargs: Any) -> Any:
+def currentUnit(*args, **kwargs) -> str: ...
+def currentUnit(*args, **kwargs) -> str:
     """Flags:
     - `angle` `a`: *str*
     - `fullName` `f`: *bool*
@@ -10930,7 +10930,7 @@ def currentUnit(*args: Any, **kwargs: Any) -> Any:
     - `time` `t`: *str*
     - `updateAnimation` `ua`: *bool*
     """
-def curve(*args: Any, append: bool = ..., a: bool = ..., bezier: bool = ..., bez: bool = ..., degree: float = ..., d: float = ..., editPoint: list[float] = ..., ep: list[float] = ..., knot: float = ..., k: float = ..., name: str = ..., n: str = ..., objectSpace: bool = ..., os: bool = ..., periodic: bool = ..., per: bool = ..., point: list[float] = ..., p: list[float] = ..., pointWeight: Any = ..., pw: Any = ..., replace: bool = ..., r: bool = ..., worldSpace: bool = ..., ws: bool = ..., **kwargs: Any) -> str:
+def curve(*args, **kwargs) -> str:
     """Flags:
     - `append` `a`: *bool*
     - `bezier` `bez`: *bool*
@@ -10945,14 +10945,14 @@ def curve(*args: Any, append: bool = ..., a: bool = ..., bezier: bool = ..., bez
     - `replace` `r`: *bool*
     - `worldSpace` `ws`: *bool*
     """
-def curveAddPtCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def curveAddPtCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def curveCVCtx(*args: Any, bezier: bool = ..., bez: bool = ..., degree: int = ..., d: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., multEndKnots: bool = ..., me: bool = ..., name: str = ..., n: str = ..., preserveShape: bool = ..., ps: bool = ..., rational: bool = ..., rl: bool = ..., refit: bool = ..., rf: bool = ..., symmetry: bool = ..., sm: bool = ..., uniform: bool = ..., un: bool = ..., **kwargs: Any) -> str:
+def curveCVCtx(*args, **kwargs) -> str:
     """Flags:
     - `bezier` `bez`: *bool*
     - `degree` `d`: *int*
@@ -10969,7 +10969,7 @@ def curveCVCtx(*args: Any, bezier: bool = ..., bez: bool = ..., degree: int = ..
     - `symmetry` `sm`: *bool*
     - `uniform` `un`: *bool*
     """
-def curveEPCtx(*args: Any, bezier: bool = ..., bez: bool = ..., degree: int = ..., d: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., preserveShape: bool = ..., ps: bool = ..., preserveShapeFraction: float = ..., pf: float = ..., refit: bool = ..., rf: bool = ..., uniform: bool = ..., un: bool = ..., **kwargs: Any) -> str:
+def curveEPCtx(*args, **kwargs) -> str:
     """Flags:
     - `bezier` `bez`: *bool*
     - `degree` `d`: *int*
@@ -10984,7 +10984,7 @@ def curveEPCtx(*args: Any, bezier: bool = ..., bez: bool = ..., degree: int = ..
     - `refit` `rf`: *bool*
     - `uniform` `un`: *bool*
     """
-def curveEditorCtx(*args: Any, direction: int = ..., dir: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., relativeTangentSize: float = ..., rts: float = ..., title: str = ..., t: str = ..., **kwargs: Any) -> str:
+def curveEditorCtx(*args, **kwargs) -> str:
     """Flags:
     - `direction` `dir`: *int*
     - `exists` `ex`: *bool*
@@ -11033,8 +11033,8 @@ def curveIntersect(*args: Any, q: bool, useDirection: bool) -> bool: ...
 @overload
 def curveIntersect(*args: Any, q: bool, ud: bool) -> bool: ...
 @overload
-def curveIntersect(*args: Any, **kwargs: Any) -> str: ...
-def curveIntersect(*args: Any, **kwargs: Any) -> Any:
+def curveIntersect(*args, **kwargs) -> str: ...
+def curveIntersect(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -11046,14 +11046,14 @@ def curveIntersect(*args: Any, **kwargs: Any) -> Any:
     - `tolerance` `tol`: *float*
     - `useDirection` `ud`: *bool*
     """
-def curveMoveEPCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def curveMoveEPCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def curveOnSurface(*args: Any, append: bool = ..., a: bool = ..., degree: float = ..., d: float = ..., knot: float = ..., k: float = ..., name: str = ..., n: str = ..., periodic: bool = ..., per: bool = ..., positionUV: Any = ..., uv: Any = ..., replace: bool = ..., r: bool = ..., **kwargs: Any) -> str:
+def curveOnSurface(*args, **kwargs) -> str:
     """Flags:
     - `append` `a`: *bool*
     - `degree` `d`: *float*
@@ -11088,8 +11088,8 @@ def curveRGBColor(*args: Any, q: bool, resetToSaved: bool) -> bool: ...
 @overload
 def curveRGBColor(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def curveRGBColor(*args: Any, **kwargs: Any) -> list[float]: ...
-def curveRGBColor(*args: Any, **kwargs: Any) -> Any:
+def curveRGBColor(*args, **kwargs) -> list[float]: ...
+def curveRGBColor(*args, **kwargs) -> list[float]:
     """Flags:
     - `hueSaturationValue` `hsv`: *bool*
     - `list` `l`: *bool*
@@ -11098,7 +11098,7 @@ def curveRGBColor(*args: Any, **kwargs: Any) -> Any:
     - `resetToFactory` `rf`: *bool*
     - `resetToSaved` `rs`: *bool*
     """
-def curveSketchCtx(*args: Any, degree: int = ..., d: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., **kwargs: Any) -> str:
+def curveSketchCtx(*args, **kwargs) -> str:
     """Flags:
     - `degree` `d`: *int*
     - `exists` `ex`: *bool*
@@ -11108,7 +11108,7 @@ def curveSketchCtx(*args: Any, degree: int = ..., d: int = ..., exists: bool = .
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def cutKey(*args: Any, animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., clear: bool = ..., cl: bool = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., option: str = ..., o: str = ..., selectKey: bool = ..., sl: bool = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., **kwargs: Any) -> int:
+def cutKey(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -11168,8 +11168,8 @@ def cycleCheck(*args: Any, q: bool, secondary: bool) -> bool: ...
 @overload
 def cycleCheck(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def cycleCheck(*args: Any, **kwargs: Any) -> bool: ...
-def cycleCheck(*args: Any, **kwargs: Any) -> Any:
+def cycleCheck(*args, **kwargs) -> bool: ...
+def cycleCheck(*args, **kwargs) -> bool:
     """Flags:
     - `all` `all`: *bool*
     - `children` `c`: *bool*
@@ -11253,8 +11253,8 @@ def cylinder(*args: Any, q: bool, useTolerance: bool) -> bool: ...
 @overload
 def cylinder(*args: Any, q: bool, ut: bool) -> bool: ...
 @overload
-def cylinder(*args: Any, **kwargs: Any) -> list[str]: ...
-def cylinder(*args: Any, **kwargs: Any) -> Any:
+def cylinder(*args, **kwargs) -> list[str]: ...
+def cylinder(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -11274,7 +11274,7 @@ def cylinder(*args: Any, **kwargs: Any) -> Any:
     - `tolerance` `tol`: *float*
     - `useTolerance` `ut`: *bool*
     """
-def dagObjectCompare(*args: Any, attribute: bool = ..., a: bool = ..., bail: str = ..., b: str = ..., connection: bool = ..., c: bool = ..., namespace: str = ..., n: str = ..., relative: bool = ..., r: bool = ..., short: bool = ..., s: bool = ..., type: bool = ..., t: bool = ..., **kwargs: Any) -> None:
+def dagObjectCompare(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `a`: *bool*
     - `bail` `b`: *str*
@@ -11331,8 +11331,8 @@ def dagPose(*args: Any, q: bool, worldParent: bool) -> bool: ...
 @overload
 def dagPose(*args: Any, q: bool, wp: bool) -> bool: ...
 @overload
-def dagPose(*args: Any, **kwargs: Any) -> str: ...
-def dagPose(*args: Any, **kwargs: Any) -> Any:
+def dagPose(*args, **kwargs) -> str: ...
+def dagPose(*args, **kwargs) -> str:
     """Flags:
     - `addToPose` `a`: *bool*
     - `atPose` `ap`: *bool*
@@ -11378,8 +11378,8 @@ def dataStructure(*args: Any, q: bool, removeAll: bool) -> bool: ...
 @overload
 def dataStructure(*args: Any, q: bool, ral: bool) -> bool: ...
 @overload
-def dataStructure(*args: Any, **kwargs: Any) -> str: ...
-def dataStructure(*args: Any, **kwargs: Any) -> Any:
+def dataStructure(*args, **kwargs) -> str: ...
+def dataStructure(*args, **kwargs) -> str:
     """Flags:
     - `asFile` `af`: *str*
     - `asString` `asString`: *str*
@@ -11390,7 +11390,7 @@ def dataStructure(*args: Any, **kwargs: Any) -> Any:
     - `remove` `rem`: *bool*
     - `removeAll` `ral`: *bool*
     """
-def date(*args: Any, date: bool = ..., d: bool = ..., format: str = ..., f: str = ..., shortDate: bool = ..., sd: bool = ..., shortTime: bool = ..., st: bool = ..., time: bool = ..., t: bool = ..., **kwargs: Any) -> str:
+def date(*args, **kwargs) -> str:
     """Flags:
     - `date` `d`: *bool*
     - `format` `f`: *str*
@@ -11398,7 +11398,7 @@ def date(*args: Any, date: bool = ..., d: bool = ..., format: str = ..., f: str 
     - `shortTime` `st`: *bool*
     - `time` `t`: *bool*
     """
-def dbcount(*args: Any, enabled: bool = ..., e: bool = ..., file: str = ..., f: str = ..., keyword: str = ..., k: str = ..., list: bool = ..., l: bool = ..., maxdepth: int = ..., md: int = ..., quick: bool = ..., reset: bool = ..., r: bool = ..., spreadsheet: bool = ..., s: bool = ..., **kwargs: Any) -> None:
+def dbcount(*args, **kwargs) -> None:
     """Flags:
     - `enabled` `e`: *bool*
     - `file` `f`: *str*
@@ -11422,14 +11422,14 @@ def dbfootprint(*args: Any, q: bool, allObjects: bool) -> bool: ...
 @overload
 def dbfootprint(*args: Any, q: bool, all: bool) -> bool: ...
 @overload
-def dbfootprint(*args: Any, **kwargs: Any) -> str: ...
-def dbfootprint(*args: Any, **kwargs: Any) -> Any:
+def dbfootprint(*args, **kwargs) -> str: ...
+def dbfootprint(*args, **kwargs) -> str:
     """Flags:
     - `allObjects` `all`: *bool*
     - `outputFile` `of`: *str*
     - `type` `t`: *str*
     """
-def dbmessage(*args: Any, file: str = ..., f: str = ..., list: bool = ..., l: bool = ..., monitor: bool = ..., m: bool = ..., type: str = ..., t: str = ..., **kwargs: Any) -> None:
+def dbmessage(*args, **kwargs) -> None:
     """Flags:
     - `file` `f`: *str*
     - `list` `l`: *bool*
@@ -11461,8 +11461,8 @@ def dbpeek(*args: Any, q: bool, evaluationGraph: bool) -> bool: ...
 @overload
 def dbpeek(*args: Any, q: bool, eg: bool) -> bool: ...
 @overload
-def dbpeek(*args: Any, **kwargs: Any) -> list[str]: ...
-def dbpeek(*args: Any, **kwargs: Any) -> Any:
+def dbpeek(*args, **kwargs) -> list[str]: ...
+def dbpeek(*args, **kwargs) -> list[str]:
     """Flags:
     - `allObjects` `all`: *bool*
     - `argument` `a`: *str*
@@ -11506,8 +11506,8 @@ def dbtrace(*args: Any, q: bool, verbose: bool) -> bool: ...
 @overload
 def dbtrace(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def dbtrace(*args: Any, **kwargs: Any) -> None: ...
-def dbtrace(*args: Any, **kwargs: Any) -> Any:
+def dbtrace(*args, **kwargs) -> None: ...
+def dbtrace(*args, **kwargs) -> None:
     """Flags:
     - `filter` `f`: *str*
     - `info` `i`: *bool*
@@ -11519,7 +11519,7 @@ def dbtrace(*args: Any, **kwargs: Any) -> Any:
     - `title` `t`: *str*
     - `verbose` `v`: *bool*
     """
-def defaultLightListCheckBox(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., label: str = ..., l: str = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., shadingGroup: str = ..., sg: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def defaultLightListCheckBox(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -11549,7 +11549,7 @@ def defaultLightListCheckBox(*args: Any, annotation: str = ..., ann: str = ..., 
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def defaultNavigation(*args: Any, connectToExisting: bool = ..., ce: bool = ..., createNew: bool = ..., cn: bool = ..., defaultAttribute: bool = ..., da: bool = ..., defaultTraversal: bool = ..., dtv: bool = ..., defaultWorkingNode: bool = ..., dwn: bool = ..., delete: bool = ..., destination: str = ..., d: str = ..., disconnect: bool = ..., dis: bool = ..., force: bool = ..., f: bool = ..., ignore: bool = ..., i: bool = ..., navigatorDecisionString: str = ..., nds: str = ..., quiet: bool = ..., qt: bool = ..., relatedNodes: bool = ..., ren: bool = ..., source: str = ..., s: str = ..., unignore: bool = ..., u: bool = ..., **kwargs: Any) -> str:
+def defaultNavigation(*args, **kwargs) -> str:
     """Flags:
     - `connectToExisting` `ce`: *bool*
     - `createNew` `cn`: *bool*
@@ -11567,13 +11567,13 @@ def defaultNavigation(*args: Any, connectToExisting: bool = ..., ce: bool = ...,
     - `source` `s`: *str*
     - `unignore` `u`: *bool*
     """
-def defineDataServer(*args: Any, device: str = ..., d: str = ..., server: str = ..., s: str = ..., undefine: bool = ..., u: bool = ..., **kwargs: Any) -> None:
+def defineDataServer(*args, **kwargs) -> None:
     """Flags:
     - `device` `d`: *str*
     - `server` `s`: *str*
     - `undefine` `u`: *bool*
     """
-def defineVirtualDevice(*args: Any, axis: int = ..., ax: int = ..., channel: str = ..., c: str = ..., clear: bool = ..., cl: bool = ..., create: bool = ..., cr: bool = ..., device: str = ..., d: str = ..., parent: str = ..., p: str = ..., undefine: bool = ..., u: bool = ..., usage: str = ..., use: str = ..., **kwargs: Any) -> None:
+def defineVirtualDevice(*args, **kwargs) -> None:
     """Flags:
     - `axis` `ax`: *int*
     - `channel` `c`: *str*
@@ -11584,7 +11584,7 @@ def defineVirtualDevice(*args: Any, axis: int = ..., ax: int = ..., channel: str
     - `undefine` `u`: *bool*
     - `usage` `use`: *str*
     """
-def deformableShape(*args: Any, chain: bool = ..., ch: bool = ..., chainHistory: bool = ..., his: bool = ..., createOriginalGeometry: bool = ..., cog: bool = ..., createTweakNode: bool = ..., ctw: bool = ..., createUpstreamTagInjectionNode: bool = ..., cti: bool = ..., deformShapeInAttr: bool = ..., dsi: bool = ..., deformShapeOutAttr: bool = ..., dso: bool = ..., frontOfChain: bool = ..., foc: bool = ..., localShapeInAttr: bool = ..., lsi: bool = ..., localShapeOutAttr: bool = ..., lso: bool = ..., nodeChain: bool = ..., nch: bool = ..., originalGeometry: bool = ..., og: bool = ..., outputPlugChain: bool = ..., och: bool = ..., plugChain: bool = ..., pch: bool = ..., supportsComponentTags: bool = ..., sct: bool = ..., tagInjectionList: bool = ..., til: bool = ..., tagInjectionNode: bool = ..., ti: bool = ..., tweakAttr: bool = ..., twa: bool = ..., tweakNode: bool = ..., tw: bool = ..., upstreamTagInjectionNode: bool = ..., uti: bool = ..., worldShapeOutAttr: bool = ..., wso: bool = ..., **kwargs: Any) -> None:
+def deformableShape(*args, **kwargs) -> None:
     """Flags:
     - `chain` `ch`: *bool*
     - `chainHistory` `his`: *bool*
@@ -11687,8 +11687,8 @@ def deformer(*args: Any, q: bool, split: bool) -> bool: ...
 @overload
 def deformer(*args: Any, q: bool, sp: bool) -> bool: ...
 @overload
-def deformer(*args: Any, **kwargs: Any) -> list[str]: ...
-def deformer(*args: Any, **kwargs: Any) -> Any:
+def deformer(*args, **kwargs) -> list[str]: ...
+def deformer(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -11779,8 +11779,8 @@ def deformerWeights(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def deformerWeights(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def deformerWeights(*args: Any, **kwargs: Any) -> Any: ...
-def deformerWeights(*args: Any, **kwargs: Any) -> Any:
+def deformerWeights(*args, **kwargs) -> Any: ...
+def deformerWeights(*args, **kwargs) -> Any:
     """Flags:
     - `attribute` `at`: *str*
     - `defaultValue` `dv`: *float*
@@ -11800,7 +11800,7 @@ def deformerWeights(*args: Any, **kwargs: Any) -> Any:
     - `weightTolerance` `wt`: *float*
     - `worldSpace` `ws`: *bool*
     """
-def delete(*args: Any, all: bool = ..., attribute: str = ..., at: str = ..., channels: bool = ..., c: bool = ..., constraints: bool = ..., cn: bool = ..., constructionHistory: bool = ..., ch: bool = ..., controlPoints: bool = ..., cp: bool = ..., expressions: bool = ..., e: bool = ..., hierarchy: str = ..., hi: str = ..., inputConnectionsAndNodes: bool = ..., icn: bool = ..., motionPaths: bool = ..., mp: bool = ..., shape: bool = ..., s: bool = ..., staticChannels: bool = ..., sc: bool = ..., timeAnimationCurves: bool = ..., tac: bool = ..., unitlessAnimationCurves: bool = ..., uac: bool = ..., **kwargs: Any) -> None:
+def delete(*args, **kwargs) -> None:
     """Flags:
     - `all` `all`: *bool*
     - `attribute` `at`: *str*
@@ -11822,24 +11822,24 @@ def deleteAttr(*args: Any, q: bool, attribute: bool) -> str: ...
 @overload
 def deleteAttr(*args: Any, q: bool, at: bool) -> str: ...
 @overload
-def deleteAttr(*args: Any, **kwargs: Any) -> None: ...
-def deleteAttr(*args: Any, **kwargs: Any) -> Any:
+def deleteAttr(*args, **kwargs) -> None: ...
+def deleteAttr(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `at`: *str*
     """
-def deleteAttrPattern(*args: Any, allPatterns: bool = ..., all: bool = ..., patternName: str = ..., pn: str = ..., patternType: str = ..., pt: str = ..., **kwargs: Any) -> str:
+def deleteAttrPattern(*args, **kwargs) -> str:
     """Flags:
     - `allPatterns` `all`: *bool*
     - `patternName` `pn`: *str*
     - `patternType` `pt`: *str*
     """
-def deleteExtension(*args: Any, attribute: str = ..., at: str = ..., forceDelete: bool = ..., fd: bool = ..., nodeType: str = ..., nt: str = ..., **kwargs: Any) -> int:
+def deleteExtension(*args, **kwargs) -> int:
     """Flags:
     - `attribute` `at`: *str*
     - `forceDelete` `fd`: *bool*
     - `nodeType` `nt`: *str*
     """
-def deleteUI(*args: Any, collection: bool = ..., cl: bool = ..., control: bool = ..., ctl: bool = ..., editor: bool = ..., ed: bool = ..., layout: bool = ..., lay: bool = ..., menu: bool = ..., m: bool = ..., menuItem: bool = ..., mi: bool = ..., panel: bool = ..., pnl: bool = ..., panelConfig: bool = ..., pc: bool = ..., radioMenuItemCollection: bool = ..., ric: bool = ..., toolContext: bool = ..., tc: bool = ..., uiTemplate: bool = ..., uit: bool = ..., window: bool = ..., wnd: bool = ..., **kwargs: Any) -> None:
+def deleteUI(*args, **kwargs) -> None:
     """Flags:
     - `collection` `cl`: *bool*
     - `control` `ctl`: *bool*
@@ -11933,8 +11933,8 @@ def deltaMush(*args: Any, q: bool, parallel: bool) -> bool: ...
 @overload
 def deltaMush(*args: Any, q: bool, par: bool) -> bool: ...
 @overload
-def deltaMush(*args: Any, **kwargs: Any) -> str: ...
-def deltaMush(*args: Any, **kwargs: Any) -> Any:
+def deltaMush(*args, **kwargs) -> str: ...
+def deltaMush(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -12000,8 +12000,8 @@ def detachCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def detachCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def detachCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def detachCurve(*args: Any, **kwargs: Any) -> Any:
+def detachCurve(*args, **kwargs) -> list[str]: ...
+def detachCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -12013,7 +12013,7 @@ def detachCurve(*args: Any, **kwargs: Any) -> Any:
     - `parameter` `p`: *float*
     - `replaceOriginal` `rpo`: *bool*
     """
-def detachDeviceAttr(*args: Any, all: bool = ..., attribute: str = ..., at: str = ..., axis: str = ..., ax: str = ..., device: str = ..., d: str = ..., selection: bool = ..., sl: bool = ..., **kwargs: Any) -> None:
+def detachDeviceAttr(*args, **kwargs) -> None:
     """Flags:
     - `all` `all`: *bool*
     - `attribute` `at`: *str*
@@ -12058,8 +12058,8 @@ def detachSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def detachSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def detachSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def detachSurface(*args: Any, **kwargs: Any) -> Any:
+def detachSurface(*args, **kwargs) -> list[str]: ...
+def detachSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -12071,7 +12071,7 @@ def detachSurface(*args: Any, **kwargs: Any) -> Any:
     - `parameter` `p`: *float*
     - `replaceOriginal` `rpo`: *bool*
     """
-def deviceEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectionConnection: str = ..., slc: str = ..., stateString: bool = ..., sts: bool = ..., takePath: str = ..., tp: str = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def deviceEditor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -12092,7 +12092,7 @@ def deviceEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplat
     - `updateMainConnection` `upd`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def deviceManager(*args: Any, attachment: bool = ..., att: bool = ..., axisCoordChanges: bool = ..., acc: bool = ..., axisIndex: int = ..., axi: int = ..., axisName: bool = ..., axn: bool = ..., axisOffset: bool = ..., axo: bool = ..., axisScale: bool = ..., axs: bool = ..., deviceIndex: int = ..., dvi: int = ..., deviceNameFromIndex: int = ..., dni: int = ..., numAxis: bool = ..., nax: bool = ..., numDevices: bool = ..., ndv: bool = ..., **kwargs: Any) -> None:
+def deviceManager(*args, **kwargs) -> None:
     """Flags:
     - `attachment` `att`: *bool*
     - `axisCoordChanges` `acc`: *bool*
@@ -12105,7 +12105,7 @@ def deviceManager(*args: Any, attachment: bool = ..., att: bool = ..., axisCoord
     - `numAxis` `nax`: *bool*
     - `numDevices` `ndv`: *bool*
     """
-def devicePanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ..., cp: str = ..., createString: bool = ..., cs: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., editString: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., init: bool = ..., isUnique: bool = ..., iu: bool = ..., label: str = ..., l: str = ..., menuBarRepeatLast: bool = ..., mrl: bool = ..., menuBarVisible: bool = ..., mbv: bool = ..., needsInit: bool = ..., ni: bool = ..., parent: str = ..., p: str = ..., popupMenuProcedure: str = ..., pmp: str = ..., replacePanel: str = ..., rp: str = ..., tearOff: bool = ..., to: bool = ..., tearOffCopy: str = ..., toc: str = ..., tearOffRestore: bool = ..., tor: bool = ..., unParent: bool = ..., up: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def devicePanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -12129,7 +12129,7 @@ def devicePanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ..
     - `unParent` `up`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def dgInfo(*args: Any, allNodes: bool = ..., all: bool = ..., connections: bool = ..., c: bool = ..., dirty: bool = ..., d: bool = ..., nodes: bool = ..., n: bool = ..., nonDeletable: bool = ..., nd: bool = ..., outputFile: str = ..., of: str = ..., propagation: bool = ..., p: bool = ..., short: bool = ..., s: bool = ..., size: bool = ..., sz: bool = ..., subgraph: bool = ..., sub: bool = ..., type: str = ..., nt: str = ..., **kwargs: Any) -> None:
+def dgInfo(*args, **kwargs) -> None:
     """Flags:
     - `allNodes` `all`: *bool*
     - `connections` `c`: *bool*
@@ -12143,7 +12143,7 @@ def dgInfo(*args: Any, allNodes: bool = ..., all: bool = ..., connections: bool 
     - `subgraph` `sub`: *bool*
     - `type` `nt`: *str*
     """
-def dgValidateCurve(*args: Any, allCurves: bool = ..., a: bool = ..., verbose: bool = ..., v: bool = ..., **kwargs: Any) -> int:
+def dgValidateCurve(*args, **kwargs) -> int:
     """Flags:
     - `allCurves` `a`: *bool*
     - `verbose` `v`: *bool*
@@ -12177,8 +12177,8 @@ def dgdirty(*args: Any, q: bool, verbose: bool) -> bool: ...
 @overload
 def dgdirty(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def dgdirty(*args: Any, **kwargs: Any) -> list[str]: ...
-def dgdirty(*args: Any, **kwargs: Any) -> Any:
+def dgdirty(*args, **kwargs) -> list[str]: ...
+def dgdirty(*args, **kwargs) -> list[str]:
     """Flags:
     - `allPlugs` `a`: *bool*
     - `clean` `c`: *bool*
@@ -12188,12 +12188,12 @@ def dgdirty(*args: Any, **kwargs: Any) -> Any:
     - `showTiming` `st`: *bool*
     - `verbose` `v`: *bool*
     """
-def dgeval(*args: Any, src: bool = ..., verbose: bool = ..., v: bool = ..., **kwargs: Any) -> None:
+def dgeval(*args, **kwargs) -> None:
     """Flags:
     - `src` `src`: *bool*
     - `verbose` `v`: *bool*
     """
-def dgfilter(*args: Any, attribute: str = ..., atr: str = ..., list: bool = ..., l: bool = ..., logicalAnd: Any = ..., logicalNot: str = ..., logicalOr: Any = ..., name: str = ..., n: str = ..., node: str = ..., nd: str = ..., nodeType: str = ..., nt: str = ..., plug: str = ..., p: str = ..., **kwargs: Any) -> str:
+def dgfilter(*args, **kwargs) -> str:
     """Flags:
     - `attribute` `atr`: *str*
     - `list` `l`: *bool*
@@ -12205,7 +12205,7 @@ def dgfilter(*args: Any, attribute: str = ..., atr: str = ..., list: bool = ...,
     - `nodeType` `nt`: *str*
     - `plug` `p`: *str*
     """
-def dgmodified(*args: Any) -> list[str]: ...
+def dgmodified(*args, **kwargs) -> list[str]: ...
 @overload
 def dgtimer(*args: Any, q: bool, hide: bool) -> str: ...
 @overload
@@ -12287,8 +12287,8 @@ def dgtimer(*args: Any, q: bool, timerOff: bool) -> bool: ...
 @overload
 def dgtimer(*args: Any, q: bool, off: bool) -> bool: ...
 @overload
-def dgtimer(*args: Any, **kwargs: Any) -> float: ...
-def dgtimer(*args: Any, **kwargs: Any) -> Any:
+def dgtimer(*args, **kwargs) -> float: ...
+def dgtimer(*args, **kwargs) -> float:
     """Flags:
     - `combineType` `ct`: *bool*
     - `hide` `hi`: *str*
@@ -12314,7 +12314,7 @@ def dgtimer(*args: Any, **kwargs: Any) -> Any:
     - `uniqueName` `un`: *bool*
     - `updateHeatMap` `uhm`: *int*
     """
-def dimWhen(*args: Any, clear: bool = ..., c: bool = ..., false: bool = ..., f: bool = ..., true: bool = ..., t: bool = ..., **kwargs: Any) -> None:
+def dimWhen(*args, **kwargs) -> None:
     """Flags:
     - `clear` `c`: *bool*
     - `false` `f`: *bool*
@@ -12353,8 +12353,8 @@ def directKeyCtx(*args: Any, q: bool, selectedOnly: bool) -> bool: ...
 @overload
 def directKeyCtx(*args: Any, q: bool, so: bool) -> bool: ...
 @overload
-def directKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def directKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def directKeyCtx(*args, **kwargs) -> str: ...
+def directKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -12410,8 +12410,8 @@ def directionalLight(*args: Any, q: bool, useRayTraceShadows: bool) -> bool: ...
 @overload
 def directionalLight(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def directionalLight(*args: Any, **kwargs: Any) -> float: ...
-def directionalLight(*args: Any, **kwargs: Any) -> Any:
+def directionalLight(*args, **kwargs) -> float: ...
+def directionalLight(*args, **kwargs) -> float:
     """Flags:
     - `decayRate` `d`: *int*
     - `discRadius` `drs`: *float*
@@ -12448,8 +12448,8 @@ def dirmap(*args: Any, q: bool, getAllMappings: bool) -> bool: ...
 @overload
 def dirmap(*args: Any, q: bool, gam: bool) -> bool: ...
 @overload
-def dirmap(*args: Any, **kwargs: Any) -> str: ...
-def dirmap(*args: Any, **kwargs: Any) -> Any:
+def dirmap(*args, **kwargs) -> str: ...
+def dirmap(*args, **kwargs) -> str:
     """Flags:
     - `convertDirectory` `cd`: *str*
     - `enable` `en`: *bool*
@@ -12458,16 +12458,16 @@ def dirmap(*args: Any, **kwargs: Any) -> Any:
     - `mapDirectory` `m`: *Any*
     - `unmapDirectory` `um`: *str*
     """
-def disable(*args: Any, value: bool = ..., v: bool = ..., **kwargs: Any) -> None:
+def disable(*args, **kwargs) -> None:
     """Flags:
     - `value` `v`: *bool*
     """
-def disableIncorrectNameWarning(*args: Any) -> None: ...
-def disconnectAttr(*args: Any, nextAvailable: bool = ..., na: bool = ..., **kwargs: Any) -> str:
+def disableIncorrectNameWarning(*args, **kwargs) -> None: ...
+def disconnectAttr(*args, **kwargs) -> str:
     """Flags:
     - `nextAvailable` `na`: *bool*
     """
-def disconnectJoint(*args: Any, attachHandleMode: bool = ..., ahm: bool = ..., deleteHandleMode: bool = ..., dhm: bool = ..., **kwargs: Any) -> str:
+def disconnectJoint(*args, **kwargs) -> str:
     """Flags:
     - `attachHandleMode` `ahm`: *bool*
     - `deleteHandleMode` `dhm`: *bool*
@@ -12533,8 +12533,8 @@ def diskCache(*args: Any, q: bool, tempDir: bool) -> bool: ...
 @overload
 def diskCache(*args: Any, q: bool, tmp: bool) -> bool: ...
 @overload
-def diskCache(*args: Any, **kwargs: Any) -> None: ...
-def diskCache(*args: Any, **kwargs: Any) -> Any:
+def diskCache(*args, **kwargs) -> None: ...
+def diskCache(*args, **kwargs) -> None:
     """Flags:
     - `append` `a`: *bool*
     - `cacheType` `ct`: *str*
@@ -12557,12 +12557,12 @@ def displacementToPoly(*args: Any, q: bool, findBboxOnly: bool) -> bool: ...
 @overload
 def displacementToPoly(*args: Any, q: bool, fbb: bool) -> bool: ...
 @overload
-def displacementToPoly(*args: Any, **kwargs: Any) -> bool: ...
-def displacementToPoly(*args: Any, **kwargs: Any) -> Any:
+def displacementToPoly(*args, **kwargs) -> bool: ...
+def displacementToPoly(*args, **kwargs) -> bool:
     """Flags:
     - `findBboxOnly` `fbb`: *bool*
     """
-def displayAffected(*args: Any) -> int: ...
+def displayAffected(*args, **kwargs) -> int: ...
 @overload
 def displayColor(*args: Any, q: bool, queryIndex: bool) -> int: ...
 @overload
@@ -12592,8 +12592,8 @@ def displayColor(*args: Any, q: bool, resetToSaved: bool) -> bool: ...
 @overload
 def displayColor(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def displayColor(*args: Any, **kwargs: Any) -> None: ...
-def displayColor(*args: Any, **kwargs: Any) -> Any:
+def displayColor(*args, **kwargs) -> None: ...
+def displayColor(*args, **kwargs) -> None:
     """Flags:
     - `active` `a`: *bool*
     - `create` `c`: *bool*
@@ -12608,8 +12608,8 @@ def displayCull(*args: Any, q: bool, backFaceCulling: bool) -> bool: ...
 @overload
 def displayCull(*args: Any, q: bool, bfc: bool) -> bool: ...
 @overload
-def displayCull(*args: Any, **kwargs: Any) -> None: ...
-def displayCull(*args: Any, **kwargs: Any) -> Any:
+def displayCull(*args, **kwargs) -> None: ...
+def displayCull(*args, **kwargs) -> None:
     """Flags:
     - `backFaceCulling` `bfc`: *bool*
     """
@@ -12618,8 +12618,8 @@ def displayLevelOfDetail(*args: Any, q: bool, levelOfDetail: bool) -> bool: ...
 @overload
 def displayLevelOfDetail(*args: Any, q: bool, lod: bool) -> bool: ...
 @overload
-def displayLevelOfDetail(*args: Any, **kwargs: Any) -> None: ...
-def displayLevelOfDetail(*args: Any, **kwargs: Any) -> Any:
+def displayLevelOfDetail(*args, **kwargs) -> None: ...
+def displayLevelOfDetail(*args, **kwargs) -> None:
     """Flags:
     - `levelOfDetail` `lod`: *bool*
     """
@@ -12684,8 +12684,8 @@ def displayPref(*args: Any, q: bool, textureDrawPixel: bool) -> bool: ...
 @overload
 def displayPref(*args: Any, q: bool, tdp: bool) -> bool: ...
 @overload
-def displayPref(*args: Any, **kwargs: Any) -> None: ...
-def displayPref(*args: Any, **kwargs: Any) -> Any:
+def displayPref(*args, **kwargs) -> None: ...
+def displayPref(*args, **kwargs) -> None:
     """Flags:
     - `activeObjectPivots` `aop`: *bool*
     - `defaultFontSize` `dfs`: *int*
@@ -12728,8 +12728,8 @@ def displayRGBColor(*args: Any, q: bool, resetToSaved: bool) -> bool: ...
 @overload
 def displayRGBColor(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def displayRGBColor(*args: Any, **kwargs: Any) -> str: ...
-def displayRGBColor(*args: Any, **kwargs: Any) -> Any:
+def displayRGBColor(*args, **kwargs) -> str: ...
+def displayRGBColor(*args, **kwargs) -> str:
     """Flags:
     - `alpha` `a`: *bool*
     - `create` `c`: *bool*
@@ -12789,8 +12789,8 @@ def displaySmoothness(*args: Any, q: bool, renderTessellation: bool) -> bool: ..
 @overload
 def displaySmoothness(*args: Any, q: bool, rt: bool) -> bool: ...
 @overload
-def displaySmoothness(*args: Any, **kwargs: Any) -> None: ...
-def displaySmoothness(*args: Any, **kwargs: Any) -> Any:
+def displaySmoothness(*args, **kwargs) -> None: ...
+def displaySmoothness(*args, **kwargs) -> None:
     """Flags:
     - `all` `all`: *bool*
     - `boundary` `bn`: *bool*
@@ -12806,7 +12806,7 @@ def displaySmoothness(*args: Any, **kwargs: Any) -> Any:
     - `simplifyU` `su`: *int*
     - `simplifyV` `sv`: *int*
     """
-def displayStats(*args: Any) -> Any: ...
+def displayStats(*args, **kwargs) -> Any: ...
 @overload
 def displayString(*args: Any, q: bool, value: bool) -> str: ...
 @overload
@@ -12828,8 +12828,8 @@ def displayString(*args: Any, q: bool, replace: bool) -> bool: ...
 @overload
 def displayString(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def displayString(*args: Any, **kwargs: Any) -> None: ...
-def displayString(*args: Any, **kwargs: Any) -> Any:
+def displayString(*args, **kwargs) -> None: ...
+def displayString(*args, **kwargs) -> None:
     """Flags:
     - `delete` `d`: *bool*
     - `exists` `ex`: *bool*
@@ -12850,8 +12850,8 @@ def displaySurface(*args: Any, q: bool, xRay: bool) -> bool: ...
 @overload
 def displaySurface(*args: Any, q: bool, x: bool) -> bool: ...
 @overload
-def displaySurface(*args: Any, **kwargs: Any) -> bool: ...
-def displaySurface(*args: Any, **kwargs: Any) -> Any:
+def displaySurface(*args, **kwargs) -> bool: ...
+def displaySurface(*args, **kwargs) -> bool:
     """Flags:
     - `flipNormals` `flp`: *bool*
     - `twoSidedLighting` `two`: *bool*
@@ -12882,8 +12882,8 @@ def distanceDimContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def distanceDimContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def distanceDimContext(*args: Any, **kwargs: Any) -> str: ...
-def distanceDimContext(*args: Any, **kwargs: Any) -> Any:
+def distanceDimContext(*args, **kwargs) -> str: ...
+def distanceDimContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -12892,12 +12892,12 @@ def distanceDimContext(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def distanceDimension(*args: Any, endPoint: list[float] = ..., ep: list[float] = ..., startPoint: list[float] = ..., sp: list[float] = ..., **kwargs: Any) -> str:
+def distanceDimension(*args, **kwargs) -> str:
     """Flags:
     - `endPoint` `ep`: *list[float]*
     - `startPoint` `sp`: *list[float]*
     """
-def doBlur(*args: Any, colorFile: str = ..., c: str = ..., length: float = ..., l: float = ..., memCapSize: float = ..., o: float = ..., sharpness: float = ..., s: float = ..., smooth: float = ..., m: float = ..., smoothColor: bool = ..., r: bool = ..., vectorFile: str = ..., v: str = ..., **kwargs: Any) -> str:
+def doBlur(*args, **kwargs) -> str:
     """Flags:
     - `colorFile` `c`: *str*
     - `length` `l`: *float*
@@ -12988,8 +12988,8 @@ def dockControl(*args: Any, q: bool, width: bool) -> int: ...
 @overload
 def dockControl(*args: Any, q: bool, w: bool) -> int: ...
 @overload
-def dockControl(*args: Any, **kwargs: Any) -> str: ...
-def dockControl(*args: Any, **kwargs: Any) -> Any:
+def dockControl(*args, **kwargs) -> str: ...
+def dockControl(*args, **kwargs) -> str:
     """Flags:
     - `allowedArea` `aa`: *str*
     - `annotation` `ann`: *str*
@@ -13034,7 +13034,7 @@ def dockControl(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def dolly(*args: Any, absolute: bool = ..., abs: bool = ..., distance: float = ..., d: float = ..., dollyTowardsCenter: bool = ..., dtc: bool = ..., orthoScale: float = ..., os: float = ..., relative: bool = ..., rel: bool = ..., **kwargs: Any) -> None:
+def dolly(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `abs`: *bool*
     - `distance` `d`: *float*
@@ -13099,8 +13099,8 @@ def dollyCtx(*args: Any, q: bool, orthoZoom: bool) -> bool: ...
 @overload
 def dollyCtx(*args: Any, q: bool, oz: bool) -> bool: ...
 @overload
-def dollyCtx(*args: Any, **kwargs: Any) -> str: ...
-def dollyCtx(*args: Any, **kwargs: Any) -> Any:
+def dollyCtx(*args, **kwargs) -> str: ...
+def dollyCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `boxDollyType` `bdt`: *str*
@@ -13198,8 +13198,8 @@ def dopeSheetEditor(*args: Any, q: bool, snapTime: bool) -> str: ...
 @overload
 def dopeSheetEditor(*args: Any, q: bool, st: bool) -> str: ...
 @overload
-def dopeSheetEditor(*args: Any, **kwargs: Any) -> str: ...
-def dopeSheetEditor(*args: Any, **kwargs: Any) -> Any:
+def dopeSheetEditor(*args, **kwargs) -> str: ...
+def dopeSheetEditor(*args, **kwargs) -> str:
     """Flags:
     - `autoFit` `af`: *str*
     - `autoFitTime` `aft`: *str*
@@ -13279,8 +13279,8 @@ def doubleProfileBirailSurface(*args: Any, q: bool, tangentContinuityProfile2: b
 @overload
 def doubleProfileBirailSurface(*args: Any, q: bool, tp2: bool) -> bool: ...
 @overload
-def doubleProfileBirailSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def doubleProfileBirailSurface(*args: Any, **kwargs: Any) -> Any:
+def doubleProfileBirailSurface(*args, **kwargs) -> list[str]: ...
+def doubleProfileBirailSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `blendFactor` `bl`: *float*
     - `caching` `cch`: *bool*
@@ -13326,8 +13326,8 @@ def dragAttrContext(*args: Any, q: bool, reset: bool) -> bool: ...
 @overload
 def dragAttrContext(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def dragAttrContext(*args: Any, **kwargs: Any) -> str: ...
-def dragAttrContext(*args: Any, **kwargs: Any) -> Any:
+def dragAttrContext(*args, **kwargs) -> str: ...
+def dragAttrContext(*args, **kwargs) -> str:
     """Flags:
     - `connectTo` `ct`: *str*
     - `exists` `ex`: *bool*
@@ -13419,8 +13419,8 @@ def draggerContext(*args: Any, q: bool, stepsCount: bool) -> int: ...
 @overload
 def draggerContext(*args: Any, q: bool, sc: bool) -> int: ...
 @overload
-def draggerContext(*args: Any, **kwargs: Any) -> str: ...
-def draggerContext(*args: Any, **kwargs: Any) -> Any:
+def draggerContext(*args, **kwargs) -> str: ...
+def draggerContext(*args, **kwargs) -> str:
     """Flags:
     - `anchorPoint` `ap`: *Any*
     - `button` `bu`: *int*
@@ -13450,8 +13450,8 @@ def draggerContext(*args: Any, **kwargs: Any) -> Any:
     - `stepsCount` `sc`: *int*
     - `undoMode` `um`: *str*
     """
-def dropoffLocator(*args: Any) -> list[str]: ...
-def duplicate(*args: Any, fullPath: bool = ..., f: bool = ..., inputConnections: bool = ..., ic: bool = ..., instanceLeaf: bool = ..., ilf: bool = ..., name: str = ..., n: str = ..., parentOnly: bool = ..., po: bool = ..., renameChildren: bool = ..., rc: bool = ..., returnRootsOnly: bool = ..., rr: bool = ..., smartTransform: bool = ..., st: bool = ..., transformsOnly: bool = ..., to: bool = ..., upstreamNodes: bool = ..., un: bool = ..., **kwargs: Any) -> list[str]:
+def dropoffLocator(*args, **kwargs) -> list[str]: ...
+def duplicate(*args, **kwargs) -> list[str]:
     """Flags:
     - `fullPath` `f`: *bool*
     - `inputConnections` `ic`: *bool*
@@ -13505,8 +13505,8 @@ def duplicateCurve(*args: Any, q: bool, relative: bool) -> bool: ...
 @overload
 def duplicateCurve(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def duplicateCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def duplicateCurve(*args: Any, **kwargs: Any) -> Any:
+def duplicateCurve(*args, **kwargs) -> list[str]: ...
+def duplicateCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -13560,8 +13560,8 @@ def duplicateSurface(*args: Any, q: bool, mergeItems: bool) -> bool: ...
 @overload
 def duplicateSurface(*args: Any, q: bool, mi: bool) -> bool: ...
 @overload
-def duplicateSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def duplicateSurface(*args: Any, **kwargs: Any) -> Any:
+def duplicateSurface(*args, **kwargs) -> list[str]: ...
+def duplicateSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -13574,7 +13574,7 @@ def duplicateSurface(*args: Any, **kwargs: Any) -> Any:
     - `name` `n`: *str*
     - `nodeState` `nds`: *int*
     """
-def dynamicLoad(*args: Any) -> None: ...
+def dynamicLoad(*args, **kwargs) -> None: ...
 @overload
 def editDisplayLayerGlobals(*args: Any, q: bool, baseId: bool) -> int: ...
 @overload
@@ -13592,8 +13592,8 @@ def editDisplayLayerGlobals(*args: Any, q: bool, useCurrent: bool) -> bool: ...
 @overload
 def editDisplayLayerGlobals(*args: Any, q: bool, uc: bool) -> bool: ...
 @overload
-def editDisplayLayerGlobals(*args: Any, **kwargs: Any) -> bool: ...
-def editDisplayLayerGlobals(*args: Any, **kwargs: Any) -> Any:
+def editDisplayLayerGlobals(*args, **kwargs) -> bool: ...
+def editDisplayLayerGlobals(*args, **kwargs) -> bool:
     """Flags:
     - `baseId` `bi`: *int*
     - `currentDisplayLayer` `cdl`: *str*
@@ -13617,15 +13617,15 @@ def editDisplayLayerMembers(*args: Any, q: bool, ufeObjects: bool) -> bool: ...
 @overload
 def editDisplayLayerMembers(*args: Any, q: bool, ufe: bool) -> bool: ...
 @overload
-def editDisplayLayerMembers(*args: Any, **kwargs: Any) -> int: ...
-def editDisplayLayerMembers(*args: Any, **kwargs: Any) -> Any:
+def editDisplayLayerMembers(*args, **kwargs) -> int: ...
+def editDisplayLayerMembers(*args, **kwargs) -> int:
     """Flags:
     - `clear` `clr`: *bool*
     - `fullNames` `fn`: *bool*
     - `noRecurse` `nr`: *bool*
     - `ufeObjects` `ufe`: *bool*
     """
-def editMetadata(*args: Any, channelName: str = ..., cn: str = ..., channelType: str = ..., cht: str = ..., endIndex: str = ..., eix: str = ..., index: str = ..., idx: str = ..., indexType: str = ..., idt: str = ..., memberName: str = ..., mn: str = ..., remove: bool = ..., rem: bool = ..., scene: bool = ..., scn: bool = ..., startIndex: str = ..., six: str = ..., streamName: str = ..., stn: str = ..., stringValue: str = ..., sv: str = ..., value: float = ..., v: float = ..., **kwargs: Any) -> str:
+def editMetadata(*args, **kwargs) -> str:
     """Flags:
     - `channelName` `cn`: *str*
     - `channelType` `cht`: *str*
@@ -13657,8 +13657,8 @@ def editRenderLayerAdjustment(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def editRenderLayerAdjustment(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def editRenderLayerAdjustment(*args: Any, **kwargs: Any) -> int: ...
-def editRenderLayerAdjustment(*args: Any, **kwargs: Any) -> Any:
+def editRenderLayerAdjustment(*args, **kwargs) -> int: ...
+def editRenderLayerAdjustment(*args, **kwargs) -> int:
     """Flags:
     - `attributeLog` `alg`: *bool*
     - `layer` `lyr`: *str*
@@ -13686,8 +13686,8 @@ def editRenderLayerGlobals(*args: Any, q: bool, useCurrent: bool) -> bool: ...
 @overload
 def editRenderLayerGlobals(*args: Any, q: bool, uc: bool) -> bool: ...
 @overload
-def editRenderLayerGlobals(*args: Any, **kwargs: Any) -> bool: ...
-def editRenderLayerGlobals(*args: Any, **kwargs: Any) -> Any:
+def editRenderLayerGlobals(*args, **kwargs) -> bool: ...
+def editRenderLayerGlobals(*args, **kwargs) -> bool:
     """Flags:
     - `baseId` `bi`: *int*
     - `currentRenderLayer` `crl`: *str*
@@ -13708,8 +13708,8 @@ def editRenderLayerMembers(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def editRenderLayerMembers(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def editRenderLayerMembers(*args: Any, **kwargs: Any) -> int: ...
-def editRenderLayerMembers(*args: Any, **kwargs: Any) -> Any:
+def editRenderLayerMembers(*args, **kwargs) -> int: ...
+def editRenderLayerMembers(*args, **kwargs) -> int:
     """Flags:
     - `fullNames` `fn`: *bool*
     - `noRecurse` `nr`: *bool*
@@ -13784,8 +13784,8 @@ def editor(*args: Any, q: bool, updateMainConnection: bool) -> bool: ...
 @overload
 def editor(*args: Any, q: bool, upd: bool) -> bool: ...
 @overload
-def editor(*args: Any, **kwargs: Any) -> str: ...
-def editor(*args: Any, **kwargs: Any) -> Any:
+def editor(*args, **kwargs) -> str: ...
+def editor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -13805,7 +13805,7 @@ def editor(*args: Any, **kwargs: Any) -> Any:
     - `updateMainConnection` `upd`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def editorTemplate(*args: Any, addAdskAssetControls: bool = ..., aac: bool = ..., addComponents: bool = ..., acp: bool = ..., addControl: Any = ..., ac: Any = ..., addDynamicControl: Any = ..., adc: Any = ..., addExtraControls: bool = ..., aec: bool = ..., addSeparator: bool = ..., annotateFieldOnly: bool = ..., afo: bool = ..., annotation: str = ..., ann: str = ..., beginLayout: str = ..., bl: str = ..., beginNoOptimize: bool = ..., bn: bool = ..., beginScrollLayout: bool = ..., bsl: bool = ..., beginTabLayout: bool = ..., btl: bool = ..., callCustom: Any = ..., ccu: Any = ..., collapse: bool = ..., cl: bool = ..., debugMode: bool = ..., dbm: bool = ..., dimControl: Any = ..., dc: Any = ..., endLayout: bool = ..., el: bool = ..., endNoOptimize: bool = ..., en: bool = ..., endScrollLayout: bool = ..., esl: bool = ..., endTabLayout: bool = ..., etl: bool = ..., extraControlsLabel: str = ..., ecl: str = ..., forceRebuild: bool = ..., fr: bool = ..., interruptOptimize: bool = ..., io: bool = ..., label: str = ..., l: str = ..., listExtraAttributes: str = ..., lea: str = ..., preventOverride: bool = ..., po: bool = ..., queryControl: Any = ..., qc: Any = ..., queryLabel: Any = ..., ql: Any = ..., queryName: Any = ..., qn: Any = ..., suppress: str = ..., s: str = ..., **kwargs: Any) -> str:
+def editorTemplate(*args, **kwargs) -> str:
     """Flags:
     - `addAdskAssetControls` `aac`: *bool*
     - `addComponents` `acp`: *bool*
@@ -13847,13 +13847,13 @@ def effector(*args: Any, q: bool, hide: bool) -> bool: ...
 @overload
 def effector(*args: Any, q: bool, hi: bool) -> bool: ...
 @overload
-def effector(*args: Any, **kwargs: Any) -> str: ...
-def effector(*args: Any, **kwargs: Any) -> Any:
+def effector(*args, **kwargs) -> str: ...
+def effector(*args, **kwargs) -> str:
     """Flags:
     - `hide` `hi`: *bool*
     - `name` `n`: *str*
     """
-def enableDevice(*args: Any, apply: bool = ..., a: bool = ..., device: str = ..., d: str = ..., enable: bool = ..., en: bool = ..., monitor: bool = ..., m: bool = ..., record: bool = ..., rec: bool = ..., **kwargs: Any) -> None:
+def enableDevice(*args, **kwargs) -> None:
     """Flags:
     - `apply` `a`: *bool*
     - `device` `d`: *str*
@@ -13861,14 +13861,14 @@ def enableDevice(*args: Any, apply: bool = ..., a: bool = ..., device: str = ...
     - `monitor` `m`: *bool*
     - `record` `rec`: *bool*
     """
-def encodeString(*args: Any) -> str: ...
-def error(*args: Any, noContext: bool = ..., n: bool = ..., showLineNumber: bool = ..., sl: bool = ..., **kwargs: Any) -> None:
+def encodeString(*args, **kwargs) -> str: ...
+def error(*args, **kwargs) -> None:
     """Flags:
     - `noContext` `n`: *bool*
     - `showLineNumber` `sl`: *bool*
     """
-def eval(*args: Any) -> Any: ...
-def evalDeferred(*args: Any, evaluateNext: bool = ..., en: bool = ..., list: bool = ..., ls: bool = ..., lowPriority: bool = ..., low: bool = ..., lowestPriority: bool = ..., lp: bool = ..., **kwargs: Any) -> list[str]:
+def eval(*args, **kwargs) -> Any: ...
+def evalDeferred(*args, **kwargs) -> list[str]:
     """Flags:
     - `evaluateNext` `en`: *bool*
     - `list` `ls`: *bool*
@@ -13956,8 +13956,8 @@ def evaluationManager(*args: Any, q: bool, safeMode: bool) -> bool: ...
 @overload
 def evaluationManager(*args: Any, q: bool, sfm: bool) -> bool: ...
 @overload
-def evaluationManager(*args: Any, **kwargs: Any) -> list[str]: ...
-def evaluationManager(*args: Any, **kwargs: Any) -> Any:
+def evaluationManager(*args, **kwargs) -> list[str]: ...
+def evaluationManager(*args, **kwargs) -> list[str]:
     """Flags:
     - `cycleCluster` `ccl`: *str*
     - `disableInfo` `di`: *str*
@@ -14017,8 +14017,8 @@ def evaluator(*args: Any, q: bool, nodeTypeChildren: bool) -> bool: ...
 @overload
 def evaluator(*args: Any, q: bool, ntc: bool) -> bool: ...
 @overload
-def evaluator(*args: Any, **kwargs: Any) -> list[str]: ...
-def evaluator(*args: Any, **kwargs: Any) -> Any:
+def evaluator(*args, **kwargs) -> list[str]: ...
+def evaluator(*args, **kwargs) -> list[str]:
     """Flags:
     - `clusters` `cl`: *bool*
     - `configuration` `c`: *str*
@@ -14030,13 +14030,13 @@ def evaluator(*args: Any, **kwargs: Any) -> Any:
     - `priority` `p`: *int*
     - `valueName` `vn`: *str*
     """
-def exactWorldBoundingBox(*args: Any, calculateExactly: bool = ..., ce: bool = ..., ignoreInvisible: bool = ..., ii: bool = ..., **kwargs: Any) -> list[float]:
+def exactWorldBoundingBox(*args, **kwargs) -> list[float]:
     """Flags:
     - `calculateExactly` `ce`: *bool*
     - `ignoreInvisible` `ii`: *bool*
     """
-def excludeObjectDisplayPreset(*args: Any) -> str: ...
-def exclusiveLightCheckBox(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., label: str = ..., l: str = ..., light: str = ..., lt: str = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def excludeObjectDisplayPreset(*args, **kwargs) -> str: ...
+def exclusiveLightCheckBox(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -14066,7 +14066,7 @@ def exclusiveLightCheckBox(*args: Any, annotation: str = ..., ann: str = ..., ba
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def expandedSelection(*args: Any, depth: int = ..., d: int = ..., expansionType: str = ..., et: str = ..., **kwargs: Any) -> str:
+def expandedSelection(*args, **kwargs) -> str:
     """Flags:
     - `depth` `d`: *int*
     - `expansionType` `et`: *str*
@@ -14134,8 +14134,8 @@ def exportEdits(*args: Any, q: bool, selected: bool) -> bool: ...
 @overload
 def exportEdits(*args: Any, q: bool, sel: bool) -> bool: ...
 @overload
-def exportEdits(*args: Any, **kwargs: Any) -> list[str]: ...
-def exportEdits(*args: Any, **kwargs: Any) -> Any:
+def exportEdits(*args, **kwargs) -> list[str]: ...
+def exportEdits(*args, **kwargs) -> list[str]:
     """Flags:
     - `editCommand` `ec`: *str*
     - `excludeHierarchy` `ehr`: *bool*
@@ -14231,8 +14231,8 @@ def extendCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def extendCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def extendCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def extendCurve(*args: Any, **kwargs: Any) -> Any:
+def extendCurve(*args, **kwargs) -> list[str]: ...
+def extendCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -14303,8 +14303,8 @@ def extendSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def extendSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def extendSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def extendSurface(*args: Any, **kwargs: Any) -> Any:
+def extendSurface(*args, **kwargs) -> list[str]: ...
+def extendSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -14400,8 +14400,8 @@ def extrude(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def extrude(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def extrude(*args: Any, **kwargs: Any) -> list[str]: ...
-def extrude(*args: Any, **kwargs: Any) -> Any:
+def extrude(*args, **kwargs) -> list[str]: ...
+def extrude(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -14507,8 +14507,8 @@ def falloffCurve(*args: Any, q: bool, enableBackground: bool) -> bool: ...
 @overload
 def falloffCurve(*args: Any, q: bool, ebg: bool) -> bool: ...
 @overload
-def falloffCurve(*args: Any, **kwargs: Any) -> str: ...
-def falloffCurve(*args: Any, **kwargs: Any) -> Any:
+def falloffCurve(*args, **kwargs) -> str: ...
+def falloffCurve(*args, **kwargs) -> str:
     """Flags:
     - `addControlVertex` `acv`: *str*
     - `annotation` `ann`: *str*
@@ -14625,8 +14625,8 @@ def falloffCurveAttr(*args: Any, q: bool, useTemplate: bool) -> str: ...
 @overload
 def falloffCurveAttr(*args: Any, q: bool, ut: bool) -> str: ...
 @overload
-def falloffCurveAttr(*args: Any, **kwargs: Any) -> str: ...
-def falloffCurveAttr(*args: Any, **kwargs: Any) -> Any:
+def falloffCurveAttr(*args, **kwargs) -> str: ...
+def falloffCurveAttr(*args, **kwargs) -> str:
     """Flags:
     - `addControlVertex` `acv`: *str*
     - `annotation` `ann`: *str*
@@ -14666,7 +14666,7 @@ def falloffCurveAttr(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def fcheck(*args: Any) -> None: ...
+def fcheck(*args, **kwargs) -> None: ...
 @overload
 def file(*args: Any, q: bool, applyTo: bool) -> str: ...
 @overload
@@ -14748,8 +14748,8 @@ def file(*args: Any, q: bool, rename: bool) -> str: ...
 @overload
 def file(*args: Any, q: bool, rn: bool) -> str: ...
 @overload
-def file(*args: Any, **kwargs: Any) -> str: ...
-def file(*args: Any, **kwargs: Any) -> Any:
+def file(*args, **kwargs) -> str: ...
+def file(*args, **kwargs) -> str:
     """Flags:
     - `absoluteName` `an`: *bool*
     - `activate` `a`: *bool*
@@ -14869,7 +14869,7 @@ def file(*args: Any, **kwargs: Any) -> Any:
     - `withoutCopyNumber` `wcn`: *bool*
     - `writable` `w`: *bool*
     """
-def fileBrowserDialog(*args: Any, actionName: str = ..., an: str = ..., dialogStyle: int = ..., ds: int = ..., fileCommand: str = ..., fc: str = ..., fileType: str = ..., ft: str = ..., filterList: str = ..., fl: str = ..., includeName: str = ..., mode: int = ..., m: int = ..., operationMode: str = ..., om: str = ..., tipMessage: str = ..., tm: str = ..., windowTitle: str = ..., wt: str = ..., **kwargs: Any) -> str:
+def fileBrowserDialog(*args, **kwargs) -> str:
     """Flags:
     - `actionName` `an`: *str*
     - `dialogStyle` `ds`: *int*
@@ -14882,7 +14882,7 @@ def fileBrowserDialog(*args: Any, actionName: str = ..., an: str = ..., dialogSt
     - `tipMessage` `tm`: *str*
     - `windowTitle` `wt`: *str*
     """
-def fileDialog(*args: Any, application: bool = ..., app: bool = ..., defaultFileName: str = ..., dfn: str = ..., directoryMask: str = ..., dm: str = ..., mode: int = ..., m: int = ..., title: str = ..., t: str = ..., **kwargs: Any) -> str:
+def fileDialog(*args, **kwargs) -> str:
     """Flags:
     - `application` `app`: *bool*
     - `defaultFileName` `dfn`: *str*
@@ -14890,7 +14890,7 @@ def fileDialog(*args: Any, application: bool = ..., app: bool = ..., defaultFile
     - `mode` `m`: *int*
     - `title` `t`: *str*
     """
-def fileDialog2(*args: Any, buttonBoxOrientation: int = ..., bbo: int = ..., cancelCaption: str = ..., cc: str = ..., caption: str = ..., cap: str = ..., dialogStyle: int = ..., ds: int = ..., fileFilter: str = ..., ff: str = ..., fileMode: int = ..., fm: int = ..., fileTypeChanged: str = ..., ftc: str = ..., hideNameEdit: bool = ..., hne: bool = ..., okCaption: str = ..., okc: str = ..., optionsUICancel: str = ..., oca: str = ..., optionsUICommit: str = ..., ocm: str = ..., optionsUICommit2: str = ..., oc2: str = ..., optionsUICreate: str = ..., ocr: str = ..., optionsUIInit: str = ..., oin: str = ..., optionsUITitle: str = ..., oti: str = ..., returnFilter: bool = ..., rf: bool = ..., selectFileFilter: str = ..., sff: str = ..., selectionChanged: str = ..., sc: str = ..., setProjectBtnEnabled: bool = ..., spe: bool = ..., startingDirectory: str = ..., dir: str = ..., **kwargs: Any) -> str:
+def fileDialog2(*args, **kwargs) -> str:
     """Flags:
     - `buttonBoxOrientation` `bbo`: *int*
     - `cancelCaption` `cc`: *str*
@@ -14922,8 +14922,8 @@ def fileInfo(*args: Any, q: bool, remove: bool) -> str: ...
 @overload
 def fileInfo(*args: Any, q: bool, rm: bool) -> str: ...
 @overload
-def fileInfo(*args: Any, **kwargs: Any) -> list[str]: ...
-def fileInfo(*args: Any, **kwargs: Any) -> Any:
+def fileInfo(*args, **kwargs) -> list[str]: ...
+def fileInfo(*args, **kwargs) -> list[str]:
     """Flags:
     - `referenceNode` `rfn`: *str*
     - `remove` `rm`: *str*
@@ -15009,8 +15009,8 @@ def filePathEditor(*args: Any, q: bool, unresolved: bool) -> bool: ...
 @overload
 def filePathEditor(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def filePathEditor(*args: Any, **kwargs: Any) -> None: ...
-def filePathEditor(*args: Any, **kwargs: Any) -> Any:
+def filePathEditor(*args, **kwargs) -> None: ...
+def filePathEditor(*args, **kwargs) -> None:
     """Flags:
     - `attributeOnly` `ao`: *bool*
     - `attributeType` `at`: *str*
@@ -15101,8 +15101,8 @@ def filletCurve(*args: Any, q: bool, trim: bool) -> bool: ...
 @overload
 def filletCurve(*args: Any, q: bool, t: bool) -> bool: ...
 @overload
-def filletCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def filletCurve(*args: Any, **kwargs: Any) -> Any:
+def filletCurve(*args, **kwargs) -> list[str]: ...
+def filletCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `bias` `b`: *float*
     - `blendControl` `bc`: *bool*
@@ -15121,7 +15121,7 @@ def filletCurve(*args: Any, **kwargs: Any) -> Any:
     - `replaceOriginal` `rpo`: *bool*
     - `trim` `t`: *bool*
     """
-def filter(*args: Any, name: str = ..., n: str = ..., type: str = ..., t: str = ..., **kwargs: Any) -> str:
+def filter(*args, **kwargs) -> str:
     """Flags:
     - `name` `n`: *str*
     - `type` `t`: *str*
@@ -15179,8 +15179,8 @@ def filterButterworthCtx(*args: Any, q: bool, selectedKeys: bool) -> bool: ...
 @overload
 def filterButterworthCtx(*args: Any, q: bool, sk: bool) -> bool: ...
 @overload
-def filterButterworthCtx(*args: Any, **kwargs: Any) -> str: ...
-def filterButterworthCtx(*args: Any, **kwargs: Any) -> Any:
+def filterButterworthCtx(*args, **kwargs) -> str: ...
+def filterButterworthCtx(*args, **kwargs) -> str:
     """Flags:
     - `apply` `a`: *bool*
     - `cutoffFrequency` `cof`: *float*
@@ -15196,7 +15196,7 @@ def filterButterworthCtx(*args: Any, **kwargs: Any) -> Any:
     - `selectedKeys` `sk`: *bool*
     - `startTime` `s`: *float*
     """
-def filterCurve(*args: Any, cutoffFrequency: float = ..., cof: float = ..., endTime: float = ..., e: float = ..., filter: str = ..., f: str = ..., keepKeysOnFrame: bool = ..., kof: bool = ..., kernel: str = ..., ker: str = ..., keySync: bool = ..., ks: bool = ..., maxTimeStep: float = ..., mxs: float = ..., minTimeStep: float = ..., mns: float = ..., period: float = ..., per: float = ..., precision: float = ..., pre: float = ..., precisionMode: int = ..., pm: int = ..., preserveKeyTangent: str = ..., pkt: str = ..., sampleCount: int = ..., sc: int = ..., samplingRate: float = ..., sr: float = ..., selectedKeys: bool = ..., sk: bool = ..., startTime: float = ..., s: float = ..., timeTolerance: float = ..., tto: float = ..., tolerance: float = ..., tol: float = ..., useQuaternion: bool = ..., uq: bool = ..., width: float = ..., w: float = ..., **kwargs: Any) -> int:
+def filterCurve(*args, **kwargs) -> int:
     """Flags:
     - `cutoffFrequency` `cof`: *float*
     - `endTime` `e`: *float*
@@ -15219,7 +15219,7 @@ def filterCurve(*args: Any, cutoffFrequency: float = ..., cof: float = ..., endT
     - `useQuaternion` `uq`: *bool*
     - `width` `w`: *float*
     """
-def filterExpand(*args: Any, expand: bool = ..., ex: bool = ..., fullPath: bool = ..., fp: bool = ..., selectionMask: int = ..., sm: int = ..., symActive: bool = ..., sma: bool = ..., symNegative: bool = ..., smn: bool = ..., symPositive: bool = ..., smp: bool = ..., symSeam: bool = ..., sms: bool = ..., **kwargs: Any) -> list[str]:
+def filterExpand(*args, **kwargs) -> list[str]:
     """Flags:
     - `expand` `ex`: *bool*
     - `fullPath` `fp`: *bool*
@@ -15282,8 +15282,8 @@ def filterGaussianCtx(*args: Any, q: bool, useQuaternion: bool) -> bool: ...
 @overload
 def filterGaussianCtx(*args: Any, q: bool, uq: bool) -> bool: ...
 @overload
-def filterGaussianCtx(*args: Any, **kwargs: Any) -> str: ...
-def filterGaussianCtx(*args: Any, **kwargs: Any) -> Any:
+def filterGaussianCtx(*args, **kwargs) -> str: ...
+def filterGaussianCtx(*args, **kwargs) -> str:
     """Flags:
     - `apply` `a`: *bool*
     - `endTime` `e`: *float*
@@ -15304,8 +15304,8 @@ def filterInstances(*args: Any, q: bool, shapes: bool) -> bool: ...
 @overload
 def filterInstances(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def filterInstances(*args: Any, **kwargs: Any) -> list[str]: ...
-def filterInstances(*args: Any, **kwargs: Any) -> Any:
+def filterInstances(*args, **kwargs) -> list[str]: ...
+def filterInstances(*args, **kwargs) -> list[str]:
     """Flags:
     - `shapes` `s`: *bool*
     """
@@ -15366,8 +15366,8 @@ def filterKeyReducerCtx(*args: Any, q: bool, selectedKeys: bool) -> bool: ...
 @overload
 def filterKeyReducerCtx(*args: Any, q: bool, sk: bool) -> bool: ...
 @overload
-def filterKeyReducerCtx(*args: Any, **kwargs: Any) -> str: ...
-def filterKeyReducerCtx(*args: Any, **kwargs: Any) -> Any:
+def filterKeyReducerCtx(*args, **kwargs) -> str: ...
+def filterKeyReducerCtx(*args, **kwargs) -> str:
     """Flags:
     - `apply` `a`: *bool*
     - `endTime` `e`: *float*
@@ -15384,8 +15384,8 @@ def filterKeyReducerCtx(*args: Any, **kwargs: Any) -> Any:
     - `selectedKeys` `sk`: *bool*
     - `startTime` `s`: *float*
     """
-def findDeformers(*args: Any) -> None: ...
-def findKeyframe(*args: Any, animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., controlPoints: bool = ..., cp: bool = ..., curve: bool = ..., c: bool = ..., float: float = ..., f: float = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., timeSlider: bool = ..., ts: bool = ..., which: str = ..., w: str = ..., **kwargs: Any) -> float:
+def findDeformers(*args, **kwargs) -> None: ...
+def findKeyframe(*args, **kwargs) -> float:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -15400,7 +15400,7 @@ def findKeyframe(*args: Any, animation: str = ..., an: str = ..., attribute: str
     - `timeSlider` `ts`: *bool*
     - `which` `w`: *str*
     """
-def findType(*args: Any, deep: bool = ..., d: bool = ..., exact: bool = ..., e: bool = ..., forward: bool = ..., f: bool = ..., type: str = ..., t: str = ..., **kwargs: Any) -> list[str]:
+def findType(*args, **kwargs) -> list[str]:
     """Flags:
     - `deep` `d`: *bool*
     - `exact` `e`: *bool*
@@ -15432,8 +15432,8 @@ def fitBspline(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def fitBspline(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def fitBspline(*args: Any, **kwargs: Any) -> list[str]: ...
-def fitBspline(*args: Any, **kwargs: Any) -> Any:
+def fitBspline(*args, **kwargs) -> list[str]: ...
+def fitBspline(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -15475,8 +15475,8 @@ def flexor(*args: Any, q: bool, toSkeleton: bool) -> bool: ...
 @overload
 def flexor(*args: Any, q: bool, ts: bool) -> bool: ...
 @overload
-def flexor(*args: Any, **kwargs: Any) -> list[str]: ...
-def flexor(*args: Any, **kwargs: Any) -> Any:
+def flexor(*args, **kwargs) -> list[str]: ...
+def flexor(*args, **kwargs) -> list[str]:
     """Flags:
     - `atBones` `ab`: *bool*
     - `atJoints` `aj`: *bool*
@@ -15568,8 +15568,8 @@ def floatField(*args: Any, q: bool, width: bool) -> int: ...
 @overload
 def floatField(*args: Any, q: bool, w: bool) -> int: ...
 @overload
-def floatField(*args: Any, **kwargs: Any) -> str: ...
-def floatField(*args: Any, **kwargs: Any) -> Any:
+def floatField(*args, **kwargs) -> str: ...
+def floatField(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -15689,8 +15689,8 @@ def floatFieldGrp(*args: Any, q: bool, numberOfFields: bool) -> int: ...
 @overload
 def floatFieldGrp(*args: Any, q: bool, nf: bool) -> int: ...
 @overload
-def floatFieldGrp(*args: Any, **kwargs: Any) -> str: ...
-def floatFieldGrp(*args: Any, **kwargs: Any) -> Any:
+def floatFieldGrp(*args, **kwargs) -> str: ...
+def floatFieldGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -15847,8 +15847,8 @@ def floatScrollBar(*args: Any, q: bool, enableBackground: bool) -> bool: ...
 @overload
 def floatScrollBar(*args: Any, q: bool, ebg: bool) -> bool: ...
 @overload
-def floatScrollBar(*args: Any, **kwargs: Any) -> str: ...
-def floatScrollBar(*args: Any, **kwargs: Any) -> Any:
+def floatScrollBar(*args, **kwargs) -> str: ...
+def floatScrollBar(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -15965,8 +15965,8 @@ def floatSlider(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def floatSlider(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def floatSlider(*args: Any, **kwargs: Any) -> str: ...
-def floatSlider(*args: Any, **kwargs: Any) -> Any:
+def floatSlider(*args, **kwargs) -> str: ...
+def floatSlider(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -16001,7 +16001,7 @@ def floatSlider(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def floatSlider2(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., changeCommand1: str = ..., cc1: str = ..., changeCommand2: str = ..., cc2: str = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., maximum: float = ..., max: float = ..., minimum: float = ..., min: float = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., polarity: int = ..., pol: int = ..., popupMenuArray: bool = ..., pma: bool = ..., positionControl1: str = ..., pc1: str = ..., positionControl2: str = ..., pc2: str = ..., preventOverride: bool = ..., po: bool = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., value1: float = ..., v1: float = ..., value2: float = ..., v2: float = ..., values: Any = ..., vs: Any = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def floatSlider2(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -16120,8 +16120,8 @@ def floatSliderButtonGrp(*args: Any, q: bool, fieldMaxValue: bool) -> float: ...
 @overload
 def floatSliderButtonGrp(*args: Any, q: bool, fmx: bool) -> float: ...
 @overload
-def floatSliderButtonGrp(*args: Any, **kwargs: Any) -> str: ...
-def floatSliderButtonGrp(*args: Any, **kwargs: Any) -> Any:
+def floatSliderButtonGrp(*args, **kwargs) -> str: ...
+def floatSliderButtonGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -16280,8 +16280,8 @@ def floatSliderGrp(*args: Any, q: bool, fieldStep: bool) -> float: ...
 @overload
 def floatSliderGrp(*args: Any, q: bool, fs: bool) -> float: ...
 @overload
-def floatSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def floatSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def floatSliderGrp(*args, **kwargs) -> str: ...
+def floatSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -16363,8 +16363,8 @@ def flow(*args: Any, q: bool, objectCentered: bool) -> bool: ...
 @overload
 def flow(*args: Any, q: bool, oc: bool) -> bool: ...
 @overload
-def flow(*args: Any, **kwargs: Any) -> list[str]: ...
-def flow(*args: Any, **kwargs: Any) -> Any:
+def flow(*args, **kwargs) -> list[str]: ...
+def flow(*args, **kwargs) -> list[str]:
     """Flags:
     - `divisions` `dv`: *Any*
     - `localCompute` `lc`: *bool*
@@ -16452,8 +16452,8 @@ def flowLayout(*args: Any, q: bool, fullPathName: bool) -> bool: ...
 @overload
 def flowLayout(*args: Any, q: bool, fpn: bool) -> bool: ...
 @overload
-def flowLayout(*args: Any, **kwargs: Any) -> str: ...
-def flowLayout(*args: Any, **kwargs: Any) -> Any:
+def flowLayout(*args, **kwargs) -> str: ...
+def flowLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -16490,8 +16490,8 @@ def flowLayout(*args: Any, **kwargs: Any) -> Any:
     - `width` `w`: *int*
     - `wrap` `wr`: *bool*
     """
-def flushUndo(*args: Any) -> None: ...
-def fontDialog(*args: Any, FontList: bool = ..., fl: bool = ..., scalable: bool = ..., sc: bool = ..., **kwargs: Any) -> str:
+def flushUndo(*args, **kwargs) -> None: ...
+def fontDialog(*args, **kwargs) -> str:
     """Flags:
     - `FontList` `fl`: *bool*
     - `scalable` `sc`: *bool*
@@ -16577,8 +16577,8 @@ def formLayout(*args: Any, q: bool, fullPathName: bool) -> bool: ...
 @overload
 def formLayout(*args: Any, q: bool, fpn: bool) -> bool: ...
 @overload
-def formLayout(*args: Any, **kwargs: Any) -> str: ...
-def formLayout(*args: Any, **kwargs: Any) -> Any:
+def formLayout(*args, **kwargs) -> str: ...
+def formLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `attachControl` `ac`: *Any*
@@ -16618,11 +16618,11 @@ def formLayout(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def format(*args: Any, stringArg: str = ..., s: str = ..., **kwargs: Any) -> str:
+def format(*args, **kwargs) -> str:
     """Flags:
     - `stringArg` `s`: *str*
     """
-def frameBufferName(*args: Any, autoTruncate: bool = ..., a: bool = ..., camera: str = ..., c: str = ..., renderLayer: str = ..., l: str = ..., renderPass: str = ..., p: str = ..., **kwargs: Any) -> str:
+def frameBufferName(*args, **kwargs) -> str:
     """Flags:
     - `autoTruncate` `a`: *bool*
     - `camera` `c`: *str*
@@ -16710,8 +16710,8 @@ def frameLayout(*args: Any, q: bool, preCollapseCommand: bool) -> str: ...
 @overload
 def frameLayout(*args: Any, q: bool, pcc: bool) -> str: ...
 @overload
-def frameLayout(*args: Any, **kwargs: Any) -> str: ...
-def frameLayout(*args: Any, **kwargs: Any) -> Any:
+def frameLayout(*args, **kwargs) -> str: ...
+def frameLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -16761,7 +16761,7 @@ def frameLayout(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def framelessDialog(*args: Any, button: str = ..., b: str = ..., message: str = ..., m: str = ..., parent: str = ..., p: str = ..., path: str = ..., pat: str = ..., primary: str = ..., pr: str = ..., title: str = ..., t: str = ..., **kwargs: Any) -> str:
+def framelessDialog(*args, **kwargs) -> str:
     """Flags:
     - `button` `b`: *str*
     - `message` `m`: *str*
@@ -16815,8 +16815,8 @@ def freeFormFillet(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def freeFormFillet(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def freeFormFillet(*args: Any, **kwargs: Any) -> list[str]: ...
-def freeFormFillet(*args: Any, **kwargs: Any) -> Any:
+def freeFormFillet(*args, **kwargs) -> list[str]: ...
+def freeFormFillet(*args, **kwargs) -> list[str]:
     """Flags:
     - `bias` `b`: *float*
     - `caching` `cch`: *bool*
@@ -16859,8 +16859,8 @@ def freezeOptions(*args: Any, q: bool, runtimePropagation: bool) -> bool: ...
 @overload
 def freezeOptions(*args: Any, q: bool, rt: bool) -> bool: ...
 @overload
-def freezeOptions(*args: Any, **kwargs: Any) -> str: ...
-def freezeOptions(*args: Any, **kwargs: Any) -> Any:
+def freezeOptions(*args, **kwargs) -> str: ...
+def freezeOptions(*args, **kwargs) -> str:
     """Flags:
     - `displayLayers` `dl`: *bool*
     - `downstream` `dn`: *str*
@@ -16883,15 +16883,15 @@ def geomBind(*args: Any, q: bool, maxInfluences: bool) -> int: ...
 @overload
 def geomBind(*args: Any, q: bool, mi: bool) -> int: ...
 @overload
-def geomBind(*args: Any, **kwargs: Any) -> None: ...
-def geomBind(*args: Any, **kwargs: Any) -> Any:
+def geomBind(*args, **kwargs) -> None: ...
+def geomBind(*args, **kwargs) -> None:
     """Flags:
     - `bindMethod` `bm`: *int*
     - `falloff` `fo`: *float*
     - `geodesicVoxelParams` `gvp`: *Any*
     - `maxInfluences` `mi`: *int*
     """
-def geomToBBox(*args: Any, bakeAnimation: bool = ..., ba: bool = ..., combineMesh: bool = ..., cm: bool = ..., endTime: float = ..., et: float = ..., keepOriginal: bool = ..., ko: bool = ..., name: str = ..., n: str = ..., nameSuffix: str = ..., ns: str = ..., sampleBy: float = ..., sb: float = ..., shaderColor: Any = ..., sc: Any = ..., single: bool = ..., s: bool = ..., startTime: float = ..., st: float = ..., **kwargs: Any) -> None:
+def geomToBBox(*args, **kwargs) -> None:
     """Flags:
     - `bakeAnimation` `ba`: *bool*
     - `combineMesh` `cm`: *bool*
@@ -16904,7 +16904,7 @@ def geomToBBox(*args: Any, bakeAnimation: bool = ..., ba: bool = ..., combineMes
     - `single` `s`: *bool*
     - `startTime` `st`: *float*
     """
-def geometryAttrInfo(*args: Any, boundingBox: bool = ..., bb: bool = ..., castToEdges: bool = ..., cte: bool = ..., castToFaces: bool = ..., ctf: bool = ..., castToVerts: bool = ..., ctv: bool = ..., componentTagCategory: bool = ..., ccy: bool = ..., componentTagExpression: str = ..., cex: str = ..., componentTagHash: bool = ..., hsh: bool = ..., componentTagHistory: bool = ..., cth: bool = ..., componentTagHistoryHash: bool = ..., chh: bool = ..., componentTagNames: bool = ..., cnm: bool = ..., components: bool = ..., cmp: bool = ..., deformerChain: bool = ..., dch: bool = ..., elementCount: bool = ..., ec: bool = ..., groupId: int = ..., gid: int = ..., matrix: bool = ..., mtx: bool = ..., nodeChain: bool = ..., nch: bool = ..., originalGeometry: bool = ..., og: bool = ..., outputPlugChain: bool = ..., och: bool = ..., plugChain: bool = ..., pch: bool = ..., pointCount: bool = ..., pc: bool = ..., pointIndices: bool = ..., pi: bool = ..., points: bool = ..., pnt: bool = ..., subsetState: bool = ..., sbs: bool = ..., **kwargs: Any) -> Any:
+def geometryAttrInfo(*args, **kwargs) -> Any:
     """Flags:
     - `boundingBox` `bb`: *bool*
     - `castToEdges` `cte`: *bool*
@@ -16955,8 +16955,8 @@ def geometryConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def geometryConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def geometryConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def geometryConstraint(*args: Any, **kwargs: Any) -> Any:
+def geometryConstraint(*args, **kwargs) -> list[str]: ...
+def geometryConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `layer` `l`: *str*
     - `name` `n`: *str*
@@ -16965,7 +16965,7 @@ def geometryConstraint(*args: Any, **kwargs: Any) -> Any:
     - `weight` `w`: *float*
     - `weightAliasList` `wal`: *bool*
     """
-def getAttr(*args: Any, asString: bool = ..., caching: bool = ..., ca: bool = ..., channelBox: bool = ..., cb: bool = ..., expandEnvironmentVariables: bool = ..., x: bool = ..., keyable: bool = ..., k: bool = ..., lock: bool = ..., l: bool = ..., multiIndices: bool = ..., mi: bool = ..., settable: bool = ..., se: bool = ..., silent: bool = ..., sl: bool = ..., size: bool = ..., s: bool = ..., time: float = ..., t: float = ..., type: bool = ..., typ: bool = ..., **kwargs: Any) -> Any:
+def getAttr(*args, **kwargs) -> Any:
     """Flags:
     - `asString` `asString`: *bool*
     - `caching` `ca`: *bool*
@@ -16980,21 +16980,21 @@ def getAttr(*args: Any, asString: bool = ..., caching: bool = ..., ca: bool = ..
     - `time` `t`: *float*
     - `type` `typ`: *bool*
     """
-def getClassification(*args: Any, satisfies: str = ..., sat: str = ..., **kwargs: Any) -> list[str]:
+def getClassification(*args, **kwargs) -> list[str]:
     """Flags:
     - `satisfies` `sat`: *str*
     """
-def getFileList(*args: Any, filespec: str = ..., fs: str = ..., folder: str = ..., fld: str = ..., **kwargs: Any) -> list[str]:
+def getFileList(*args, **kwargs) -> list[str]:
     """Flags:
     - `filespec` `fs`: *str*
     - `folder` `fld`: *str*
     """
-def getInputDeviceRange(*args: Any, maxValue: bool = ..., max: bool = ..., minValue: bool = ..., min: bool = ..., **kwargs: Any) -> list[float]:
+def getInputDeviceRange(*args, **kwargs) -> list[float]:
     """Flags:
     - `maxValue` `max`: *bool*
     - `minValue` `min`: *bool*
     """
-def getMetadata(*args: Any, channelName: str = ..., cn: str = ..., channelType: str = ..., cht: str = ..., dataType: bool = ..., dt: bool = ..., endIndex: str = ..., eix: str = ..., index: str = ..., idx: str = ..., indexType: str = ..., idt: str = ..., listChannelNames: bool = ..., lcn: bool = ..., listMemberNames: bool = ..., lmn: bool = ..., listStreamNames: bool = ..., lsn: bool = ..., memberName: str = ..., mn: str = ..., scene: bool = ..., scn: bool = ..., startIndex: str = ..., six: str = ..., streamName: str = ..., stn: str = ..., **kwargs: Any) -> list[int]:
+def getMetadata(*args, **kwargs) -> list[int]:
     """Flags:
     - `channelName` `cn`: *str*
     - `channelType` `cht`: *str*
@@ -17010,12 +17010,12 @@ def getMetadata(*args: Any, channelName: str = ..., cn: str = ..., channelType: 
     - `startIndex` `six`: *str*
     - `streamName` `stn`: *str*
     """
-def getModifiers(*args: Any) -> int: ...
-def getModulePath(*args: Any, moduleName: str = ..., mn: str = ..., **kwargs: Any) -> str:
+def getModifiers(*args, **kwargs) -> int: ...
+def getModulePath(*args, **kwargs) -> str:
     """Flags:
     - `moduleName` `mn`: *str*
     """
-def getPanel(*args: Any, allConfigs: bool = ..., ac: bool = ..., allPanels: bool = ..., all: bool = ..., allScriptedTypes: bool = ..., ast: bool = ..., allTypes: bool = ..., at: bool = ..., atPosition: Any = ..., ap: Any = ..., configWithLabel: str = ..., cwl: str = ..., containing: str = ..., c: str = ..., invisiblePanels: bool = ..., inv: bool = ..., scriptType: str = ..., sty: str = ..., type: str = ..., typ: str = ..., typeOf: str = ..., to: str = ..., underPointer: bool = ..., up: bool = ..., visiblePanels: bool = ..., vis: bool = ..., withFocus: bool = ..., wf: bool = ..., withLabel: str = ..., wl: str = ..., **kwargs: Any) -> list[str]:
+def getPanel(*args, **kwargs) -> list[str]:
     """Flags:
     - `allConfigs` `ac`: *bool*
     - `allPanels` `all`: *bool*
@@ -17033,8 +17033,8 @@ def getPanel(*args: Any, allConfigs: bool = ..., ac: bool = ..., allPanels: bool
     - `withFocus` `wf`: *bool*
     - `withLabel` `wl`: *str*
     """
-def getRenderDependencies(*args: Any) -> str: ...
-def getRenderTasks(*args: Any, camera: str = ..., c: str = ..., renderLayer: str = ..., rl: str = ..., **kwargs: Any) -> list[str]:
+def getRenderDependencies(*args, **kwargs) -> str: ...
+def getRenderTasks(*args, **kwargs) -> list[str]:
     """Flags:
     - `camera` `c`: *str*
     - `renderLayer` `rl`: *str*
@@ -17120,8 +17120,8 @@ def ghosting(*args: Any, q: bool, useDriver: bool) -> bool: ...
 @overload
 def ghosting(*args: Any, q: bool, ud: bool) -> bool: ...
 @overload
-def ghosting(*args: Any, **kwargs: Any) -> bool: ...
-def ghosting(*args: Any, **kwargs: Any) -> Any:
+def ghosting(*args, **kwargs) -> bool: ...
+def ghosting(*args, **kwargs) -> bool:
     """Flags:
     - `action` `act`: *str*
     - `allGhostedObjects` `ago`: *bool*
@@ -17223,8 +17223,8 @@ def glRender(*args: Any, q: bool, currentFrame: bool) -> bool: ...
 @overload
 def glRender(*args: Any, q: bool, cf: bool) -> bool: ...
 @overload
-def glRender(*args: Any, **kwargs: Any) -> None: ...
-def glRender(*args: Any, **kwargs: Any) -> Any:
+def glRender(*args, **kwargs) -> None: ...
+def glRender(*args, **kwargs) -> None:
     """Flags:
     - `accumBufferPasses` `abp`: *int*
     - `alphaSource` `alphaSource`: *str*
@@ -17338,8 +17338,8 @@ def glRenderEditor(*args: Any, q: bool, viewCameraName: bool) -> bool: ...
 @overload
 def glRenderEditor(*args: Any, q: bool, vcn: bool) -> bool: ...
 @overload
-def glRenderEditor(*args: Any, **kwargs: Any) -> None: ...
-def glRenderEditor(*args: Any, **kwargs: Any) -> Any:
+def glRenderEditor(*args, **kwargs) -> None: ...
+def glRenderEditor(*args, **kwargs) -> None:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -17414,8 +17414,8 @@ def globalStitch(*args: Any, q: bool, stitchPartialEdges: bool) -> bool: ...
 @overload
 def globalStitch(*args: Any, q: bool, spe: bool) -> bool: ...
 @overload
-def globalStitch(*args: Any, **kwargs: Any) -> list[str]: ...
-def globalStitch(*args: Any, **kwargs: Any) -> Any:
+def globalStitch(*args, **kwargs) -> list[str]: ...
+def globalStitch(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -17431,7 +17431,7 @@ def globalStitch(*args: Any, **kwargs: Any) -> Any:
     - `stitchPartialEdges` `spe`: *bool*
     - `stitchSmoothness` `ss`: *int*
     """
-def grabColor(*args: Any, alpha: bool = ..., a: bool = ..., hsvValue: bool = ..., hsv: bool = ..., rgbValue: bool = ..., rgb: bool = ..., **kwargs: Any) -> list[float]:
+def grabColor(*args, **kwargs) -> list[float]:
     """Flags:
     - `alpha` `a`: *bool*
     - `hsvValue` `hsv`: *bool*
@@ -17516,8 +17516,8 @@ def gradientControl(*args: Any, q: bool, w: bool) -> int: ...
 @overload
 def gradientControl(*args: Any, q: bool, adaptiveScaling: bool) -> bool: ...
 @overload
-def gradientControl(*args: Any, **kwargs: Any) -> str: ...
-def gradientControl(*args: Any, **kwargs: Any) -> Any:
+def gradientControl(*args, **kwargs) -> str: ...
+def gradientControl(*args, **kwargs) -> str:
     """Flags:
     - `adaptiveScaling` `adaptiveScaling`: *bool*
     - `annotation` `ann`: *str*
@@ -17639,8 +17639,8 @@ def gradientControlNoAttr(*args: Any, q: bool, width: bool) -> int: ...
 @overload
 def gradientControlNoAttr(*args: Any, q: bool, w: bool) -> int: ...
 @overload
-def gradientControlNoAttr(*args: Any, **kwargs: Any) -> str: ...
-def gradientControlNoAttr(*args: Any, **kwargs: Any) -> Any:
+def gradientControlNoAttr(*args, **kwargs) -> str: ...
+def gradientControlNoAttr(*args, **kwargs) -> str:
     """Flags:
     - `addEntry` `ae`: *Any*
     - `annotation` `ann`: *str*
@@ -17709,8 +17709,8 @@ def graphDollyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def graphDollyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def graphDollyCtx(*args: Any, **kwargs: Any) -> str: ...
-def graphDollyCtx(*args: Any, **kwargs: Any) -> Any:
+def graphDollyCtx(*args, **kwargs) -> str: ...
+def graphDollyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -17719,7 +17719,7 @@ def graphDollyCtx(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def graphSelectContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def graphSelectContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -17751,8 +17751,8 @@ def graphTrackCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def graphTrackCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def graphTrackCtx(*args: Any, **kwargs: Any) -> str: ...
-def graphTrackCtx(*args: Any, **kwargs: Any) -> Any:
+def graphTrackCtx(*args, **kwargs) -> str: ...
+def graphTrackCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -17822,8 +17822,8 @@ def grid(*args: Any, q: bool, toggle: bool) -> bool: ...
 @overload
 def grid(*args: Any, q: bool, tgl: bool) -> bool: ...
 @overload
-def grid(*args: Any, **kwargs: Any) -> None: ...
-def grid(*args: Any, **kwargs: Any) -> Any:
+def grid(*args, **kwargs) -> None: ...
+def grid(*args, **kwargs) -> None:
     """Flags:
     - `default` `df`: *bool*
     - `displayAxes` `da`: *bool*
@@ -17922,8 +17922,8 @@ def gridLayout(*args: Any, q: bool, childArray: bool) -> bool: ...
 @overload
 def gridLayout(*args: Any, q: bool, ca: bool) -> bool: ...
 @overload
-def gridLayout(*args: Any, **kwargs: Any) -> str: ...
-def gridLayout(*args: Any, **kwargs: Any) -> Any:
+def gridLayout(*args, **kwargs) -> str: ...
+def gridLayout(*args, **kwargs) -> str:
     """Flags:
     - `allowEmptyCells` `aec`: *bool*
     - `annotation` `ann`: *str*
@@ -17967,7 +17967,7 @@ def gridLayout(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def group(*args: Any, absolute: bool = ..., a: bool = ..., empty: bool = ..., em: bool = ..., name: str = ..., n: str = ..., parent: str = ..., p: str = ..., relative: bool = ..., r: bool = ..., useAsGroup: str = ..., uag: str = ..., world: bool = ..., w: bool = ..., **kwargs: Any) -> str:
+def group(*args, **kwargs) -> str:
     """Flags:
     - `absolute` `a`: *bool*
     - `empty` `em`: *bool*
@@ -18006,8 +18006,8 @@ def hardenPointCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def hardenPointCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def hardenPointCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def hardenPointCurve(*args: Any, **kwargs: Any) -> Any:
+def hardenPointCurve(*args, **kwargs) -> list[str]: ...
+def hardenPointCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -18017,7 +18017,7 @@ def hardenPointCurve(*args: Any, **kwargs: Any) -> Any:
     - `object` `o`: *bool*
     - `replaceOriginal` `rpo`: *bool*
     """
-def hardware(*args: Any, brdType: bool = ..., brd: bool = ..., cpuType: bool = ..., cpu: bool = ..., graphicsType: bool = ..., gfx: bool = ..., megaHertz: bool = ..., mhz: bool = ..., numProcessors: bool = ..., npr: bool = ..., **kwargs: Any) -> str:
+def hardware(*args, **kwargs) -> str:
     """Flags:
     - `brdType` `brd`: *bool*
     - `cpuType` `cpu`: *bool*
@@ -18104,8 +18104,8 @@ def hardwareRenderPanel(*args: Any, q: bool, needsInit: bool) -> bool: ...
 @overload
 def hardwareRenderPanel(*args: Any, q: bool, ni: bool) -> bool: ...
 @overload
-def hardwareRenderPanel(*args: Any, **kwargs: Any) -> str: ...
-def hardwareRenderPanel(*args: Any, **kwargs: Any) -> Any:
+def hardwareRenderPanel(*args, **kwargs) -> str: ...
+def hardwareRenderPanel(*args, **kwargs) -> str:
     """Flags:
     - `camera` `cam`: *str*
     - `control` `ctl`: *bool*
@@ -18131,7 +18131,7 @@ def hardwareRenderPanel(*args: Any, **kwargs: Any) -> Any:
     - `unParent` `up`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def hasMetadata(*args: Any, asList: bool = ..., al: bool = ..., channelName: str = ..., cn: str = ..., channelType: str = ..., cht: str = ..., endIndex: str = ..., eix: str = ..., ignoreDefault: bool = ..., id: bool = ..., index: str = ..., idx: str = ..., indexType: str = ..., idt: str = ..., memberName: str = ..., mn: str = ..., scene: bool = ..., scn: bool = ..., startIndex: str = ..., six: str = ..., streamName: str = ..., stn: str = ..., **kwargs: Any) -> list[str]:
+def hasMetadata(*args, **kwargs) -> list[str]:
     """Flags:
     - `asList` `al`: *bool*
     - `channelName` `cn`: *str*
@@ -18226,8 +18226,8 @@ def headsUpDisplay(*args: Any, q: bool, lastOccupiedBlock: bool) -> int: ...
 @overload
 def headsUpDisplay(*args: Any, q: bool, lob: bool) -> int: ...
 @overload
-def headsUpDisplay(*args: Any, **kwargs: Any) -> int: ...
-def headsUpDisplay(*args: Any, **kwargs: Any) -> Any:
+def headsUpDisplay(*args, **kwargs) -> int: ...
+def headsUpDisplay(*args, **kwargs) -> int:
     """Flags:
     - `allDescendants` `ad`: *bool*
     - `allowOverlap` `ao`: *bool*
@@ -18276,7 +18276,7 @@ def headsUpDisplay(*args: Any, **kwargs: Any) -> Any:
     - `showGrid` `sg`: *bool*
     - `visible` `vis`: *bool*
     """
-def headsUpMessage(*args: Any, horizontalOffset: int = ..., ho: int = ..., object: str = ..., o: str = ..., selection: bool = ..., s: bool = ..., time: float = ..., t: float = ..., uvTextureEditor: bool = ..., uve: bool = ..., verticalOffset: int = ..., vo: int = ..., viewport: bool = ..., vp: bool = ..., **kwargs: Any) -> None:
+def headsUpMessage(*args, **kwargs) -> None:
     """Flags:
     - `horizontalOffset` `ho`: *int*
     - `object` `o`: *str*
@@ -18323,8 +18323,8 @@ def help(*args: Any, q: bool, syntaxOnly: bool) -> bool: ...
 @overload
 def help(*args: Any, q: bool, so: bool) -> bool: ...
 @overload
-def help(*args: Any, **kwargs: Any) -> None: ...
-def help(*args: Any, **kwargs: Any) -> Any:
+def help(*args, **kwargs) -> None: ...
+def help(*args, **kwargs) -> None:
     """Flags:
     - `documentation` `doc`: *bool*
     - `language` `lng`: *str*
@@ -18417,8 +18417,8 @@ def helpLine(*args: Any, q: bool, numberOfPopupMenus: bool) -> bool: ...
 @overload
 def helpLine(*args: Any, q: bool, npm: bool) -> bool: ...
 @overload
-def helpLine(*args: Any, **kwargs: Any) -> str: ...
-def helpLine(*args: Any, **kwargs: Any) -> Any:
+def helpLine(*args, **kwargs) -> str: ...
+def helpLine(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -18446,7 +18446,7 @@ def helpLine(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def hide(*args: Any, allObjects: bool = ..., all: bool = ..., clearLastHidden: bool = ..., clh: bool = ..., clearSelection: bool = ..., cs: bool = ..., invertComponents: bool = ..., ic: bool = ..., returnHidden: bool = ..., rh: bool = ..., testVisibility: bool = ..., tv: bool = ..., **kwargs: Any) -> None:
+def hide(*args, **kwargs) -> None:
     """Flags:
     - `allObjects` `all`: *bool*
     - `clearLastHidden` `clh`: *bool*
@@ -18460,18 +18460,18 @@ def hikGlobals(*args: Any, q: bool, releaseAllPinning: bool) -> bool: ...
 @overload
 def hikGlobals(*args: Any, q: bool, rap: bool) -> bool: ...
 @overload
-def hikGlobals(*args: Any, **kwargs: Any) -> bool: ...
-def hikGlobals(*args: Any, **kwargs: Any) -> Any:
+def hikGlobals(*args, **kwargs) -> bool: ...
+def hikGlobals(*args, **kwargs) -> bool:
     """Flags:
     - `releaseAllPinning` `rap`: *bool*
     """
-def hilite(*args: Any, replace: bool = ..., r: bool = ..., toggle: bool = ..., tgl: bool = ..., unHilite: bool = ..., u: bool = ..., **kwargs: Any) -> None:
+def hilite(*args, **kwargs) -> None:
     """Flags:
     - `replace` `r`: *bool*
     - `toggle` `tgl`: *bool*
     - `unHilite` `u`: *bool*
     """
-def hitTest(*args: Any) -> list[str]: ...
+def hitTest(*args, **kwargs) -> list[str]: ...
 @overload
 def hotBox(*args: Any, q: bool, menuSetOnly: bool) -> str: ...
 @overload
@@ -18553,8 +18553,8 @@ def hotBox(*args: Any, q: bool, liveOnlyMenus: bool) -> bool: ...
 @overload
 def hotBox(*args: Any, q: bool, lo: bool) -> bool: ...
 @overload
-def hotBox(*args: Any, **kwargs: Any) -> None: ...
-def hotBox(*args: Any, **kwargs: Any) -> Any:
+def hotBox(*args, **kwargs) -> None: ...
+def hotBox(*args, **kwargs) -> None:
     """Flags:
     - `PaneOnlyMenus` `po`: *bool*
     - `PaneToggleMenus` `pt`: *bool*
@@ -18659,8 +18659,8 @@ def hotkey(*args: Any, q: bool, sourceUserHotkeys: bool) -> bool: ...
 @overload
 def hotkey(*args: Any, q: bool, suh: bool) -> bool: ...
 @overload
-def hotkey(*args: Any, **kwargs: Any) -> None: ...
-def hotkey(*args: Any, **kwargs: Any) -> Any:
+def hotkey(*args, **kwargs) -> None: ...
+def hotkey(*args, **kwargs) -> None:
     """Flags:
     - `altModifier` `alt`: *bool*
     - `autoSave` `autoSave`: *bool*
@@ -18679,7 +18679,7 @@ def hotkey(*args: Any, **kwargs: Any) -> Any:
     - `shiftModifier` `sht`: *bool*
     - `sourceUserHotkeys` `suh`: *bool*
     """
-def hotkeyCheck(*args: Any, altModifier: bool = ..., alt: bool = ..., commandModifier: bool = ..., cmd: bool = ..., ctrlModifier: bool = ..., ctl: bool = ..., isRepeatable: bool = ..., ir: bool = ..., keyString: str = ..., k: str = ..., keyUp: bool = ..., kup: bool = ..., optionModifier: bool = ..., opt: bool = ..., **kwargs: Any) -> str:
+def hotkeyCheck(*args, **kwargs) -> str:
     """Flags:
     - `altModifier` `alt`: *bool*
     - `commandModifier` `cmd`: *bool*
@@ -18726,8 +18726,8 @@ def hotkeyCtx(*args: Any, q: bool, typeArray: bool) -> bool: ...
 @overload
 def hotkeyCtx(*args: Any, q: bool, ta: bool) -> bool: ...
 @overload
-def hotkeyCtx(*args: Any, **kwargs: Any) -> None: ...
-def hotkeyCtx(*args: Any, **kwargs: Any) -> Any:
+def hotkeyCtx(*args, **kwargs) -> None: ...
+def hotkeyCtx(*args, **kwargs) -> None:
     """Flags:
     - `addClient` `ac`: *str*
     - `clientArray` `ca`: *bool*
@@ -18821,8 +18821,8 @@ def hotkeyEditorPanel(*args: Any, q: bool, numberOfPopupMenus: bool) -> bool: ..
 @overload
 def hotkeyEditorPanel(*args: Any, q: bool, npm: bool) -> bool: ...
 @overload
-def hotkeyEditorPanel(*args: Any, **kwargs: Any) -> str: ...
-def hotkeyEditorPanel(*args: Any, **kwargs: Any) -> Any:
+def hotkeyEditorPanel(*args, **kwargs) -> str: ...
+def hotkeyEditorPanel(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -18879,8 +18879,8 @@ def hotkeySet(*args: Any, q: bool, hotkeySetArray: bool) -> bool: ...
 @overload
 def hotkeySet(*args: Any, q: bool, hsa: bool) -> bool: ...
 @overload
-def hotkeySet(*args: Any, **kwargs: Any) -> str: ...
-def hotkeySet(*args: Any, **kwargs: Any) -> Any:
+def hotkeySet(*args, **kwargs) -> str: ...
+def hotkeySet(*args, **kwargs) -> str:
     """Flags:
     - `current` `cu`: *bool*
     - `delete` `delete`: *bool*
@@ -18944,8 +18944,8 @@ def hudButton(*args: Any, q: bool, visible: bool) -> bool: ...
 @overload
 def hudButton(*args: Any, q: bool, vis: bool) -> bool: ...
 @overload
-def hudButton(*args: Any, **kwargs: Any) -> int: ...
-def hudButton(*args: Any, **kwargs: Any) -> Any:
+def hudButton(*args, **kwargs) -> int: ...
+def hudButton(*args, **kwargs) -> int:
     """Flags:
     - `allowOverlap` `ao`: *bool*
     - `block` `b`: *int*
@@ -19042,8 +19042,8 @@ def hudSlider(*args: Any, q: bool, valueAlignment: bool) -> str: ...
 @overload
 def hudSlider(*args: Any, q: bool, va: bool) -> str: ...
 @overload
-def hudSlider(*args: Any, **kwargs: Any) -> int: ...
-def hudSlider(*args: Any, **kwargs: Any) -> Any:
+def hudSlider(*args, **kwargs) -> int: ...
+def hudSlider(*args, **kwargs) -> int:
     """Flags:
     - `allowOverlap` `ao`: *bool*
     - `block` `b`: *int*
@@ -19151,8 +19151,8 @@ def hudSliderButton(*args: Any, q: bool, sliderLabelWidth: bool) -> int: ...
 @overload
 def hudSliderButton(*args: Any, q: bool, slw: bool) -> int: ...
 @overload
-def hudSliderButton(*args: Any, **kwargs: Any) -> int: ...
-def hudSliderButton(*args: Any, **kwargs: Any) -> Any:
+def hudSliderButton(*args, **kwargs) -> int: ...
+def hudSliderButton(*args, **kwargs) -> int:
     """Flags:
     - `allowOverlap` `ao`: *bool*
     - `block` `b`: *int*
@@ -19226,8 +19226,8 @@ def hwReflectionMap(*args: Any, q: bool, enable: bool) -> bool: ...
 @overload
 def hwReflectionMap(*args: Any, q: bool, en: bool) -> bool: ...
 @overload
-def hwReflectionMap(*args: Any, **kwargs: Any) -> str: ...
-def hwReflectionMap(*args: Any, **kwargs: Any) -> Any:
+def hwReflectionMap(*args, **kwargs) -> str: ...
+def hwReflectionMap(*args, **kwargs) -> str:
     """Flags:
     - `backTextureName` `bkn`: *str*
     - `bottomTextureName` `bmn`: *str*
@@ -19321,8 +19321,8 @@ def hwRender(*args: Any, q: bool, renderSelected: bool) -> bool: ...
 @overload
 def hwRender(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def hwRender(*args: Any, **kwargs: Any) -> bool: ...
-def hwRender(*args: Any, **kwargs: Any) -> Any:
+def hwRender(*args, **kwargs) -> bool: ...
+def hwRender(*args, **kwargs) -> bool:
     """Flags:
     - `acceleratedMultiSampleSupport` `ams`: *bool*
     - `activeTextureCount` `atc`: *bool*
@@ -19349,8 +19349,8 @@ def hwRender(*args: Any, **kwargs: Any) -> Any:
     - `writeAlpha` `a`: *bool*
     - `writeDepth` `d`: *bool*
     """
-def hwRenderLoad(*args: Any) -> None: ...
-def hyperGraph(*args: Any, addBookmark: bool = ..., abk: bool = ..., addDependGraph: str = ..., adg: str = ..., addDependNode: str = ..., adn: str = ..., animateTransition: bool = ..., atr: bool = ..., attributeEditor: str = ..., ae: str = ..., backward: bool = ..., bak: bool = ..., bookmarkName: bool = ..., bn: bool = ..., breakConnectionCommand: str = ..., bco: str = ..., clear: bool = ..., clr: bool = ..., collapseContainer: bool = ..., cc: bool = ..., connectionDrawStyle: str = ..., cds: str = ..., control: bool = ..., ctl: bool = ..., currentEdge: str = ..., ced: str = ..., currentNode: str = ..., cno: str = ..., debug: str = ..., deb: str = ..., defineTemplate: str = ..., dt: str = ..., deleteBookmark: str = ..., dbk: str = ..., dependGraph: bool = ..., dg: bool = ..., dependNode: str = ..., dn: str = ..., directoryPressCommand: str = ..., dp: str = ..., docTag: str = ..., dtg: str = ..., down: bool = ..., do: bool = ..., downstream: bool = ..., ds: bool = ..., dragAndDropBehaviorCommand: str = ..., ddc: str = ..., dropNode: str = ..., dr: str = ..., dropTargetNode: str = ..., drt: str = ..., edgeDblClickCommand: str = ..., edc: str = ..., edgeDimmedDblClickCommand: str = ..., edd: str = ..., edgeDropCommand: str = ..., edr: str = ..., edgePressCommand: str = ..., ep: str = ..., edgeReleaseCommand: str = ..., er: str = ..., enableAutomaticLayout: bool = ..., eal: bool = ..., exists: bool = ..., ex: bool = ..., expandContainer: bool = ..., ec: bool = ..., feedbackGadget: str = ..., fbg: str = ..., feedbackNode: str = ..., fbn: str = ..., filter: str = ..., f: str = ..., filterDetail: Any = ..., fd: Any = ..., fitImageToHeight: bool = ..., fih: bool = ..., fitImageToWidth: bool = ..., fiw: bool = ..., focusCommand: str = ..., fc: str = ..., fold: bool = ..., fo: bool = ..., forceMainConnection: str = ..., fmc: str = ..., forceRefresh: bool = ..., frf: bool = ..., forward: bool = ..., fow: bool = ..., frame: bool = ..., fr: bool = ..., frameBranch: bool = ..., frb: bool = ..., frameGraph: bool = ..., fg: bool = ..., frameGraphNoRebuild: bool = ..., fgn: bool = ..., frameHierarchy: bool = ..., frh: bool = ..., freeform: bool = ..., fre: bool = ..., fromAttr: str = ..., fat: str = ..., fromNode: str = ..., frn: str = ..., getNodeList: bool = ..., gnl: bool = ..., getNodePosition: str = ..., gnp: str = ..., graphDescription: bool = ..., gd: bool = ..., graphLayoutStyle: str = ..., gls: str = ..., graphType: str = ..., gt: str = ..., heatMapDisplay: bool = ..., hmd: bool = ..., highlightConnection: str = ..., hlc: str = ..., iconSize: str = ..., ics: str = ..., image: str = ..., img: str = ..., imageEnabled: bool = ..., ime: bool = ..., imageForContainer: bool = ..., ifc: bool = ..., imagePosition: Any = ..., imp: Any = ..., imageScale: float = ..., ims: float = ..., initializeScript: str = ..., ini: str = ..., isHotkeyTarget: bool = ..., iht: bool = ..., layout: bool = ..., lay: bool = ..., layoutSelected: str = ..., lsl: str = ..., limitGraphTraversal: int = ..., lgt: int = ..., lockMainConnection: bool = ..., lck: bool = ..., look: Any = ..., loo: Any = ..., mainListConnection: str = ..., mlc: str = ..., mergeConnections: bool = ..., mc: bool = ..., navigateHome: bool = ..., hom: bool = ..., navup: bool = ..., nu: bool = ..., newInputConnection: str = ..., nin: str = ..., newOutputConnection: str = ..., nou: str = ..., nextView: bool = ..., nvw: bool = ..., nodeConnectCommand: str = ..., nco: str = ..., nodeDblClickCommand: str = ..., ndc: str = ..., nodeDropCommand: str = ..., ndr: str = ..., nodeMenuCommand: str = ..., nm: str = ..., nodePressCommand: str = ..., np: str = ..., nodeReleaseCommand: str = ..., nr: str = ..., opaqueContainers: bool = ..., opc: bool = ..., orientation: str = ..., panView: Any = ..., pan: Any = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., popupMenuScript: str = ..., pms: str = ..., previousView: bool = ..., pvw: bool = ..., range: Any = ..., rg: Any = ..., rebuild: bool = ..., rb: bool = ..., removeNode: str = ..., rmn: str = ..., rename: bool = ..., rn: bool = ..., resetFreeform: bool = ..., rf: bool = ..., restoreBookmark: str = ..., rbk: str = ..., scrollUpDownNoZoom: bool = ..., snz: bool = ..., selectionConnection: str = ..., slc: str = ..., setNodePosition: Any = ..., snp: Any = ..., showCachedConnections: bool = ..., scc: bool = ..., showConnectionFromSelected: bool = ..., scf: bool = ..., showConnectionToSelected: bool = ..., sct: bool = ..., showConstraintLabels: bool = ..., scl: bool = ..., showConstraints: bool = ..., shc: bool = ..., showDeformers: bool = ..., shd: bool = ..., showExpressions: bool = ..., shx: bool = ..., showInvisible: bool = ..., shi: bool = ..., showNamespace: bool = ..., sn: bool = ..., showRelationships: bool = ..., shr: bool = ..., showShapes: bool = ..., shs: bool = ..., showUnderworld: bool = ..., shu: bool = ..., stateString: bool = ..., sts: bool = ..., toAttr: str = ..., tat: str = ..., toNode: str = ..., ton: str = ..., transitionFrames: int = ..., tfr: int = ..., unParent: bool = ..., up: bool = ..., unfold: bool = ..., uf: bool = ..., unfoldAll: bool = ..., ua: bool = ..., unfoldAllShapes: bool = ..., uas: bool = ..., unfoldHidden: bool = ..., ufh: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., updateNodeAdded: bool = ..., una: bool = ..., updateSelection: bool = ..., us: bool = ..., upstream: bool = ..., ups: bool = ..., useDrawOverrideColor: bool = ..., drc: bool = ..., useFeedbackList: bool = ..., ufl: bool = ..., useTemplate: str = ..., ut: str = ..., viewOption: str = ..., vo: str = ..., visibility: bool = ..., vis: bool = ..., zoom: float = ..., zm: float = ..., **kwargs: Any) -> str:
+def hwRenderLoad(*args, **kwargs) -> None: ...
+def hyperGraph(*args, **kwargs) -> str:
     """Flags:
     - `addBookmark` `abk`: *bool*
     - `addDependGraph` `adg`: *str*
@@ -19487,7 +19487,7 @@ def hyperGraph(*args: Any, addBookmark: bool = ..., abk: bool = ..., addDependGr
     - `visibility` `vis`: *bool*
     - `zoom` `zm`: *float*
     """
-def hyperPanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ..., cp: str = ..., createString: bool = ..., cs: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., editString: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., hyperEditor: bool = ..., he: bool = ..., init: bool = ..., isUnique: bool = ..., iu: bool = ..., label: str = ..., l: str = ..., menuBarRepeatLast: bool = ..., mrl: bool = ..., menuBarVisible: bool = ..., mbv: bool = ..., needsInit: bool = ..., ni: bool = ..., parent: str = ..., p: str = ..., popupMenuProcedure: str = ..., pmp: str = ..., replacePanel: str = ..., rp: str = ..., tearOff: bool = ..., to: bool = ..., tearOffCopy: str = ..., toc: str = ..., tearOffRestore: bool = ..., tor: bool = ..., unParent: bool = ..., up: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def hyperPanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -19512,7 +19512,7 @@ def hyperPanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ...
     - `unParent` `up`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def hyperShade(*args: Any, assign: str = ..., a: str = ..., clearWorkArea: bool = ..., cwa: bool = ..., collapse: str = ..., clp: str = ..., createNode: str = ..., rcn: str = ..., dependGraphArea: bool = ..., dg: bool = ..., downStream: bool = ..., ds: bool = ..., duplicate: bool = ..., dup: bool = ..., fixRenderSize: bool = ..., fix: bool = ..., geometries: str = ..., geo: str = ..., incremental: bool = ..., inc: bool = ..., listDownstreamNodes: str = ..., ldn: str = ..., listDownstreamShaderNodes: str = ..., lds: str = ..., listGeometries: str = ..., lgm: str = ..., listMaterialNodes: bool = ..., lmn: bool = ..., listUpstreamNodes: str = ..., lun: str = ..., name: str = ..., n: str = ..., networks: bool = ..., net: bool = ..., noSGShapes: bool = ..., nsg: bool = ..., noShapes: bool = ..., ns: bool = ..., noTransforms: bool = ..., nt: bool = ..., objects: str = ..., o: str = ..., renderCreateAndDrop: str = ..., rcd: str = ..., reset: bool = ..., rst: bool = ..., resetGraph: bool = ..., rsg: bool = ..., resetSwatch: bool = ..., rss: bool = ..., setAllowsRegraphing: bool = ..., sar: bool = ..., setWorkArea: str = ..., swa: str = ..., shaderNetwork: str = ..., sn: str = ..., shaderNetworks: bool = ..., sns: bool = ..., shaderNetworksSelectMaterialNodes: bool = ..., smn: bool = ..., snapShot: bool = ..., snp: bool = ..., uncollapse: str = ..., ucl: str = ..., upStream: bool = ..., ups: bool = ..., useMaterialTemplate: bool = ..., umt: bool = ..., userDefinedLayout: bool = ..., udl: bool = ..., workAreaAddCmd: str = ..., waa: str = ..., workAreaDeleteCmd: str = ..., wad: str = ..., workAreaSelectCmd: str = ..., was: str = ..., **kwargs: Any) -> str:
+def hyperShade(*args, **kwargs) -> str:
     """Flags:
     - `assign` `a`: *str*
     - `clearWorkArea` `cwa`: *bool*
@@ -19634,8 +19634,8 @@ def iconTextButton(*args: Any, q: bool, labelEditingCallback: bool) -> str: ...
 @overload
 def iconTextButton(*args: Any, q: bool, lec: bool) -> str: ...
 @overload
-def iconTextButton(*args: Any, **kwargs: Any) -> str: ...
-def iconTextButton(*args: Any, **kwargs: Any) -> Any:
+def iconTextButton(*args, **kwargs) -> str: ...
+def iconTextButton(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -19775,8 +19775,8 @@ def iconTextCheckBox(*args: Any, q: bool, marginWidth: bool) -> int: ...
 @overload
 def iconTextCheckBox(*args: Any, q: bool, mw: bool) -> int: ...
 @overload
-def iconTextCheckBox(*args: Any, **kwargs: Any) -> str: ...
-def iconTextCheckBox(*args: Any, **kwargs: Any) -> Any:
+def iconTextCheckBox(*args, **kwargs) -> str: ...
+def iconTextCheckBox(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -19914,8 +19914,8 @@ def iconTextRadioButton(*args: Any, q: bool, marginHeight: bool) -> int: ...
 @overload
 def iconTextRadioButton(*args: Any, q: bool, mh: bool) -> int: ...
 @overload
-def iconTextRadioButton(*args: Any, **kwargs: Any) -> str: ...
-def iconTextRadioButton(*args: Any, **kwargs: Any) -> Any:
+def iconTextRadioButton(*args, **kwargs) -> str: ...
+def iconTextRadioButton(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -20008,8 +20008,8 @@ def iconTextRadioCollection(*args: Any, q: bool, numberOfCollectionItems: bool) 
 @overload
 def iconTextRadioCollection(*args: Any, q: bool, nci: bool) -> bool: ...
 @overload
-def iconTextRadioCollection(*args: Any, **kwargs: Any) -> str: ...
-def iconTextRadioCollection(*args: Any, **kwargs: Any) -> Any:
+def iconTextRadioCollection(*args, **kwargs) -> str: ...
+def iconTextRadioCollection(*args, **kwargs) -> str:
     """Flags:
     - `collectionItemArray` `cia`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -20102,8 +20102,8 @@ def iconTextScrollList(*args: Any, q: bool, width: bool) -> int: ...
 @overload
 def iconTextScrollList(*args: Any, q: bool, w: bool) -> int: ...
 @overload
-def iconTextScrollList(*args: Any, **kwargs: Any) -> str: ...
-def iconTextScrollList(*args: Any, **kwargs: Any) -> Any:
+def iconTextScrollList(*args, **kwargs) -> str: ...
+def iconTextScrollList(*args, **kwargs) -> str:
     """Flags:
     - `allowMultiSelection` `ams`: *bool*
     - `annotation` `ann`: *str*
@@ -20230,8 +20230,8 @@ def iconTextStaticLabel(*args: Any, q: bool, rotation: bool) -> float: ...
 @overload
 def iconTextStaticLabel(*args: Any, q: bool, rot: bool) -> float: ...
 @overload
-def iconTextStaticLabel(*args: Any, **kwargs: Any) -> str: ...
-def iconTextStaticLabel(*args: Any, **kwargs: Any) -> Any:
+def iconTextStaticLabel(*args, **kwargs) -> str: ...
+def iconTextStaticLabel(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -20361,8 +20361,8 @@ def ikHandle(*args: Any, q: bool, freezeJoints: bool) -> bool: ...
 @overload
 def ikHandle(*args: Any, q: bool, fj: bool) -> bool: ...
 @overload
-def ikHandle(*args: Any, **kwargs: Any) -> str: ...
-def ikHandle(*args: Any, **kwargs: Any) -> Any:
+def ikHandle(*args, **kwargs) -> str: ...
+def ikHandle(*args, **kwargs) -> str:
     """Flags:
     - `autoPriority` `ap`: *bool*
     - `connectEffector` `ce`: *bool*
@@ -20394,7 +20394,7 @@ def ikHandle(*args: Any, **kwargs: Any) -> Any:
     - `twistType` `tws`: *str*
     - `weight` `w`: *float*
     """
-def ikHandleCtx(*args: Any, autoPriorityH: bool = ..., apH: bool = ..., createCurve: bool = ..., ccv: bool = ..., createRootAxis: bool = ..., cra: bool = ..., exists: bool = ..., ex: bool = ..., forceSolverH: bool = ..., fsH: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., numSpans: int = ..., ns: int = ..., parentCurve: bool = ..., pcv: bool = ..., poWeightH: float = ..., pwH: float = ..., priorityH: int = ..., pH: int = ..., rootOnCurve: bool = ..., roc: bool = ..., rootTwistMode: bool = ..., rtm: bool = ..., simplifyCurve: bool = ..., scv: bool = ..., snapCurve: bool = ..., snc: bool = ..., snapHandleH: bool = ..., snH: bool = ..., solverTypeH: str = ..., stH: str = ..., stickyH: str = ..., sH: str = ..., twistType: str = ..., tws: str = ..., weightH: float = ..., wH: float = ..., **kwargs: Any) -> str:
+def ikHandleCtx(*args, **kwargs) -> str:
     """Flags:
     - `autoPriorityH` `apH`: *bool*
     - `createCurve` `ccv`: *bool*
@@ -20420,7 +20420,7 @@ def ikHandleCtx(*args: Any, autoPriorityH: bool = ..., apH: bool = ..., createCu
     - `twistType` `tws`: *str*
     - `weightH` `wH`: *float*
     """
-def ikHandleDisplayScale(*args: Any) -> float: ...
+def ikHandleDisplayScale(*args, **kwargs) -> float: ...
 @overload
 def ikSolver(*args: Any, q: bool, epsilon: bool) -> float: ...
 @overload
@@ -20438,15 +20438,15 @@ def ikSolver(*args: Any, q: bool, solverType: bool) -> str: ...
 @overload
 def ikSolver(*args: Any, q: bool, st: bool) -> str: ...
 @overload
-def ikSolver(*args: Any, **kwargs: Any) -> str: ...
-def ikSolver(*args: Any, **kwargs: Any) -> Any:
+def ikSolver(*args, **kwargs) -> str: ...
+def ikSolver(*args, **kwargs) -> str:
     """Flags:
     - `epsilon` `ep`: *float*
     - `maxIterations` `mxi`: *int*
     - `name` `n`: *str*
     - `solverType` `st`: *str*
     """
-def ikSplineHandleCtx(*args: Any, autoPriorityH: bool = ..., apH: bool = ..., createCurve: bool = ..., ccv: bool = ..., createRootAxis: bool = ..., cra: bool = ..., exists: bool = ..., ex: bool = ..., forceSolverH: bool = ..., fsH: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., numSpans: int = ..., ns: int = ..., parentCurve: bool = ..., pcv: bool = ..., poWeightH: float = ..., pwH: float = ..., priorityH: int = ..., pH: int = ..., rootOnCurve: bool = ..., roc: bool = ..., rootTwistMode: bool = ..., rtm: bool = ..., simplifyCurve: bool = ..., scv: bool = ..., snapCurve: bool = ..., snc: bool = ..., snapHandleH: bool = ..., snH: bool = ..., solverTypeH: str = ..., stH: str = ..., stickyH: str = ..., sH: str = ..., twistType: str = ..., tws: str = ..., weightH: float = ..., wH: float = ..., **kwargs: Any) -> str:
+def ikSplineHandleCtx(*args, **kwargs) -> str:
     """Flags:
     - `autoPriorityH` `apH`: *bool*
     - `createCurve` `ccv`: *bool*
@@ -20501,8 +20501,8 @@ def ikSystem(*args: Any, q: bool, solverTypes: bool) -> bool: ...
 @overload
 def ikSystem(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def ikSystem(*args: Any, **kwargs: Any) -> str: ...
-def ikSystem(*args: Any, **kwargs: Any) -> Any:
+def ikSystem(*args, **kwargs) -> str: ...
+def ikSystem(*args, **kwargs) -> str:
     """Flags:
     - `allowRotation` `ar`: *bool*
     - `autoPriority` `ap`: *bool*
@@ -20518,8 +20518,8 @@ def ikSystemInfo(*args: Any, q: bool, globalSnapHandle: bool) -> bool: ...
 @overload
 def ikSystemInfo(*args: Any, q: bool, gsh: bool) -> bool: ...
 @overload
-def ikSystemInfo(*args: Any, **kwargs: Any) -> None: ...
-def ikSystemInfo(*args: Any, **kwargs: Any) -> Any:
+def ikSystemInfo(*args, **kwargs) -> None: ...
+def ikSystemInfo(*args, **kwargs) -> None:
     """Flags:
     - `globalSnapHandle` `gsh`: *bool*
     """
@@ -20528,8 +20528,8 @@ def ikfkDisplayMethod(*args: Any, q: bool, display: bool) -> str: ...
 @overload
 def ikfkDisplayMethod(*args: Any, q: bool, d: bool) -> str: ...
 @overload
-def ikfkDisplayMethod(*args: Any, **kwargs: Any) -> None: ...
-def ikfkDisplayMethod(*args: Any, **kwargs: Any) -> Any:
+def ikfkDisplayMethod(*args, **kwargs) -> None: ...
+def ikfkDisplayMethod(*args, **kwargs) -> None:
     """Flags:
     - `display` `d`: *str*
     """
@@ -20558,8 +20558,8 @@ def illustratorCurves(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def illustratorCurves(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def illustratorCurves(*args: Any, **kwargs: Any) -> list[str]: ...
-def illustratorCurves(*args: Any, **kwargs: Any) -> Any:
+def illustratorCurves(*args, **kwargs) -> list[str]: ...
+def illustratorCurves(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -20649,8 +20649,8 @@ def image(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def image(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def image(*args: Any, **kwargs: Any) -> str: ...
-def image(*args: Any, **kwargs: Any) -> Any:
+def image(*args, **kwargs) -> str: ...
+def image(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -20756,8 +20756,8 @@ def imagePlane(*args: Any, q: bool, twentyFourHourMax: bool) -> bool: ...
 @overload
 def imagePlane(*args: Any, q: bool, tf: bool) -> bool: ...
 @overload
-def imagePlane(*args: Any, **kwargs: Any) -> bool: ...
-def imagePlane(*args: Any, **kwargs: Any) -> Any:
+def imagePlane(*args, **kwargs) -> bool: ...
+def imagePlane(*args, **kwargs) -> bool:
     """Flags:
     - `camera` `c`: *str*
     - `counter` `cn`: *bool*
@@ -20805,8 +20805,8 @@ def imfPlugins(*args: Any, q: bool, writeSupport: bool) -> str: ...
 @overload
 def imfPlugins(*args: Any, q: bool, ws: bool) -> str: ...
 @overload
-def imfPlugins(*args: Any, **kwargs: Any) -> list[str]: ...
-def imfPlugins(*args: Any, **kwargs: Any) -> Any:
+def imfPlugins(*args, **kwargs) -> list[str]: ...
+def imfPlugins(*args, **kwargs) -> list[str]:
     """Flags:
     - `extension` `ext`: *str*
     - `keyword` `key`: *str*
@@ -20815,7 +20815,7 @@ def imfPlugins(*args: Any, **kwargs: Any) -> Any:
     - `readSupport` `rs`: *str*
     - `writeSupport` `ws`: *str*
     """
-def inViewMessage(*args: Any, alpha: float = ..., a: float = ..., assistMessage: str = ..., amg: str = ..., backColor: int = ..., bkc: int = ..., clear: str = ..., cl: str = ..., clickKill: bool = ..., ck: bool = ..., dragKill: bool = ..., dk: bool = ..., fade: bool = ..., f: bool = ..., fadeInTime: int = ..., fit: int = ..., fadeOutTime: int = ..., fot: int = ..., fadeStayTime: int = ..., fst: int = ..., font: str = ..., ft: str = ..., fontSize: int = ..., fts: int = ..., frameOffset: int = ..., fof: int = ..., hide: bool = ..., hd: bool = ..., message: str = ..., msg: str = ..., minimize: bool = ..., min: bool = ..., position: str = ..., pos: str = ..., restore: bool = ..., res: bool = ..., show: bool = ..., sh: bool = ..., statusMessage: str = ..., smg: str = ..., textAlpha: float = ..., ta: float = ..., textOffset: int = ..., tof: int = ..., uvEditor: bool = ..., uv: bool = ..., **kwargs: Any) -> None:
+def inViewMessage(*args, **kwargs) -> None:
     """Flags:
     - `alpha` `a`: *float*
     - `assistMessage` `amg`: *str*
@@ -20854,16 +20854,16 @@ def inheritTransform(*args: Any, q: bool, toggle: bool) -> bool: ...
 @overload
 def inheritTransform(*args: Any, q: bool, tgl: bool) -> bool: ...
 @overload
-def inheritTransform(*args: Any, **kwargs: Any) -> None: ...
-def inheritTransform(*args: Any, **kwargs: Any) -> Any:
+def inheritTransform(*args, **kwargs) -> None: ...
+def inheritTransform(*args, **kwargs) -> None:
     """Flags:
     - `off` `off`: *bool*
     - `on` `on`: *bool*
     - `preserve` `p`: *bool*
     - `toggle` `tgl`: *bool*
     """
-def insertJoint(*args: Any) -> str: ...
-def insertJointCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def insertJoint(*args, **kwargs) -> str: ...
+def insertJointCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -20903,8 +20903,8 @@ def insertKeyCtx(*args: Any, q: bool, preserveTangent: bool) -> bool: ...
 @overload
 def insertKeyCtx(*args: Any, q: bool, pt: bool) -> bool: ...
 @overload
-def insertKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def insertKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def insertKeyCtx(*args, **kwargs) -> str: ...
+def insertKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `breakdown` `bd`: *bool*
     - `exists` `ex`: *bool*
@@ -20960,8 +20960,8 @@ def insertKnotCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def insertKnotCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def insertKnotCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def insertKnotCurve(*args: Any, **kwargs: Any) -> Any:
+def insertKnotCurve(*args, **kwargs) -> list[str]: ...
+def insertKnotCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `addKnots` `add`: *bool*
     - `caching` `cch`: *bool*
@@ -21020,8 +21020,8 @@ def insertKnotSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def insertKnotSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def insertKnotSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def insertKnotSurface(*args: Any, **kwargs: Any) -> Any:
+def insertKnotSurface(*args, **kwargs) -> list[str]: ...
+def insertKnotSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `addKnots` `add`: *bool*
     - `caching` `cch`: *bool*
@@ -21035,7 +21035,7 @@ def insertKnotSurface(*args: Any, **kwargs: Any) -> Any:
     - `parameter` `p`: *float*
     - `replaceOriginal` `rpo`: *bool*
     """
-def instance(*args: Any, leaf: bool = ..., lf: bool = ..., name: str = ..., n: str = ..., smartTransform: bool = ..., st: bool = ..., **kwargs: Any) -> str:
+def instance(*args, **kwargs) -> str:
     """Flags:
     - `leaf` `lf`: *bool*
     - `name` `n`: *str*
@@ -21054,8 +21054,8 @@ def instanceable(*args: Any, q: bool, shape: bool) -> bool: ...
 @overload
 def instanceable(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def instanceable(*args: Any, **kwargs: Any) -> Any: ...
-def instanceable(*args: Any, **kwargs: Any) -> Any:
+def instanceable(*args, **kwargs) -> Any: ...
+def instanceable(*args, **kwargs) -> Any:
     """Flags:
     - `allow` `a`: *bool*
     - `recursive` `r`: *bool*
@@ -21124,8 +21124,8 @@ def instancer(*args: Any, q: bool, removeObject: bool) -> bool: ...
 @overload
 def instancer(*args: Any, q: bool, rm: bool) -> bool: ...
 @overload
-def instancer(*args: Any, **kwargs: Any) -> str: ...
-def instancer(*args: Any, **kwargs: Any) -> Any:
+def instancer(*args, **kwargs) -> str: ...
+def instancer(*args, **kwargs) -> str:
     """Flags:
     - `addObject` `a`: *bool*
     - `cycle` `c`: *str*
@@ -21225,8 +21225,8 @@ def intField(*args: Any, q: bool, editable: bool) -> bool: ...
 @overload
 def intField(*args: Any, q: bool, ed: bool) -> bool: ...
 @overload
-def intField(*args: Any, **kwargs: Any) -> str: ...
-def intField(*args: Any, **kwargs: Any) -> Any:
+def intField(*args, **kwargs) -> str: ...
+def intField(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -21344,8 +21344,8 @@ def intFieldGrp(*args: Any, q: bool, numberOfFields: bool) -> int: ...
 @overload
 def intFieldGrp(*args: Any, q: bool, nf: bool) -> int: ...
 @overload
-def intFieldGrp(*args: Any, **kwargs: Any) -> str: ...
-def intFieldGrp(*args: Any, **kwargs: Any) -> Any:
+def intFieldGrp(*args, **kwargs) -> str: ...
+def intFieldGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -21499,8 +21499,8 @@ def intScrollBar(*args: Any, q: bool, enableBackground: bool) -> bool: ...
 @overload
 def intScrollBar(*args: Any, q: bool, ebg: bool) -> bool: ...
 @overload
-def intScrollBar(*args: Any, **kwargs: Any) -> str: ...
-def intScrollBar(*args: Any, **kwargs: Any) -> Any:
+def intScrollBar(*args, **kwargs) -> str: ...
+def intScrollBar(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -21617,8 +21617,8 @@ def intSlider(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def intSlider(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def intSlider(*args: Any, **kwargs: Any) -> str: ...
-def intSlider(*args: Any, **kwargs: Any) -> Any:
+def intSlider(*args, **kwargs) -> str: ...
+def intSlider(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -21734,8 +21734,8 @@ def intSliderGrp(*args: Any, q: bool, fieldStep: bool) -> int: ...
 @overload
 def intSliderGrp(*args: Any, q: bool, fs: bool) -> int: ...
 @overload
-def intSliderGrp(*args: Any, **kwargs: Any) -> str: ...
-def intSliderGrp(*args: Any, **kwargs: Any) -> Any:
+def intSliderGrp(*args, **kwargs) -> str: ...
+def intSliderGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -21807,7 +21807,7 @@ def intSliderGrp(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def internalVar(*args: Any, mayaInstallDir: bool = ..., mid: bool = ..., userAppDir: bool = ..., uad: bool = ..., userBitmapsDir: bool = ..., ubd: bool = ..., userHotkeyDir: bool = ..., uhk: bool = ..., userMarkingMenuDir: bool = ..., umm: bool = ..., userPrefDir: bool = ..., upd: bool = ..., userPresetsDir: bool = ..., ups: bool = ..., userScriptDir: bool = ..., usd: bool = ..., userShelfDir: bool = ..., ush: bool = ..., userTmpDir: bool = ..., utd: bool = ..., userWorkspaceDir: bool = ..., uwd: bool = ..., **kwargs: Any) -> str:
+def internalVar(*args, **kwargs) -> str:
     """Flags:
     - `mayaInstallDir` `mid`: *bool*
     - `userAppDir` `uad`: *bool*
@@ -21854,8 +21854,8 @@ def intersect(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def intersect(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def intersect(*args: Any, **kwargs: Any) -> list[str]: ...
-def intersect(*args: Any, **kwargs: Any) -> Any:
+def intersect(*args, **kwargs) -> list[str]: ...
+def intersect(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -21866,7 +21866,7 @@ def intersect(*args: Any, **kwargs: Any) -> Any:
     - `object` `o`: *bool*
     - `tolerance` `tol`: *float*
     """
-def iprEngine(*args: Any, copy: str = ..., cp: str = ..., defineTemplate: str = ..., dt: str = ..., diagnostics: bool = ..., dig: bool = ..., estimatedMemory: bool = ..., mem: bool = ..., exists: bool = ..., ex: bool = ..., iprImage: str = ..., ipr: str = ..., motionVectorFile: bool = ..., mvf: bool = ..., object: str = ..., obj: str = ..., region: Any = ..., r: Any = ..., relatedFiles: bool = ..., rel: bool = ..., releaseIprImage: bool = ..., rii: bool = ..., resolution: bool = ..., res: bool = ..., scanlineIncrement: str = ..., sli: str = ..., showProgressBar: bool = ..., spb: bool = ..., startTuning: bool = ..., st: bool = ..., stopTuning: bool = ..., spt: bool = ..., underPixel: Any = ..., un: Any = ..., update: bool = ..., u: bool = ..., updateDepthOfField: bool = ..., udf: bool = ..., updateLightGlow: bool = ..., ulg: bool = ..., updateMotionBlur: bool = ..., umb: bool = ..., updatePort: str = ..., up: str = ..., updateShaderGlow: bool = ..., usg: bool = ..., updateShading: bool = ..., us: bool = ..., updateShadowMaps: bool = ..., usm: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def iprEngine(*args, **kwargs) -> str:
     """Flags:
     - `copy` `cp`: *str*
     - `defineTemplate` `dt`: *str*
@@ -21895,16 +21895,16 @@ def iprEngine(*args: Any, copy: str = ..., cp: str = ..., defineTemplate: str = 
     - `updateShadowMaps` `usm`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def isConnected(*args: Any, ignoreUnitConversion: bool = ..., iuc: bool = ..., **kwargs: Any) -> bool:
+def isConnected(*args, **kwargs) -> bool:
     """Flags:
     - `ignoreUnitConversion` `iuc`: *bool*
     """
-def isDirty(*args: Any, connection: bool = ..., c: bool = ..., datablock: bool = ..., d: bool = ..., **kwargs: Any) -> bool:
+def isDirty(*args, **kwargs) -> bool:
     """Flags:
     - `connection` `c`: *bool*
     - `datablock` `d`: *bool*
     """
-def isTrue(*args: Any) -> None: ...
+def isTrue(*args, **kwargs) -> None: ...
 @overload
 def isolateSelect(*args: Any, q: bool, addDagObject: bool) -> str: ...
 @overload
@@ -21940,8 +21940,8 @@ def isolateSelect(*args: Any, q: bool, viewObjects: bool) -> bool: ...
 @overload
 def isolateSelect(*args: Any, q: bool, vo: bool) -> bool: ...
 @overload
-def isolateSelect(*args: Any, **kwargs: Any) -> bool: ...
-def isolateSelect(*args: Any, **kwargs: Any) -> Any:
+def isolateSelect(*args, **kwargs) -> bool: ...
+def isolateSelect(*args, **kwargs) -> bool:
     """Flags:
     - `addDagObject` `ado`: *str*
     - `addSelected` `addSelected`: *bool*
@@ -22026,8 +22026,8 @@ def itemFilter(*args: Any, q: bool, uniqueNodeNames: bool) -> bool: ...
 @overload
 def itemFilter(*args: Any, q: bool, unn: bool) -> bool: ...
 @overload
-def itemFilter(*args: Any, **kwargs: Any) -> str: ...
-def itemFilter(*args: Any, **kwargs: Any) -> Any:
+def itemFilter(*args, **kwargs) -> str: ...
+def itemFilter(*args, **kwargs) -> str:
     """Flags:
     - `byBin` `bk`: *str*
     - `byName` `bn`: *str*
@@ -22132,8 +22132,8 @@ def itemFilterAttr(*args: Any, q: bool, readable: bool) -> bool: ...
 @overload
 def itemFilterAttr(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def itemFilterAttr(*args: Any, **kwargs: Any) -> str: ...
-def itemFilterAttr(*args: Any, **kwargs: Any) -> Any:
+def itemFilterAttr(*args, **kwargs) -> str: ...
+def itemFilterAttr(*args, **kwargs) -> str:
     """Flags:
     - `byName` `bn`: *str*
     - `byNameString` `bns`: *str*
@@ -22169,8 +22169,8 @@ def itemFilterType(*args: Any, q: bool, type: bool) -> bool: ...
 @overload
 def itemFilterType(*args: Any, q: bool, typ: bool) -> bool: ...
 @overload
-def itemFilterType(*args: Any, **kwargs: Any) -> str: ...
-def itemFilterType(*args: Any, **kwargs: Any) -> Any:
+def itemFilterType(*args, **kwargs) -> str: ...
+def itemFilterType(*args, **kwargs) -> str:
     """Flags:
     - `text` `t`: *str*
     - `type` `typ`: *bool*
@@ -22256,8 +22256,8 @@ def joint(*args: Any, q: bool, automaticLimits: bool) -> bool: ...
 @overload
 def joint(*args: Any, q: bool, al: bool) -> bool: ...
 @overload
-def joint(*args: Any, **kwargs: Any) -> str: ...
-def joint(*args: Any, **kwargs: Any) -> Any:
+def joint(*args, **kwargs) -> str: ...
+def joint(*args, **kwargs) -> str:
     """Flags:
     - `absolute` `a`: *bool*
     - `angleX` `ax`: *float*
@@ -22340,8 +22340,8 @@ def jointCluster(*args: Any, q: bool, deformerTools: bool) -> bool: ...
 @overload
 def jointCluster(*args: Any, q: bool, dt: bool) -> bool: ...
 @overload
-def jointCluster(*args: Any, **kwargs: Any) -> str: ...
-def jointCluster(*args: Any, **kwargs: Any) -> Any:
+def jointCluster(*args, **kwargs) -> str: ...
+def jointCluster(*args, **kwargs) -> str:
     """Flags:
     - `aboveBound` `ab`: *float*
     - `aboveCluster` `ac`: *bool*
@@ -22355,7 +22355,7 @@ def jointCluster(*args: Any, **kwargs: Any) -> Any:
     - `joint` `j`: *str*
     - `name` `n`: *str*
     """
-def jointCtx(*args: Any, autoJointOrient: str = ..., ajo: str = ..., autoOrientSecondaryAxis: bool = ..., aos: bool = ..., autoPriorityH: bool = ..., apH: bool = ..., createIKHandle: bool = ..., ikh: bool = ..., degreeOfFreedomJ: str = ..., dJ: str = ..., exists: bool = ..., ex: bool = ..., forceSolverH: bool = ..., fsH: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., jointAutoLimits: bool = ..., jal: bool = ..., jointOrientationJ: Any = ..., joJ: Any = ..., largeBoneLength: float = ..., lbl: float = ..., largeBoneRadius: float = ..., lbr: float = ..., poWeightH: float = ..., pwH: float = ..., priorityH: int = ..., pH: int = ..., scaleCompensateJ: bool = ..., scJ: bool = ..., scaleJ: Any = ..., sJ: Any = ..., scaleOrientationJ: Any = ..., soJ: Any = ..., secondaryAxisOrient: str = ..., sao: str = ..., smallBoneLength: float = ..., sbl: float = ..., smallBoneRadius: float = ..., sbr: float = ..., snapHandleH: bool = ..., snH: bool = ..., solverTypeH: str = ..., stH: str = ..., stickyH: str = ..., sH: str = ..., symmetry: bool = ..., sym: bool = ..., symmetryAxis: str = ..., sa: str = ..., variableBoneSize: bool = ..., vbs: bool = ..., weightH: float = ..., wH: float = ..., **kwargs: Any) -> str:
+def jointCtx(*args, **kwargs) -> str:
     """Flags:
     - `autoJointOrient` `ajo`: *str*
     - `autoOrientSecondaryAxis` `aos`: *bool*
@@ -22396,8 +22396,8 @@ def jointDisplayScale(*args: Any, q: bool, absolute: bool) -> bool: ...
 @overload
 def jointDisplayScale(*args: Any, q: bool, a: bool) -> bool: ...
 @overload
-def jointDisplayScale(*args: Any, **kwargs: Any) -> float: ...
-def jointDisplayScale(*args: Any, **kwargs: Any) -> Any:
+def jointDisplayScale(*args, **kwargs) -> float: ...
+def jointDisplayScale(*args, **kwargs) -> float:
     """Flags:
     - `absolute` `a`: *bool*
     - `ikfk` `ik`: *float*
@@ -22483,8 +22483,8 @@ def jointLattice(*args: Any, q: bool, deformerTools: bool) -> bool: ...
 @overload
 def jointLattice(*args: Any, q: bool, dt: bool) -> bool: ...
 @overload
-def jointLattice(*args: Any, **kwargs: Any) -> str: ...
-def jointLattice(*args: Any, **kwargs: Any) -> Any:
+def jointLattice(*args, **kwargs) -> str: ...
+def jointLattice(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -22589,8 +22589,8 @@ def keyTangent(*args: Any, q: bool, controlPoints: bool) -> bool: ...
 @overload
 def keyTangent(*args: Any, q: bool, cp: bool) -> bool: ...
 @overload
-def keyTangent(*args: Any, **kwargs: Any) -> int: ...
-def keyTangent(*args: Any, **kwargs: Any) -> Any:
+def keyTangent(*args, **kwargs) -> int: ...
+def keyTangent(*args, **kwargs) -> int:
     """Flags:
     - `absolute` `a`: *bool*
     - `animation` `an`: *str*
@@ -22701,8 +22701,8 @@ def keyframe(*args: Any, q: bool, name: bool) -> bool: ...
 @overload
 def keyframe(*args: Any, q: bool, n: bool) -> bool: ...
 @overload
-def keyframe(*args: Any, **kwargs: Any) -> int: ...
-def keyframe(*args: Any, **kwargs: Any) -> Any:
+def keyframe(*args, **kwargs) -> int: ...
+def keyframe(*args, **kwargs) -> int:
     """Flags:
     - `absolute` `a`: *bool*
     - `adjustBreakdown` `abd`: *bool*
@@ -22811,8 +22811,8 @@ def keyframeOutliner(*args: Any, q: bool, manage: bool) -> bool: ...
 @overload
 def keyframeOutliner(*args: Any, q: bool, m: bool) -> bool: ...
 @overload
-def keyframeOutliner(*args: Any, **kwargs: Any) -> str: ...
-def keyframeOutliner(*args: Any, **kwargs: Any) -> Any:
+def keyframeOutliner(*args, **kwargs) -> str: ...
+def keyframeOutliner(*args, **kwargs) -> str:
     """Flags:
     - `animCurve` `ac`: *str*
     - `annotation` `ann`: *str*
@@ -22867,8 +22867,8 @@ def keyframeRegionCurrentTimeCtx(*args: Any, q: bool, history: bool) -> bool: ..
 @overload
 def keyframeRegionCurrentTimeCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionCurrentTimeCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionCurrentTimeCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionCurrentTimeCtx(*args, **kwargs) -> str: ...
+def keyframeRegionCurrentTimeCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -22906,8 +22906,8 @@ def keyframeRegionDirectKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionDirectKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionDirectKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionDirectKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionDirectKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionDirectKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -22942,8 +22942,8 @@ def keyframeRegionDollyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionDollyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionDollyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionDollyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionDollyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionDollyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -22981,8 +22981,8 @@ def keyframeRegionInsertKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionInsertKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionInsertKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionInsertKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionInsertKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionInsertKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `breakdown` `bd`: *bool*
     - `exists` `ex`: *bool*
@@ -23021,8 +23021,8 @@ def keyframeRegionMoveKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionMoveKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionMoveKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionMoveKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionMoveKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionMoveKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -23065,8 +23065,8 @@ def keyframeRegionScaleKeyCtx(*args: Any, q: bool, scaleSpecifiedKeys: bool) -> 
 @overload
 def keyframeRegionScaleKeyCtx(*args: Any, q: bool, ssk: bool) -> bool: ...
 @overload
-def keyframeRegionScaleKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionScaleKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionScaleKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionScaleKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -23102,8 +23102,8 @@ def keyframeRegionSelectKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionSelectKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionSelectKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionSelectKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionSelectKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionSelectKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -23141,8 +23141,8 @@ def keyframeRegionSetKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionSetKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionSetKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionSetKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionSetKeyCtx(*args, **kwargs) -> str: ...
+def keyframeRegionSetKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `breakdown` `bd`: *bool*
     - `exists` `ex`: *bool*
@@ -23177,8 +23177,8 @@ def keyframeRegionTrackCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def keyframeRegionTrackCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def keyframeRegionTrackCtx(*args: Any, **kwargs: Any) -> str: ...
-def keyframeRegionTrackCtx(*args: Any, **kwargs: Any) -> Any:
+def keyframeRegionTrackCtx(*args, **kwargs) -> str: ...
+def keyframeRegionTrackCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -23268,8 +23268,8 @@ def keyframeStats(*args: Any, q: bool, statusBarMessage: bool) -> str: ...
 @overload
 def keyframeStats(*args: Any, q: bool, sbm: bool) -> str: ...
 @overload
-def keyframeStats(*args: Any, **kwargs: Any) -> str: ...
-def keyframeStats(*args: Any, **kwargs: Any) -> Any:
+def keyframeStats(*args, **kwargs) -> str: ...
+def keyframeStats(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -23414,8 +23414,8 @@ def keyframeTangentControl(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def keyframeTangentControl(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def keyframeTangentControl(*args: Any, **kwargs: Any) -> str: ...
-def keyframeTangentControl(*args: Any, **kwargs: Any) -> Any:
+def keyframeTangentControl(*args, **kwargs) -> str: ...
+def keyframeTangentControl(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -23523,8 +23523,8 @@ def keyingGroup(*args: Any, q: bool, subtract: bool) -> str: ...
 @overload
 def keyingGroup(*args: Any, q: bool, sub: bool) -> str: ...
 @overload
-def keyingGroup(*args: Any, **kwargs: Any) -> str: ...
-def keyingGroup(*args: Any, **kwargs: Any) -> Any:
+def keyingGroup(*args, **kwargs) -> str: ...
+def keyingGroup(*args, **kwargs) -> str:
     """Flags:
     - `activator` `act`: *str*
     - `addElement` `add`: *str*
@@ -23599,8 +23599,8 @@ def lassoContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def lassoContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def lassoContext(*args: Any, **kwargs: Any) -> str: ...
-def lassoContext(*args: Any, **kwargs: Any) -> Any:
+def lassoContext(*args, **kwargs) -> str: ...
+def lassoContext(*args, **kwargs) -> str:
     """Flags:
     - `drawClosed` `dc`: *bool*
     - `exists` `ex`: *bool*
@@ -23691,8 +23691,8 @@ def lattice(*args: Any, q: bool, frontOfChain: bool) -> bool: ...
 @overload
 def lattice(*args: Any, q: bool, foc: bool) -> bool: ...
 @overload
-def lattice(*args: Any, **kwargs: Any) -> list[str]: ...
-def lattice(*args: Any, **kwargs: Any) -> Any:
+def lattice(*args, **kwargs) -> list[str]: ...
+def lattice(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -23770,8 +23770,8 @@ def latticeDeformKeyCtx(*args: Any, q: bool, scaleLatticePts: bool) -> bool: ...
 @overload
 def latticeDeformKeyCtx(*args: Any, q: bool, slp: bool) -> bool: ...
 @overload
-def latticeDeformKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def latticeDeformKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def latticeDeformKeyCtx(*args, **kwargs) -> str: ...
+def latticeDeformKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `envelope` `ev`: *float*
     - `exists` `ex`: *bool*
@@ -23784,14 +23784,14 @@ def latticeDeformKeyCtx(*args: Any, **kwargs: Any) -> Any:
     - `name` `n`: *str*
     - `scaleLatticePts` `slp`: *bool*
     """
-def launch(*args: Any, directory: str = ..., dir: str = ..., movie: str = ..., mov: str = ..., pdfFile: str = ..., pdf: str = ..., webPage: str = ..., web: str = ..., **kwargs: Any) -> None:
+def launch(*args, **kwargs) -> None:
     """Flags:
     - `directory` `dir`: *str*
     - `movie` `mov`: *str*
     - `pdfFile` `pdf`: *str*
     - `webPage` `web`: *str*
     """
-def launchImageEditor(*args: Any, editImageFile: str = ..., eif: str = ..., viewImageFile: str = ..., vif: str = ..., **kwargs: Any) -> None:
+def launchImageEditor(*args, **kwargs) -> None:
     """Flags:
     - `editImageFile` `eif`: *str*
     - `viewImageFile` `vif`: *str*
@@ -23877,8 +23877,8 @@ def layerButton(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ...
 @overload
 def layerButton(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def layerButton(*args: Any, **kwargs: Any) -> str: ...
-def layerButton(*args: Any, **kwargs: Any) -> Any:
+def layerButton(*args, **kwargs) -> str: ...
+def layerButton(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -23924,7 +23924,7 @@ def layerButton(*args: Any, **kwargs: Any) -> Any:
     - `visibleCommand` `vc`: *str*
     - `width` `w`: *int*
     """
-def layeredShaderPort(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., node: str = ..., n: str = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., selectedColorControl: str = ..., scc: str = ..., selectedTransparencyControl: str = ..., stc: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def layeredShaderPort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -23955,7 +23955,7 @@ def layeredShaderPort(*args: Any, annotation: str = ..., ann: str = ..., backgro
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def layeredTexturePort(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., node: str = ..., n: str = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., selectedAlphaControl: str = ..., sac: str = ..., selectedBlendModeControl: str = ..., sbc: str = ..., selectedColorControl: str = ..., scc: str = ..., selectedIsVisibleControl: str = ..., svc: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def layeredTexturePort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -24069,8 +24069,8 @@ def layout(*args: Any, q: bool, isObscured: bool) -> bool: ...
 @overload
 def layout(*args: Any, q: bool, io: bool) -> bool: ...
 @overload
-def layout(*args: Any, **kwargs: Any) -> None: ...
-def layout(*args: Any, **kwargs: Any) -> Any:
+def layout(*args, **kwargs) -> None: ...
+def layout(*args, **kwargs) -> None:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -24103,7 +24103,7 @@ def layout(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def layoutDialog(*args: Any, backgroundColor: Any = ..., bgc: Any = ..., dismiss: str = ..., dis: str = ..., parent: str = ..., p: str = ..., resizable: bool = ..., res: bool = ..., title: str = ..., t: str = ..., uiScript: str = ..., ui: str = ..., **kwargs: Any) -> str:
+def layoutDialog(*args, **kwargs) -> str:
     """Flags:
     - `backgroundColor` `bgc`: *Any*
     - `dismiss` `dis`: *str*
@@ -24112,7 +24112,7 @@ def layoutDialog(*args: Any, backgroundColor: Any = ..., bgc: Any = ..., dismiss
     - `title` `t`: *str*
     - `uiScript` `ui`: *str*
     """
-def license(*args: Any, borrow: bool = ..., b: bool = ..., info: bool = ..., i: bool = ..., isBorrowed: bool = ..., ib: bool = ..., isExported: bool = ..., ie: bool = ..., isTrial: bool = ..., it: bool = ..., licenseMethod: bool = ..., lm: bool = ..., productChoice: bool = ..., pc: bool = ..., r: bool = ..., showBorrowInfo: bool = ..., sbi: bool = ..., showProductInfoDialog: bool = ..., spi: bool = ..., status: bool = ..., s: bool = ..., usage: bool = ..., u: bool = ..., **kwargs: Any) -> str:
+def license(*args, **kwargs) -> str:
     """Flags:
     - `borrow` `b`: *bool*
     - `info` `i`: *bool*
@@ -24134,8 +24134,8 @@ def lightList(*args: Any, q: bool, remove: bool) -> str: ...
 @overload
 def lightList(*args: Any, q: bool, rm: bool) -> str: ...
 @overload
-def lightList(*args: Any, **kwargs: Any) -> None: ...
-def lightList(*args: Any, **kwargs: Any) -> Any:
+def lightList(*args, **kwargs) -> None: ...
+def lightList(*args, **kwargs) -> None:
     """Flags:
     - `add` `add`: *str*
     - `remove` `rm`: *str*
@@ -24183,8 +24183,8 @@ def lightlink(*args: Any, q: bool, useActiveObjects: bool) -> bool: ...
 @overload
 def lightlink(*args: Any, q: bool, uao: bool) -> bool: ...
 @overload
-def lightlink(*args: Any, **kwargs: Any) -> str: ...
-def lightlink(*args: Any, **kwargs: Any) -> Any:
+def lightlink(*args, **kwargs) -> str: ...
+def lightlink(*args, **kwargs) -> str:
     """Flags:
     - `b` `b`: *bool*
     - `hierarchy` `h`: *bool*
@@ -24198,8 +24198,8 @@ def lightlink(*args: Any, **kwargs: Any) -> Any:
     - `useActiveLights` `ual`: *bool*
     - `useActiveObjects` `uao`: *bool*
     """
-def linearPrecision(*args: Any) -> None: ...
-def listAnimatable(*args: Any, active: bool = ..., act: bool = ..., manip: bool = ..., m: bool = ..., manipHandle: bool = ..., mh: bool = ..., shape: bool = ..., s: bool = ..., type: bool = ..., typ: bool = ..., **kwargs: Any) -> list[str]:
+def linearPrecision(*args, **kwargs) -> None: ...
+def listAnimatable(*args, **kwargs) -> list[str]:
     """Flags:
     - `active` `act`: *bool*
     - `manip` `m`: *bool*
@@ -24207,7 +24207,7 @@ def listAnimatable(*args: Any, active: bool = ..., act: bool = ..., manip: bool 
     - `shape` `s`: *bool*
     - `type` `typ`: *bool*
     """
-def listAttr(*args: Any, array: bool = ..., a: bool = ..., attributeType: str = ..., at: str = ..., caching: bool = ..., ca: bool = ..., category: str = ..., ct: str = ..., changedSinceFileOpen: bool = ..., cfo: bool = ..., channelBox: bool = ..., cb: bool = ..., connectable: bool = ..., c: bool = ..., extension: bool = ..., ex: bool = ..., fromPlugin: bool = ..., fp: bool = ..., fullNodeName: bool = ..., fnn: bool = ..., hasData: bool = ..., hd: bool = ..., hasNullData: bool = ..., hnd: bool = ..., inUse: bool = ..., iu: bool = ..., keyable: bool = ..., k: bool = ..., leaf: bool = ..., lf: bool = ..., locked: bool = ..., l: bool = ..., multi: bool = ..., m: bool = ..., nodeName: bool = ..., nn: bool = ..., output: bool = ..., o: bool = ..., ramp: bool = ..., ra: bool = ..., read: bool = ..., r: bool = ..., readOnly: bool = ..., ro: bool = ..., scalar: bool = ..., s: bool = ..., scalarAndArray: bool = ..., sa: bool = ..., settable: bool = ..., se: bool = ..., shortNames: bool = ..., sn: bool = ..., string: str = ..., st: str = ..., unlocked: bool = ..., u: bool = ..., usedAsFilename: bool = ..., uf: bool = ..., userDefined: bool = ..., ud: bool = ..., visible: bool = ..., v: bool = ..., write: bool = ..., w: bool = ..., **kwargs: Any) -> list[str]:
+def listAttr(*args, **kwargs) -> list[str]:
     """Flags:
     - `array` `a`: *bool*
     - `attributeType` `at`: *str*
@@ -24242,18 +24242,18 @@ def listAttr(*args: Any, array: bool = ..., a: bool = ..., attributeType: str = 
     - `visible` `v`: *bool*
     - `write` `w`: *bool*
     """
-def listAttrPatterns(*args: Any, patternType: bool = ..., pt: bool = ..., verbose: bool = ..., v: bool = ..., **kwargs: Any) -> list[str]:
+def listAttrPatterns(*args, **kwargs) -> list[str]:
     """Flags:
     - `patternType` `pt`: *bool*
     - `verbose` `v`: *bool*
     """
-def listCameras(*args: Any, orthographic: bool = ..., o: bool = ..., perspective: bool = ..., p: bool = ..., ufeCameras: bool = ..., ufe: bool = ..., **kwargs: Any) -> list[str]:
+def listCameras(*args, **kwargs) -> list[str]:
     """Flags:
     - `orthographic` `o`: *bool*
     - `perspective` `p`: *bool*
     - `ufeCameras` `ufe`: *bool*
     """
-def listConnections(*args: Any, connections: bool = ..., c: bool = ..., destination: bool = ..., d: bool = ..., exactType: bool = ..., et: bool = ..., fullNodeName: bool = ..., fnn: bool = ..., plugs: bool = ..., p: bool = ..., shapes: bool = ..., sh: bool = ..., skipConversionNodes: bool = ..., scn: bool = ..., source: bool = ..., s: bool = ..., type: str = ..., t: str = ..., **kwargs: Any) -> list[str]:
+def listConnections(*args, **kwargs) -> list[str]:
     """Flags:
     - `connections` `c`: *bool*
     - `destination` `d`: *bool*
@@ -24265,7 +24265,7 @@ def listConnections(*args: Any, connections: bool = ..., c: bool = ..., destinat
     - `source` `s`: *bool*
     - `type` `t`: *str*
     """
-def listDeviceAttachments(*args: Any, attribute: str = ..., at: str = ..., axis: str = ..., ax: str = ..., clutch: str = ..., c: str = ..., device: str = ..., d: str = ..., file: str = ..., f: str = ..., selection: bool = ..., sl: bool = ..., write: bool = ..., w: bool = ..., **kwargs: Any) -> str:
+def listDeviceAttachments(*args, **kwargs) -> str:
     """Flags:
     - `attribute` `at`: *str*
     - `axis` `ax`: *str*
@@ -24336,8 +24336,8 @@ def listHistory(*args: Any, q: bool, pruneDagObjects: bool) -> bool: ...
 @overload
 def listHistory(*args: Any, q: bool, pdo: bool) -> bool: ...
 @overload
-def listHistory(*args: Any, **kwargs: Any) -> list[str]: ...
-def listHistory(*args: Any, **kwargs: Any) -> Any:
+def listHistory(*args, **kwargs) -> list[str]: ...
+def listHistory(*args, **kwargs) -> list[str]:
     """Flags:
     - `allConnections` `ac`: *bool*
     - `allFuture` `af`: *bool*
@@ -24355,20 +24355,20 @@ def listHistory(*args: Any, **kwargs: Any) -> Any:
     - `levels` `lv`: *int*
     - `pruneDagObjects` `pdo`: *bool*
     """
-def listInputDeviceAxes(*args: Any) -> list[str]: ...
-def listInputDeviceButtons(*args: Any) -> list[str]: ...
-def listInputDevices(*args: Any, free: bool = ..., f: bool = ..., primary: bool = ..., p: bool = ..., secondary: bool = ..., s: bool = ..., **kwargs: Any) -> list[str]:
+def listInputDeviceAxes(*args, **kwargs) -> list[str]: ...
+def listInputDeviceButtons(*args, **kwargs) -> list[str]: ...
+def listInputDevices(*args, **kwargs) -> list[str]:
     """Flags:
     - `free` `f`: *bool*
     - `primary` `p`: *bool*
     - `secondary` `s`: *bool*
     """
-def listNodeTypes(*args: Any, exclude: str = ..., ex: str = ..., **kwargs: Any) -> list[str]:
+def listNodeTypes(*args, **kwargs) -> list[str]:
     """Flags:
     - `exclude` `ex`: *str*
     """
-def listNodesWithIncorrectNames(*args: Any) -> None: ...
-def listRelatives(*args: Any, allDescendents: bool = ..., ad: bool = ..., allParents: bool = ..., ap: bool = ..., children: bool = ..., c: bool = ..., fullPath: bool = ..., f: bool = ..., noIntermediate: bool = ..., ni: bool = ..., parent: bool = ..., p: bool = ..., path: bool = ..., pa: bool = ..., shapes: bool = ..., s: bool = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> list[str]:
+def listNodesWithIncorrectNames(*args, **kwargs) -> None: ...
+def listRelatives(*args, **kwargs) -> list[str]:
     """Flags:
     - `allDescendents` `ad`: *bool*
     - `allParents` `ap`: *bool*
@@ -24380,20 +24380,20 @@ def listRelatives(*args: Any, allDescendents: bool = ..., ad: bool = ..., allPar
     - `shapes` `s`: *bool*
     - `type` `typ`: *str*
     """
-def listSets(*args: Any, allSets: bool = ..., extendToShape: bool = ..., ets: bool = ..., object: str = ..., o: str = ..., type: int = ..., t: int = ..., **kwargs: Any) -> list[str]:
+def listSets(*args, **kwargs) -> list[str]:
     """Flags:
     - `allSets` `allSets`: *bool*
     - `extendToShape` `ets`: *bool*
     - `object` `o`: *str*
     - `type` `t`: *int*
     """
-def loadModule(*args: Any, allModules: bool = ..., a: bool = ..., load: str = ..., ld: str = ..., scan: bool = ..., sc: bool = ..., **kwargs: Any) -> list[str]:
+def loadModule(*args, **kwargs) -> list[str]:
     """Flags:
     - `allModules` `a`: *bool*
     - `load` `ld`: *str*
     - `scan` `sc`: *bool*
     """
-def loadPlugin(*args: Any, addCallback: str = ..., ac: str = ..., allPlugins: bool = ..., a: bool = ..., name: str = ..., n: str = ..., pluginPath: bool = ..., pp: bool = ..., quiet: bool = ..., qt: bool = ..., removeCallback: str = ..., rc: str = ..., **kwargs: Any) -> list[str]:
+def loadPlugin(*args, **kwargs) -> list[str]:
     """Flags:
     - `addCallback` `ac`: *str*
     - `allPlugins` `a`: *bool*
@@ -24402,8 +24402,8 @@ def loadPlugin(*args: Any, addCallback: str = ..., ac: str = ..., allPlugins: bo
     - `quiet` `qt`: *bool*
     - `removeCallback` `rc`: *str*
     """
-def loadPrefObjects(*args: Any) -> bool: ...
-def loadUI(*args: Any, listTypes: bool = ..., lt: bool = ..., uiFile: str = ..., f: str = ..., uiString: str = ..., s: str = ..., verbose: bool = ..., v: bool = ..., workingDirectory: str = ..., wd: str = ..., **kwargs: Any) -> str:
+def loadPrefObjects(*args, **kwargs) -> bool: ...
+def loadUI(*args, **kwargs) -> str:
     """Flags:
     - `listTypes` `lt`: *bool*
     - `uiFile` `f`: *str*
@@ -24428,8 +24428,8 @@ def lockNode(*args: Any, q: bool, lockUnpublished: bool) -> bool: ...
 @overload
 def lockNode(*args: Any, q: bool, lu: bool) -> bool: ...
 @overload
-def lockNode(*args: Any, **kwargs: Any) -> Any: ...
-def lockNode(*args: Any, **kwargs: Any) -> Any:
+def lockNode(*args, **kwargs) -> Any: ...
+def lockNode(*args, **kwargs) -> Any:
     """Flags:
     - `ignoreComponents` `ic`: *bool*
     - `lock` `l`: *bool*
@@ -24501,8 +24501,8 @@ def loft(*args: Any, q: bool, uniform: bool) -> bool: ...
 @overload
 def loft(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def loft(*args: Any, **kwargs: Any) -> list[str]: ...
-def loft(*args: Any, **kwargs: Any) -> Any:
+def loft(*args, **kwargs) -> list[str]: ...
+def loft(*args, **kwargs) -> list[str]:
     """Flags:
     - `autoReverse` `ar`: *bool*
     - `caching` `cch`: *bool*
@@ -24530,13 +24530,13 @@ def lookThru(*args: Any, q: bool, nearClip: bool) -> float: ...
 @overload
 def lookThru(*args: Any, q: bool, nc: bool) -> float: ...
 @overload
-def lookThru(*args: Any, **kwargs: Any) -> None: ...
-def lookThru(*args: Any, **kwargs: Any) -> Any:
+def lookThru(*args, **kwargs) -> None: ...
+def lookThru(*args, **kwargs) -> None:
     """Flags:
     - `farClip` `fc`: *float*
     - `nearClip` `nc`: *float*
     """
-def ls(*args: Any, absoluteName: bool = ..., an: bool = ..., allPaths: bool = ..., ap: bool = ..., assemblies: bool = ..., cameras: bool = ..., ca: bool = ..., containerType: str = ..., ct: str = ..., containers: bool = ..., con: bool = ..., dagObjects: bool = ..., dag: bool = ..., defaultNodes: bool = ..., dn: bool = ..., dependencyNodes: bool = ..., dep: bool = ..., exactType: str = ..., et: str = ..., excludeType: str = ..., ext: str = ..., flatten: bool = ..., fl: bool = ..., geometry: bool = ..., g: bool = ..., ghost: bool = ..., gh: bool = ..., head: int = ..., hd: int = ..., hilite: bool = ..., hl: bool = ..., intermediateObjects: bool = ..., io: bool = ..., invisible: bool = ..., iv: bool = ..., leaf: bool = ..., lf: bool = ..., lights: bool = ..., lt: bool = ..., live: bool = ..., lv: bool = ..., lockedNodes: bool = ..., ln: bool = ..., long: bool = ..., l: bool = ..., materials: bool = ..., mat: bool = ..., modified: bool = ..., mod: bool = ..., noIntermediate: bool = ..., ni: bool = ..., nodeTypes: bool = ..., nt: bool = ..., objectsOnly: bool = ..., o: bool = ..., orderedComponentSelection: bool = ..., ocs: bool = ..., orderedSelection: bool = ..., os: bool = ..., partitions: bool = ..., pr: bool = ..., persistentNodes: bool = ..., pn: bool = ..., planes: bool = ..., pl: bool = ..., preSelectHilite: bool = ..., psh: bool = ..., readOnly: bool = ..., ro: bool = ..., recursive: bool = ..., r: bool = ..., referencedNodes: bool = ..., rn: bool = ..., references: bool = ..., rf: bool = ..., renderGlobals: bool = ..., rg: bool = ..., renderQualities: bool = ..., rq: bool = ..., renderResolutions: bool = ..., rr: bool = ..., renderSetups: bool = ..., rs: bool = ..., selection: bool = ..., sl: bool = ..., sets: bool = ..., set: bool = ..., shapes: bool = ..., s: bool = ..., shortNames: bool = ..., sn: bool = ..., showNamespace: bool = ..., sns: bool = ..., showType: bool = ..., st: bool = ..., tail: int = ..., tl: int = ..., templated: bool = ..., tm: bool = ..., textures: bool = ..., tex: bool = ..., transforms: bool = ..., tr: bool = ..., type: str = ..., typ: str = ..., ufeObjects: bool = ..., ufe: bool = ..., undeletable: bool = ..., ud: bool = ..., untemplated: bool = ..., ut: bool = ..., uuid: bool = ..., uid: bool = ..., visible: bool = ..., v: bool = ..., **kwargs: Any) -> list[str]:
+def ls(*args, **kwargs) -> list[str]:
     """Flags:
     - `absoluteName` `an`: *bool*
     - `allPaths` `ap`: *bool*
@@ -24597,7 +24597,7 @@ def ls(*args: Any, absoluteName: bool = ..., an: bool = ..., allPaths: bool = ..
     - `uuid` `uid`: *bool*
     - `visible` `v`: *bool*
     """
-def lsThroughFilter(*args: Any, item: str = ..., it: str = ..., nodeArray: bool = ..., na: bool = ..., reverse: bool = ..., rv: bool = ..., selection: bool = ..., sl: bool = ..., sort: str = ..., so: str = ..., **kwargs: Any) -> list[str]:
+def lsThroughFilter(*args, **kwargs) -> list[str]:
     """Flags:
     - `item` `it`: *str*
     - `nodeArray` `na`: *bool*
@@ -24605,7 +24605,7 @@ def lsThroughFilter(*args: Any, item: str = ..., it: str = ..., nodeArray: bool 
     - `selection` `sl`: *bool*
     - `sort` `so`: *str*
     """
-def lsUI(*args: Any, cmdTemplates: bool = ..., ct: bool = ..., collection: bool = ..., col: bool = ..., contexts: bool = ..., ctx: bool = ..., controlLayouts: bool = ..., cl: bool = ..., controls: bool = ..., ctl: bool = ..., dumpWidgets: bool = ..., dw: bool = ..., editors: bool = ..., ed: bool = ..., head: int = ..., hd: int = ..., long: bool = ..., l: bool = ..., menuItems: bool = ..., mi: bool = ..., menus: bool = ..., m: bool = ..., numWidgets: bool = ..., nw: bool = ..., panels: bool = ..., p: bool = ..., radioMenuItemCollections: bool = ..., rmc: bool = ..., tail: int = ..., tl: int = ..., type: str = ..., typ: str = ..., windows: bool = ..., wnd: bool = ..., workspaceControls: bool = ..., wc: bool = ..., **kwargs: Any) -> list[str]:
+def lsUI(*args, **kwargs) -> list[str]:
     """Flags:
     - `cmdTemplates` `ct`: *bool*
     - `collection` `col`: *bool*
@@ -24626,7 +24626,7 @@ def lsUI(*args: Any, cmdTemplates: bool = ..., ct: bool = ..., collection: bool 
     - `windows` `wnd`: *bool*
     - `workspaceControls` `wc`: *bool*
     """
-def makeIdentity(*args: Any, apply: bool = ..., a: bool = ..., jointOrient: bool = ..., jo: bool = ..., normal: int = ..., n: int = ..., preserveNormals: bool = ..., pn: bool = ..., rotate: bool = ..., r: bool = ..., scale: bool = ..., s: bool = ..., translate: bool = ..., t: bool = ..., **kwargs: Any) -> None:
+def makeIdentity(*args, **kwargs) -> None:
     """Flags:
     - `apply` `a`: *bool*
     - `jointOrient` `jo`: *bool*
@@ -24665,8 +24665,8 @@ def makeLive(*args: Any, q: bool, removeObjects: bool) -> bool: ...
 @overload
 def makeLive(*args: Any, q: bool, ro: bool) -> bool: ...
 @overload
-def makeLive(*args: Any, **kwargs: Any) -> None: ...
-def makeLive(*args: Any, **kwargs: Any) -> Any:
+def makeLive(*args, **kwargs) -> None: ...
+def makeLive(*args, **kwargs) -> None:
     """Flags:
     - `addObjects` `ao`: *bool*
     - `none` `n`: *bool*
@@ -24709,8 +24709,8 @@ def makePaintable(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def makePaintable(*args: Any, q: bool, rm: bool) -> bool: ...
 @overload
-def makePaintable(*args: Any, **kwargs: Any) -> None: ...
-def makePaintable(*args: Any, **kwargs: Any) -> Any:
+def makePaintable(*args, **kwargs) -> None: ...
+def makePaintable(*args, **kwargs) -> None:
     """Flags:
     - `activate` `ac`: *bool*
     - `activateAll` `aca`: *bool*
@@ -24746,8 +24746,8 @@ def makeSingleSurface(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def makeSingleSurface(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def makeSingleSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def makeSingleSurface(*args: Any, **kwargs: Any) -> Any:
+def makeSingleSurface(*args, **kwargs) -> list[str]: ...
+def makeSingleSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -24756,7 +24756,7 @@ def makeSingleSurface(*args: Any, **kwargs: Any) -> Any:
     - `object` `o`: *bool*
     - `stitchTolerance` `st`: *float*
     """
-def makebot(*args: Any, checkdepends: bool = ..., c: bool = ..., checkres: int = ..., r: int = ..., input: str = ..., i: str = ..., nooverwrite: bool = ..., nov: bool = ..., output: str = ..., o: str = ..., verbose: bool = ..., v: bool = ..., **kwargs: Any) -> None:
+def makebot(*args, **kwargs) -> None:
     """Flags:
     - `checkdepends` `c`: *bool*
     - `checkres` `r`: *int*
@@ -24846,8 +24846,8 @@ def manipMoveContext(*args: Any, q: bool, autoOrientSecondaryAxis: bool) -> bool
 @overload
 def manipMoveContext(*args: Any, q: bool, aos: bool) -> bool: ...
 @overload
-def manipMoveContext(*args: Any, **kwargs: Any) -> str: ...
-def manipMoveContext(*args: Any, **kwargs: Any) -> Any:
+def manipMoveContext(*args, **kwargs) -> str: ...
+def manipMoveContext(*args, **kwargs) -> str:
     """Flags:
     - `activeHandle` `ah`: *int*
     - `activeHandleNormal` `ahn`: *int*
@@ -24923,8 +24923,8 @@ def manipMoveLimitsCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def manipMoveLimitsCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def manipMoveLimitsCtx(*args: Any, **kwargs: Any) -> str: ...
-def manipMoveLimitsCtx(*args: Any, **kwargs: Any) -> Any:
+def manipMoveLimitsCtx(*args, **kwargs) -> str: ...
+def manipMoveLimitsCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -25014,8 +25014,8 @@ def manipOptions(*args: Any, q: bool, rememberActiveHandleAfterToolSwitch: bool)
 @overload
 def manipOptions(*args: Any, q: bool, rhs: bool) -> bool: ...
 @overload
-def manipOptions(*args: Any, **kwargs: Any) -> None: ...
-def manipOptions(*args: Any, **kwargs: Any) -> Any:
+def manipOptions(*args, **kwargs) -> None: ...
+def manipOptions(*args, **kwargs) -> None:
     """Flags:
     - `enableSmartDuplicate` `esd`: *bool*
     - `enableSmartExtrude` `ese`: *bool*
@@ -25098,8 +25098,8 @@ def manipPivot(*args: Any, q: bool, valid: bool) -> bool: ...
 @overload
 def manipPivot(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def manipPivot(*args: Any, **kwargs: Any) -> None: ...
-def manipPivot(*args: Any, **kwargs: Any) -> Any:
+def manipPivot(*args, **kwargs) -> None: ...
+def manipPivot(*args, **kwargs) -> None:
     """Flags:
     - `bakeOri` `bo`: *bool*
     - `moveToolOri` `mto`: *int*
@@ -25199,8 +25199,8 @@ def manipRotateContext(*args: Any, q: bool, editPivotMode: bool) -> bool: ...
 @overload
 def manipRotateContext(*args: Any, q: bool, epm: bool) -> bool: ...
 @overload
-def manipRotateContext(*args: Any, **kwargs: Any) -> str: ...
-def manipRotateContext(*args: Any, **kwargs: Any) -> Any:
+def manipRotateContext(*args, **kwargs) -> str: ...
+def manipRotateContext(*args, **kwargs) -> str:
     """Flags:
     - `activeHandle` `ah`: *int*
     - `alignAlong` `aa`: *Any*
@@ -25272,8 +25272,8 @@ def manipRotateLimitsCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def manipRotateLimitsCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def manipRotateLimitsCtx(*args: Any, **kwargs: Any) -> str: ...
-def manipRotateLimitsCtx(*args: Any, **kwargs: Any) -> Any:
+def manipRotateLimitsCtx(*args, **kwargs) -> str: ...
+def manipRotateLimitsCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -25363,8 +25363,8 @@ def manipScaleContext(*args: Any, q: bool, editPivotMode: bool) -> bool: ...
 @overload
 def manipScaleContext(*args: Any, q: bool, epm: bool) -> bool: ...
 @overload
-def manipScaleContext(*args: Any, **kwargs: Any) -> str: ...
-def manipScaleContext(*args: Any, **kwargs: Any) -> Any:
+def manipScaleContext(*args, **kwargs) -> str: ...
+def manipScaleContext(*args, **kwargs) -> str:
     """Flags:
     - `activeHandle` `ah`: *int*
     - `alignAlong` `aa`: *Any*
@@ -25434,8 +25434,8 @@ def manipScaleLimitsCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def manipScaleLimitsCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def manipScaleLimitsCtx(*args: Any, **kwargs: Any) -> str: ...
-def manipScaleLimitsCtx(*args: Any, **kwargs: Any) -> Any:
+def manipScaleLimitsCtx(*args, **kwargs) -> str: ...
+def manipScaleLimitsCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -25481,8 +25481,8 @@ def marker(*args: Any, q: bool, positionMarker: bool) -> bool: ...
 @overload
 def marker(*args: Any, q: bool, pm: bool) -> bool: ...
 @overload
-def marker(*args: Any, **kwargs: Any) -> list[str]: ...
-def marker(*args: Any, **kwargs: Any) -> Any:
+def marker(*args, **kwargs) -> list[str]: ...
+def marker(*args, **kwargs) -> list[str]:
     """Flags:
     - `attach` `a`: *bool*
     - `detach` `d`: *bool*
@@ -25494,7 +25494,7 @@ def marker(*args: Any, **kwargs: Any) -> Any:
     - `upTwist` `ut`: *float*
     - `valueU` `u`: *float*
     """
-def matchTransform(*args: Any, pivots: bool = ..., piv: bool = ..., position: bool = ..., pos: bool = ..., positionX: bool = ..., px: bool = ..., positionY: bool = ..., py: bool = ..., positionZ: bool = ..., pz: bool = ..., rotatePivot: bool = ..., rp: bool = ..., rotation: bool = ..., rot: bool = ..., rotationX: bool = ..., rx: bool = ..., rotationY: bool = ..., ry: bool = ..., rotationZ: bool = ..., rz: bool = ..., scale: bool = ..., scl: bool = ..., scaleBox: bool = ..., box: bool = ..., scalePivot: bool = ..., sp: bool = ..., scaleX: bool = ..., sx: bool = ..., scaleY: bool = ..., sy: bool = ..., scaleZ: bool = ..., sz: bool = ..., **kwargs: Any) -> None:
+def matchTransform(*args, **kwargs) -> None:
     """Flags:
     - `pivots` `piv`: *bool*
     - `position` `pos`: *bool*
@@ -25542,8 +25542,8 @@ def matrixUtil(*args: Any, q: bool, transpose: bool) -> bool: ...
 @overload
 def matrixUtil(*args: Any, q: bool, tp: bool) -> bool: ...
 @overload
-def matrixUtil(*args: Any, **kwargs: Any) -> str: ...
-def matrixUtil(*args: Any, **kwargs: Any) -> Any:
+def matrixUtil(*args, **kwargs) -> str: ...
+def matrixUtil(*args, **kwargs) -> str:
     """Flags:
     - `inverse` `iv`: *bool*
     - `quaternion` `qt`: *Any*
@@ -25571,8 +25571,8 @@ def mayaDpiSetting(*args: Any, q: bool, systemDpi: bool) -> bool: ...
 @overload
 def mayaDpiSetting(*args: Any, q: bool, sd: bool) -> bool: ...
 @overload
-def mayaDpiSetting(*args: Any, **kwargs: Any) -> int: ...
-def mayaDpiSetting(*args: Any, **kwargs: Any) -> Any:
+def mayaDpiSetting(*args, **kwargs) -> int: ...
+def mayaDpiSetting(*args, **kwargs) -> int:
     """Flags:
     - `mode` `m`: *int*
     - `realScaleValue` `rsv`: *bool*
@@ -25588,24 +25588,24 @@ def mayaHasRenderSetup(*args: Any, q: bool, enableDuringTests: bool) -> bool: ..
 @overload
 def mayaHasRenderSetup(*args: Any, q: bool, edt: bool) -> bool: ...
 @overload
-def mayaHasRenderSetup(*args: Any, **kwargs: Any) -> None: ...
-def mayaHasRenderSetup(*args: Any, **kwargs: Any) -> Any:
+def mayaHasRenderSetup(*args, **kwargs) -> None: ...
+def mayaHasRenderSetup(*args, **kwargs) -> None:
     """Flags:
     - `enableCurrentSession` `ecs`: *bool*
     - `enableDuringTests` `edt`: *bool*
     """
-def melInfo(*args: Any) -> list[str]: ...
+def melInfo(*args, **kwargs) -> list[str]: ...
 @overload
 def melOptions(*args: Any, q: bool, duplicateVariableWarnings: bool) -> bool: ...
 @overload
 def melOptions(*args: Any, q: bool, dvw: bool) -> bool: ...
 @overload
-def melOptions(*args: Any, **kwargs: Any) -> None: ...
-def melOptions(*args: Any, **kwargs: Any) -> Any:
+def melOptions(*args, **kwargs) -> None: ...
+def melOptions(*args, **kwargs) -> None:
     """Flags:
     - `duplicateVariableWarnings` `dvw`: *bool*
     """
-def memory(*args: Any, adjustedVirtualMemory: bool = ..., av: bool = ..., asFloat: bool = ..., af: bool = ..., debug: bool = ..., dbg: bool = ..., freeMemory: bool = ..., fr: bool = ..., gigaByte: bool = ..., gb: bool = ..., heapMemory: bool = ..., he: bool = ..., kiloByte: bool = ..., kb: bool = ..., megaByte: bool = ..., mb: bool = ..., pageFaults: bool = ..., pf: bool = ..., pageReclaims: bool = ..., pr: bool = ..., physicalMemory: bool = ..., phy: bool = ..., processVirtualMemory: bool = ..., pv: bool = ..., summary: bool = ..., sum: bool = ..., swapFree: bool = ..., swf: bool = ..., swapLogical: bool = ..., swl: bool = ..., swapMax: bool = ..., swm: bool = ..., swapPhysical: bool = ..., swp: bool = ..., swapReserved: bool = ..., swr: bool = ..., swapVirtual: bool = ..., swv: bool = ..., swaps: bool = ..., sw: bool = ..., **kwargs: Any) -> None:
+def memory(*args, **kwargs) -> None:
     """Flags:
     - `adjustedVirtualMemory` `av`: *bool*
     - `asFloat` `af`: *bool*
@@ -25709,8 +25709,8 @@ def menu(*args: Any, q: bool, visible: bool) -> bool: ...
 @overload
 def menu(*args: Any, q: bool, vis: bool) -> bool: ...
 @overload
-def menu(*args: Any, **kwargs: Any) -> str: ...
-def menu(*args: Any, **kwargs: Any) -> Any:
+def menu(*args, **kwargs) -> str: ...
+def menu(*args, **kwargs) -> str:
     """Flags:
     - `allowOptionBoxes` `aob`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -25814,8 +25814,8 @@ def menuBarLayout(*args: Any, q: bool, isObscured: bool) -> bool: ...
 @overload
 def menuBarLayout(*args: Any, q: bool, io: bool) -> bool: ...
 @overload
-def menuBarLayout(*args: Any, **kwargs: Any) -> str: ...
-def menuBarLayout(*args: Any, **kwargs: Any) -> Any:
+def menuBarLayout(*args, **kwargs) -> str: ...
+def menuBarLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -25933,8 +25933,8 @@ def menuEditor(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def menuEditor(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def menuEditor(*args: Any, **kwargs: Any) -> str: ...
-def menuEditor(*args: Any, **kwargs: Any) -> Any:
+def menuEditor(*args, **kwargs) -> str: ...
+def menuEditor(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -26066,8 +26066,8 @@ def menuItem(*args: Any, q: bool, sourceType: bool) -> str: ...
 @overload
 def menuItem(*args: Any, q: bool, stp: bool) -> str: ...
 @overload
-def menuItem(*args: Any, **kwargs: Any) -> str: ...
-def menuItem(*args: Any, **kwargs: Any) -> Any:
+def menuItem(*args, **kwargs) -> str: ...
+def menuItem(*args, **kwargs) -> str:
     """Flags:
     - `allowOptionBoxes` `aob`: *bool*
     - `annotation` `ann`: *str*
@@ -26161,8 +26161,8 @@ def menuSet(*args: Any, q: bool, permanent: bool) -> bool: ...
 @overload
 def menuSet(*args: Any, q: bool, p: bool) -> bool: ...
 @overload
-def menuSet(*args: Any, **kwargs: Any) -> str: ...
-def menuSet(*args: Any, **kwargs: Any) -> Any:
+def menuSet(*args, **kwargs) -> str: ...
+def menuSet(*args, **kwargs) -> str:
     """Flags:
     - `addMenu` `am`: *str*
     - `allMenuSets` `ams`: *bool*
@@ -26209,8 +26209,8 @@ def menuSetPref(*args: Any, q: bool, version: bool) -> bool: ...
 @overload
 def menuSetPref(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def menuSetPref(*args: Any, **kwargs: Any) -> None: ...
-def menuSetPref(*args: Any, **kwargs: Any) -> Any:
+def menuSetPref(*args, **kwargs) -> None: ...
+def menuSetPref(*args, **kwargs) -> None:
     """Flags:
     - `exists` `e`: *bool*
     - `force` `f`: *bool*
@@ -26301,8 +26301,8 @@ def messageLine(*args: Any, q: bool, numberOfPopupMenus: bool) -> bool: ...
 @overload
 def messageLine(*args: Any, q: bool, npm: bool) -> bool: ...
 @overload
-def messageLine(*args: Any, **kwargs: Any) -> str: ...
-def messageLine(*args: Any, **kwargs: Any) -> Any:
+def messageLine(*args, **kwargs) -> str: ...
+def messageLine(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -26330,14 +26330,14 @@ def messageLine(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def mimicManipulation(*args: Any, manipulations: str = ..., m: str = ..., prevalidation: bool = ..., p: bool = ..., refresh: bool = ..., r: bool = ..., **kwargs: Any) -> bool:
+def mimicManipulation(*args, **kwargs) -> bool:
     """Flags:
     - `manipulations` `m`: *str*
     - `prevalidation` `p`: *bool*
     - `refresh` `r`: *bool*
     """
-def minimizeApp(*args: Any) -> None: ...
-def mirrorJoint(*args: Any, mirrorBehavior: bool = ..., mb: bool = ..., mirrorXY: bool = ..., mxy: bool = ..., mirrorXZ: bool = ..., mxz: bool = ..., mirrorYZ: bool = ..., myz: bool = ..., searchReplace: Any = ..., sr: Any = ..., **kwargs: Any) -> list[str]:
+def minimizeApp(*args, **kwargs) -> None: ...
+def mirrorJoint(*args, **kwargs) -> list[str]:
     """Flags:
     - `mirrorBehavior` `mb`: *bool*
     - `mirrorXY` `mxy`: *bool*
@@ -26374,8 +26374,8 @@ def modelCurrentTimeCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def modelCurrentTimeCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def modelCurrentTimeCtx(*args: Any, **kwargs: Any) -> str: ...
-def modelCurrentTimeCtx(*args: Any, **kwargs: Any) -> Any:
+def modelCurrentTimeCtx(*args, **kwargs) -> str: ...
+def modelCurrentTimeCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -26466,8 +26466,8 @@ def modelEditor(*args: Any, q: bool, excludeObjectPreset: bool) -> str: ...
 @overload
 def modelEditor(*args: Any, q: bool, eop: bool) -> str: ...
 @overload
-def modelEditor(*args: Any, **kwargs: Any) -> str: ...
-def modelEditor(*args: Any, **kwargs: Any) -> Any:
+def modelEditor(*args, **kwargs) -> str: ...
+def modelEditor(*args, **kwargs) -> str:
     """Flags:
     - `activeComponentsXray` `acx`: *bool*
     - `activeCustomEnvironment` `ace`: *str*
@@ -26715,8 +26715,8 @@ def modelPanel(*args: Any, q: bool, modelEditor: bool) -> bool: ...
 @overload
 def modelPanel(*args: Any, q: bool, me: bool) -> bool: ...
 @overload
-def modelPanel(*args: Any, **kwargs: Any) -> str: ...
-def modelPanel(*args: Any, **kwargs: Any) -> Any:
+def modelPanel(*args, **kwargs) -> str: ...
+def modelPanel(*args, **kwargs) -> str:
     """Flags:
     - `barLayout` `bl`: *bool*
     - `camera` `cam`: *str*
@@ -26743,7 +26743,7 @@ def modelPanel(*args: Any, **kwargs: Any) -> Any:
     - `unParent` `up`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def moduleInfo(*args: Any, definition: bool = ..., d: bool = ..., listModules: bool = ..., lm: bool = ..., moduleName: str = ..., mn: str = ..., path: bool = ..., p: bool = ..., version: bool = ..., v: bool = ..., **kwargs: Any) -> list[str]:
+def moduleInfo(*args, **kwargs) -> list[str]:
     """Flags:
     - `definition` `d`: *bool*
     - `listModules` `lm`: *bool*
@@ -26751,26 +26751,26 @@ def moduleInfo(*args: Any, definition: bool = ..., d: bool = ..., listModules: b
     - `path` `p`: *bool*
     - `version` `v`: *bool*
     """
-def mouse(*args: Any, enableScrollWheel: bool = ..., esw: bool = ..., mouseButtonTracking: int = ..., mbt: int = ..., mouseButtonTrackingStatus: bool = ..., mbs: bool = ..., scrollWheelStatus: bool = ..., sws: bool = ..., **kwargs: Any) -> int:
+def mouse(*args, **kwargs) -> int:
     """Flags:
     - `enableScrollWheel` `esw`: *bool*
     - `mouseButtonTracking` `mbt`: *int*
     - `mouseButtonTrackingStatus` `mbs`: *bool*
     - `scrollWheelStatus` `sws`: *bool*
     """
-def movIn(*args: Any, file: str = ..., f: str = ..., startTime: float = ..., st: float = ..., **kwargs: Any) -> None:
+def movIn(*args, **kwargs) -> None:
     """Flags:
     - `file` `f`: *str*
     - `startTime` `st`: *float*
     """
-def movOut(*args: Any, comment: bool = ..., c: bool = ..., file: str = ..., f: str = ..., precision: int = ..., pre: int = ..., time: float = ..., t: float = ..., **kwargs: Any) -> None:
+def movOut(*args, **kwargs) -> None:
     """Flags:
     - `comment` `c`: *bool*
     - `file` `f`: *str*
     - `precision` `pre`: *int*
     - `time` `t`: *float*
     """
-def move(*args: Any, absolute: bool = ..., a: bool = ..., autoOrientSecondaryAxis: bool = ..., aos: bool = ..., componentOffset: bool = ..., co: bool = ..., componentSpace: bool = ..., cs: bool = ..., constrainAlongNormal: bool = ..., xn: bool = ..., deletePriorHistory: bool = ..., dph: bool = ..., localSpace: bool = ..., ls: bool = ..., moveX: bool = ..., x: bool = ..., moveXY: bool = ..., xy: bool = ..., moveXYZ: bool = ..., xyz: bool = ..., moveXZ: bool = ..., xz: bool = ..., moveY: bool = ..., y: bool = ..., moveYZ: bool = ..., yz: bool = ..., moveZ: bool = ..., z: bool = ..., objectSpace: bool = ..., os: bool = ..., orientJoint: str = ..., oj: str = ..., parameter: bool = ..., p: bool = ..., preserveChildPosition: bool = ..., pcp: bool = ..., preserveGeometryPosition: bool = ..., pgp: bool = ..., preserveUV: bool = ..., puv: bool = ..., reflection: bool = ..., rfl: bool = ..., reflectionAboutBBox: bool = ..., rab: bool = ..., reflectionAboutOrigin: bool = ..., rao: bool = ..., reflectionAboutX: bool = ..., rax: bool = ..., reflectionAboutY: bool = ..., ray: bool = ..., reflectionAboutZ: bool = ..., raz: bool = ..., reflectionTolerance: float = ..., rft: float = ..., relative: bool = ..., r: bool = ..., rotatePivotRelative: bool = ..., rpr: bool = ..., scalePivotRelative: bool = ..., spr: bool = ..., secondaryAxisOrient: str = ..., sao: str = ..., symNegative: bool = ..., smn: bool = ..., worldSpace: bool = ..., ws: bool = ..., worldSpaceDistance: bool = ..., wd: bool = ..., xformConstraint: str = ..., xc: str = ..., **kwargs: Any) -> None:
+def move(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `autoOrientSecondaryAxis` `aos`: *bool*
@@ -26845,8 +26845,8 @@ def moveKeyCtx(*args: Any, q: bool, moveReplace: bool) -> bool: ...
 @overload
 def moveKeyCtx(*args: Any, q: bool, mr: bool) -> bool: ...
 @overload
-def moveKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def moveKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def moveKeyCtx(*args, **kwargs) -> str: ...
+def moveKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -26858,7 +26858,7 @@ def moveKeyCtx(*args: Any, **kwargs: Any) -> Any:
     - `name` `n`: *str*
     - `option` `o`: *str*
     """
-def moveVertexAlongDirection(*args: Any, direction: Any = ..., d: Any = ..., magnitude: float = ..., m: float = ..., normalDirection: float = ..., n: float = ..., uDirection: float = ..., u: float = ..., uvNormalDirection: list[float] = ..., uvn: list[float] = ..., vDirection: float = ..., v: float = ..., **kwargs: Any) -> None:
+def moveVertexAlongDirection(*args, **kwargs) -> None:
     """Flags:
     - `direction` `d`: *Any*
     - `magnitude` `m`: *float*
@@ -26867,7 +26867,7 @@ def moveVertexAlongDirection(*args: Any, direction: Any = ..., d: Any = ..., mag
     - `uvNormalDirection` `uvn`: *list[float]*
     - `vDirection` `v`: *float*
     """
-def movieInfo(*args: Any, counter: bool = ..., cn: bool = ..., dropFrame: bool = ..., df: bool = ..., frameCount: bool = ..., f: bool = ..., frameDuration: bool = ..., fd: bool = ..., height: bool = ..., h: bool = ..., movieTexture: bool = ..., mt: bool = ..., negTimesOK: bool = ..., nt: bool = ..., numFrames: bool = ..., nf: bool = ..., quickTime: bool = ..., qt: bool = ..., timeCode: bool = ..., tc: bool = ..., timeCodeTrack: bool = ..., tt: bool = ..., timeScale: bool = ..., ts: bool = ..., twentyFourHourMax: bool = ..., tf: bool = ..., width: bool = ..., w: bool = ..., **kwargs: Any) -> None:
+def movieInfo(*args, **kwargs) -> None:
     """Flags:
     - `counter` `cn`: *bool*
     - `dropFrame` `df`: *bool*
@@ -26921,8 +26921,8 @@ def multiProfileBirailSurface(*args: Any, q: bool, tangentContinuityProfile2: bo
 @overload
 def multiProfileBirailSurface(*args: Any, q: bool, tp2: bool) -> bool: ...
 @overload
-def multiProfileBirailSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def multiProfileBirailSurface(*args: Any, **kwargs: Any) -> Any:
+def multiProfileBirailSurface(*args, **kwargs) -> list[str]: ...
+def multiProfileBirailSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -26934,7 +26934,7 @@ def multiProfileBirailSurface(*args: Any, **kwargs: Any) -> Any:
     - `tangentContinuityProfile2` `tp2`: *bool*
     - `transformMode` `tm`: *int*
     """
-def multiTouch(*args: Any, gestures: bool = ..., g: bool = ..., trackpad: int = ..., t: int = ..., **kwargs: Any) -> None:
+def multiTouch(*args, **kwargs) -> None:
     """Flags:
     - `gestures` `g`: *bool*
     - `trackpad` `t`: *int*
@@ -26948,13 +26948,13 @@ def mute(*args: Any, q: bool, force: bool) -> bool: ...
 @overload
 def mute(*args: Any, q: bool, f: bool) -> bool: ...
 @overload
-def mute(*args: Any, **kwargs: Any) -> list[str]: ...
-def mute(*args: Any, **kwargs: Any) -> Any:
+def mute(*args, **kwargs) -> list[str]: ...
+def mute(*args, **kwargs) -> list[str]:
     """Flags:
     - `disable` `d`: *bool*
     - `force` `f`: *bool*
     """
-def nameCommand(*args: Any, annotation: str = ..., ann: str = ..., command: str = ..., c: str = ..., data1: str = ..., da1: str = ..., data2: str = ..., da2: str = ..., data3: str = ..., da3: str = ..., default: bool = ..., d: bool = ..., sourceType: str = ..., stp: str = ..., **kwargs: Any) -> str:
+def nameCommand(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `command` `c`: *str*
@@ -27045,8 +27045,8 @@ def nameField(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def nameField(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def nameField(*args: Any, **kwargs: Any) -> str: ...
-def nameField(*args: Any, **kwargs: Any) -> Any:
+def nameField(*args, **kwargs) -> str: ...
+def nameField(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -27144,8 +27144,8 @@ def namespace(*args: Any, q: bool, relativeNames: bool) -> bool: ...
 @overload
 def namespace(*args: Any, q: bool, rel: bool) -> bool: ...
 @overload
-def namespace(*args: Any, **kwargs: Any) -> str: ...
-def namespace(*args: Any, **kwargs: Any) -> Any:
+def namespace(*args, **kwargs) -> str: ...
+def namespace(*args, **kwargs) -> str:
     """Flags:
     - `absoluteName` `an`: *bool*
     - `addNamespace` `add`: *str*
@@ -27166,7 +27166,7 @@ def namespace(*args: Any, **kwargs: Any) -> Any:
     - `setNamespace` `set`: *str*
     - `validateName` `vn`: *str*
     """
-def namespaceInfo(*args: Any, absoluteName: bool = ..., an: bool = ..., baseName: bool = ..., bn: bool = ..., currentNamespace: bool = ..., cur: bool = ..., dagPath: bool = ..., dp: bool = ..., fullName: bool = ..., fn: bool = ..., internal: bool = ..., int: bool = ..., isRootNamespace: bool = ..., ir: bool = ..., listNamespace: bool = ..., ls: bool = ..., listOnlyDependencyNodes: bool = ..., lod: bool = ..., listOnlyNamespaces: bool = ..., lon: bool = ..., parent: bool = ..., p: bool = ..., recurse: bool = ..., r: bool = ..., shortName: bool = ..., sn: bool = ..., **kwargs: Any) -> str:
+def namespaceInfo(*args, **kwargs) -> str:
     """Flags:
     - `absoluteName` `an`: *bool*
     - `baseName` `bn`: *bool*
@@ -27182,7 +27182,7 @@ def namespaceInfo(*args: Any, absoluteName: bool = ..., an: bool = ..., baseName
     - `recurse` `r`: *bool*
     - `shortName` `sn`: *bool*
     """
-def nodeCast(*args: Any, copyDynamicAttrs: bool = ..., cda: bool = ..., disableAPICallbacks: bool = ..., dsa: bool = ..., disableScriptJobCallbacks: bool = ..., dsj: bool = ..., disconnectUnmatchedAttrs: bool = ..., dua: bool = ..., force: bool = ..., f: bool = ..., swapNames: bool = ..., sn: bool = ..., swapValues: bool = ..., sv: bool = ..., **kwargs: Any) -> int:
+def nodeCast(*args, **kwargs) -> int:
     """Flags:
     - `copyDynamicAttrs` `cda`: *bool*
     - `disableAPICallbacks` `dsa`: *bool*
@@ -27273,8 +27273,8 @@ def nodeIconButton(*args: Any, q: bool, parent: bool) -> str: ...
 @overload
 def nodeIconButton(*args: Any, q: bool, p: bool) -> str: ...
 @overload
-def nodeIconButton(*args: Any, **kwargs: Any) -> str: ...
-def nodeIconButton(*args: Any, **kwargs: Any) -> Any:
+def nodeIconButton(*args, **kwargs) -> str: ...
+def nodeIconButton(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -27405,8 +27405,8 @@ def nodeOutliner(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ...
 @overload
 def nodeOutliner(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def nodeOutliner(*args: Any, **kwargs: Any) -> None: ...
-def nodeOutliner(*args: Any, **kwargs: Any) -> Any:
+def nodeOutliner(*args, **kwargs) -> None: ...
+def nodeOutliner(*args, **kwargs) -> None:
     """Flags:
     - `addCommand` `ac`: *str*
     - `addObject` `a`: *str*
@@ -27464,7 +27464,7 @@ def nodeOutliner(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def nodePreset(*args: Any, attributes: str = ..., atr: str = ..., custom: str = ..., ctm: str = ..., delete: Any = ..., exists: Any = ..., ex: Any = ..., isValidName: str = ..., ivn: str = ..., list: str = ..., ls: str = ..., load: Any = ..., ld: Any = ..., save: Any = ..., sv: Any = ..., **kwargs: Any) -> bool:
+def nodePreset(*args, **kwargs) -> bool:
     """Flags:
     - `attributes` `atr`: *str*
     - `custom` `ctm`: *str*
@@ -27556,8 +27556,8 @@ def nodeTreeLister(*args: Any, q: bool, selectPath: bool) -> str: ...
 @overload
 def nodeTreeLister(*args: Any, q: bool, sp: bool) -> str: ...
 @overload
-def nodeTreeLister(*args: Any, **kwargs: Any) -> str: ...
-def nodeTreeLister(*args: Any, **kwargs: Any) -> Any:
+def nodeTreeLister(*args, **kwargs) -> str: ...
+def nodeTreeLister(*args, **kwargs) -> str:
     """Flags:
     - `addFavorite` `af`: *str*
     - `addItem` `add`: *Any*
@@ -27605,7 +27605,7 @@ def nodeTreeLister(*args: Any, **kwargs: Any) -> Any:
     - `vnnString` `vnn`: *bool*
     - `width` `w`: *int*
     """
-def nodeType(*args: Any, apiType: bool = ..., api: bool = ..., derived: bool = ..., d: bool = ..., inherited: bool = ..., i: bool = ..., isTypeName: bool = ..., itn: bool = ..., ufeRuntimeName: bool = ..., urn: bool = ..., **kwargs: Any) -> str:
+def nodeType(*args, **kwargs) -> str:
     """Flags:
     - `apiType` `api`: *bool*
     - `derived` `d`: *bool*
@@ -27692,8 +27692,8 @@ def nonLinear(*args: Any, q: bool, prune: bool) -> bool: ...
 @overload
 def nonLinear(*args: Any, q: bool, pr: bool) -> bool: ...
 @overload
-def nonLinear(*args: Any, **kwargs: Any) -> list[str]: ...
-def nonLinear(*args: Any, **kwargs: Any) -> Any:
+def nonLinear(*args, **kwargs) -> list[str]: ...
+def nonLinear(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -27753,8 +27753,8 @@ def normalConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def normalConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def normalConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def normalConstraint(*args: Any, **kwargs: Any) -> Any:
+def normalConstraint(*args, **kwargs) -> list[str]: ...
+def normalConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `aimVector` `aim`: *Any*
     - `layer` `l`: *str*
@@ -27805,8 +27805,8 @@ def nurbsBoolean(*args: Any, q: bool, smartConnection: bool) -> bool: ...
 @overload
 def nurbsBoolean(*args: Any, q: bool, sc: bool) -> bool: ...
 @overload
-def nurbsBoolean(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsBoolean(*args: Any, **kwargs: Any) -> Any:
+def nurbsBoolean(*args, **kwargs) -> list[str]: ...
+def nurbsBoolean(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -27818,7 +27818,7 @@ def nurbsBoolean(*args: Any, **kwargs: Any) -> Any:
     - `smartConnection` `sc`: *bool*
     - `tolerance` `tlb`: *float*
     """
-def nurbsCopyUVSet(*args: Any) -> bool: ...
+def nurbsCopyUVSet(*args, **kwargs) -> bool: ...
 @overload
 def nurbsCube(*args: Any, q: bool, axis: bool) -> list[float]: ...
 @overload
@@ -27876,8 +27876,8 @@ def nurbsCube(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def nurbsCube(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def nurbsCube(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsCube(*args: Any, **kwargs: Any) -> Any:
+def nurbsCube(*args, **kwargs) -> list[str]: ...
+def nurbsCube(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -27894,7 +27894,7 @@ def nurbsCube(*args: Any, **kwargs: Any) -> Any:
     - `polygon` `po`: *int*
     - `width` `w`: *float*
     """
-def nurbsCurveToBezier(*args: Any) -> list[str]: ...
+def nurbsCurveToBezier(*args, **kwargs) -> list[str]: ...
 @overload
 def nurbsEditUV(*args: Any, q: bool, angle: bool) -> float: ...
 @overload
@@ -27940,8 +27940,8 @@ def nurbsEditUV(*args: Any, q: bool, scale: bool) -> bool: ...
 @overload
 def nurbsEditUV(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def nurbsEditUV(*args: Any, **kwargs: Any) -> bool: ...
-def nurbsEditUV(*args: Any, **kwargs: Any) -> Any:
+def nurbsEditUV(*args, **kwargs) -> bool: ...
+def nurbsEditUV(*args, **kwargs) -> bool:
     """Flags:
     - `angle` `a`: *float*
     - `pivotU` `pu`: *float*
@@ -28008,8 +28008,8 @@ def nurbsPlane(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def nurbsPlane(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def nurbsPlane(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsPlane(*args: Any, **kwargs: Any) -> Any:
+def nurbsPlane(*args, **kwargs) -> list[str]: ...
+def nurbsPlane(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -28025,7 +28025,7 @@ def nurbsPlane(*args: Any, **kwargs: Any) -> Any:
     - `polygon` `po`: *int*
     - `width` `w`: *float*
     """
-def nurbsSelect(*args: Any, borderSelection: bool = ..., bs: bool = ..., bottomBorder: bool = ..., bb: bool = ..., growSelection: int = ..., gs: int = ..., leftBorder: bool = ..., lb: bool = ..., rightBorder: bool = ..., rb: bool = ..., shrinkSelection: int = ..., ss: int = ..., topBorder: bool = ..., tb: bool = ..., **kwargs: Any) -> None:
+def nurbsSelect(*args, **kwargs) -> None:
     """Flags:
     - `borderSelection` `bs`: *bool*
     - `bottomBorder` `bb`: *bool*
@@ -28104,8 +28104,8 @@ def nurbsSquare(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def nurbsSquare(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def nurbsSquare(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsSquare(*args: Any, **kwargs: Any) -> Any:
+def nurbsSquare(*args, **kwargs) -> list[str]: ...
+def nurbsSquare(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `center` `c`: *list[float]*
@@ -28170,8 +28170,8 @@ def nurbsToPoly(*args: Any, q: bool, smoothEdge: bool) -> bool: ...
 @overload
 def nurbsToPoly(*args: Any, q: bool, ues: bool) -> bool: ...
 @overload
-def nurbsToPoly(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsToPoly(*args: Any, **kwargs: Any) -> Any:
+def nurbsToPoly(*args, **kwargs) -> list[str]: ...
+def nurbsToPoly(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -28258,8 +28258,8 @@ def nurbsToPolygonsPref(*args: Any, q: bool, useChordHeightRatio: bool) -> bool:
 @overload
 def nurbsToPolygonsPref(*args: Any, q: bool, ucr: bool) -> bool: ...
 @overload
-def nurbsToPolygonsPref(*args: Any, **kwargs: Any) -> None: ...
-def nurbsToPolygonsPref(*args: Any, **kwargs: Any) -> Any:
+def nurbsToPolygonsPref(*args, **kwargs) -> None: ...
+def nurbsToPolygonsPref(*args, **kwargs) -> None:
     """Flags:
     - `chordHeight` `cht`: *float*
     - `chordHeightRatio` `chr`: *float*
@@ -28321,8 +28321,8 @@ def nurbsToSubdiv(*args: Any, q: bool, reverseNormal: bool) -> bool: ...
 @overload
 def nurbsToSubdiv(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def nurbsToSubdiv(*args: Any, **kwargs: Any) -> list[str]: ...
-def nurbsToSubdiv(*args: Any, **kwargs: Any) -> Any:
+def nurbsToSubdiv(*args, **kwargs) -> list[str]: ...
+def nurbsToSubdiv(*args, **kwargs) -> list[str]:
     """Flags:
     - `addUnderTransform` `aut`: *bool*
     - `caching` `cch`: *bool*
@@ -28416,8 +28416,8 @@ def nurbsToSubdivPref(*args: Any, q: bool, reverseNormal: bool) -> bool: ...
 @overload
 def nurbsToSubdivPref(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def nurbsToSubdivPref(*args: Any, **kwargs: Any) -> None: ...
-def nurbsToSubdivPref(*args: Any, **kwargs: Any) -> Any:
+def nurbsToSubdivPref(*args, **kwargs) -> None: ...
+def nurbsToSubdivPref(*args, **kwargs) -> None:
     """Flags:
     - `bridge` `br`: *int*
     - `capType` `ct`: *int*
@@ -28449,14 +28449,14 @@ def nurbsUVSet(*args: Any, q: bool, useExplicit: bool) -> bool: ...
 @overload
 def nurbsUVSet(*args: Any, q: bool, ue: bool) -> bool: ...
 @overload
-def nurbsUVSet(*args: Any, **kwargs: Any) -> bool: ...
-def nurbsUVSet(*args: Any, **kwargs: Any) -> Any:
+def nurbsUVSet(*args, **kwargs) -> bool: ...
+def nurbsUVSet(*args, **kwargs) -> bool:
     """Flags:
     - `create` `c`: *bool*
     - `useExplicit` `ue`: *bool*
     """
-def objExists(*args: Any) -> bool: ...
-def objectCenter(*args: Any, gl: bool = ..., local: bool = ..., l: bool = ..., x: bool = ..., y: bool = ..., z: bool = ..., **kwargs: Any) -> list[float]:
+def objExists(*args, **kwargs) -> bool: ...
+def objectCenter(*args, **kwargs) -> list[float]:
     """Flags:
     - `gl` `gl`: *bool*
     - `local` `l`: *bool*
@@ -28464,7 +28464,7 @@ def objectCenter(*args: Any, gl: bool = ..., local: bool = ..., l: bool = ..., x
     - `y` `y`: *bool*
     - `z` `z`: *bool*
     """
-def objectType(*args: Any, isAType: str = ..., isa: str = ..., isType: str = ..., i: str = ..., tagFromType: str = ..., tgt: str = ..., typeFromTag: int = ..., tpt: int = ..., typeTag: bool = ..., tt: bool = ..., **kwargs: Any) -> str:
+def objectType(*args, **kwargs) -> str:
     """Flags:
     - `isAType` `isa`: *str*
     - `isType` `i`: *str*
@@ -28472,7 +28472,7 @@ def objectType(*args: Any, isAType: str = ..., isa: str = ..., isType: str = ...
     - `typeFromTag` `tpt`: *int*
     - `typeTag` `tt`: *bool*
     """
-def objectTypeUI(*args: Any, isType: str = ..., i: str = ..., listAll: bool = ..., la: bool = ..., superClasses: bool = ..., sc: bool = ..., **kwargs: Any) -> str:
+def objectTypeUI(*args, **kwargs) -> str:
     """Flags:
     - `isType` `i`: *str*
     - `listAll` `la`: *bool*
@@ -28543,8 +28543,8 @@ def offsetCurve(*args: Any, q: bool, useGivenNormal: bool) -> bool: ...
 @overload
 def offsetCurve(*args: Any, q: bool, ugn: bool) -> bool: ...
 @overload
-def offsetCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def offsetCurve(*args: Any, **kwargs: Any) -> Any:
+def offsetCurve(*args, **kwargs) -> list[str]: ...
+def offsetCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `connectBreaks` `cb`: *int*
@@ -28616,8 +28616,8 @@ def offsetCurveOnSurface(*args: Any, q: bool, stitch: bool) -> bool: ...
 @overload
 def offsetCurveOnSurface(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def offsetCurveOnSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def offsetCurveOnSurface(*args: Any, **kwargs: Any) -> Any:
+def offsetCurveOnSurface(*args, **kwargs) -> list[str]: ...
+def offsetCurveOnSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `checkPoints` `cp`: *int*
@@ -28662,8 +28662,8 @@ def offsetSurface(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def offsetSurface(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def offsetSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def offsetSurface(*args: Any, **kwargs: Any) -> Any:
+def offsetSurface(*args, **kwargs) -> list[str]: ...
+def offsetSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -28750,8 +28750,8 @@ def ogs(*args: Any, q: bool, traceRenderPipeline: bool) -> bool: ...
 @overload
 def ogs(*args: Any, q: bool, trp: bool) -> bool: ...
 @overload
-def ogs(*args: Any, **kwargs: Any) -> str: ...
-def ogs(*args: Any, **kwargs: Any) -> Any:
+def ogs(*args, **kwargs) -> str: ...
+def ogs(*args, **kwargs) -> str:
     """Flags:
     - `deviceInformation` `di`: *bool*
     - `disposeReleasableTextures` `drt`: *bool*
@@ -28838,8 +28838,8 @@ def ogsRender(*args: Any, q: bool, noRenderView: bool) -> bool: ...
 @overload
 def ogsRender(*args: Any, q: bool, nrv: bool) -> bool: ...
 @overload
-def ogsRender(*args: Any, **kwargs: Any) -> bool: ...
-def ogsRender(*args: Any, **kwargs: Any) -> Any:
+def ogsRender(*args, **kwargs) -> bool: ...
+def ogsRender(*args, **kwargs) -> bool:
     """Flags:
     - `activeMultisampleType` `mst`: *str*
     - `activeRenderOverride` `cro`: *str*
@@ -28875,15 +28875,15 @@ def openCLInfo(*args: Any, q: bool, valid: bool) -> bool: ...
 @overload
 def openCLInfo(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def openCLInfo(*args: Any, **kwargs: Any) -> bool: ...
-def openCLInfo(*args: Any, **kwargs: Any) -> Any:
+def openCLInfo(*args, **kwargs) -> bool: ...
+def openCLInfo(*args, **kwargs) -> bool:
     """Flags:
     - `limitMinimumVerts` `lmv`: *bool*
     - `minVertexBuffer` `mvb`: *int*
     - `supportsDoublePrecision` `dbl`: *bool*
     - `valid` `v`: *bool*
     """
-def openGLExtension(*args: Any, extension: str = ..., ext: str = ..., renderer: bool = ..., rnd: bool = ..., vendor: bool = ..., vnd: bool = ..., version: bool = ..., ver: bool = ..., **kwargs: Any) -> str:
+def openGLExtension(*args, **kwargs) -> str:
     """Flags:
     - `extension` `ext`: *str*
     - `renderer` `rnd`: *bool*
@@ -28903,8 +28903,8 @@ def openMayaPref(*args: Any, q: bool, oldPluginWarning: bool) -> bool: ...
 @overload
 def openMayaPref(*args: Any, q: bool, ow: bool) -> bool: ...
 @overload
-def openMayaPref(*args: Any, **kwargs: Any) -> int: ...
-def openMayaPref(*args: Any, **kwargs: Any) -> Any:
+def openMayaPref(*args, **kwargs) -> int: ...
+def openMayaPref(*args, **kwargs) -> int:
     """Flags:
     - `errlog` `el`: *bool*
     - `lazyLoad` `lz`: *bool*
@@ -28991,8 +28991,8 @@ def optionMenu(*args: Any, q: bool, deleteAllItems: bool) -> bool: ...
 @overload
 def optionMenu(*args: Any, q: bool, dai: bool) -> bool: ...
 @overload
-def optionMenu(*args: Any, **kwargs: Any) -> str: ...
-def optionMenu(*args: Any, **kwargs: Any) -> Any:
+def optionMenu(*args, **kwargs) -> str: ...
+def optionMenu(*args, **kwargs) -> str:
     """Flags:
     - `alwaysCallChangeCommand` `acc`: *bool*
     - `annotation` `ann`: *str*
@@ -29114,8 +29114,8 @@ def optionMenuGrp(*args: Any, q: bool, postMenuCommand: bool) -> str: ...
 @overload
 def optionMenuGrp(*args: Any, q: bool, pmc: bool) -> str: ...
 @overload
-def optionMenuGrp(*args: Any, **kwargs: Any) -> str: ...
-def optionMenuGrp(*args: Any, **kwargs: Any) -> Any:
+def optionMenuGrp(*args, **kwargs) -> str: ...
+def optionMenuGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -29260,8 +29260,8 @@ def optionVar(*args: Any, q: bool, transient: bool) -> bool: ...
 @overload
 def optionVar(*args: Any, q: bool, t: bool) -> bool: ...
 @overload
-def optionVar(*args: Any, **kwargs: Any) -> int: ...
-def optionVar(*args: Any, **kwargs: Any) -> Any:
+def optionVar(*args, **kwargs) -> int: ...
+def optionVar(*args, **kwargs) -> int:
     """Flags:
     - `arraySize` `arraySize`: *str*
     - `category` `cat`: *str*
@@ -29296,7 +29296,7 @@ def optionVar(*args: Any, **kwargs: Any) -> Any:
     - `unstash` `us`: *str*
     - `version` `v`: *int*
     """
-def orbit(*args: Any, horizontalAngle: float = ..., ha: float = ..., pivotPoint: list[float] = ..., pp: list[float] = ..., rotationAngles: Any = ..., ra: Any = ..., verticalAngle: float = ..., va: float = ..., **kwargs: Any) -> None:
+def orbit(*args, **kwargs) -> None:
     """Flags:
     - `horizontalAngle` `ha`: *float*
     - `pivotPoint` `pp`: *list[float]*
@@ -29344,8 +29344,8 @@ def orbitCtx(*args: Any, q: bool, localOrbit: bool) -> bool: ...
 @overload
 def orbitCtx(*args: Any, q: bool, lo: bool) -> bool: ...
 @overload
-def orbitCtx(*args: Any, **kwargs: Any) -> str: ...
-def orbitCtx(*args: Any, **kwargs: Any) -> Any:
+def orbitCtx(*args, **kwargs) -> str: ...
+def orbitCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `exists` `ex`: *bool*
@@ -29395,8 +29395,8 @@ def orientConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def orientConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def orientConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def orientConstraint(*args: Any, **kwargs: Any) -> Any:
+def orientConstraint(*args, **kwargs) -> list[str]: ...
+def orientConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `createCache` `cc`: *Any*
     - `deleteCache` `dc`: *bool*
@@ -29489,8 +29489,8 @@ def outlinerEditor(*args: Any, q: bool, pinPlug: bool) -> str: ...
 @overload
 def outlinerEditor(*args: Any, q: bool, pin: bool) -> str: ...
 @overload
-def outlinerEditor(*args: Any, **kwargs: Any) -> str: ...
-def outlinerEditor(*args: Any, **kwargs: Any) -> Any:
+def outlinerEditor(*args, **kwargs) -> str: ...
+def outlinerEditor(*args, **kwargs) -> str:
     """Flags:
     - `allowMultiSelection` `ams`: *bool*
     - `alwaysToggleSelect` `ats`: *bool*
@@ -29677,8 +29677,8 @@ def outlinerPanel(*args: Any, q: bool, outlinerEditor: bool) -> bool: ...
 @overload
 def outlinerPanel(*args: Any, q: bool, oe: bool) -> bool: ...
 @overload
-def outlinerPanel(*args: Any, **kwargs: Any) -> str: ...
-def outlinerPanel(*args: Any, **kwargs: Any) -> Any:
+def outlinerPanel(*args, **kwargs) -> str: ...
+def outlinerPanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -29709,12 +29709,12 @@ def outputWindow(*args: Any, q: bool, show: bool) -> bool: ...
 @overload
 def outputWindow(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def outputWindow(*args: Any, **kwargs: Any) -> None: ...
-def outputWindow(*args: Any, **kwargs: Any) -> Any:
+def outputWindow(*args, **kwargs) -> None: ...
+def outputWindow(*args, **kwargs) -> None:
     """Flags:
     - `show` `s`: *bool*
     """
-def overrideModifier(*args: Any, clear: bool = ..., cl: bool = ..., press: str = ..., p: str = ..., release: str = ..., r: str = ..., **kwargs: Any) -> None:
+def overrideModifier(*args, **kwargs) -> None:
     """Flags:
     - `clear` `cl`: *bool*
     - `press` `p`: *str*
@@ -29737,8 +29737,8 @@ def pairBlend(*args: Any, q: bool, input2: bool) -> bool: ...
 @overload
 def pairBlend(*args: Any, q: bool, i2: bool) -> bool: ...
 @overload
-def pairBlend(*args: Any, **kwargs: Any) -> str: ...
-def pairBlend(*args: Any, **kwargs: Any) -> Any:
+def pairBlend(*args, **kwargs) -> str: ...
+def pairBlend(*args, **kwargs) -> str:
     """Flags:
     - `attribute` `at`: *str*
     - `input1` `i1`: *bool*
@@ -29826,8 +29826,8 @@ def palettePort(*args: Any, q: bool, enableBackground: bool) -> bool: ...
 @overload
 def palettePort(*args: Any, q: bool, ebg: bool) -> bool: ...
 @overload
-def palettePort(*args: Any, **kwargs: Any) -> str: ...
-def palettePort(*args: Any, **kwargs: Any) -> Any:
+def palettePort(*args, **kwargs) -> str: ...
+def palettePort(*args, **kwargs) -> str:
     """Flags:
     - `actualTotal` `at`: *int*
     - `annotation` `ann`: *str*
@@ -29867,7 +29867,7 @@ def palettePort(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def panZoom(*args: Any, absolute: bool = ..., abs: bool = ..., downDistance: float = ..., d: float = ..., leftDistance: float = ..., l: float = ..., relative: bool = ..., rel: bool = ..., rightDistance: float = ..., r: float = ..., upDistance: float = ..., u: float = ..., zoomRatio: float = ..., z: float = ..., **kwargs: Any) -> None:
+def panZoom(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `abs`: *bool*
     - `downDistance` `d`: *float*
@@ -29930,8 +29930,8 @@ def panZoomCtx(*args: Any, q: bool, zoomMode: bool) -> bool: ...
 @overload
 def panZoomCtx(*args: Any, q: bool, zm: bool) -> bool: ...
 @overload
-def panZoomCtx(*args: Any, **kwargs: Any) -> str: ...
-def panZoomCtx(*args: Any, **kwargs: Any) -> Any:
+def panZoomCtx(*args, **kwargs) -> str: ...
+def panZoomCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `buttonDown` `btd`: *bool*
@@ -30028,8 +30028,8 @@ def paneLayout(*args: Any, q: bool, useTemplate: bool) -> str: ...
 @overload
 def paneLayout(*args: Any, q: bool, ut: bool) -> str: ...
 @overload
-def paneLayout(*args: Any, **kwargs: Any) -> str: ...
-def paneLayout(*args: Any, **kwargs: Any) -> Any:
+def paneLayout(*args, **kwargs) -> str: ...
+def paneLayout(*args, **kwargs) -> str:
     """Flags:
     - `activeFrameThickness` `aft`: *int*
     - `activePane` `ap`: *str*
@@ -30157,8 +30157,8 @@ def panel(*args: Any, q: bool, tearOffRestore: bool) -> bool: ...
 @overload
 def panel(*args: Any, q: bool, tor: bool) -> bool: ...
 @overload
-def panel(*args: Any, **kwargs: Any) -> None: ...
-def panel(*args: Any, **kwargs: Any) -> Any:
+def panel(*args, **kwargs) -> None: ...
+def panel(*args, **kwargs) -> None:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -30249,8 +30249,8 @@ def panelConfiguration(*args: Any, q: bool, userCreated: bool) -> bool: ...
 @overload
 def panelConfiguration(*args: Any, q: bool, uc: bool) -> bool: ...
 @overload
-def panelConfiguration(*args: Any, **kwargs: Any) -> str: ...
-def panelConfiguration(*args: Any, **kwargs: Any) -> Any:
+def panelConfiguration(*args, **kwargs) -> str: ...
+def panelConfiguration(*args, **kwargs) -> str:
     """Flags:
     - `addPanel` `ap`: *Any*
     - `configString` `cfs`: *str*
@@ -30322,8 +30322,8 @@ def panelHistory(*args: Any, q: bool, wrap: bool) -> bool: ...
 @overload
 def panelHistory(*args: Any, q: bool, w: bool) -> bool: ...
 @overload
-def panelHistory(*args: Any, **kwargs: Any) -> str: ...
-def panelHistory(*args: Any, **kwargs: Any) -> Any:
+def panelHistory(*args, **kwargs) -> str: ...
+def panelHistory(*args, **kwargs) -> str:
     """Flags:
     - `back` `b`: *bool*
     - `clear` `cl`: *bool*
@@ -30362,8 +30362,8 @@ def paramDimContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def paramDimContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def paramDimContext(*args: Any, **kwargs: Any) -> str: ...
-def paramDimContext(*args: Any, **kwargs: Any) -> Any:
+def paramDimContext(*args, **kwargs) -> str: ...
+def paramDimContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -30372,18 +30372,18 @@ def paramDimContext(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def paramDimension(*args: Any) -> str: ...
+def paramDimension(*args, **kwargs) -> str: ...
 @overload
 def paramLocator(*args: Any, q: bool, position: bool) -> bool: ...
 @overload
 def paramLocator(*args: Any, q: bool, p: bool) -> bool: ...
 @overload
-def paramLocator(*args: Any, **kwargs: Any) -> str: ...
-def paramLocator(*args: Any, **kwargs: Any) -> Any:
+def paramLocator(*args, **kwargs) -> str: ...
+def paramLocator(*args, **kwargs) -> str:
     """Flags:
     - `position` `p`: *bool*
     """
-def parent(*args: Any, absolute: bool = ..., a: bool = ..., addObject: bool = ..., add: bool = ..., noConnections: bool = ..., nc: bool = ..., noInvScale: bool = ..., nis: bool = ..., relative: bool = ..., r: bool = ..., removeObject: bool = ..., rm: bool = ..., shape: bool = ..., s: bool = ..., world: bool = ..., w: bool = ..., **kwargs: Any) -> list[str]:
+def parent(*args, **kwargs) -> list[str]:
     """Flags:
     - `absolute` `a`: *bool*
     - `addObject` `add`: *bool*
@@ -30439,8 +30439,8 @@ def parentConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def parentConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def parentConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def parentConstraint(*args: Any, **kwargs: Any) -> Any:
+def parentConstraint(*args, **kwargs) -> list[str]: ...
+def parentConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `createCache` `cc`: *Any*
     - `decompRotationToChild` `dr`: *bool*
@@ -30472,8 +30472,8 @@ def partition(*args: Any, q: bool, render: bool) -> bool: ...
 @overload
 def partition(*args: Any, q: bool, re: bool) -> bool: ...
 @overload
-def partition(*args: Any, **kwargs: Any) -> str: ...
-def partition(*args: Any, **kwargs: Any) -> Any:
+def partition(*args, **kwargs) -> str: ...
+def partition(*args, **kwargs) -> str:
     """Flags:
     - `addSet` `add`: *str*
     - `name` `n`: *str*
@@ -30547,8 +30547,8 @@ def pasteKey(*args: Any, q: bool, selectPasted: bool) -> bool: ...
 @overload
 def pasteKey(*args: Any, q: bool, sp: bool) -> bool: ...
 @overload
-def pasteKey(*args: Any, **kwargs: Any) -> int: ...
-def pasteKey(*args: Any, **kwargs: Any) -> Any:
+def pasteKey(*args, **kwargs) -> int: ...
+def pasteKey(*args, **kwargs) -> int:
     """Flags:
     - `animLayer` `al`: *str*
     - `animation` `an`: *str*
@@ -30639,8 +30639,8 @@ def pathAnimation(*args: Any, q: bool, useNormal: bool) -> bool: ...
 @overload
 def pathAnimation(*args: Any, q: bool, un: bool) -> bool: ...
 @overload
-def pathAnimation(*args: Any, **kwargs: Any) -> str: ...
-def pathAnimation(*args: Any, **kwargs: Any) -> Any:
+def pathAnimation(*args, **kwargs) -> str: ...
+def pathAnimation(*args, **kwargs) -> str:
     """Flags:
     - `bank` `b`: *bool*
     - `bankScale` `bs`: *float*
@@ -30662,7 +30662,7 @@ def pathAnimation(*args: Any, **kwargs: Any) -> Any:
     - `worldUpType` `wut`: *str*
     - `worldUpVector` `wu`: *Any*
     """
-def pause(*args: Any, seconds: int = ..., sec: int = ..., **kwargs: Any) -> None:
+def pause(*args, **kwargs) -> None:
     """Flags:
     - `seconds` `sec`: *int*
     """
@@ -30691,8 +30691,8 @@ def perCameraVisibility(*args: Any, q: bool, removeCamera: bool) -> bool: ...
 @overload
 def perCameraVisibility(*args: Any, q: bool, rc: bool) -> bool: ...
 @overload
-def perCameraVisibility(*args: Any, **kwargs: Any) -> list[str]: ...
-def perCameraVisibility(*args: Any, **kwargs: Any) -> Any:
+def perCameraVisibility(*args, **kwargs) -> list[str]: ...
+def perCameraVisibility(*args, **kwargs) -> list[str]:
     """Flags:
     - `camera` `c`: *str*
     - `exclusive` `ex`: *bool*
@@ -30734,8 +30734,8 @@ def percent(*args: Any, q: bool, multiplyPercent: bool) -> bool: ...
 @overload
 def percent(*args: Any, q: bool, mp: bool) -> bool: ...
 @overload
-def percent(*args: Any, **kwargs: Any) -> None: ...
-def percent(*args: Any, **kwargs: Any) -> Any:
+def percent(*args, **kwargs) -> None: ...
+def percent(*args, **kwargs) -> None:
     """Flags:
     - `addPercent` `ap`: *bool*
     - `dropoffAxis` `dax`: *list[float]*
@@ -30819,8 +30819,8 @@ def performanceOptions(*args: Any, q: bool, skipHierarchyTraversal: bool) -> boo
 @overload
 def performanceOptions(*args: Any, q: bool, sht: bool) -> bool: ...
 @overload
-def performanceOptions(*args: Any, **kwargs: Any) -> str: ...
-def performanceOptions(*args: Any, **kwargs: Any) -> Any:
+def performanceOptions(*args, **kwargs) -> str: ...
+def performanceOptions(*args, **kwargs) -> str:
     """Flags:
     - `clusterResolution` `cr`: *float*
     - `disableStitch` `ds`: *str*
@@ -30841,7 +30841,7 @@ def performanceOptions(*args: Any, **kwargs: Any) -> Any:
     - `useClusterResolution` `ucr`: *str*
     - `useLatticeResolution` `ulr`: *str*
     """
-def pickWalk(*args: Any, direction: str = ..., d: str = ..., recurse: bool = ..., r: bool = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> list[str]:
+def pickWalk(*args, **kwargs) -> list[str]:
     """Flags:
     - `direction` `d`: *str*
     - `recurse` `r`: *bool*
@@ -30928,8 +30928,8 @@ def picture(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def picture(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def picture(*args: Any, **kwargs: Any) -> str: ...
-def picture(*args: Any, **kwargs: Any) -> Any:
+def picture(*args, **kwargs) -> str: ...
+def picture(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -30959,7 +30959,7 @@ def picture(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def pixelMove(*args: Any) -> None: ...
+def pixelMove(*args, **kwargs) -> None: ...
 @overload
 def planarSrf(*args: Any, q: bool, degree: bool) -> int: ...
 @overload
@@ -31001,8 +31001,8 @@ def planarSrf(*args: Any, q: bool, range: bool) -> bool: ...
 @overload
 def planarSrf(*args: Any, q: bool, rn: bool) -> bool: ...
 @overload
-def planarSrf(*args: Any, **kwargs: Any) -> list[str]: ...
-def planarSrf(*args: Any, **kwargs: Any) -> Any:
+def planarSrf(*args, **kwargs) -> list[str]: ...
+def planarSrf(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -31015,7 +31015,7 @@ def planarSrf(*args: Any, **kwargs: Any) -> Any:
     - `range` `rn`: *bool*
     - `tolerance` `tol`: *float*
     """
-def plane(*args: Any, length: float = ..., l: float = ..., name: str = ..., n: str = ..., position: list[float] = ..., p: list[float] = ..., rotation: Any = ..., r: Any = ..., size: float = ..., s: float = ..., width: float = ..., w: float = ..., **kwargs: Any) -> str:
+def plane(*args, **kwargs) -> str:
     """Flags:
     - `length` `l`: *float*
     - `name` `n`: *str*
@@ -31053,8 +31053,8 @@ def play(*args: Any, q: bool, wait: bool) -> bool: ...
 @overload
 def play(*args: Any, q: bool, w: bool) -> bool: ...
 @overload
-def play(*args: Any, **kwargs: Any) -> None: ...
-def play(*args: Any, **kwargs: Any) -> Any:
+def play(*args, **kwargs) -> None: ...
+def play(*args, **kwargs) -> None:
     """Flags:
     - `forward` `f`: *bool*
     - `playSound` `ps`: *bool*
@@ -31131,8 +31131,8 @@ def playbackOptions(*args: Any, q: bool, stepLoop: bool) -> bool: ...
 @overload
 def playbackOptions(*args: Any, q: bool, slp: bool) -> bool: ...
 @overload
-def playbackOptions(*args: Any, **kwargs: Any) -> Any: ...
-def playbackOptions(*args: Any, **kwargs: Any) -> Any:
+def playbackOptions(*args, **kwargs) -> Any: ...
+def playbackOptions(*args, **kwargs) -> Any:
     """Flags:
     - `animationEndTime` `aet`: *float*
     - `animationStartTime` `ast`: *float*
@@ -31233,8 +31233,8 @@ def playblast(*args: Any, q: bool, activeEditor: bool) -> bool: ...
 @overload
 def playblast(*args: Any, q: bool, ae: bool) -> bool: ...
 @overload
-def playblast(*args: Any, **kwargs: Any) -> str: ...
-def playblast(*args: Any, **kwargs: Any) -> Any:
+def playblast(*args, **kwargs) -> str: ...
+def playblast(*args, **kwargs) -> str:
     """Flags:
     - `activeEditor` `ae`: *bool*
     - `cameraSetup` `cs`: *Any*
@@ -31301,8 +31301,8 @@ def pluginDisplayFilter(*args: Any, q: bool, register: bool) -> bool: ...
 @overload
 def pluginDisplayFilter(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def pluginDisplayFilter(*args: Any, **kwargs: Any) -> str: ...
-def pluginDisplayFilter(*args: Any, **kwargs: Any) -> Any:
+def pluginDisplayFilter(*args, **kwargs) -> str: ...
+def pluginDisplayFilter(*args, **kwargs) -> str:
     """Flags:
     - `classification` `cls`: *str*
     - `deregister` `dr`: *bool*
@@ -31392,8 +31392,8 @@ def pluginInfo(*args: Any, q: bool, dragAndDropBehavior: bool) -> bool: ...
 @overload
 def pluginInfo(*args: Any, q: bool, ddb: bool) -> bool: ...
 @overload
-def pluginInfo(*args: Any, **kwargs: Any) -> Any: ...
-def pluginInfo(*args: Any, **kwargs: Any) -> Any:
+def pluginInfo(*args, **kwargs) -> Any: ...
+def pluginInfo(*args, **kwargs) -> Any:
     """Flags:
     - `activeFile` `af`: *bool*
     - `allEvaluators` `ae`: *bool*
@@ -31470,8 +31470,8 @@ def pointConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def pointConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def pointConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def pointConstraint(*args: Any, **kwargs: Any) -> Any:
+def pointConstraint(*args, **kwargs) -> list[str]: ...
+def pointConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `layer` `l`: *str*
     - `maintainOffset` `mo`: *bool*
@@ -31516,8 +31516,8 @@ def pointCurveConstraint(*args: Any, q: bool, replaceOriginal: bool) -> bool: ..
 @overload
 def pointCurveConstraint(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def pointCurveConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def pointCurveConstraint(*args: Any, **kwargs: Any) -> Any:
+def pointCurveConstraint(*args, **kwargs) -> list[str]: ...
+def pointCurveConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -31575,8 +31575,8 @@ def pointLight(*args: Any, q: bool, useRayTraceShadows: bool) -> bool: ...
 @overload
 def pointLight(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def pointLight(*args: Any, **kwargs: Any) -> str: ...
-def pointLight(*args: Any, **kwargs: Any) -> Any:
+def pointLight(*args, **kwargs) -> str: ...
+def pointLight(*args, **kwargs) -> str:
     """Flags:
     - `decayRate` `d`: *int*
     - `discRadius` `drs`: *float*
@@ -31641,8 +31641,8 @@ def pointOnCurve(*args: Any, q: bool, turnOnPercentage: bool) -> bool: ...
 @overload
 def pointOnCurve(*args: Any, q: bool, top: bool) -> bool: ...
 @overload
-def pointOnCurve(*args: Any, **kwargs: Any) -> float: ...
-def pointOnCurve(*args: Any, **kwargs: Any) -> Any:
+def pointOnCurve(*args, **kwargs) -> float: ...
+def pointOnCurve(*args, **kwargs) -> float:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -31690,8 +31690,8 @@ def pointOnPolyConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: .
 @overload
 def pointOnPolyConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def pointOnPolyConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def pointOnPolyConstraint(*args: Any, **kwargs: Any) -> Any:
+def pointOnPolyConstraint(*args, **kwargs) -> list[str]: ...
+def pointOnPolyConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `layer` `l`: *str*
     - `maintainOffset` `mo`: *bool*
@@ -31756,8 +31756,8 @@ def pointOnSurface(*args: Any, q: bool, turnOnPercentage: bool) -> bool: ...
 @overload
 def pointOnSurface(*args: Any, q: bool, top: bool) -> bool: ...
 @overload
-def pointOnSurface(*args: Any, **kwargs: Any) -> float: ...
-def pointOnSurface(*args: Any, **kwargs: Any) -> Any:
+def pointOnSurface(*args, **kwargs) -> float: ...
+def pointOnSurface(*args, **kwargs) -> float:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -31773,7 +31773,7 @@ def pointOnSurface(*args: Any, **kwargs: Any) -> Any:
     - `tangentV` `tv`: *bool*
     - `turnOnPercentage` `top`: *bool*
     """
-def pointPosition(*args: Any, local: bool = ..., l: bool = ..., world: bool = ..., w: bool = ..., **kwargs: Any) -> list[float]:
+def pointPosition(*args, **kwargs) -> list[float]:
     """Flags:
     - `local` `l`: *bool*
     - `world` `w`: *bool*
@@ -31803,8 +31803,8 @@ def poleVectorConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ..
 @overload
 def poleVectorConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def poleVectorConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def poleVectorConstraint(*args: Any, **kwargs: Any) -> Any:
+def poleVectorConstraint(*args, **kwargs) -> list[str]: ...
+def poleVectorConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `layer` `l`: *str*
     - `name` `n`: *str*
@@ -31838,8 +31838,8 @@ def polyAppend(*args: Any, q: bool, hole: bool) -> bool: ...
 @overload
 def polyAppend(*args: Any, q: bool, hl: bool) -> bool: ...
 @overload
-def polyAppend(*args: Any, **kwargs: Any) -> str: ...
-def polyAppend(*args: Any, **kwargs: Any) -> Any:
+def polyAppend(*args, **kwargs) -> str: ...
+def polyAppend(*args, **kwargs) -> str:
     """Flags:
     - `append` `a`: *Any*
     - `constructionHistory` `ch`: *bool*
@@ -31850,7 +31850,7 @@ def polyAppend(*args: Any, **kwargs: Any) -> Any:
     - `subdivision` `s`: *int*
     - `texture` `tx`: *int*
     """
-def polyAppendFacetCtx(*args: Any, append: bool = ..., ap: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., isRotateAvailable: bool = ..., isr: bool = ..., maximumNumberOfPoints: int = ..., mp: int = ..., planarConstraint: bool = ..., pc: bool = ..., rotate: float = ..., r: float = ..., subdivision: int = ..., s: int = ..., texture: int = ..., tx: int = ..., **kwargs: Any) -> None:
+def polyAppendFacetCtx(*args, **kwargs) -> None:
     """Flags:
     - `append` `ap`: *bool*
     - `exists` `ex`: *bool*
@@ -31885,8 +31885,8 @@ def polyAppendVertex(*args: Any, q: bool, hole: bool) -> bool: ...
 @overload
 def polyAppendVertex(*args: Any, q: bool, h: bool) -> bool: ...
 @overload
-def polyAppendVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyAppendVertex(*args: Any, **kwargs: Any) -> Any:
+def polyAppendVertex(*args, **kwargs) -> str: ...
+def polyAppendVertex(*args, **kwargs) -> str:
     """Flags:
     - `append` `a`: *Any*
     - `constructionHistory` `ch`: *bool*
@@ -31977,8 +31977,8 @@ def polyAutoProjection(*args: Any, q: bool, translate: bool) -> list[float]: ...
 @overload
 def polyAutoProjection(*args: Any, q: bool, t: bool) -> list[float]: ...
 @overload
-def polyAutoProjection(*args: Any, **kwargs: Any) -> str: ...
-def polyAutoProjection(*args: Any, **kwargs: Any) -> Any:
+def polyAutoProjection(*args, **kwargs) -> str: ...
+def polyAutoProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -32013,7 +32013,7 @@ def polyAutoProjection(*args: Any, **kwargs: Any) -> Any:
     - `uvSetName` `uvs`: *str*
     - `worldSpace` `ws`: *bool*
     """
-def polyAverageNormal(*args: Any, allowZeroNormal: bool = ..., azn: bool = ..., distance: float = ..., d: float = ..., postnormalize: bool = ..., pon: bool = ..., prenormalize: bool = ..., prn: bool = ..., replaceNormalXYZ: Any = ..., xyz: Any = ..., **kwargs: Any) -> str:
+def polyAverageNormal(*args, **kwargs) -> str:
     """Flags:
     - `allowZeroNormal` `azn`: *bool*
     - `distance` `d`: *float*
@@ -32046,8 +32046,8 @@ def polyAverageVertex(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyAverageVertex(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyAverageVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyAverageVertex(*args: Any, **kwargs: Any) -> Any:
+def polyAverageVertex(*args, **kwargs) -> str: ...
+def polyAverageVertex(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -32121,8 +32121,8 @@ def polyAxis(*args: Any, q: bool, rightHanded: bool) -> bool: ...
 @overload
 def polyAxis(*args: Any, q: bool, rhd: bool) -> bool: ...
 @overload
-def polyAxis(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyAxis(*args: Any, **kwargs: Any) -> Any:
+def polyAxis(*args, **kwargs) -> list[str]: ...
+def polyAxis(*args, **kwargs) -> list[str]:
     """Flags:
     - `arrowType` `arw`: *int*
     - `axis` `ax`: *list[float]*
@@ -32214,8 +32214,8 @@ def polyBevel(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyBevel(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyBevel(*args: Any, **kwargs: Any) -> str: ...
-def polyBevel(*args: Any, **kwargs: Any) -> Any:
+def polyBevel(*args, **kwargs) -> str: ...
+def polyBevel(*args, **kwargs) -> str:
     """Flags:
     - `angleTolerance` `at`: *float*
     - `autoFit` `af`: *bool*
@@ -32317,8 +32317,8 @@ def polyBevel3(*args: Any, q: bool, offsetAsFraction: bool) -> bool: ...
 @overload
 def polyBevel3(*args: Any, q: bool, oaf: bool) -> bool: ...
 @overload
-def polyBevel3(*args: Any, **kwargs: Any) -> str: ...
-def polyBevel3(*args: Any, **kwargs: Any) -> Any:
+def polyBevel3(*args, **kwargs) -> str: ...
+def polyBevel3(*args, **kwargs) -> str:
     """Flags:
     - `angleTolerance` `at`: *float*
     - `autoFit` `af`: *bool*
@@ -32391,8 +32391,8 @@ def polyBlendColor(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyBlendColor(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyBlendColor(*args: Any, **kwargs: Any) -> str: ...
-def polyBlendColor(*args: Any, **kwargs: Any) -> Any:
+def polyBlendColor(*args, **kwargs) -> str: ...
+def polyBlendColor(*args, **kwargs) -> str:
     """Flags:
     - `baseColorName` `bcn`: *str*
     - `blendFunc` `bfn`: *int*
@@ -32407,7 +32407,7 @@ def polyBlendColor(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `srcColorName` `src`: *str*
     """
-def polyBlindData(*args: Any, associationType: str = ..., at: str = ..., binaryData: str = ..., bnd: str = ..., booleanData: bool = ..., bd: bool = ..., delete: bool = ..., doubleData: float = ..., dbd: float = ..., int64Data: int = ..., lid: int = ..., intData: int = ..., ind: int = ..., longDataName: str = ..., ldn: str = ..., rescan: bool = ..., res: bool = ..., reset: bool = ..., rst: bool = ..., shape: bool = ..., sh: bool = ..., shortDataName: str = ..., sdn: str = ..., stringData: str = ..., sd: str = ..., typeId: int = ..., id: int = ..., **kwargs: Any) -> str:
+def polyBlindData(*args, **kwargs) -> str:
     """Flags:
     - `associationType` `at`: *str*
     - `binaryData` `bnd`: *str*
@@ -32457,8 +32457,8 @@ def polyBoolOp(*args: Any, q: bool, useThresholds: bool) -> bool: ...
 @overload
 def polyBoolOp(*args: Any, q: bool, uth: bool) -> bool: ...
 @overload
-def polyBoolOp(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyBoolOp(*args: Any, **kwargs: Any) -> Any:
+def polyBoolOp(*args, **kwargs) -> list[str]: ...
+def polyBoolOp(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `faceAreaThreshold` `fat`: *float*
@@ -32538,8 +32538,8 @@ def polyBridgeEdge(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyBridgeEdge(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyBridgeEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyBridgeEdge(*args: Any, **kwargs: Any) -> Any:
+def polyBridgeEdge(*args, **kwargs) -> str: ...
+def polyBridgeEdge(*args, **kwargs) -> str:
     """Flags:
     - `bridgeOffset` `bo`: *int*
     - `caching` `cch`: *bool*
@@ -32604,8 +32604,8 @@ def polyCBoolOp(*args: Any, q: bool, useThresholds: bool) -> bool: ...
 @overload
 def polyCBoolOp(*args: Any, q: bool, uth: bool) -> bool: ...
 @overload
-def polyCBoolOp(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyCBoolOp(*args: Any, **kwargs: Any) -> Any:
+def polyCBoolOp(*args, **kwargs) -> list[str]: ...
+def polyCBoolOp(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `classification` `cls`: *int*
@@ -32619,13 +32619,13 @@ def polyCBoolOp(*args: Any, **kwargs: Any) -> Any:
     - `useThresholds` `uth`: *bool*
     - `vertexDistanceThreshold` `vdt`: *float*
     """
-def polyCacheMonitor(*args: Any, cacheValue: bool = ..., chv: bool = ..., nodeName: str = ..., nm: str = ..., **kwargs: Any) -> None:
+def polyCacheMonitor(*args, **kwargs) -> None:
     """Flags:
     - `cacheValue` `chv`: *bool*
     - `nodeName` `nm`: *str*
     """
-def polyCanBridgeEdge(*args: Any) -> bool: ...
-def polyCheck(*args: Any, edge: bool = ..., e: bool = ..., face: bool = ..., f: bool = ..., faceOffset: bool = ..., fo: bool = ..., openFile: str = ..., of: str = ..., **kwargs: Any) -> int:
+def polyCanBridgeEdge(*args, **kwargs) -> bool: ...
+def polyCheck(*args, **kwargs) -> int:
     """Flags:
     - `edge` `e`: *bool*
     - `face` `f`: *bool*
@@ -32713,8 +32713,8 @@ def polyChipOff(*args: Any, q: bool, localTranslateY: bool) -> float: ...
 @overload
 def polyChipOff(*args: Any, q: bool, lty: bool) -> float: ...
 @overload
-def polyChipOff(*args: Any, **kwargs: Any) -> str: ...
-def polyChipOff(*args: Any, **kwargs: Any) -> Any:
+def polyChipOff(*args, **kwargs) -> str: ...
+def polyChipOff(*args, **kwargs) -> str:
     """Flags:
     - `attraction` `att`: *float*
     - `caching` `cch`: *bool*
@@ -32816,8 +32816,8 @@ def polyCircularize(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyCircularize(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyCircularize(*args: Any, **kwargs: Any) -> str: ...
-def polyCircularize(*args: Any, **kwargs: Any) -> Any:
+def polyCircularize(*args, **kwargs) -> str: ...
+def polyCircularize(*args, **kwargs) -> str:
     """Flags:
     - `alignment` `al`: *int*
     - `caching` `cch`: *bool*
@@ -32881,8 +32881,8 @@ def polyCircularizeEdge(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyCircularizeEdge(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyCircularizeEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyCircularizeEdge(*args: Any, **kwargs: Any) -> Any:
+def polyCircularizeEdge(*args, **kwargs) -> str: ...
+def polyCircularizeEdge(*args, **kwargs) -> str:
     """Flags:
     - `alignment` `al`: *int*
     - `caching` `cch`: *bool*
@@ -32946,8 +32946,8 @@ def polyCircularizeFace(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyCircularizeFace(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyCircularizeFace(*args: Any, **kwargs: Any) -> str: ...
-def polyCircularizeFace(*args: Any, **kwargs: Any) -> Any:
+def polyCircularizeFace(*args, **kwargs) -> str: ...
+def polyCircularizeFace(*args, **kwargs) -> str:
     """Flags:
     - `alignment` `al`: *int*
     - `caching` `cch`: *bool*
@@ -32999,8 +32999,8 @@ def polyClean(*args: Any, q: bool, frozen: bool) -> bool: ...
 @overload
 def polyClean(*args: Any, q: bool, fzn: bool) -> bool: ...
 @overload
-def polyClean(*args: Any, **kwargs: Any) -> str: ...
-def polyClean(*args: Any, **kwargs: Any) -> Any:
+def polyClean(*args, **kwargs) -> str: ...
+def polyClean(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `cleanEdges` `ce`: *bool*
@@ -33012,7 +33012,7 @@ def polyClean(*args: Any, **kwargs: Any) -> Any:
     - `name` `n`: *str*
     - `nodeState` `nds`: *int*
     """
-def polyClipboard(*args: Any, clear: bool = ..., cl: bool = ..., color: bool = ..., clr: bool = ..., copy: bool = ..., cp: bool = ..., paste: bool = ..., ps: bool = ..., shader: bool = ..., sh: bool = ..., uvCoordinates: bool = ..., uv: bool = ..., **kwargs: Any) -> bool:
+def polyClipboard(*args, **kwargs) -> bool:
     """Flags:
     - `clear` `cl`: *bool*
     - `color` `clr`: *bool*
@@ -33038,8 +33038,8 @@ def polyCloseBorder(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyCloseBorder(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyCloseBorder(*args: Any, **kwargs: Any) -> str: ...
-def polyCloseBorder(*args: Any, **kwargs: Any) -> Any:
+def polyCloseBorder(*args, **kwargs) -> str: ...
+def polyCloseBorder(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -33063,8 +33063,8 @@ def polyCollapseEdge(*args: Any, q: bool, constructionHistory: bool) -> bool: ..
 @overload
 def polyCollapseEdge(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyCollapseEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyCollapseEdge(*args: Any, **kwargs: Any) -> Any:
+def polyCollapseEdge(*args, **kwargs) -> str: ...
+def polyCollapseEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -33096,8 +33096,8 @@ def polyCollapseFacet(*args: Any, q: bool, useAreaThreshold: bool) -> bool: ...
 @overload
 def polyCollapseFacet(*args: Any, q: bool, uat: bool) -> bool: ...
 @overload
-def polyCollapseFacet(*args: Any, **kwargs: Any) -> str: ...
-def polyCollapseFacet(*args: Any, **kwargs: Any) -> Any:
+def polyCollapseFacet(*args, **kwargs) -> str: ...
+def polyCollapseFacet(*args, **kwargs) -> str:
     """Flags:
     - `areaThreshold` `at`: *float*
     - `caching` `cch`: *bool*
@@ -33111,12 +33111,12 @@ def polyCollapseTweaks(*args: Any, q: bool, hasVertexTweaks: bool) -> bool: ...
 @overload
 def polyCollapseTweaks(*args: Any, q: bool, hvt: bool) -> bool: ...
 @overload
-def polyCollapseTweaks(*args: Any, **kwargs: Any) -> None: ...
-def polyCollapseTweaks(*args: Any, **kwargs: Any) -> Any:
+def polyCollapseTweaks(*args, **kwargs) -> None: ...
+def polyCollapseTweaks(*args, **kwargs) -> None:
     """Flags:
     - `hasVertexTweaks` `hvt`: *bool*
     """
-def polyColorBlindData(*args: Any, aboveMaxColorBlue: float = ..., amb: float = ..., aboveMaxColorGreen: float = ..., amg: float = ..., aboveMaxColorRed: float = ..., amr: float = ..., attrName: str = ..., n: str = ..., belowMinColorBlue: float = ..., bmb: float = ..., belowMinColorGreen: float = ..., bmg: float = ..., belowMinColorRed: float = ..., bmr: float = ..., clashColorBlue: float = ..., ccb: float = ..., clashColorGreen: float = ..., ccg: float = ..., clashColorRed: float = ..., ccr: float = ..., colorBlue: float = ..., cb: float = ..., colorGreen: float = ..., cg: float = ..., colorRed: float = ..., cr: float = ..., dataType: str = ..., dt: str = ..., enableFalseColor: bool = ..., efc: bool = ..., maxColorBlue: float = ..., mxb: float = ..., maxColorGreen: float = ..., mxg: float = ..., maxColorRed: float = ..., mxr: float = ..., maxValue: float = ..., mxv: float = ..., minColorBlue: float = ..., mnb: float = ..., minColorGreen: float = ..., mng: float = ..., minColorRed: float = ..., mnr: float = ..., minValue: float = ..., mnv: float = ..., mode: int = ..., m: int = ..., noColorBlue: float = ..., ncb: float = ..., noColorGreen: float = ..., ncg: float = ..., noColorRed: float = ..., ncr: float = ..., numIdTypes: int = ..., num: int = ..., queryMode: bool = ..., typeId: int = ..., id: int = ..., useMax: bool = ..., umx: bool = ..., useMin: bool = ..., umn: bool = ..., value: str = ..., v: str = ..., **kwargs: Any) -> list[str]:
+def polyColorBlindData(*args, **kwargs) -> list[str]:
     """Flags:
     - `aboveMaxColorBlue` `amb`: *float*
     - `aboveMaxColorGreen` `amg`: *float*
@@ -33173,8 +33173,8 @@ def polyColorDel(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyColorDel(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyColorDel(*args: Any, **kwargs: Any) -> str: ...
-def polyColorDel(*args: Any, **kwargs: Any) -> Any:
+def polyColorDel(*args, **kwargs) -> str: ...
+def polyColorDel(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `colorSetName` `cls`: *str*
@@ -33263,8 +33263,8 @@ def polyColorMod(*args: Any, q: bool, satv: bool) -> float: ...
 @overload
 def polyColorMod(*args: Any, q: bool, s: bool) -> float: ...
 @overload
-def polyColorMod(*args: Any, **kwargs: Any) -> str: ...
-def polyColorMod(*args: Any, **kwargs: Any) -> Any:
+def polyColorMod(*args, **kwargs) -> str: ...
+def polyColorMod(*args, **kwargs) -> str:
     """Flags:
     - `alphaScale_FloatValue` `afv`: *float*
     - `alphaScale_Interp` `ai`: *int*
@@ -33331,8 +33331,8 @@ def polyColorPerVertex(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def polyColorPerVertex(*args: Any, q: bool, rem: bool) -> bool: ...
 @overload
-def polyColorPerVertex(*args: Any, **kwargs: Any) -> bool: ...
-def polyColorPerVertex(*args: Any, **kwargs: Any) -> Any:
+def polyColorPerVertex(*args, **kwargs) -> bool: ...
+def polyColorPerVertex(*args, **kwargs) -> bool:
     """Flags:
     - `alpha` `a`: *float*
     - `clamped` `cla`: *bool*
@@ -33403,8 +33403,8 @@ def polyColorSet(*args: Any, q: bool, unshared: bool) -> bool: ...
 @overload
 def polyColorSet(*args: Any, q: bool, us: bool) -> bool: ...
 @overload
-def polyColorSet(*args: Any, **kwargs: Any) -> bool: ...
-def polyColorSet(*args: Any, **kwargs: Any) -> Any:
+def polyColorSet(*args, **kwargs) -> bool: ...
+def polyColorSet(*args, **kwargs) -> bool:
     """Flags:
     - `allColorSets` `acs`: *bool*
     - `clamped` `cla`: *bool*
@@ -33421,7 +33421,7 @@ def polyColorSet(*args: Any, **kwargs: Any) -> Any:
     - `shareInstances` `si`: *bool*
     - `unshared` `us`: *bool*
     """
-def polyCompare(*args: Any, colorSetIndices: bool = ..., ic: bool = ..., colorSets: bool = ..., c: bool = ..., edges: bool = ..., e: bool = ..., faceDesc: bool = ..., fd: bool = ..., userNormals: bool = ..., un: bool = ..., uvSetIndices: bool = ..., iuv: bool = ..., uvSets: bool = ..., uv: bool = ..., vertices: bool = ..., v: bool = ..., **kwargs: Any) -> int:
+def polyCompare(*args, **kwargs) -> int:
     """Flags:
     - `colorSetIndices` `ic`: *bool*
     - `colorSets` `c`: *bool*
@@ -33501,8 +33501,8 @@ def polyCone(*args: Any, q: bool, texture: bool) -> bool: ...
 @overload
 def polyCone(*args: Any, q: bool, tx: bool) -> bool: ...
 @overload
-def polyCone(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyCone(*args: Any, **kwargs: Any) -> Any:
+def polyCone(*args, **kwargs) -> list[str]: ...
+def polyCone(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -33547,8 +33547,8 @@ def polyConnectComponents(*args: Any, q: bool, insertWithEdgeFlow: bool) -> bool
 @overload
 def polyConnectComponents(*args: Any, q: bool, ief: bool) -> bool: ...
 @overload
-def polyConnectComponents(*args: Any, **kwargs: Any) -> str: ...
-def polyConnectComponents(*args: Any, **kwargs: Any) -> Any:
+def polyConnectComponents(*args, **kwargs) -> str: ...
+def polyConnectComponents(*args, **kwargs) -> str:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `caching` `cch`: *bool*
@@ -33638,8 +33638,8 @@ def polyContourProjection(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyContourProjection(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyContourProjection(*args: Any, **kwargs: Any) -> str: ...
-def polyContourProjection(*args: Any, **kwargs: Any) -> Any:
+def polyContourProjection(*args, **kwargs) -> str: ...
+def polyContourProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -33695,8 +33695,8 @@ def polyCopyUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyCopyUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyCopyUV(*args: Any, **kwargs: Any) -> str: ...
-def polyCopyUV(*args: Any, **kwargs: Any) -> Any:
+def polyCopyUV(*args, **kwargs) -> str: ...
+def polyCopyUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -33728,8 +33728,8 @@ def polyCrease(*args: Any, q: bool, createHistory: bool) -> bool: ...
 @overload
 def polyCrease(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyCrease(*args: Any, **kwargs: Any) -> bool: ...
-def polyCrease(*args: Any, **kwargs: Any) -> Any:
+def polyCrease(*args, **kwargs) -> bool: ...
+def polyCrease(*args, **kwargs) -> bool:
     """Flags:
     - `createHistory` `ch`: *bool*
     - `operation` `op`: *int*
@@ -33737,7 +33737,7 @@ def polyCrease(*args: Any, **kwargs: Any) -> Any:
     - `value` `v`: *float*
     - `vertexValue` `vv`: *float*
     """
-def polyCreaseCtx(*args: Any, createSet: str = ..., cs: str = ..., exists: bool = ..., ex: bool = ..., extendSelection: bool = ..., es: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., relative: bool = ..., r: bool = ..., **kwargs: Any) -> None:
+def polyCreaseCtx(*args, **kwargs) -> None:
     """Flags:
     - `createSet` `cs`: *str*
     - `exists` `ex`: *bool*
@@ -33768,8 +33768,8 @@ def polyCreateFacet(*args: Any, q: bool, hole: bool) -> bool: ...
 @overload
 def polyCreateFacet(*args: Any, q: bool, hl: bool) -> bool: ...
 @overload
-def polyCreateFacet(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyCreateFacet(*args: Any, **kwargs: Any) -> Any:
+def polyCreateFacet(*args, **kwargs) -> list[str]: ...
+def polyCreateFacet(*args, **kwargs) -> list[str]:
     """Flags:
     - `constructionHistory` `ch`: *bool*
     - `hole` `hl`: *bool*
@@ -33778,7 +33778,7 @@ def polyCreateFacet(*args: Any, **kwargs: Any) -> Any:
     - `subdivision` `s`: *int*
     - `texture` `tx`: *int*
     """
-def polyCreateFacetCtx(*args: Any, append: bool = ..., ap: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., maximumNumberOfPoints: int = ..., mp: int = ..., planarConstraint: bool = ..., pc: bool = ..., subdivision: int = ..., s: int = ..., texture: int = ..., tx: int = ..., **kwargs: Any) -> None:
+def polyCreateFacetCtx(*args, **kwargs) -> None:
     """Flags:
     - `append` `ap`: *bool*
     - `exists` `ex`: *bool*
@@ -33859,8 +33859,8 @@ def polyCube(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polyCube(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polyCube(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyCube(*args: Any, **kwargs: Any) -> Any:
+def polyCube(*args, **kwargs) -> list[str]: ...
+def polyCube(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -33961,8 +33961,8 @@ def polyCut(*args: Any, q: bool, extractFaces: bool) -> bool: ...
 @overload
 def polyCut(*args: Any, q: bool, ef: bool) -> bool: ...
 @overload
-def polyCut(*args: Any, **kwargs: Any) -> str: ...
-def polyCut(*args: Any, **kwargs: Any) -> Any:
+def polyCut(*args, **kwargs) -> str: ...
+def polyCut(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -33989,7 +33989,7 @@ def polyCut(*args: Any, **kwargs: Any) -> Any:
     - `onObject` `oo`: *bool*
     - `worldSpace` `ws`: *bool*
     """
-def polyCutCtx(*args: Any, deleteFaces: bool = ..., df: bool = ..., exists: bool = ..., ex: bool = ..., extractFaces: bool = ..., ef: bool = ..., extractOffset: list[float] = ..., eo: list[float] = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> None:
+def polyCutCtx(*args, **kwargs) -> None:
     """Flags:
     - `deleteFaces` `df`: *bool*
     - `exists` `ex`: *bool*
@@ -33999,7 +33999,7 @@ def polyCutCtx(*args: Any, deleteFaces: bool = ..., df: bool = ..., exists: bool
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def polyCutUVCtx(*args: Any, loopSpeed: int = ..., ls: int = ..., mapBordersColor: Any = ..., mbc: Any = ..., showCheckerMap: bool = ..., scm: bool = ..., showTextureBorders: bool = ..., stb: bool = ..., showUVShellColoring: bool = ..., ssc: bool = ..., steadyStroke: bool = ..., ss: bool = ..., steadyStrokeDistance: float = ..., ssd: float = ..., symmetry: int = ..., sym: int = ..., **kwargs: Any) -> bool:
+def polyCutUVCtx(*args, **kwargs) -> bool:
     """Flags:
     - `loopSpeed` `ls`: *int*
     - `mapBordersColor` `mbc`: *Any*
@@ -34079,8 +34079,8 @@ def polyCylinder(*args: Any, q: bool, roundCap: bool) -> bool: ...
 @overload
 def polyCylinder(*args: Any, q: bool, rcp: bool) -> bool: ...
 @overload
-def polyCylinder(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyCylinder(*args: Any, **kwargs: Any) -> Any:
+def polyCylinder(*args, **kwargs) -> list[str]: ...
+def polyCylinder(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -34181,8 +34181,8 @@ def polyCylindricalProjection(*args: Any, q: bool, createNewMap: bool) -> bool: 
 @overload
 def polyCylindricalProjection(*args: Any, q: bool, cm: bool) -> bool: ...
 @overload
-def polyCylindricalProjection(*args: Any, **kwargs: Any) -> str: ...
-def polyCylindricalProjection(*args: Any, **kwargs: Any) -> Any:
+def polyCylindricalProjection(*args, **kwargs) -> str: ...
+def polyCylindricalProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -34235,8 +34235,8 @@ def polyDelEdge(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyDelEdge(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyDelEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyDelEdge(*args: Any, **kwargs: Any) -> Any:
+def polyDelEdge(*args, **kwargs) -> str: ...
+def polyDelEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `cleanVertices` `cv`: *bool*
@@ -34261,8 +34261,8 @@ def polyDelFacet(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyDelFacet(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyDelFacet(*args: Any, **kwargs: Any) -> str: ...
-def polyDelFacet(*args: Any, **kwargs: Any) -> Any:
+def polyDelFacet(*args, **kwargs) -> str: ...
+def polyDelFacet(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -34286,15 +34286,15 @@ def polyDelVertex(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyDelVertex(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyDelVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyDelVertex(*args: Any, **kwargs: Any) -> Any:
+def polyDelVertex(*args, **kwargs) -> str: ...
+def polyDelVertex(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
     - `name` `n`: *str*
     - `nodeState` `nds`: *int*
     """
-def polyDuplicateAndConnect(*args: Any, removeOriginalFromShaders: bool = ..., ros: bool = ..., renameChildren: bool = ..., rc: bool = ..., **kwargs: Any) -> None:
+def polyDuplicateAndConnect(*args, **kwargs) -> None:
     """Flags:
     - `removeOriginalFromShaders` `ros`: *bool*
     - `renameChildren` `rc`: *bool*
@@ -34348,8 +34348,8 @@ def polyDuplicateEdge(*args: Any, q: bool, insertWithEdgeFlow: bool) -> bool: ..
 @overload
 def polyDuplicateEdge(*args: Any, q: bool, ief: bool) -> bool: ...
 @overload
-def polyDuplicateEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyDuplicateEdge(*args: Any, **kwargs: Any) -> Any:
+def polyDuplicateEdge(*args, **kwargs) -> str: ...
+def polyDuplicateEdge(*args, **kwargs) -> str:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `caching` `cch`: *bool*
@@ -34389,8 +34389,8 @@ def polyEditEdgeFlow(*args: Any, q: bool, edgeFlow: bool) -> bool: ...
 @overload
 def polyEditEdgeFlow(*args: Any, q: bool, ef: bool) -> bool: ...
 @overload
-def polyEditEdgeFlow(*args: Any, **kwargs: Any) -> str: ...
-def polyEditEdgeFlow(*args: Any, **kwargs: Any) -> Any:
+def polyEditEdgeFlow(*args, **kwargs) -> str: ...
+def polyEditEdgeFlow(*args, **kwargs) -> str:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `caching` `cch`: *bool*
@@ -34448,8 +34448,8 @@ def polyEditUV(*args: Any, q: bool, scale: bool) -> bool: ...
 @overload
 def polyEditUV(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def polyEditUV(*args: Any, **kwargs: Any) -> bool: ...
-def polyEditUV(*args: Any, **kwargs: Any) -> Any:
+def polyEditUV(*args, **kwargs) -> bool: ...
+def polyEditUV(*args, **kwargs) -> bool:
     """Flags:
     - `angle` `a`: *float*
     - `pivotU` `pu`: *float*
@@ -34513,8 +34513,8 @@ def polyEditUVShell(*args: Any, q: bool, scale: bool) -> bool: ...
 @overload
 def polyEditUVShell(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def polyEditUVShell(*args: Any, **kwargs: Any) -> bool: ...
-def polyEditUVShell(*args: Any, **kwargs: Any) -> Any:
+def polyEditUVShell(*args, **kwargs) -> bool: ...
+def polyEditUVShell(*args, **kwargs) -> bool:
     """Flags:
     - `angle` `a`: *float*
     - `pivotU` `pu`: *float*
@@ -34529,7 +34529,7 @@ def polyEditUVShell(*args: Any, **kwargs: Any) -> Any:
     - `uvSetName` `uvs`: *str*
     - `vValue` `v`: *float*
     """
-def polyEvaluate(*args: Any, accurateEvaluation: bool = ..., ae: bool = ..., activeShells: bool = ..., activeUVShells: bool = ..., aus: bool = ..., area: bool = ..., a: bool = ..., boundingBox: bool = ..., b: bool = ..., boundingBox2d: bool = ..., b2: bool = ..., boundingBoxComponent: bool = ..., bc: bool = ..., boundingBoxComponent2d: bool = ..., bc2: bool = ..., displayStats: bool = ..., ds: bool = ..., edge: bool = ..., e: bool = ..., edgeComponent: bool = ..., ec: bool = ..., face: bool = ..., f: bool = ..., faceArea: bool = ..., fa: bool = ..., faceComponent: bool = ..., fc: bool = ..., format: bool = ..., fmt: bool = ..., shell: bool = ..., s: bool = ..., triangle: bool = ..., t: bool = ..., triangleComponent: bool = ..., tc: bool = ..., uvArea: bool = ..., uva: bool = ..., uvComponent: bool = ..., uvc: bool = ..., uvEdgePairs: bool = ..., uep: bool = ..., uvFaceArea: bool = ..., ufa: bool = ..., uvSetName: str = ..., uvs: str = ..., uvShell: bool = ..., us: bool = ..., uvShellIds: bool = ..., usi: bool = ..., uvcoord: bool = ..., uv: bool = ..., uvsInShell: int = ..., uis: int = ..., vertex: bool = ..., v: bool = ..., vertexComponent: bool = ..., vc: bool = ..., worldArea: bool = ..., wa: bool = ..., worldFaceArea: bool = ..., wfa: bool = ..., **kwargs: Any) -> Any:
+def polyEvaluate(*args, **kwargs) -> Any:
     """Flags:
     - `accurateEvaluation` `ae`: *bool*
     - `activeShells` `activeShells`: *bool*
@@ -34644,8 +34644,8 @@ def polyExtrudeEdge(*args: Any, q: bool, nodeState: bool) -> int: ...
 @overload
 def polyExtrudeEdge(*args: Any, q: bool, nds: bool) -> int: ...
 @overload
-def polyExtrudeEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyExtrudeEdge(*args: Any, **kwargs: Any) -> Any:
+def polyExtrudeEdge(*args, **kwargs) -> str: ...
+def polyExtrudeEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -34781,8 +34781,8 @@ def polyExtrudeFacet(*args: Any, q: bool, localTranslate: bool) -> list[float]: 
 @overload
 def polyExtrudeFacet(*args: Any, q: bool, lt: bool) -> list[float]: ...
 @overload
-def polyExtrudeFacet(*args: Any, **kwargs: Any) -> str: ...
-def polyExtrudeFacet(*args: Any, **kwargs: Any) -> Any:
+def polyExtrudeFacet(*args, **kwargs) -> str: ...
+def polyExtrudeFacet(*args, **kwargs) -> str:
     """Flags:
     - `attraction` `att`: *float*
     - `caching` `cch`: *bool*
@@ -34882,8 +34882,8 @@ def polyExtrudeVertex(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyExtrudeVertex(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyExtrudeVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyExtrudeVertex(*args: Any, **kwargs: Any) -> Any:
+def polyExtrudeVertex(*args, **kwargs) -> str: ...
+def polyExtrudeVertex(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -34894,7 +34894,7 @@ def polyExtrudeVertex(*args: Any, **kwargs: Any) -> Any:
     - `width` `w`: *float*
     - `worldSpace` `ws`: *bool*
     """
-def polyFlipEdge(*args: Any) -> bool: ...
+def polyFlipEdge(*args, **kwargs) -> bool: ...
 @overload
 def polyFlipUV(*args: Any, q: bool, flipType: bool) -> int: ...
 @overload
@@ -34952,8 +34952,8 @@ def polyFlipUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyFlipUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyFlipUV(*args: Any, **kwargs: Any) -> str: ...
-def polyFlipUV(*args: Any, **kwargs: Any) -> Any:
+def polyFlipUV(*args, **kwargs) -> str: ...
+def polyFlipUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -34970,7 +34970,7 @@ def polyFlipUV(*args: Any, **kwargs: Any) -> Any:
     - `uvSetName` `uvs`: *str*
     - `worldSpace` `ws`: *bool*
     """
-def polyForceUV(*args: Any, cameraProjection: bool = ..., cp: bool = ..., createNewMap: bool = ..., cm: bool = ..., flipHorizontal: bool = ..., fh: bool = ..., flipVertical: bool = ..., fv: bool = ..., g: bool = ..., local: bool = ..., l: bool = ..., normalize: str = ..., nor: str = ..., numItems: int = ..., ni: int = ..., preserveAspectRatio: bool = ..., par: bool = ..., unitize: bool = ..., uni: bool = ..., unshare: bool = ..., u: bool = ..., uvSetName: str = ..., uvs: str = ..., **kwargs: Any) -> bool:
+def polyForceUV(*args, **kwargs) -> bool:
     """Flags:
     - `cameraProjection` `cp`: *bool*
     - `createNewMap` `cm`: *bool*
@@ -34985,7 +34985,7 @@ def polyForceUV(*args: Any, cameraProjection: bool = ..., cp: bool = ..., create
     - `unshare` `u`: *bool*
     - `uvSetName` `uvs`: *str*
     """
-def polyGeoSampler(*args: Any, alphaBlend: str = ..., abl: str = ..., averageColor: bool = ..., ac: bool = ..., clampAlphaMax: float = ..., amx: float = ..., clampAlphaMin: float = ..., amn: float = ..., clampRGBMax: Any = ..., cmx: Any = ..., clampRGBMin: Any = ..., cmn: Any = ..., colorBlend: str = ..., cbl: str = ..., colorDisplayOption: bool = ..., cdo: bool = ..., computeShadows: bool = ..., cs: bool = ..., displaceGeometry: bool = ..., dg: bool = ..., flatShading: bool = ..., fs: bool = ..., ignoreDoubleSided: bool = ..., ids: bool = ..., lightingOnly: bool = ..., lo: bool = ..., reuseShadows: bool = ..., rs: bool = ..., sampleByFace: bool = ..., bf: bool = ..., scaleFactor: float = ..., sf: float = ..., shareUV: bool = ..., su: bool = ..., useLightShadows: bool = ..., ul: bool = ..., **kwargs: Any) -> bool:
+def polyGeoSampler(*args, **kwargs) -> bool:
     """Flags:
     - `alphaBlend` `abl`: *str*
     - `averageColor` `ac`: *bool*
@@ -35075,8 +35075,8 @@ def polyHelix(*args: Any, q: bool, useOldInitBehaviour: bool) -> bool: ...
 @overload
 def polyHelix(*args: Any, q: bool, oib: bool) -> bool: ...
 @overload
-def polyHelix(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyHelix(*args: Any, **kwargs: Any) -> Any:
+def polyHelix(*args, **kwargs) -> list[str]: ...
+def polyHelix(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `coils` `c`: *float*
@@ -35105,13 +35105,13 @@ def polyHole(*args: Any, q: bool, createHistory: bool) -> bool: ...
 @overload
 def polyHole(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyHole(*args: Any, **kwargs: Any) -> bool: ...
-def polyHole(*args: Any, **kwargs: Any) -> Any:
+def polyHole(*args, **kwargs) -> bool: ...
+def polyHole(*args, **kwargs) -> bool:
     """Flags:
     - `assignHole` `ah`: *bool*
     - `createHistory` `ch`: *bool*
     """
-def polyInfo(*args: Any, edgeToFace: bool = ..., ef: bool = ..., edgeToVertex: bool = ..., ev: bool = ..., faceNormals: bool = ..., fn: bool = ..., faceToEdge: bool = ..., fe: bool = ..., faceToVertex: bool = ..., fv: bool = ..., invalidEdges: bool = ..., ie: bool = ..., invalidVertices: bool = ..., iv: bool = ..., laminaFaces: bool = ..., lf: bool = ..., nonManifoldEdges: bool = ..., nme: bool = ..., nonManifoldUVEdges: bool = ..., nue: bool = ..., nonManifoldUVs: bool = ..., nuv: bool = ..., nonManifoldVertices: bool = ..., nmv: bool = ..., vertexToEdge: bool = ..., ve: bool = ..., vertexToFace: bool = ..., vf: bool = ..., **kwargs: Any) -> str:
+def polyInfo(*args, **kwargs) -> str:
     """Flags:
     - `edgeToFace` `ef`: *bool*
     - `edgeToVertex` `ev`: *bool*
@@ -35128,7 +35128,7 @@ def polyInfo(*args: Any, edgeToFace: bool = ..., ef: bool = ..., edgeToVertex: b
     - `vertexToEdge` `ve`: *bool*
     - `vertexToFace` `vf`: *bool*
     """
-def polyInstallAction(*args: Any, commandName: bool = ..., cn: bool = ..., convertSelection: bool = ..., cs: bool = ..., installConstraint: bool = ..., ic: bool = ..., installDisplay: bool = ..., id: bool = ..., keepInstances: bool = ..., ki: bool = ..., uninstallConstraint: bool = ..., uc: bool = ..., uninstallDisplay: bool = ..., ud: bool = ..., **kwargs: Any) -> list[str]:
+def polyInstallAction(*args, **kwargs) -> list[str]:
     """Flags:
     - `commandName` `cn`: *bool*
     - `convertSelection` `cs`: *bool*
@@ -35191,8 +35191,8 @@ def polyLayoutUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyLayoutUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyLayoutUV(*args: Any, **kwargs: Any) -> str: ...
-def polyLayoutUV(*args: Any, **kwargs: Any) -> Any:
+def polyLayoutUV(*args, **kwargs) -> str: ...
+def polyLayoutUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35208,7 +35208,7 @@ def polyLayoutUV(*args: Any, **kwargs: Any) -> Any:
     - `uvSetName` `uvs`: *str*
     - `worldSpace` `ws`: *bool*
     """
-def polyListComponentConversion(*args: Any, border: bool = ..., bo: bool = ..., fromEdge: bool = ..., fe: bool = ..., fromFace: bool = ..., ff: bool = ..., fromUV: bool = ..., fuv: bool = ..., fromVertex: bool = ..., fv: bool = ..., fromVertexFace: bool = ..., fvf: bool = ..., internal: bool = ..., toEdge: bool = ..., te: bool = ..., toFace: bool = ..., tf: bool = ..., toUV: bool = ..., tuv: bool = ..., toVertex: bool = ..., tv: bool = ..., toVertexFace: bool = ..., tvf: bool = ..., uvShell: bool = ..., uvs: bool = ..., vertexFaceAllEdges: bool = ..., vfa: bool = ..., **kwargs: Any) -> Any:
+def polyListComponentConversion(*args, **kwargs) -> Any:
     """Flags:
     - `border` `bo`: *bool*
     - `fromEdge` `fe`: *bool*
@@ -35246,8 +35246,8 @@ def polyMapCut(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMapCut(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMapCut(*args: Any, **kwargs: Any) -> str: ...
-def polyMapCut(*args: Any, **kwargs: Any) -> Any:
+def polyMapCut(*args, **kwargs) -> str: ...
+def polyMapCut(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35272,8 +35272,8 @@ def polyMapDel(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMapDel(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMapDel(*args: Any, **kwargs: Any) -> str: ...
-def polyMapDel(*args: Any, **kwargs: Any) -> Any:
+def polyMapDel(*args, **kwargs) -> str: ...
+def polyMapDel(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35297,8 +35297,8 @@ def polyMapSew(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMapSew(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMapSew(*args: Any, **kwargs: Any) -> str: ...
-def polyMapSew(*args: Any, **kwargs: Any) -> Any:
+def polyMapSew(*args, **kwargs) -> str: ...
+def polyMapSew(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35338,8 +35338,8 @@ def polyMapSewMove(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyMapSewMove(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyMapSewMove(*args: Any, **kwargs: Any) -> str: ...
-def polyMapSewMove(*args: Any, **kwargs: Any) -> Any:
+def polyMapSewMove(*args, **kwargs) -> str: ...
+def polyMapSewMove(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35383,8 +35383,8 @@ def polyMergeEdge(*args: Any, q: bool, mergeTexture: bool) -> bool: ...
 @overload
 def polyMergeEdge(*args: Any, q: bool, mt: bool) -> bool: ...
 @overload
-def polyMergeEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyMergeEdge(*args: Any, **kwargs: Any) -> Any:
+def polyMergeEdge(*args, **kwargs) -> str: ...
+def polyMergeEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35395,7 +35395,7 @@ def polyMergeEdge(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `secondEdge` `se`: *int*
     """
-def polyMergeEdgeCtx(*args: Any, activeNodes: bool = ..., anq: bool = ..., caching: bool = ..., cch: bool = ..., constructionHistory: bool = ..., ch: bool = ..., exists: bool = ..., ex: bool = ..., firstEdge: int = ..., fe: int = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., immediate: bool = ..., im: bool = ..., mergeMode: int = ..., mm: int = ..., mergeTexture: bool = ..., mt: bool = ..., name: str = ..., n: str = ..., nodeState: int = ..., nds: int = ..., previous: bool = ..., pv: bool = ..., reset: bool = ..., rs: bool = ..., secondEdge: int = ..., se: int = ..., toolNode: bool = ..., tnq: bool = ..., **kwargs: Any) -> str:
+def polyMergeEdgeCtx(*args, **kwargs) -> str:
     """Flags:
     - `activeNodes` `anq`: *bool*
     - `caching` `cch`: *bool*
@@ -35444,8 +35444,8 @@ def polyMergeFacet(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMergeFacet(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMergeFacet(*args: Any, **kwargs: Any) -> str: ...
-def polyMergeFacet(*args: Any, **kwargs: Any) -> Any:
+def polyMergeFacet(*args, **kwargs) -> str: ...
+def polyMergeFacet(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35455,7 +35455,7 @@ def polyMergeFacet(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `secondFacet` `sf`: *int*
     """
-def polyMergeFacetCtx(*args: Any, activeNodes: bool = ..., anq: bool = ..., caching: bool = ..., cch: bool = ..., constructionHistory: bool = ..., ch: bool = ..., exists: bool = ..., ex: bool = ..., firstFacet: int = ..., ff: int = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., immediate: bool = ..., im: bool = ..., mergeMode: int = ..., mm: int = ..., name: str = ..., n: str = ..., nodeState: int = ..., nds: int = ..., previous: bool = ..., pv: bool = ..., reset: bool = ..., rs: bool = ..., secondFacet: int = ..., sf: int = ..., toolNode: bool = ..., tnq: bool = ..., **kwargs: Any) -> str:
+def polyMergeFacetCtx(*args, **kwargs) -> str:
     """Flags:
     - `activeNodes` `anq`: *bool*
     - `caching` `cch`: *bool*
@@ -35503,8 +35503,8 @@ def polyMergeUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyMergeUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyMergeUV(*args: Any, **kwargs: Any) -> str: ...
-def polyMergeUV(*args: Any, **kwargs: Any) -> Any:
+def polyMergeUV(*args, **kwargs) -> str: ...
+def polyMergeUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35551,8 +35551,8 @@ def polyMergeVertex(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyMergeVertex(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyMergeVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyMergeVertex(*args: Any, **kwargs: Any) -> Any:
+def polyMergeVertex(*args, **kwargs) -> str: ...
+def polyMergeVertex(*args, **kwargs) -> str:
     """Flags:
     - `alwaysMergeTwoVertices` `am`: *bool*
     - `caching` `cch`: *bool*
@@ -35633,8 +35633,8 @@ def polyMirrorFace(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyMirrorFace(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyMirrorFace(*args: Any, **kwargs: Any) -> str: ...
-def polyMirrorFace(*args: Any, **kwargs: Any) -> Any:
+def polyMirrorFace(*args, **kwargs) -> str: ...
+def polyMirrorFace(*args, **kwargs) -> str:
     """Flags:
     - `axis` `a`: *int*
     - `axisDirection` `ad`: *int*
@@ -35735,8 +35735,8 @@ def polyMoveEdge(*args: Any, q: bool, pivotX: bool) -> float: ...
 @overload
 def polyMoveEdge(*args: Any, q: bool, pvx: bool) -> float: ...
 @overload
-def polyMoveEdge(*args: Any, **kwargs: Any) -> str: ...
-def polyMoveEdge(*args: Any, **kwargs: Any) -> Any:
+def polyMoveEdge(*args, **kwargs) -> str: ...
+def polyMoveEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -35860,8 +35860,8 @@ def polyMoveFacet(*args: Any, q: bool, localTranslateY: bool) -> float: ...
 @overload
 def polyMoveFacet(*args: Any, q: bool, lty: bool) -> float: ...
 @overload
-def polyMoveFacet(*args: Any, **kwargs: Any) -> str: ...
-def polyMoveFacet(*args: Any, **kwargs: Any) -> Any:
+def polyMoveFacet(*args, **kwargs) -> str: ...
+def polyMoveFacet(*args, **kwargs) -> str:
     """Flags:
     - `attraction` `att`: *float*
     - `caching` `cch`: *bool*
@@ -35976,8 +35976,8 @@ def polyMoveFacetUV(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMoveFacetUV(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMoveFacetUV(*args: Any, **kwargs: Any) -> str: ...
-def polyMoveFacetUV(*args: Any, **kwargs: Any) -> Any:
+def polyMoveFacetUV(*args, **kwargs) -> str: ...
+def polyMoveFacetUV(*args, **kwargs) -> str:
     """Flags:
     - `axisLen` `l`: *Any*
     - `axisLenX` `lx`: *float*
@@ -36059,8 +36059,8 @@ def polyMoveUV(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyMoveUV(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyMoveUV(*args: Any, **kwargs: Any) -> str: ...
-def polyMoveUV(*args: Any, **kwargs: Any) -> Any:
+def polyMoveUV(*args, **kwargs) -> str: ...
+def polyMoveUV(*args, **kwargs) -> str:
     """Flags:
     - `axisLen` `l`: *Any*
     - `axisLenX` `lx`: *float*
@@ -36162,8 +36162,8 @@ def polyMoveVertex(*args: Any, q: bool, scale: bool) -> list[float]: ...
 @overload
 def polyMoveVertex(*args: Any, q: bool, s: bool) -> list[float]: ...
 @overload
-def polyMoveVertex(*args: Any, **kwargs: Any) -> str: ...
-def polyMoveVertex(*args: Any, **kwargs: Any) -> Any:
+def polyMoveVertex(*args, **kwargs) -> str: ...
+def polyMoveVertex(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -36197,7 +36197,7 @@ def polyMoveVertex(*args: Any, **kwargs: Any) -> Any:
     - `translateZ` `tz`: *float*
     - `worldSpace` `ws`: *bool*
     """
-def polyMultiLayoutUV(*args: Any, flipReversed: bool = ..., fr: bool = ..., gridU: int = ..., gu: int = ..., gridV: int = ..., gv: int = ..., layout: int = ..., l: int = ..., layoutMethod: int = ..., lm: int = ..., offsetU: float = ..., ou: float = ..., offsetV: float = ..., ov: float = ..., percentageSpace: float = ..., ps: float = ..., prescale: int = ..., psc: int = ..., rotateForBestFit: int = ..., rbf: int = ..., scale: int = ..., sc: int = ..., sizeU: float = ..., su: float = ..., sizeV: float = ..., sv: float = ..., uvSetName: str = ..., uvs: str = ..., **kwargs: Any) -> None:
+def polyMultiLayoutUV(*args, **kwargs) -> None:
     """Flags:
     - `flipReversed` `fr`: *bool*
     - `gridU` `gu`: *int*
@@ -36239,8 +36239,8 @@ def polyNormal(*args: Any, q: bool, userNormalMode: bool) -> bool: ...
 @overload
 def polyNormal(*args: Any, q: bool, unm: bool) -> bool: ...
 @overload
-def polyNormal(*args: Any, **kwargs: Any) -> str: ...
-def polyNormal(*args: Any, **kwargs: Any) -> Any:
+def polyNormal(*args, **kwargs) -> str: ...
+def polyNormal(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -36280,8 +36280,8 @@ def polyNormalPerVertex(*args: Any, q: bool, unFreezeNormal: bool) -> bool: ...
 @overload
 def polyNormalPerVertex(*args: Any, q: bool, ufn: bool) -> bool: ...
 @overload
-def polyNormalPerVertex(*args: Any, **kwargs: Any) -> bool: ...
-def polyNormalPerVertex(*args: Any, **kwargs: Any) -> Any:
+def polyNormalPerVertex(*args, **kwargs) -> bool: ...
+def polyNormalPerVertex(*args, **kwargs) -> bool:
     """Flags:
     - `allLocked` `al`: *bool*
     - `deformable` `deformable`: *bool*
@@ -36342,8 +36342,8 @@ def polyNormalizeUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyNormalizeUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyNormalizeUV(*args: Any, **kwargs: Any) -> str: ...
-def polyNormalizeUV(*args: Any, **kwargs: Any) -> Any:
+def polyNormalizeUV(*args, **kwargs) -> str: ...
+def polyNormalizeUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `centerOnTile` `cot`: *bool*
@@ -36425,8 +36425,8 @@ def polyOptUvs(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyOptUvs(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyOptUvs(*args: Any, **kwargs: Any) -> str: ...
-def polyOptUvs(*args: Any, **kwargs: Any) -> Any:
+def polyOptUvs(*args, **kwargs) -> str: ...
+def polyOptUvs(*args, **kwargs) -> str:
     """Flags:
     - `applyToShell` `applyToShell`: *bool*
     - `areaWeight` `aw`: *float*
@@ -36446,7 +36446,7 @@ def polyOptUvs(*args: Any, **kwargs: Any) -> Any:
     - `uvSetName` `uvs`: *str*
     - `worldSpace` `ws`: *bool*
     """
-def polyOptions(*args: Any, activeObjects: bool = ..., ao: bool = ..., allEdges: bool = ..., ae: bool = ..., backCullVertex: bool = ..., bcv: bool = ..., backCulling: bool = ..., bc: bool = ..., colorMaterialChannel: str = ..., cm: str = ..., colorShadedDisplay: bool = ..., cs: bool = ..., displayAlphaAsGreyScale: bool = ..., dal: bool = ..., displayBlueChannel: bool = ..., dbc: bool = ..., displayBorder: bool = ..., db: bool = ..., displayCenter: bool = ..., dc: bool = ..., displayColorAsGreyScale: bool = ..., dcl: bool = ..., displayCreaseEdge: bool = ..., dce: bool = ..., displayCreaseVertex: bool = ..., dcv: bool = ..., displayGeometry: bool = ..., dg: bool = ..., displayGreenChannel: bool = ..., dgc: bool = ..., displayInvisibleFaces: bool = ..., dif: bool = ..., displayItemNumbers: Any = ..., din: Any = ..., displayMapBorder: bool = ..., dmb: bool = ..., displayMetadata: Any = ..., dmt: Any = ..., displayNormal: bool = ..., dn: bool = ..., displayRedChannel: bool = ..., drc: bool = ..., displaySubdComps: bool = ..., dsc: bool = ..., displayTangent: bool = ..., dtn: bool = ..., displayTriangle: bool = ..., dt: bool = ..., displayUVTopology: bool = ..., uvt: bool = ..., displayUVs: bool = ..., duv: bool = ..., displayVertex: bool = ..., dv: bool = ..., displayWarp: bool = ..., dw: bool = ..., facet: bool = ..., f: bool = ..., fullBack: bool = ..., fb: bool = ..., gl: bool = ..., hardBack: bool = ..., hb: bool = ..., hardEdge: bool = ..., he: bool = ..., hardEdgeColor: bool = ..., hec: bool = ..., materialBlend: str = ..., mb: str = ..., newPolymesh: bool = ..., np: bool = ..., point: bool = ..., pt: bool = ..., pointFacet: bool = ..., pf: bool = ..., relative: bool = ..., r: bool = ..., reuseTriangles: bool = ..., rt: bool = ..., sizeBorder: float = ..., sb: float = ..., sizeNormal: float = ..., sn: float = ..., sizeUV: float = ..., suv: float = ..., sizeVertex: float = ..., sv: float = ..., smoothDrawType: int = ..., sdt: int = ..., softEdge: bool = ..., se: bool = ..., vertexNormalMethod: int = ..., vnm: int = ..., wireBackCulling: bool = ..., wbc: bool = ..., **kwargs: Any) -> None:
+def polyOptions(*args, **kwargs) -> None:
     """Flags:
     - `activeObjects` `ao`: *bool*
     - `allEdges` `ae`: *bool*
@@ -36497,7 +36497,7 @@ def polyOptions(*args: Any, activeObjects: bool = ..., ao: bool = ..., allEdges:
     - `vertexNormalMethod` `vnm`: *int*
     - `wireBackCulling` `wbc`: *bool*
     """
-def polyOutput(*args: Any, allValues: bool = ..., a: bool = ..., color: bool = ..., c: bool = ..., colorDesc: bool = ..., cd: bool = ..., edge: bool = ..., e: bool = ..., edgeFace: bool = ..., ef: bool = ..., face: bool = ..., f: bool = ..., faceNorm: bool = ..., fn: bool = ..., force: bool = ..., fo: bool = ..., group: bool = ..., g: bool = ..., noOutput: bool = ..., no: bool = ..., normDesc: bool = ..., nd: bool = ..., outputFile: str = ..., of: str = ..., triangle: bool = ..., t: bool = ..., uvDesc: bool = ..., uvd: bool = ..., uvValue: bool = ..., uv: bool = ..., vert: bool = ..., v: bool = ..., vertEdge: bool = ..., ve: bool = ..., vertNorm: bool = ..., vn: bool = ..., **kwargs: Any) -> None:
+def polyOutput(*args, **kwargs) -> None:
     """Flags:
     - `allValues` `a`: *bool*
     - `color` `c`: *bool*
@@ -36539,8 +36539,8 @@ def polyPinUV(*args: Any, q: bool, unpinned: bool) -> bool: ...
 @overload
 def polyPinUV(*args: Any, q: bool, unp: bool) -> bool: ...
 @overload
-def polyPinUV(*args: Any, **kwargs: Any) -> bool: ...
-def polyPinUV(*args: Any, **kwargs: Any) -> Any:
+def polyPinUV(*args, **kwargs) -> bool: ...
+def polyPinUV(*args, **kwargs) -> bool:
     """Flags:
     - `createHistory` `ch`: *bool*
     - `operation` `op`: *int*
@@ -36609,8 +36609,8 @@ def polyPipe(*args: Any, q: bool, texture: bool) -> bool: ...
 @overload
 def polyPipe(*args: Any, q: bool, tx: bool) -> bool: ...
 @overload
-def polyPipe(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPipe(*args: Any, **kwargs: Any) -> Any:
+def polyPipe(*args, **kwargs) -> list[str]: ...
+def polyPipe(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -36709,8 +36709,8 @@ def polyPlanarProjection(*args: Any, q: bool, createNewMap: bool) -> bool: ...
 @overload
 def polyPlanarProjection(*args: Any, q: bool, cm: bool) -> bool: ...
 @overload
-def polyPlanarProjection(*args: Any, **kwargs: Any) -> str: ...
-def polyPlanarProjection(*args: Any, **kwargs: Any) -> Any:
+def polyPlanarProjection(*args, **kwargs) -> str: ...
+def polyPlanarProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -36800,8 +36800,8 @@ def polyPlane(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polyPlane(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polyPlane(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPlane(*args: Any, **kwargs: Any) -> Any:
+def polyPlane(*args, **kwargs) -> list[str]: ...
+def polyPlane(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -36863,8 +36863,8 @@ def polyPlatonicSolid(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polyPlatonicSolid(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polyPlatonicSolid(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPlatonicSolid(*args: Any, **kwargs: Any) -> Any:
+def polyPlatonicSolid(*args, **kwargs) -> list[str]: ...
+def polyPlatonicSolid(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -36931,8 +36931,8 @@ def polyPoke(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyPoke(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyPoke(*args: Any, **kwargs: Any) -> str: ...
-def polyPoke(*args: Any, **kwargs: Any) -> Any:
+def polyPoke(*args, **kwargs) -> str: ...
+def polyPoke(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -36993,8 +36993,8 @@ def polyPrimitive(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polyPrimitive(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polyPrimitive(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPrimitive(*args: Any, **kwargs: Any) -> Any:
+def polyPrimitive(*args, **kwargs) -> list[str]: ...
+def polyPrimitive(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -37065,8 +37065,8 @@ def polyPrism(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polyPrism(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polyPrism(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPrism(*args: Any, **kwargs: Any) -> Any:
+def polyPrism(*args, **kwargs) -> list[str]: ...
+def polyPrism(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -37116,8 +37116,8 @@ def polyProjectCurve(*args: Any, q: bool, caching: bool) -> bool: ...
 @overload
 def polyProjectCurve(*args: Any, q: bool, cch: bool) -> bool: ...
 @overload
-def polyProjectCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyProjectCurve(*args: Any, **kwargs: Any) -> Any:
+def polyProjectCurve(*args, **kwargs) -> list[str]: ...
+def polyProjectCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `addUnderTransform` `aut`: *bool*
     - `caching` `cch`: *bool*
@@ -37128,7 +37128,7 @@ def polyProjectCurve(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `tolerance` `tol`: *float*
     """
-def polyProjection(*args: Any, constructionHistory: bool = ..., ch: bool = ..., createNewMap: bool = ..., cm: bool = ..., imageCenterX: float = ..., icx: float = ..., imageCenterY: float = ..., icy: float = ..., imageScaleU: float = ..., isu: float = ..., imageScaleV: float = ..., isv: float = ..., insertBeforeDeformers: bool = ..., ibd: bool = ..., keepImageRatio: bool = ..., kir: bool = ..., mapDirection: str = ..., md: str = ..., projectionCenterX: float = ..., pcx: float = ..., projectionCenterY: float = ..., pcy: float = ..., projectionCenterZ: float = ..., pcz: float = ..., projectionScaleU: float = ..., psu: float = ..., projectionScaleV: float = ..., psv: float = ..., rotateX: float = ..., rx: float = ..., rotateY: float = ..., ry: float = ..., rotateZ: float = ..., rz: float = ..., rotationAngle: float = ..., ra: float = ..., seamCorrect: bool = ..., sc: bool = ..., smartFit: bool = ..., sf: bool = ..., type: str = ..., t: str = ..., uvSetName: str = ..., uvs: str = ..., **kwargs: Any) -> str:
+def polyProjection(*args, **kwargs) -> str:
     """Flags:
     - `constructionHistory` `ch`: *bool*
     - `createNewMap` `cm`: *bool*
@@ -37206,8 +37206,8 @@ def polyPyramid(*args: Any, q: bool, texture: bool) -> bool: ...
 @overload
 def polyPyramid(*args: Any, q: bool, tx: bool) -> bool: ...
 @overload
-def polyPyramid(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyPyramid(*args: Any, **kwargs: Any) -> Any:
+def polyPyramid(*args, **kwargs) -> list[str]: ...
+def polyPyramid(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -37260,8 +37260,8 @@ def polyQuad(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyQuad(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyQuad(*args: Any, **kwargs: Any) -> str: ...
-def polyQuad(*args: Any, **kwargs: Any) -> Any:
+def polyQuad(*args, **kwargs) -> str: ...
+def polyQuad(*args, **kwargs) -> str:
     """Flags:
     - `angle` `a`: *float*
     - `caching` `cch`: *bool*
@@ -37273,7 +37273,7 @@ def polyQuad(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `worldSpace` `ws`: *bool*
     """
-def polyQueryBlindData(*args: Any, associationType: str = ..., at: str = ..., binaryData: str = ..., bnd: str = ..., booleanData: bool = ..., bd: bool = ..., doubleData: float = ..., dbd: float = ..., intData: int = ..., ind: int = ..., longDataName: str = ..., ldn: str = ..., maxValue: float = ..., max: float = ..., minValue: float = ..., min: float = ..., shortDataName: str = ..., sdn: str = ..., showComp: bool = ..., sc: bool = ..., stringData: str = ..., sd: str = ..., subString: str = ..., ss: str = ..., typeId: int = ..., id: int = ..., **kwargs: Any) -> str:
+def polyQueryBlindData(*args, **kwargs) -> str:
     """Flags:
     - `associationType` `at`: *str*
     - `binaryData` `bnd`: *str*
@@ -37370,8 +37370,8 @@ def polyReduce(*args: Any, q: bool, termination: bool) -> int: ...
 @overload
 def polyReduce(*args: Any, q: bool, trm: bool) -> int: ...
 @overload
-def polyReduce(*args: Any, **kwargs: Any) -> str: ...
-def polyReduce(*args: Any, **kwargs: Any) -> Any:
+def polyReduce(*args, **kwargs) -> str: ...
+def polyReduce(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `cachingReduce` `cr`: *bool*
@@ -37458,8 +37458,8 @@ def polyRemesh(*args: Any, q: bool, useRelativeValues: bool) -> bool: ...
 @overload
 def polyRemesh(*args: Any, q: bool, urv: bool) -> bool: ...
 @overload
-def polyRemesh(*args: Any, **kwargs: Any) -> str: ...
-def polyRemesh(*args: Any, **kwargs: Any) -> Any:
+def polyRemesh(*args, **kwargs) -> str: ...
+def polyRemesh(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `collapseThreshold` `cot`: *float*
@@ -37472,7 +37472,7 @@ def polyRemesh(*args: Any, **kwargs: Any) -> Any:
     - `tessellateBorders` `tsb`: *bool*
     - `useRelativeValues` `urv`: *bool*
     """
-def polyRetopo(*args: Any) -> str: ...
+def polyRetopo(*args, **kwargs) -> str: ...
 @overload
 def polySelect(*args: Any, q: bool, edgeBorder: bool) -> int: ...
 @overload
@@ -37528,8 +37528,8 @@ def polySelect(*args: Any, q: bool, toggle: bool) -> bool: ...
 @overload
 def polySelect(*args: Any, q: bool, tgl: bool) -> bool: ...
 @overload
-def polySelect(*args: Any, **kwargs: Any) -> list[int]: ...
-def polySelect(*args: Any, **kwargs: Any) -> Any:
+def polySelect(*args, **kwargs) -> list[int]: ...
+def polySelect(*args, **kwargs) -> list[int]:
     """Flags:
     - `add` `add`: *bool*
     - `addFirst` `af`: *bool*
@@ -37635,8 +37635,8 @@ def polySelectConstraint(*args: Any, q: bool, smoothness: bool) -> int: ...
 @overload
 def polySelectConstraint(*args: Any, q: bool, sm: bool) -> int: ...
 @overload
-def polySelectConstraint(*args: Any, **kwargs: Any) -> None: ...
-def polySelectConstraint(*args: Any, **kwargs: Any) -> Any:
+def polySelectConstraint(*args, **kwargs) -> None: ...
+def polySelectConstraint(*args, **kwargs) -> None:
     """Flags:
     - `angle` `a`: *int*
     - `anglePropagation` `ap`: *bool*
@@ -37696,13 +37696,13 @@ def polySelectConstraint(*args: Any, **kwargs: Any) -> Any:
     - `where` `w`: *int*
     - `wholeSensitive` `ws`: *bool*
     """
-def polySelectConstraintMonitor(*args: Any, changeCommand: Any = ..., cc: Any = ..., create: bool = ..., c: bool = ..., delete: bool = ..., d: bool = ..., **kwargs: Any) -> None:
+def polySelectConstraintMonitor(*args, **kwargs) -> None:
     """Flags:
     - `changeCommand` `cc`: *Any*
     - `create` `c`: *bool*
     - `delete` `d`: *bool*
     """
-def polySelectCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., mode: int = ..., m: int = ..., **kwargs: Any) -> None:
+def polySelectCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -37710,7 +37710,7 @@ def polySelectCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = 
     - `image3` `i3`: *str*
     - `mode` `m`: *int*
     """
-def polySelectEditCtx(*args: Any, absoluteOffset: bool = ..., abo: bool = ..., adjustEdgeFlow: float = ..., aef: float = ..., autoComplete: bool = ..., ac: bool = ..., deleteEdge: bool = ..., de: bool = ..., divisions: int = ..., div: int = ..., endVertexOffset: float = ..., evo: float = ..., exists: bool = ..., ex: bool = ..., fixQuads: bool = ..., fq: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., insertWithEdgeFlow: bool = ..., ief: bool = ..., mode: int = ..., m: int = ..., smoothingAngle: float = ..., sma: float = ..., splitType: int = ..., stp: int = ..., startVertexOffset: float = ..., svo: float = ..., useEqualMultiplier: bool = ..., uem: bool = ..., **kwargs: Any) -> str:
+def polySelectEditCtx(*args, **kwargs) -> str:
     """Flags:
     - `absoluteOffset` `abo`: *bool*
     - `adjustEdgeFlow` `aef`: *float*
@@ -37747,15 +37747,15 @@ def polySeparate(*args: Any, q: bool, removeShells: bool) -> bool: ...
 @overload
 def polySeparate(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def polySeparate(*args: Any, **kwargs: Any) -> list[str]: ...
-def polySeparate(*args: Any, **kwargs: Any) -> Any:
+def polySeparate(*args, **kwargs) -> list[str]: ...
+def polySeparate(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `nodeState` `nds`: *int*
     - `removeShells` `rs`: *bool*
     - `separateSpecificShell` `sss`: *int*
     """
-def polySetToFaceNormal(*args: Any, setUserNormal: bool = ..., su: bool = ..., **kwargs: Any) -> str:
+def polySetToFaceNormal(*args, **kwargs) -> str:
     """Flags:
     - `setUserNormal` `su`: *bool*
     """
@@ -37788,8 +37788,8 @@ def polySewEdge(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polySewEdge(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polySewEdge(*args: Any, **kwargs: Any) -> str: ...
-def polySewEdge(*args: Any, **kwargs: Any) -> Any:
+def polySewEdge(*args, **kwargs) -> str: ...
+def polySewEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -37799,14 +37799,14 @@ def polySewEdge(*args: Any, **kwargs: Any) -> Any:
     - `tolerance` `t`: *float*
     - `worldSpace` `ws`: *bool*
     """
-def polyShortestPathCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> None:
+def polyShortestPathCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def polySlideEdge(*args: Any, absolute: bool = ..., a: bool = ..., direction: int = ..., d: int = ..., edgeDirection: float = ..., ed: float = ..., symmetry: bool = ..., sym: bool = ..., **kwargs: Any) -> bool:
+def polySlideEdge(*args, **kwargs) -> bool:
     """Flags:
     - `absolute` `a`: *bool*
     - `direction` `d`: *int*
@@ -37894,8 +37894,8 @@ def polySmooth(*args: Any, q: bool, keepSelectionBorder: bool) -> bool: ...
 @overload
 def polySmooth(*args: Any, q: bool, ksb: bool) -> bool: ...
 @overload
-def polySmooth(*args: Any, **kwargs: Any) -> str: ...
-def polySmooth(*args: Any, **kwargs: Any) -> Any:
+def polySmooth(*args, **kwargs) -> str: ...
+def polySmooth(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -37949,8 +37949,8 @@ def polySoftEdge(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polySoftEdge(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polySoftEdge(*args: Any, **kwargs: Any) -> str: ...
-def polySoftEdge(*args: Any, **kwargs: Any) -> Any:
+def polySoftEdge(*args, **kwargs) -> str: ...
+def polySoftEdge(*args, **kwargs) -> str:
     """Flags:
     - `angle` `a`: *float*
     - `caching` `cch`: *bool*
@@ -38012,8 +38012,8 @@ def polySphere(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def polySphere(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def polySphere(*args: Any, **kwargs: Any) -> list[str]: ...
-def polySphere(*args: Any, **kwargs: Any) -> Any:
+def polySphere(*args, **kwargs) -> list[str]: ...
+def polySphere(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -38110,8 +38110,8 @@ def polySphericalProjection(*args: Any, q: bool, caching: bool) -> bool: ...
 @overload
 def polySphericalProjection(*args: Any, q: bool, cch: bool) -> bool: ...
 @overload
-def polySphericalProjection(*args: Any, **kwargs: Any) -> str: ...
-def polySphericalProjection(*args: Any, **kwargs: Any) -> Any:
+def polySphericalProjection(*args, **kwargs) -> str: ...
+def polySphericalProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38183,8 +38183,8 @@ def polySplit(*args: Any, q: bool, insertWithEdgeFlow: bool) -> bool: ...
 @overload
 def polySplit(*args: Any, q: bool, ief: bool) -> bool: ...
 @overload
-def polySplit(*args: Any, **kwargs: Any) -> str: ...
-def polySplit(*args: Any, **kwargs: Any) -> Any:
+def polySplit(*args, **kwargs) -> str: ...
+def polySplit(*args, **kwargs) -> str:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `constructionHistory` `ch`: *bool*
@@ -38199,7 +38199,7 @@ def polySplit(*args: Any, **kwargs: Any) -> Any:
     - `smoothingangle` `sma`: *float*
     - `subdivision` `s`: *int*
     """
-def polySplitCtx(*args: Any, enablesnap: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., magnetsnap: int = ..., ms: int = ..., precsnap: float = ..., ps: float = ..., smoothingangle: float = ..., sma: float = ..., snaptoedge: bool = ..., ste: bool = ..., subdivision: int = ..., s: int = ..., **kwargs: Any) -> None:
+def polySplitCtx(*args, **kwargs) -> None:
     """Flags:
     - `enablesnap` `es`: *bool*
     - `exists` `ex`: *bool*
@@ -38212,7 +38212,7 @@ def polySplitCtx(*args: Any, enablesnap: bool = ..., es: bool = ..., exists: boo
     - `snaptoedge` `ste`: *bool*
     - `subdivision` `s`: *int*
     """
-def polySplitCtx2(*args: Any, adjustEdgeFlow: float = ..., aef: float = ..., constrainToEdges: bool = ..., cte: bool = ..., edgeMagnets: int = ..., em: int = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., insertWithEdgeFlow: bool = ..., ief: bool = ..., snapTolerance: float = ..., st: float = ..., snappedToEdgeColor: Any = ..., sec: Any = ..., snappedToFaceColor: Any = ..., sfc: Any = ..., snappedToMagnetColor: Any = ..., smc: Any = ..., snappedToVertexColor: Any = ..., svc: Any = ..., **kwargs: Any) -> None:
+def polySplitCtx2(*args, **kwargs) -> None:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `constrainToEdges` `cte`: *bool*
@@ -38249,8 +38249,8 @@ def polySplitEdge(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polySplitEdge(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polySplitEdge(*args: Any, **kwargs: Any) -> str: ...
-def polySplitEdge(*args: Any, **kwargs: Any) -> Any:
+def polySplitEdge(*args, **kwargs) -> str: ...
+def polySplitEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38339,8 +38339,8 @@ def polySplitRing(*args: Any, q: bool, useEqualMultiplier: bool) -> bool: ...
 @overload
 def polySplitRing(*args: Any, q: bool, uem: bool) -> bool: ...
 @overload
-def polySplitRing(*args: Any, **kwargs: Any) -> str: ...
-def polySplitRing(*args: Any, **kwargs: Any) -> Any:
+def polySplitRing(*args, **kwargs) -> str: ...
+def polySplitRing(*args, **kwargs) -> str:
     """Flags:
     - `adjustEdgeFlow` `aef`: *float*
     - `caching` `cch`: *bool*
@@ -38386,8 +38386,8 @@ def polySplitVertex(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polySplitVertex(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polySplitVertex(*args: Any, **kwargs: Any) -> str: ...
-def polySplitVertex(*args: Any, **kwargs: Any) -> Any:
+def polySplitVertex(*args, **kwargs) -> str: ...
+def polySplitVertex(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38436,8 +38436,8 @@ def polyStraightenUVBorder(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyStraightenUVBorder(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyStraightenUVBorder(*args: Any, **kwargs: Any) -> str: ...
-def polyStraightenUVBorder(*args: Any, **kwargs: Any) -> Any:
+def polyStraightenUVBorder(*args, **kwargs) -> str: ...
+def polyStraightenUVBorder(*args, **kwargs) -> str:
     """Flags:
     - `blendOriginal` `bo`: *float*
     - `caching` `cch`: *bool*
@@ -38479,8 +38479,8 @@ def polySubdivideEdge(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polySubdivideEdge(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polySubdivideEdge(*args: Any, **kwargs: Any) -> str: ...
-def polySubdivideEdge(*args: Any, **kwargs: Any) -> Any:
+def polySubdivideEdge(*args, **kwargs) -> str: ...
+def polySubdivideEdge(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38527,8 +38527,8 @@ def polySubdivideFacet(*args: Any, q: bool, constructionHistory: bool) -> bool: 
 @overload
 def polySubdivideFacet(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polySubdivideFacet(*args: Any, **kwargs: Any) -> str: ...
-def polySubdivideFacet(*args: Any, **kwargs: Any) -> Any:
+def polySubdivideFacet(*args, **kwargs) -> str: ...
+def polySubdivideFacet(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38601,8 +38601,8 @@ def polyToSubdiv(*args: Any, q: bool, quickConvert: bool) -> bool: ...
 @overload
 def polyToSubdiv(*args: Any, q: bool, qc: bool) -> bool: ...
 @overload
-def polyToSubdiv(*args: Any, **kwargs: Any) -> str: ...
-def polyToSubdiv(*args: Any, **kwargs: Any) -> Any:
+def polyToSubdiv(*args, **kwargs) -> str: ...
+def polyToSubdiv(*args, **kwargs) -> str:
     """Flags:
     - `absolutePosition` `ap`: *bool*
     - `addUnderTransform` `aut`: *bool*
@@ -38682,8 +38682,8 @@ def polyTorus(*args: Any, q: bool, texture: bool) -> bool: ...
 @overload
 def polyTorus(*args: Any, q: bool, tx: bool) -> bool: ...
 @overload
-def polyTorus(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyTorus(*args: Any, **kwargs: Any) -> Any:
+def polyTorus(*args, **kwargs) -> list[str]: ...
+def polyTorus(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -38734,8 +38734,8 @@ def polyTransfer(*args: Any, q: bool, vertices: bool) -> bool: ...
 @overload
 def polyTransfer(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def polyTransfer(*args: Any, **kwargs: Any) -> str: ...
-def polyTransfer(*args: Any, **kwargs: Any) -> Any:
+def polyTransfer(*args, **kwargs) -> str: ...
+def polyTransfer(*args, **kwargs) -> str:
     """Flags:
     - `alternateObject` `ao`: *str*
     - `caching` `cch`: *bool*
@@ -38763,19 +38763,19 @@ def polyTriangulate(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyTriangulate(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyTriangulate(*args: Any, **kwargs: Any) -> str: ...
-def polyTriangulate(*args: Any, **kwargs: Any) -> Any:
+def polyTriangulate(*args, **kwargs) -> str: ...
+def polyTriangulate(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
     - `name` `n`: *str*
     - `nodeState` `nds`: *int*
     """
-def polyUVCoverage(*args: Any, uvRange: Any = ..., ur: Any = ..., **kwargs: Any) -> list[float]:
+def polyUVCoverage(*args, **kwargs) -> list[float]:
     """Flags:
     - `uvRange` `ur`: *Any*
     """
-def polyUVOverlap(*args: Any, nonOverlappingComponents: bool = ..., noc: bool = ..., overlappingComponents: bool = ..., oc: bool = ..., **kwargs: Any) -> Any:
+def polyUVOverlap(*args, **kwargs) -> Any:
     """Flags:
     - `nonOverlappingComponents` `noc`: *bool*
     - `overlappingComponents` `oc`: *bool*
@@ -38797,8 +38797,8 @@ def polyUVRectangle(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def polyUVRectangle(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def polyUVRectangle(*args: Any, **kwargs: Any) -> str: ...
-def polyUVRectangle(*args: Any, **kwargs: Any) -> Any:
+def polyUVRectangle(*args, **kwargs) -> str: ...
+def polyUVRectangle(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38878,8 +38878,8 @@ def polyUVSet(*args: Any, q: bool, unshared: bool) -> bool: ...
 @overload
 def polyUVSet(*args: Any, q: bool, us: bool) -> bool: ...
 @overload
-def polyUVSet(*args: Any, **kwargs: Any) -> bool: ...
-def polyUVSet(*args: Any, **kwargs: Any) -> Any:
+def polyUVSet(*args, **kwargs) -> bool: ...
+def polyUVSet(*args, **kwargs) -> bool:
     """Flags:
     - `allUVSets` `auv`: *bool*
     - `allUVSetsIndices` `uvn`: *bool*
@@ -38900,7 +38900,7 @@ def polyUVSet(*args: Any, **kwargs: Any) -> Any:
     - `unshared` `us`: *bool*
     - `uvSet` `uvs`: *str*
     """
-def polyUVStackSimilarShells(*args: Any, onlyMatch: bool = ..., om: bool = ..., tolerance: float = ..., to: float = ..., **kwargs: Any) -> list[str]:
+def polyUVStackSimilarShells(*args, **kwargs) -> list[str]:
     """Flags:
     - `onlyMatch` `om`: *bool*
     - `tolerance` `to`: *float*
@@ -38926,8 +38926,8 @@ def polyUnite(*args: Any, q: bool, objectPivot: bool) -> bool: ...
 @overload
 def polyUnite(*args: Any, q: bool, op: bool) -> bool: ...
 @overload
-def polyUnite(*args: Any, **kwargs: Any) -> list[str]: ...
-def polyUnite(*args: Any, **kwargs: Any) -> Any:
+def polyUnite(*args, **kwargs) -> list[str]: ...
+def polyUnite(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `centerPivot` `cp`: *bool*
@@ -38952,8 +38952,8 @@ def polyUniteSkinned(*args: Any, q: bool, objectPivot: bool) -> bool: ...
 @overload
 def polyUniteSkinned(*args: Any, q: bool, op: bool) -> bool: ...
 @overload
-def polyUniteSkinned(*args: Any, **kwargs: Any) -> None: ...
-def polyUniteSkinned(*args: Any, **kwargs: Any) -> Any:
+def polyUniteSkinned(*args, **kwargs) -> None: ...
+def polyUniteSkinned(*args, **kwargs) -> None:
     """Flags:
     - `centerPivot` `cp`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -38989,8 +38989,8 @@ def polyUnsmooth(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def polyUnsmooth(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def polyUnsmooth(*args: Any, **kwargs: Any) -> str: ...
-def polyUnsmooth(*args: Any, **kwargs: Any) -> Any:
+def polyUnsmooth(*args, **kwargs) -> str: ...
+def polyUnsmooth(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -39033,8 +39033,8 @@ def polyWedgeFace(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def polyWedgeFace(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def polyWedgeFace(*args: Any, **kwargs: Any) -> str: ...
-def polyWedgeFace(*args: Any, **kwargs: Any) -> Any:
+def polyWedgeFace(*args, **kwargs) -> str: ...
+def polyWedgeFace(*args, **kwargs) -> str:
     """Flags:
     - `axis` `ax`: *Any*
     - `caching` `cch`: *bool*
@@ -39108,8 +39108,8 @@ def popupMenu(*args: Any, q: bool, shiftModifier: bool) -> bool: ...
 @overload
 def popupMenu(*args: Any, q: bool, sh: bool) -> bool: ...
 @overload
-def popupMenu(*args: Any, **kwargs: Any) -> str: ...
-def popupMenu(*args: Any, **kwargs: Any) -> Any:
+def popupMenu(*args, **kwargs) -> str: ...
+def popupMenu(*args, **kwargs) -> str:
     """Flags:
     - `allowOptionBoxes` `aob`: *bool*
     - `altModifier` `alt`: *bool*
@@ -39140,14 +39140,14 @@ def pose(*args: Any, q: bool, apply: bool) -> bool: ...
 @overload
 def pose(*args: Any, q: bool, a: bool) -> bool: ...
 @overload
-def pose(*args: Any, **kwargs: Any) -> str: ...
-def pose(*args: Any, **kwargs: Any) -> Any:
+def pose(*args, **kwargs) -> str: ...
+def pose(*args, **kwargs) -> str:
     """Flags:
     - `allPoses` `ap`: *bool*
     - `apply` `a`: *bool*
     - `name` `n`: *str*
     """
-def poseEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectionConnection: str = ..., slc: str = ..., stateString: bool = ..., sts: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def poseEditor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -39167,7 +39167,7 @@ def poseEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate:
     - `updateMainConnection` `upd`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def posePanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ..., cp: str = ..., createString: bool = ..., cs: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., editString: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., init: bool = ..., isUnique: bool = ..., iu: bool = ..., label: str = ..., l: str = ..., menuBarRepeatLast: bool = ..., mrl: bool = ..., menuBarVisible: bool = ..., mbv: bool = ..., needsInit: bool = ..., ni: bool = ..., parent: str = ..., p: str = ..., popupMenuProcedure: str = ..., pmp: str = ..., poseEditor: bool = ..., pe: bool = ..., replacePanel: str = ..., rp: str = ..., tearOff: bool = ..., to: bool = ..., tearOffCopy: str = ..., toc: str = ..., tearOffRestore: bool = ..., tor: bool = ..., unParent: bool = ..., up: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def posePanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -39201,13 +39201,13 @@ def preferredRenderer(*args: Any, q: bool, makeCurrent: bool) -> bool: ...
 @overload
 def preferredRenderer(*args: Any, q: bool, mc: bool) -> bool: ...
 @overload
-def preferredRenderer(*args: Any, **kwargs: Any) -> None: ...
-def preferredRenderer(*args: Any, **kwargs: Any) -> Any:
+def preferredRenderer(*args, **kwargs) -> None: ...
+def preferredRenderer(*args, **kwargs) -> None:
     """Flags:
     - `fallback` `f`: *str*
     - `makeCurrent` `mc`: *bool*
     """
-def preloadRefEd(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectCommand: str = ..., sc: str = ..., selectFileNode: bool = ..., sf: bool = ..., selectionConnection: str = ..., slc: str = ..., stateString: bool = ..., sts: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def preloadRefEd(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -39310,8 +39310,8 @@ def prepareRender(*args: Any, q: bool, listTraversalSets: bool) -> bool: ...
 @overload
 def prepareRender(*args: Any, q: bool, lt: bool) -> bool: ...
 @overload
-def prepareRender(*args: Any, **kwargs: Any) -> None: ...
-def prepareRender(*args: Any, **kwargs: Any) -> Any:
+def prepareRender(*args, **kwargs) -> None: ...
+def prepareRender(*args, **kwargs) -> None:
     """Flags:
     - `defaultTraversalSet` `dt`: *str*
     - `deregister` `d`: *str*
@@ -39418,8 +39418,8 @@ def profiler(*args: Any, q: bool, eventColor: bool) -> bool: ...
 @overload
 def profiler(*args: Any, q: bool, eco: bool) -> bool: ...
 @overload
-def profiler(*args: Any, **kwargs: Any) -> None: ...
-def profiler(*args: Any, **kwargs: Any) -> Any:
+def profiler(*args, **kwargs) -> None: ...
+def profiler(*args, **kwargs) -> None:
     """Flags:
     - `addCategory` `a`: *str*
     - `allCategories` `ac`: *bool*
@@ -39453,7 +39453,7 @@ def profiler(*args: Any, **kwargs: Any) -> Any:
     - `signalEvent` `sig`: *bool*
     - `signalMelEvent` `sim`: *bool*
     """
-def profilerTool(*args: Any, categoryView: bool = ..., cat: bool = ..., collapseSelectedEvents: bool = ..., cs: bool = ..., collapseSelectedEventsRepetition: bool = ..., csr: bool = ..., cpuView: bool = ..., cpu: bool = ..., destroy: bool = ..., dtr: bool = ..., eventTypes: bool = ..., et: bool = ..., exists: bool = ..., ex: bool = ..., expandSelectedEvents: bool = ..., es: bool = ..., expandSelectedEventsRepetition: bool = ..., esr: bool = ..., findNext: bool = ..., fn: bool = ..., findPrevious: bool = ..., fp: bool = ..., frameAll: bool = ..., fa: bool = ..., frameSelected: bool = ..., fs: bool = ..., isolateSegment: int = ..., make: bool = ..., mk: bool = ..., matchWholeWord: bool = ..., mww: bool = ..., searchEvent: str = ..., se: str = ..., segmentCount: bool = ..., sc: bool = ..., showAllEvent: bool = ..., sa: bool = ..., showCriticalPath: bool = ..., scp: bool = ..., showHotspot: bool = ..., sh: bool = ..., showSelectedEvents: bool = ..., ss: bool = ..., showSelectedEventsRepetition: bool = ..., ssr: bool = ..., threadView: bool = ..., thd: bool = ..., unisolateSegment: bool = ..., uis: bool = ..., **kwargs: Any) -> None:
+def profilerTool(*args, **kwargs) -> None:
     """Flags:
     - `categoryView` `cat`: *bool*
     - `collapseSelectedEvents` `cs`: *bool*
@@ -39562,8 +39562,8 @@ def progressBar(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def progressBar(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def progressBar(*args: Any, **kwargs: Any) -> str: ...
-def progressBar(*args: Any, **kwargs: Any) -> Any:
+def progressBar(*args, **kwargs) -> str: ...
+def progressBar(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -39648,8 +39648,8 @@ def progressWindow(*args: Any, q: bool, showProgressPercentText: bool) -> bool: 
 @overload
 def progressWindow(*args: Any, q: bool, spt: bool) -> bool: ...
 @overload
-def progressWindow(*args: Any, **kwargs: Any) -> bool: ...
-def progressWindow(*args: Any, **kwargs: Any) -> Any:
+def progressWindow(*args, **kwargs) -> bool: ...
+def progressWindow(*args, **kwargs) -> bool:
     """Flags:
     - `endProgress` `ep`: *bool*
     - `isCancelled` `ic`: *bool*
@@ -39712,8 +39712,8 @@ def projectCurve(*args: Any, q: bool, useNormal: bool) -> bool: ...
 @overload
 def projectCurve(*args: Any, q: bool, un: bool) -> bool: ...
 @overload
-def projectCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def projectCurve(*args: Any, **kwargs: Any) -> Any:
+def projectCurve(*args, **kwargs) -> list[str]: ...
+def projectCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -39781,8 +39781,8 @@ def projectTangent(*args: Any, q: bool, reverseTangent: bool) -> bool: ...
 @overload
 def projectTangent(*args: Any, q: bool, rt: bool) -> bool: ...
 @overload
-def projectTangent(*args: Any, **kwargs: Any) -> list[str]: ...
-def projectTangent(*args: Any, **kwargs: Any) -> Any:
+def projectTangent(*args, **kwargs) -> list[str]: ...
+def projectTangent(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -39798,7 +39798,7 @@ def projectTangent(*args: Any, **kwargs: Any) -> Any:
     - `tangentDirection` `td`: *int*
     - `tangentScale` `ts`: *float*
     """
-def projectionContext(*args: Any, exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., **kwargs: Any) -> str:
+def projectionContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -39820,8 +39820,8 @@ def projectionManip(*args: Any, q: bool, switchType: bool) -> bool: ...
 @overload
 def projectionManip(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def projectionManip(*args: Any, **kwargs: Any) -> None: ...
-def projectionManip(*args: Any, **kwargs: Any) -> Any:
+def projectionManip(*args, **kwargs) -> None: ...
+def projectionManip(*args, **kwargs) -> None:
     """Flags:
     - `fitBBox` `fb`: *bool*
     - `projType` `pt`: *int*
@@ -39872,8 +39872,8 @@ def promptDialog(*args: Any, q: bool, scrollableField: bool) -> bool: ...
 @overload
 def promptDialog(*args: Any, q: bool, sf: bool) -> bool: ...
 @overload
-def promptDialog(*args: Any, **kwargs: Any) -> str: ...
-def promptDialog(*args: Any, **kwargs: Any) -> Any:
+def promptDialog(*args, **kwargs) -> str: ...
+def promptDialog(*args, **kwargs) -> str:
     """Flags:
     - `backgroundColor` `bgc`: *Any*
     - `button` `b`: *str*
@@ -39949,8 +39949,8 @@ def propModCtx(*args: Any, q: bool, worldspace: bool) -> bool: ...
 @overload
 def propModCtx(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def propModCtx(*args: Any, **kwargs: Any) -> str: ...
-def propModCtx(*args: Any, **kwargs: Any) -> Any:
+def propModCtx(*args, **kwargs) -> str: ...
+def propModCtx(*args, **kwargs) -> str:
     """Flags:
     - `animCurve` `ac`: *str*
     - `animCurveFalloff` `acf`: *Any*
@@ -39972,7 +39972,7 @@ def propModCtx(*args: Any, **kwargs: Any) -> Any:
     - `type` `t`: *int*
     - `worldspace` `ws`: *bool*
     """
-def propMove(*args: Any, percent: float = ..., p: float = ..., percentX: float = ..., px: float = ..., percentY: float = ..., py: float = ..., percentZ: float = ..., pz: float = ..., pivot: Any = ..., pi: Any = ..., rotate: Any = ..., r: Any = ..., scale: Any = ..., s: Any = ..., translate: list[float] = ..., t: list[float] = ..., worldSpace: bool = ..., ws: bool = ..., **kwargs: Any) -> None:
+def propMove(*args, **kwargs) -> None:
     """Flags:
     - `percent` `p`: *float*
     - `percentX` `px`: *float*
@@ -40013,8 +40013,8 @@ def proximityWrap(*args: Any, q: bool, freeDriverIndex: bool) -> bool: ...
 @overload
 def proximityWrap(*args: Any, q: bool, fdi: bool) -> bool: ...
 @overload
-def proximityWrap(*args: Any, **kwargs: Any) -> list[str]: ...
-def proximityWrap(*args: Any, **kwargs: Any) -> Any:
+def proximityWrap(*args, **kwargs) -> list[str]: ...
+def proximityWrap(*args, **kwargs) -> list[str]:
     """Flags:
     - `addDrivers` `ad`: *str*
     - `applyUserDefaults` `aud`: *bool*
@@ -40024,7 +40024,7 @@ def proximityWrap(*args: Any, **kwargs: Any) -> Any:
     - `freeDriverIndex` `fdi`: *bool*
     - `removeDrivers` `rd`: *str*
     """
-def psdChannelOutliner(*args: Any, addChild: Any = ..., ach: Any = ..., allItems: bool = ..., all: bool = ..., annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., doubleClickCommand: str = ..., dcc: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfItems: bool = ..., ni: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., psdParent: str = ..., ppa: str = ..., removeAll: bool = ..., ra: bool = ..., removeChild: str = ..., rc: str = ..., select: str = ..., sel: str = ..., selectCommand: str = ..., sc: str = ..., selectItem: bool = ..., si: bool = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def psdChannelOutliner(*args, **kwargs) -> str:
     """Flags:
     - `addChild` `ach`: *Any*
     - `allItems` `all`: *bool*
@@ -40062,7 +40062,7 @@ def psdChannelOutliner(*args: Any, addChild: Any = ..., ach: Any = ..., allItems
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def psdEditTextureFile(*args: Any, addChannel: str = ..., adc: str = ..., addChannelColor: Any = ..., acc: Any = ..., addChannelImage: Any = ..., aci: Any = ..., deleteChannel: str = ..., psdFileName: str = ..., psf: str = ..., snapShotImage: str = ..., ssi: str = ..., uvSnapPostionTop: bool = ..., uvt: bool = ..., **kwargs: Any) -> None:
+def psdEditTextureFile(*args, **kwargs) -> None:
     """Flags:
     - `addChannel` `adc`: *str*
     - `addChannelColor` `acc`: *Any*
@@ -40072,7 +40072,7 @@ def psdEditTextureFile(*args: Any, addChannel: str = ..., adc: str = ..., addCha
     - `snapShotImage` `ssi`: *str*
     - `uvSnapPostionTop` `uvt`: *bool*
     """
-def psdExport(*args: Any, alphaChannelIdx: int = ..., aci: int = ..., bytesPerChannel: int = ..., bpc: int = ..., emptyLayerSet: bool = ..., els: bool = ..., format: str = ..., layerName: str = ..., lyn: str = ..., layerSetName: str = ..., lsn: str = ..., outFileName: str = ..., ofn: str = ..., preMultiplyAlpha: bool = ..., pma: bool = ..., psdFileName: str = ..., ifn: str = ..., **kwargs: Any) -> None:
+def psdExport(*args, **kwargs) -> None:
     """Flags:
     - `alphaChannelIdx` `aci`: *int*
     - `bytesPerChannel` `bpc`: *int*
@@ -40084,7 +40084,7 @@ def psdExport(*args: Any, alphaChannelIdx: int = ..., aci: int = ..., bytesPerCh
     - `preMultiplyAlpha` `pma`: *bool*
     - `psdFileName` `ifn`: *str*
     """
-def psdTextureFile(*args: Any, channelRGB: Any = ..., chc: Any = ..., channels: Any = ..., chs: Any = ..., imageFileName: Any = ..., ifn: Any = ..., psdFileName: str = ..., psf: str = ..., snapShotImageName: str = ..., ssi: str = ..., uvSnapPostionTop: bool = ..., uvt: bool = ..., xResolution: int = ..., xr: int = ..., yResolution: int = ..., yr: int = ..., **kwargs: Any) -> None:
+def psdTextureFile(*args, **kwargs) -> None:
     """Flags:
     - `channelRGB` `chc`: *Any*
     - `channels` `chs`: *Any*
@@ -40095,13 +40095,13 @@ def psdTextureFile(*args: Any, channelRGB: Any = ..., chc: Any = ..., channels: 
     - `xResolution` `xr`: *int*
     - `yResolution` `yr`: *int*
     """
-def querySubdiv(*args: Any, action: int = ..., a: int = ..., level: int = ..., l: int = ..., relative: bool = ..., r: bool = ..., **kwargs: Any) -> bool:
+def querySubdiv(*args, **kwargs) -> bool:
     """Flags:
     - `action` `a`: *int*
     - `level` `l`: *int*
     - `relative` `r`: *bool*
     """
-def quit(*args: Any, abort: bool = ..., a: bool = ..., exitCode: int = ..., ec: int = ..., force: bool = ..., f: bool = ..., **kwargs: Any) -> None:
+def quit(*args, **kwargs) -> None:
     """Flags:
     - `abort` `a`: *bool*
     - `exitCode` `ec`: *int*
@@ -40188,8 +40188,8 @@ def radioButton(*args: Any, q: bool, enable: bool) -> bool: ...
 @overload
 def radioButton(*args: Any, q: bool, en: bool) -> bool: ...
 @overload
-def radioButton(*args: Any, **kwargs: Any) -> str: ...
-def radioButton(*args: Any, **kwargs: Any) -> Any:
+def radioButton(*args, **kwargs) -> str: ...
+def radioButton(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -40308,8 +40308,8 @@ def radioButtonGrp(*args: Any, q: bool, data1: bool) -> int: ...
 @overload
 def radioButtonGrp(*args: Any, q: bool, da1: bool) -> int: ...
 @overload
-def radioButtonGrp(*args: Any, **kwargs: Any) -> str: ...
-def radioButtonGrp(*args: Any, **kwargs: Any) -> Any:
+def radioButtonGrp(*args, **kwargs) -> str: ...
+def radioButtonGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -40440,8 +40440,8 @@ def radioCollection(*args: Any, q: bool, numberOfCollectionItems: bool) -> bool:
 @overload
 def radioCollection(*args: Any, q: bool, nci: bool) -> bool: ...
 @overload
-def radioCollection(*args: Any, **kwargs: Any) -> str: ...
-def radioCollection(*args: Any, **kwargs: Any) -> Any:
+def radioCollection(*args, **kwargs) -> str: ...
+def radioCollection(*args, **kwargs) -> str:
     """Flags:
     - `collectionItemArray` `cia`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -40471,8 +40471,8 @@ def radioMenuItemCollection(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
 def radioMenuItemCollection(*args: Any, q: bool, gl: bool) -> bool: ...
 @overload
-def radioMenuItemCollection(*args: Any, **kwargs: Any) -> str: ...
-def radioMenuItemCollection(*args: Any, **kwargs: Any) -> Any:
+def radioMenuItemCollection(*args, **kwargs) -> str: ...
+def radioMenuItemCollection(*args, **kwargs) -> str:
     """Flags:
     - `defineTemplate` `dt`: *str*
     - `exists` `ex`: *bool*
@@ -40480,7 +40480,7 @@ def radioMenuItemCollection(*args: Any, **kwargs: Any) -> Any:
     - `parent` `p`: *str*
     - `useTemplate` `ut`: *str*
     """
-def rampColorPort(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., node: str = ..., n: str = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., selectedColorControl: str = ..., sc: str = ..., selectedInterpControl: str = ..., si: str = ..., selectedPositionControl: str = ..., sp: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., verticalLayout: bool = ..., vl: bool = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def rampColorPort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -40594,8 +40594,8 @@ def rangeControl(*args: Any, q: bool, isObscured: bool) -> bool: ...
 @overload
 def rangeControl(*args: Any, q: bool, io: bool) -> bool: ...
 @overload
-def rangeControl(*args: Any, **kwargs: Any) -> str: ...
-def rangeControl(*args: Any, **kwargs: Any) -> Any:
+def rangeControl(*args, **kwargs) -> str: ...
+def rangeControl(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -40627,7 +40627,7 @@ def rangeControl(*args: Any, **kwargs: Any) -> Any:
     - `width` `w`: *int*
     - `widthHeight` `wh`: *Any*
     """
-def readTake(*args: Any, angle: str = ..., a: str = ..., device: str = ..., d: str = ..., frequency: float = ..., f: float = ..., linear: str = ..., l: str = ..., noTime: bool = ..., nt: bool = ..., take: str = ..., t: str = ..., **kwargs: Any) -> None:
+def readTake(*args, **kwargs) -> None:
     """Flags:
     - `angle` `a`: *str*
     - `device` `d`: *str*
@@ -40709,8 +40709,8 @@ def rebuildCurve(*args: Any, q: bool, smartSurfaceCurveRebuild: bool) -> bool: .
 @overload
 def rebuildCurve(*args: Any, q: bool, scr: bool) -> bool: ...
 @overload
-def rebuildCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def rebuildCurve(*args: Any, **kwargs: Any) -> Any:
+def rebuildCurve(*args, **kwargs) -> list[str]: ...
+def rebuildCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -40808,8 +40808,8 @@ def rebuildSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def rebuildSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def rebuildSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def rebuildSurface(*args: Any, **kwargs: Any) -> Any:
+def rebuildSurface(*args, **kwargs) -> list[str]: ...
+def rebuildSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -40840,13 +40840,13 @@ def recordAttr(*args: Any, q: bool, delete: bool) -> bool: ...
 @overload
 def recordAttr(*args: Any, q: bool, d: bool) -> bool: ...
 @overload
-def recordAttr(*args: Any, **kwargs: Any) -> None: ...
-def recordAttr(*args: Any, **kwargs: Any) -> Any:
+def recordAttr(*args, **kwargs) -> None: ...
+def recordAttr(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `at`: *str*
     - `delete` `d`: *bool*
     """
-def recordDevice(*args: Any, cleanup: bool = ..., c: bool = ..., data: bool = ..., da: bool = ..., device: str = ..., d: str = ..., duration: int = ..., dr: int = ..., playback: bool = ..., p: bool = ..., state: bool = ..., st: bool = ..., wait: bool = ..., w: bool = ..., **kwargs: Any) -> None:
+def recordDevice(*args, **kwargs) -> None:
     """Flags:
     - `cleanup` `c`: *bool*
     - `data` `da`: *bool*
@@ -40856,9 +40856,9 @@ def recordDevice(*args: Any, cleanup: bool = ..., c: bool = ..., data: bool = ..
     - `state` `st`: *bool*
     - `wait` `w`: *bool*
     """
-def redo(*args: Any) -> None: ...
-def reference(*args: Any) -> Any: ...
-def referenceEdit(*args: Any, applyFailedEdits: bool = ..., afe: bool = ..., changeEditTarget: Any = ..., cet: Any = ..., editCommand: str = ..., ec: str = ..., failedEdits: bool = ..., fld: bool = ..., onReferenceNode: str = ..., orn: str = ..., removeEdits: bool = ..., r: bool = ..., successfulEdits: bool = ..., scs: bool = ..., **kwargs: Any) -> None:
+def redo(*args, **kwargs) -> None: ...
+def reference(*args, **kwargs) -> Any: ...
+def referenceEdit(*args, **kwargs) -> None:
     """Flags:
     - `applyFailedEdits` `afe`: *bool*
     - `changeEditTarget` `cet`: *Any*
@@ -40868,7 +40868,7 @@ def referenceEdit(*args: Any, applyFailedEdits: bool = ..., afe: bool = ..., cha
     - `removeEdits` `r`: *bool*
     - `successfulEdits` `scs`: *bool*
     """
-def referenceQuery(*args: Any, child: bool = ..., ch: bool = ..., dagPath: bool = ..., dp: bool = ..., editAttrs: bool = ..., ea: bool = ..., editCommand: str = ..., ec: str = ..., editNodes: bool = ..., en: bool = ..., editStrings: bool = ..., es: bool = ..., failedEdits: bool = ..., fld: bool = ..., filename: bool = ..., f: bool = ..., isExportEdits: bool = ..., iee: bool = ..., isLoaded: bool = ..., il: bool = ..., isNodeReferenced: bool = ..., inr: bool = ..., isPreviewOnly: bool = ..., ipo: bool = ..., liveEdits: bool = ..., le: bool = ..., namespace: bool = ..., ns: bool = ..., nodes: bool = ..., n: bool = ..., onReferenceNode: str = ..., orn: str = ..., parent: bool = ..., p: bool = ..., parentNamespace: bool = ..., pns: bool = ..., referenceNode: bool = ..., rfn: bool = ..., shortName: bool = ..., shn: bool = ..., showDagPath: bool = ..., sdp: bool = ..., showFullPath: bool = ..., sfp: bool = ..., showNamespace: bool = ..., sns: bool = ..., successfulEdits: bool = ..., scs: bool = ..., topReference: bool = ..., tr: bool = ..., unresolvedName: bool = ..., un: bool = ..., withoutCopyNumber: bool = ..., wcn: bool = ..., **kwargs: Any) -> list[str]:
+def referenceQuery(*args, **kwargs) -> list[str]:
     """Flags:
     - `child` `ch`: *bool*
     - `dagPath` `dp`: *bool*
@@ -40898,8 +40898,8 @@ def referenceQuery(*args: Any, child: bool = ..., ch: bool = ..., dagPath: bool 
     - `unresolvedName` `un`: *bool*
     - `withoutCopyNumber` `wcn`: *bool*
     """
-def refineSubdivSelectionList(*args: Any) -> bool: ...
-def refresh(*args: Any, currentView: bool = ..., cv: bool = ..., fileExtension: str = ..., fe: str = ..., filename: str = ..., fn: str = ..., force: bool = ..., f: bool = ..., suspend: bool = ..., su: bool = ..., **kwargs: Any) -> None:
+def refineSubdivSelectionList(*args, **kwargs) -> bool: ...
+def refresh(*args, **kwargs) -> None:
     """Flags:
     - `currentView` `cv`: *bool*
     - `fileExtension` `fe`: *str*
@@ -40907,7 +40907,7 @@ def refresh(*args: Any, currentView: bool = ..., cv: bool = ..., fileExtension: 
     - `force` `f`: *bool*
     - `suspend` `su`: *bool*
     """
-def refreshEditorTemplates(*args: Any) -> None: ...
+def refreshEditorTemplates(*args, **kwargs) -> None: ...
 @overload
 def regionSelectKeyCtx(*args: Any, q: bool, bottomManip: bool) -> float: ...
 @overload
@@ -40949,8 +40949,8 @@ def regionSelectKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def regionSelectKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def regionSelectKeyCtx(*args: Any, **kwargs: Any) -> float: ...
-def regionSelectKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def regionSelectKeyCtx(*args, **kwargs) -> float: ...
+def regionSelectKeyCtx(*args, **kwargs) -> float:
     """Flags:
     - `bottomManip` `bot`: *float*
     - `exists` `ex`: *bool*
@@ -40970,28 +40970,28 @@ def relationship(*args: Any, q: bool, rd: bool) -> str: ...
 @overload
 def relationship(*args: Any, q: bool, b: bool) -> bool: ...
 @overload
-def relationship(*args: Any, **kwargs: Any) -> None: ...
-def relationship(*args: Any, **kwargs: Any) -> Any:
+def relationship(*args, **kwargs) -> None: ...
+def relationship(*args, **kwargs) -> None:
     """Flags:
     - `b` `b`: *bool*
     - `relationshipData` `rd`: *str*
     """
-def reloadImage(*args: Any) -> bool: ...
-def rememberCtxSettings(*args: Any) -> None: ...
-def removeJoint(*args: Any) -> None: ...
-def removeMultiInstance(*args: Any, allChildren: bool = ..., all: bool = ..., b: bool = ..., **kwargs: Any) -> bool:
+def reloadImage(*args, **kwargs) -> bool: ...
+def rememberCtxSettings(*args, **kwargs) -> None: ...
+def removeJoint(*args, **kwargs) -> None: ...
+def removeMultiInstance(*args, **kwargs) -> bool:
     """Flags:
     - `allChildren` `all`: *bool*
     - `b` `b`: *bool*
     """
-def rename(*args: Any, ignoreShape: bool = ..., uuid: bool = ..., uid: bool = ..., **kwargs: Any) -> str:
+def rename(*args, **kwargs) -> str:
     """Flags:
     - `ignoreShape` `ignoreShape`: *bool*
     - `uuid` `uid`: *bool*
     """
-def renameAttr(*args: Any) -> str: ...
-def renameUI(*args: Any) -> str: ...
-def render(*args: Any, abortMissingTexture: bool = ..., amt: bool = ..., batch: bool = ..., b: bool = ..., keepPreImage: bool = ..., kpi: bool = ..., layer: str = ..., l: str = ..., nglowpass: bool = ..., ngl: bool = ..., nshadows: bool = ..., nsh: bool = ..., replace: bool = ..., rep: bool = ..., xresolution: int = ..., x: int = ..., yresolution: int = ..., y: int = ..., **kwargs: Any) -> str:
+def renameAttr(*args, **kwargs) -> str: ...
+def renameUI(*args, **kwargs) -> str: ...
+def render(*args, **kwargs) -> str:
     """Flags:
     - `abortMissingTexture` `amt`: *bool*
     - `batch` `b`: *bool*
@@ -41003,7 +41003,7 @@ def render(*args: Any, abortMissingTexture: bool = ..., amt: bool = ..., batch: 
     - `xresolution` `x`: *int*
     - `yresolution` `y`: *int*
     """
-def renderGlobalsNode(*args: Any, name: str = ..., n: str = ..., parent: str = ..., p: str = ..., renderQuality: str = ..., rq: str = ..., renderResolution: str = ..., rr: str = ..., shared: bool = ..., s: bool = ..., skipSelect: bool = ..., ss: bool = ..., **kwargs: Any) -> str:
+def renderGlobalsNode(*args, **kwargs) -> str:
     """Flags:
     - `name` `n`: *str*
     - `parent` `p`: *str*
@@ -41081,8 +41081,8 @@ def renderInfo(*args: Any, q: bool, useMinScreen: bool) -> bool: ...
 @overload
 def renderInfo(*args: Any, q: bool, ums: bool) -> bool: ...
 @overload
-def renderInfo(*args: Any, **kwargs: Any) -> None: ...
-def renderInfo(*args: Any, **kwargs: Any) -> Any:
+def renderInfo(*args, **kwargs) -> None: ...
+def renderInfo(*args, **kwargs) -> None:
     """Flags:
     - `castShadows` `cs`: *bool*
     - `chordHeight` `ch`: *float*
@@ -41111,8 +41111,8 @@ def renderLayerPostProcess(*args: Any, q: bool, keepImages: bool) -> bool: ...
 @overload
 def renderLayerPostProcess(*args: Any, q: bool, ki: bool) -> bool: ...
 @overload
-def renderLayerPostProcess(*args: Any, **kwargs: Any) -> None: ...
-def renderLayerPostProcess(*args: Any, **kwargs: Any) -> Any:
+def renderLayerPostProcess(*args, **kwargs) -> None: ...
+def renderLayerPostProcess(*args, **kwargs) -> None:
     """Flags:
     - `keepImages` `ki`: *bool*
     - `sceneName` `sn`: *str*
@@ -41122,16 +41122,16 @@ def renderManip(*args: Any, q: bool, state: bool) -> bool: ...
 @overload
 def renderManip(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def renderManip(*args: Any, **kwargs: Any) -> None: ...
-def renderManip(*args: Any, **kwargs: Any) -> Any:
+def renderManip(*args, **kwargs) -> None: ...
+def renderManip(*args, **kwargs) -> None:
     """Flags:
     - `camera` `cam`: *Any*
     - `light` `lt`: *Any*
     - `spotLight` `slt`: *Any*
     - `state` `st`: *bool*
     """
-def renderPartition(*args: Any) -> str: ...
-def renderPassRegistry(*args: Any, channels: int = ..., ch: int = ..., isPassSupported: bool = ..., ips: bool = ..., passID: str = ..., pi: str = ..., passName: bool = ..., pn: bool = ..., renderer: str = ..., r: str = ..., supportedChannelCounts: bool = ..., scc: bool = ..., supportedDataTypes: bool = ..., sdt: bool = ..., supportedPassSemantics: bool = ..., ps: bool = ..., supportedRenderPassNames: bool = ..., spn: bool = ..., supportedRenderPasses: bool = ..., srp: bool = ..., **kwargs: Any) -> list[str]:
+def renderPartition(*args, **kwargs) -> str: ...
+def renderPassRegistry(*args, **kwargs) -> list[str]:
     """Flags:
     - `channels` `ch`: *int*
     - `isPassSupported` `ips`: *bool*
@@ -41144,14 +41144,14 @@ def renderPassRegistry(*args: Any, channels: int = ..., ch: int = ..., isPassSup
     - `supportedRenderPassNames` `spn`: *bool*
     - `supportedRenderPasses` `srp`: *bool*
     """
-def renderQualityNode(*args: Any, name: str = ..., n: str = ..., parent: str = ..., p: str = ..., shared: bool = ..., s: bool = ..., skipSelect: bool = ..., ss: bool = ..., **kwargs: Any) -> str:
+def renderQualityNode(*args, **kwargs) -> str:
     """Flags:
     - `name` `n`: *str*
     - `parent` `p`: *str*
     - `shared` `s`: *bool*
     - `skipSelect` `ss`: *bool*
     """
-def renderSettings(*args: Any, camera: str = ..., cam: str = ..., customTokenString: str = ..., cts: str = ..., firstImageName: bool = ..., fin: bool = ..., fullPath: bool = ..., fp: bool = ..., fullPathTemp: bool = ..., fpt: bool = ..., genericFrameImageName: str = ..., gin: str = ..., imageGenericName: bool = ..., ign: bool = ..., lastImageName: bool = ..., lin: bool = ..., layer: str = ..., lyr: str = ..., leaveUnmatchedTokens: bool = ..., lut: bool = ..., **kwargs: Any) -> list[str]:
+def renderSettings(*args, **kwargs) -> list[str]:
     """Flags:
     - `camera` `cam`: *str*
     - `customTokenString` `cts`: *str*
@@ -41164,11 +41164,11 @@ def renderSettings(*args: Any, camera: str = ..., cam: str = ..., customTokenStr
     - `layer` `lyr`: *str*
     - `leaveUnmatchedTokens` `lut`: *bool*
     """
-def renderThumbnailUpdate(*args: Any, forceUpdate: str = ..., fu: str = ..., **kwargs: Any) -> None:
+def renderThumbnailUpdate(*args, **kwargs) -> None:
     """Flags:
     - `forceUpdate` `fu`: *str*
     """
-def renderWindowEditor(*args: Any, autoResize: bool = ..., ar: bool = ..., blendMode: int = ..., blm: int = ..., caption: str = ..., cap: str = ..., changeCommand: Any = ..., cc: Any = ..., clear: Any = ..., cl: Any = ..., cmEnabled: bool = ..., cme: bool = ..., colorManage: bool = ..., com: bool = ..., compDisplay: int = ..., cd: int = ..., compImageFile: str = ..., cif: str = ..., control: bool = ..., ctl: bool = ..., currentCamera: str = ..., crc: str = ..., currentCameraRig: str = ..., crg: str = ..., defineTemplate: str = ..., dt: str = ..., displayImage: int = ..., di: int = ..., displayImageViewCount: int = ..., dvc: int = ..., displayStyle: str = ..., dst: str = ..., docTag: str = ..., dtg: str = ..., doubleBuffer: bool = ..., dbf: bool = ..., drawAxis: bool = ..., da: bool = ..., editorName: bool = ..., en: bool = ..., exists: bool = ..., ex: bool = ..., exposure: float = ..., exp: float = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., frameImage: bool = ..., fi: bool = ..., frameRegion: bool = ..., fr: bool = ..., gamma: float = ..., ga: float = ..., highlightConnection: str = ..., hlc: str = ..., loadImage: str = ..., li: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., marquee: Any = ..., mq: Any = ..., nbImages: bool = ..., nim: bool = ..., nextViewImage: bool = ..., nvi: bool = ..., outputColorManage: bool = ..., ocm: bool = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., pcaption: str = ..., pca: str = ..., realSize: bool = ..., rs: bool = ..., refresh: bool = ..., ref: bool = ..., removeAllImages: bool = ..., ra: bool = ..., removeImage: bool = ..., ri: bool = ..., resetRegion: bool = ..., rr: bool = ..., resetViewImage: bool = ..., rvi: bool = ..., saveImage: bool = ..., si: bool = ..., scaleBlue: float = ..., sb: float = ..., scaleGreen: float = ..., sg: float = ..., scaleRed: float = ..., sr: float = ..., selectionConnection: str = ..., slc: str = ..., showRegion: Any = ..., srg: Any = ..., singleBuffer: bool = ..., sbf: bool = ..., snapshot: Any = ..., snp: Any = ..., snapshotMode: bool = ..., snm: bool = ..., stateString: bool = ..., sts: bool = ..., stereo: int = ..., s: int = ..., stereoImageOrientation: Any = ..., sio: Any = ..., stereoMode: str = ..., sm: str = ..., toggle: bool = ..., tgl: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., viewImageCount: int = ..., vic: int = ..., viewTransformName: str = ..., vtn: str = ..., writeImage: str = ..., wi: str = ..., **kwargs: Any) -> str:
+def renderWindowEditor(*args, **kwargs) -> str:
     """Flags:
     - `autoResize` `ar`: *bool*
     - `blendMode` `blm`: *int*
@@ -41236,7 +41236,7 @@ def renderWindowEditor(*args: Any, autoResize: bool = ..., ar: bool = ..., blend
     - `viewTransformName` `vtn`: *str*
     - `writeImage` `wi`: *str*
     """
-def renderWindowSelectContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def renderWindowSelectContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -41324,8 +41324,8 @@ def renderer(*args: Any, q: bool, renderGlobalsProcedure: bool) -> str: ...
 @overload
 def renderer(*args: Any, q: bool, rg: bool) -> str: ...
 @overload
-def renderer(*args: Any, **kwargs: Any) -> None: ...
-def renderer(*args: Any, **kwargs: Any) -> Any:
+def renderer(*args, **kwargs) -> None: ...
+def renderer(*args, **kwargs) -> None:
     """Flags:
     - `addGlobalsNode` `agn`: *str*
     - `addGlobalsTab` `agt`: *Any*
@@ -41374,7 +41374,7 @@ def renderer(*args: Any, **kwargs: Any) -> Any:
     - `textureBakingProcedure` `tb`: *str*
     - `unregisterRenderer` `unr`: *bool*
     """
-def reorder(*args: Any, back: bool = ..., b: bool = ..., front: bool = ..., f: bool = ..., relative: int = ..., r: int = ..., **kwargs: Any) -> None:
+def reorder(*args, **kwargs) -> None:
     """Flags:
     - `back` `b`: *bool*
     - `front` `f`: *bool*
@@ -41393,32 +41393,32 @@ def reorderContainer(*args: Any, q: bool, front: bool) -> bool: ...
 @overload
 def reorderContainer(*args: Any, q: bool, f: bool) -> bool: ...
 @overload
-def reorderContainer(*args: Any, **kwargs: Any) -> None: ...
-def reorderContainer(*args: Any, **kwargs: Any) -> Any:
+def reorderContainer(*args, **kwargs) -> None: ...
+def reorderContainer(*args, **kwargs) -> None:
     """Flags:
     - `back` `b`: *bool*
     - `front` `f`: *bool*
     - `relative` `r`: *int*
     """
-def reorderDeformers(*args: Any, name: str = ..., n: str = ..., **kwargs: Any) -> None:
+def reorderDeformers(*args, **kwargs) -> None:
     """Flags:
     - `name` `n`: *str*
     """
-def requires(*args: Any, dataType: str = ..., dt: str = ..., nodeType: str = ..., nt: str = ..., **kwargs: Any) -> None:
+def requires(*args, **kwargs) -> None:
     """Flags:
     - `dataType` `dt`: *str*
     - `nodeType` `nt`: *str*
     """
-def reroot(*args: Any) -> None: ...
-def resetTool(*args: Any) -> None: ...
-def resolutionNode(*args: Any, name: str = ..., n: str = ..., parent: str = ..., p: str = ..., shared: bool = ..., s: bool = ..., skipSelect: bool = ..., ss: bool = ..., **kwargs: Any) -> str:
+def reroot(*args, **kwargs) -> None: ...
+def resetTool(*args, **kwargs) -> None: ...
+def resolutionNode(*args, **kwargs) -> str:
     """Flags:
     - `name` `n`: *str*
     - `parent` `p`: *str*
     - `shared` `s`: *bool*
     - `skipSelect` `ss`: *bool*
     """
-def resourceManager(*args: Any, nameFilter: str = ..., nf: str = ..., saveAs: Any = ..., s: Any = ..., **kwargs: Any) -> None:
+def resourceManager(*args, **kwargs) -> None:
     """Flags:
     - `nameFilter` `nf`: *str*
     - `saveAs` `s`: *Any*
@@ -41456,8 +41456,8 @@ def retimeKeyCtx(*args: Any, q: bool, snapOnFrame: bool) -> bool: ...
 @overload
 def retimeKeyCtx(*args: Any, q: bool, sof: bool) -> bool: ...
 @overload
-def retimeKeyCtx(*args: Any, **kwargs: Any) -> bool: ...
-def retimeKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def retimeKeyCtx(*args, **kwargs) -> bool: ...
+def retimeKeyCtx(*args, **kwargs) -> bool:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -41501,8 +41501,8 @@ def reverseCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def reverseCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def reverseCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def reverseCurve(*args: Any, **kwargs: Any) -> Any:
+def reverseCurve(*args, **kwargs) -> list[str]: ...
+def reverseCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -41542,8 +41542,8 @@ def reverseSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def reverseSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def reverseSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def reverseSurface(*args: Any, **kwargs: Any) -> Any:
+def reverseSurface(*args, **kwargs) -> list[str]: ...
+def reverseSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -41634,8 +41634,8 @@ def revolve(*args: Any, q: bool, tolerance: bool) -> float: ...
 @overload
 def revolve(*args: Any, q: bool, tol: bool) -> float: ...
 @overload
-def revolve(*args: Any, **kwargs: Any) -> list[str]: ...
-def revolve(*args: Any, **kwargs: Any) -> Any:
+def revolve(*args, **kwargs) -> list[str]: ...
+def revolve(*args, **kwargs) -> list[str]:
     """Flags:
     - `autoCorrectNormal` `acn`: *bool*
     - `axis` `ax`: *list[float]*
@@ -41667,7 +41667,7 @@ def revolve(*args: Any, **kwargs: Any) -> Any:
     - `useLocalPivot` `ulp`: *bool*
     - `useTolerance` `ut`: *bool*
     """
-def roll(*args: Any, absolute: bool = ..., abs: bool = ..., degree: float = ..., d: float = ..., relative: bool = ..., rel: bool = ..., **kwargs: Any) -> None:
+def roll(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `abs`: *bool*
     - `degree` `d`: *float*
@@ -41710,8 +41710,8 @@ def rollCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def rollCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def rollCtx(*args: Any, **kwargs: Any) -> str: ...
-def rollCtx(*args: Any, **kwargs: Any) -> Any:
+def rollCtx(*args, **kwargs) -> str: ...
+def rollCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `exists` `ex`: *bool*
@@ -41723,7 +41723,7 @@ def rollCtx(*args: Any, **kwargs: Any) -> Any:
     - `rollScale` `rs`: *float*
     - `toolName` `tn`: *str*
     """
-def rotate(*args: Any, absolute: bool = ..., a: bool = ..., centerPivot: bool = ..., cp: bool = ..., componentSpace: bool = ..., cs: bool = ..., constrainAlongNormal: bool = ..., xn: bool = ..., deletePriorHistory: bool = ..., dph: bool = ..., euler: bool = ..., eu: bool = ..., forceOrderXYZ: bool = ..., fo: bool = ..., objectCenterPivot: bool = ..., ocp: bool = ..., objectSpace: bool = ..., os: bool = ..., orientAxes: Any = ..., oa: Any = ..., pivot: list[float] = ..., p: list[float] = ..., preserveChildPosition: bool = ..., pcp: bool = ..., preserveGeometryPosition: bool = ..., pgp: bool = ..., preserveUV: bool = ..., puv: bool = ..., reflection: bool = ..., rfl: bool = ..., reflectionAboutBBox: bool = ..., rab: bool = ..., reflectionAboutOrigin: bool = ..., rao: bool = ..., reflectionAboutX: bool = ..., rax: bool = ..., reflectionAboutY: bool = ..., ray: bool = ..., reflectionAboutZ: bool = ..., raz: bool = ..., reflectionTolerance: float = ..., rft: float = ..., relative: bool = ..., r: bool = ..., rotateX: bool = ..., x: bool = ..., rotateXY: bool = ..., xy: bool = ..., rotateXYZ: bool = ..., xyz: bool = ..., rotateXZ: bool = ..., xz: bool = ..., rotateY: bool = ..., y: bool = ..., rotateYZ: bool = ..., yz: bool = ..., rotateZ: bool = ..., z: bool = ..., symNegative: bool = ..., smn: bool = ..., translate: bool = ..., t: bool = ..., worldSpace: bool = ..., ws: bool = ..., xformConstraint: str = ..., xc: str = ..., **kwargs: Any) -> None:
+def rotate(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `centerPivot` `cp`: *bool*
@@ -41764,8 +41764,8 @@ def rotationInterpolation(*args: Any, q: bool, convert: bool) -> str: ...
 @overload
 def rotationInterpolation(*args: Any, q: bool, c: bool) -> str: ...
 @overload
-def rotationInterpolation(*args: Any, **kwargs: Any) -> None: ...
-def rotationInterpolation(*args: Any, **kwargs: Any) -> Any:
+def rotationInterpolation(*args, **kwargs) -> None: ...
+def rotationInterpolation(*args, **kwargs) -> None:
     """Flags:
     - `convert` `c`: *str*
     """
@@ -41798,8 +41798,8 @@ def roundConstantRadius(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def roundConstantRadius(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def roundConstantRadius(*args: Any, **kwargs: Any) -> list[str]: ...
-def roundConstantRadius(*args: Any, **kwargs: Any) -> Any:
+def roundConstantRadius(*args, **kwargs) -> list[str]: ...
+def roundConstantRadius(*args, **kwargs) -> list[str]:
     """Flags:
     - `append` `a`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -41891,8 +41891,8 @@ def rowColumnLayout(*args: Any, q: bool, enableKeyboardFocus: bool) -> bool: ...
 @overload
 def rowColumnLayout(*args: Any, q: bool, ekf: bool) -> bool: ...
 @overload
-def rowColumnLayout(*args: Any, **kwargs: Any) -> str: ...
-def rowColumnLayout(*args: Any, **kwargs: Any) -> Any:
+def rowColumnLayout(*args, **kwargs) -> str: ...
+def rowColumnLayout(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `annotation` `ann`: *str*
@@ -42019,8 +42019,8 @@ def rowLayout(*args: Any, q: bool, height: bool) -> int: ...
 @overload
 def rowLayout(*args: Any, q: bool, h: bool) -> int: ...
 @overload
-def rowLayout(*args: Any, **kwargs: Any) -> str: ...
-def rowLayout(*args: Any, **kwargs: Any) -> Any:
+def rowLayout(*args, **kwargs) -> str: ...
+def rowLayout(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn1` `ad1`: *int*
@@ -42168,8 +42168,8 @@ def runTimeCommand(*args: Any, q: bool, dca: bool) -> bool: ...
 @overload
 def runTimeCommand(*args: Any, q: bool, delete: bool) -> bool: ...
 @overload
-def runTimeCommand(*args: Any, **kwargs: Any) -> str: ...
-def runTimeCommand(*args: Any, **kwargs: Any) -> Any:
+def runTimeCommand(*args, **kwargs) -> str: ...
+def runTimeCommand(*args, **kwargs) -> str:
     """Flags:
     - `addKeyword` `ak`: *str*
     - `addTag` `at`: *str*
@@ -42199,13 +42199,13 @@ def runTimeCommand(*args: Any, **kwargs: Any) -> Any:
     - `userCommandArray` `uca`: *bool*
     - `version` `ver`: *str*
     """
-def sampleImage(*args: Any, fastSample: bool = ..., f: bool = ..., resolution: Any = ..., r: Any = ..., **kwargs: Any) -> None:
+def sampleImage(*args, **kwargs) -> None:
     """Flags:
     - `fastSample` `f`: *bool*
     - `resolution` `r`: *Any*
     """
-def saveAllShelves(*args: Any) -> bool: ...
-def saveImage(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., currentView: bool = ..., cv: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., image: str = ..., i: str = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., objectThumbnail: str = ..., ot: str = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., sceneFile: str = ..., sf: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def saveAllShelves(*args, **kwargs) -> bool: ...
+def saveImage(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -42237,12 +42237,12 @@ def saveImage(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def saveMenu(*args: Any) -> str: ...
-def savePrefObjects(*args: Any) -> bool: ...
-def saveShelf(*args: Any) -> bool: ...
-def saveToolSettings(*args: Any) -> None: ...
-def saveViewportSettings(*args: Any) -> None: ...
-def scale(*args: Any, absolute: bool = ..., a: bool = ..., centerPivot: bool = ..., cp: bool = ..., componentSpace: bool = ..., cs: bool = ..., constrainAlongNormal: bool = ..., xn: bool = ..., deletePriorHistory: bool = ..., dph: bool = ..., distanceOnly: bool = ..., dso: bool = ..., localSpace: bool = ..., ls: bool = ..., objectCenterPivot: bool = ..., ocp: bool = ..., objectSpace: bool = ..., os: bool = ..., orientAxes: Any = ..., oa: Any = ..., pivot: list[float] = ..., p: list[float] = ..., preserveChildPosition: bool = ..., pcp: bool = ..., preserveGeometryPosition: bool = ..., pgp: bool = ..., preserveUV: bool = ..., puv: bool = ..., reflection: bool = ..., rfl: bool = ..., reflectionAboutBBox: bool = ..., rab: bool = ..., reflectionAboutOrigin: bool = ..., rao: bool = ..., reflectionAboutX: bool = ..., rax: bool = ..., reflectionAboutY: bool = ..., ray: bool = ..., reflectionAboutZ: bool = ..., raz: bool = ..., reflectionTolerance: float = ..., rft: float = ..., relative: bool = ..., r: bool = ..., scaleX: bool = ..., x: bool = ..., scaleXY: bool = ..., xy: bool = ..., scaleXYZ: bool = ..., xyz: bool = ..., scaleXZ: bool = ..., xz: bool = ..., scaleY: bool = ..., y: bool = ..., scaleYZ: bool = ..., yz: bool = ..., scaleZ: bool = ..., z: bool = ..., symNegative: bool = ..., smn: bool = ..., worldSpace: bool = ..., ws: bool = ..., xformConstraint: str = ..., xc: str = ..., **kwargs: Any) -> None:
+def saveMenu(*args, **kwargs) -> str: ...
+def savePrefObjects(*args, **kwargs) -> bool: ...
+def saveShelf(*args, **kwargs) -> bool: ...
+def saveToolSettings(*args, **kwargs) -> None: ...
+def saveViewportSettings(*args, **kwargs) -> None: ...
+def scale(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `centerPivot` `cp`: *bool*
@@ -42277,7 +42277,7 @@ def scale(*args: Any, absolute: bool = ..., a: bool = ..., centerPivot: bool = .
     - `worldSpace` `ws`: *bool*
     - `xformConstraint` `xc`: *str*
     """
-def scaleComponents(*args: Any, pivot: list[float] = ..., p: list[float] = ..., rotation: Any = ..., ro: Any = ..., **kwargs: Any) -> None:
+def scaleComponents(*args, **kwargs) -> None:
     """Flags:
     - `pivot` `p`: *list[float]*
     - `rotation` `ro`: *Any*
@@ -42319,8 +42319,8 @@ def scaleConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def scaleConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def scaleConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def scaleConstraint(*args: Any, **kwargs: Any) -> Any:
+def scaleConstraint(*args, **kwargs) -> list[str]: ...
+def scaleConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `layer` `l`: *str*
     - `maintainOffset` `mo`: *bool*
@@ -42333,7 +42333,7 @@ def scaleConstraint(*args: Any, **kwargs: Any) -> Any:
     - `weight` `w`: *float*
     - `weightAliasList` `wal`: *bool*
     """
-def scaleKey(*args: Any, animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., autoSnap: bool = ..., asp: bool = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., floatPivot: float = ..., fp: float = ..., floatScale: float = ..., fs: float = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., newEndFloat: float = ..., nef: float = ..., newEndTime: float = ..., net: float = ..., newStartFloat: float = ..., nsf: float = ..., newStartTime: float = ..., nst: float = ..., scaleSpecifiedKeys: bool = ..., ssk: bool = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., timePivot: float = ..., tp: float = ..., timeScale: float = ..., ts: float = ..., valuePivot: float = ..., vp: float = ..., valueScale: float = ..., vs: float = ..., **kwargs: Any) -> int:
+def scaleKey(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -42390,8 +42390,8 @@ def scaleKeyCtx(*args: Any, q: bool, scaleSpecifiedKeys: bool) -> bool: ...
 @overload
 def scaleKeyCtx(*args: Any, q: bool, ssk: bool) -> bool: ...
 @overload
-def scaleKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def scaleKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def scaleKeyCtx(*args, **kwargs) -> str: ...
+def scaleKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -42402,7 +42402,7 @@ def scaleKeyCtx(*args: Any, **kwargs: Any) -> Any:
     - `scaleSpecifiedKeys` `ssk`: *bool*
     - `type` `typ`: *str*
     """
-def sceneEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., mainListConnection: str = ..., mlc: str = ..., onlyParents: bool = ..., op: bool = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., refreshReferences: bool = ..., rr: bool = ..., selectCommand: str = ..., sc: str = ..., selectItem: int = ..., si: int = ..., selectReference: str = ..., sr: str = ..., selectionConnection: str = ..., slc: str = ..., shortName: bool = ..., shn: bool = ..., stateString: bool = ..., sts: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., unresolvedName: bool = ..., un: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., withoutCopyNumber: bool = ..., wcn: bool = ..., **kwargs: Any) -> str:
+def sceneEditor(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -42430,12 +42430,12 @@ def sceneEditor(*args: Any, control: bool = ..., ctl: bool = ..., defineTemplate
     - `useTemplate` `ut`: *str*
     - `withoutCopyNumber` `wcn`: *bool*
     """
-def sceneLint(*args: Any, issueType: str = ..., i: str = ..., verbose: bool = ..., v: bool = ..., **kwargs: Any) -> str:
+def sceneLint(*args, **kwargs) -> str:
     """Flags:
     - `issueType` `i`: *str*
     - `verbose` `v`: *bool*
     """
-def sceneUIReplacement(*args: Any, clear: bool = ..., cl: bool = ..., deleteRemaining: bool = ..., dr: bool = ..., getNextFilter: Any = ..., gf: Any = ..., getNextPanel: Any = ..., gp: Any = ..., getNextScriptedPanel: Any = ..., gsp: Any = ..., update: str = ..., u: str = ..., **kwargs: Any) -> str:
+def sceneUIReplacement(*args, **kwargs) -> str:
     """Flags:
     - `clear` `cl`: *bool*
     - `deleteRemaining` `dr`: *bool*
@@ -42444,7 +42444,7 @@ def sceneUIReplacement(*args: Any, clear: bool = ..., cl: bool = ..., deleteRema
     - `getNextScriptedPanel` `gsp`: *Any*
     - `update` `u`: *str*
     """
-def scmh(*args: Any, absolute: bool = ..., a: bool = ..., ignore: int = ..., i: int = ..., quiet: bool = ..., relative: bool = ..., r: bool = ..., **kwargs: Any) -> None:
+def scmh(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `ignore` `i`: *int*
@@ -42532,8 +42532,8 @@ def scriptCtx(*args: Any, q: bool, animBreakdown: bool) -> bool: ...
 @overload
 def scriptCtx(*args: Any, q: bool, abd: bool) -> bool: ...
 @overload
-def scriptCtx(*args: Any, **kwargs: Any) -> str: ...
-def scriptCtx(*args: Any, **kwargs: Any) -> Any:
+def scriptCtx(*args, **kwargs) -> str: ...
+def scriptCtx(*args, **kwargs) -> str:
     """Flags:
     - `allComponents` `alc`: *bool*
     - `allObjects` `alo`: *bool*
@@ -42690,8 +42690,8 @@ def scriptEditorInfo(*args: Any, q: bool, writeHistory: bool) -> bool: ...
 @overload
 def scriptEditorInfo(*args: Any, q: bool, wh: bool) -> bool: ...
 @overload
-def scriptEditorInfo(*args: Any, **kwargs: Any) -> str: ...
-def scriptEditorInfo(*args: Any, **kwargs: Any) -> Any:
+def scriptEditorInfo(*args, **kwargs) -> str: ...
+def scriptEditorInfo(*args, **kwargs) -> str:
     """Flags:
     - `clearHistory` `ch`: *bool*
     - `clearHistoryFile` `chf`: *bool*
@@ -42704,7 +42704,7 @@ def scriptEditorInfo(*args: Any, **kwargs: Any) -> Any:
     - `suppressWarnings` `sw`: *bool*
     - `writeHistory` `wh`: *bool*
     """
-def scriptJob(*args: Any, allChildren: bool = ..., alc: bool = ..., attributeAdded: Any = ..., aa: Any = ..., attributeChange: Any = ..., ac: Any = ..., attributeDeleted: Any = ..., ad: Any = ..., compressUndo: bool = ..., cu: bool = ..., conditionChange: Any = ..., cc: Any = ..., conditionFalse: Any = ..., cf: Any = ..., conditionTrue: Any = ..., ct: Any = ..., connectionChange: Any = ..., con: Any = ..., disregardIndex: bool = ..., dri: bool = ..., event: Any = ..., e: Any = ..., exists: int = ..., ex: int = ..., force: bool = ..., f: bool = ..., idleEvent: str = ..., ie: str = ..., kill: int = ..., k: int = ..., killAll: bool = ..., ka: bool = ..., killWithScene: bool = ..., kws: bool = ..., listConditions: bool = ..., lc: bool = ..., listEvents: bool = ..., le: bool = ..., listJobs: bool = ..., lj: bool = ..., nodeDeleted: Any = ..., nd: Any = ..., nodeNameChanged: Any = ..., nnc: Any = ..., optionVarChanged: Any = ..., ovc: Any = ..., parent: str = ..., p: str = ..., permanent: bool = ..., per: bool = ..., protected: bool = ..., pro: bool = ..., replacePrevious: bool = ..., rp: bool = ..., runOnce: bool = ..., ro: bool = ..., timeChange: str = ..., tc: str = ..., uiDeleted: Any = ..., uid: Any = ..., **kwargs: Any) -> int:
+def scriptJob(*args, **kwargs) -> int:
     """Flags:
     - `allChildren` `alc`: *bool*
     - `attributeAdded` `aa`: *Any*
@@ -42768,8 +42768,8 @@ def scriptNode(*args: Any, q: bool, ignoreReferenceEdits: bool) -> bool: ...
 @overload
 def scriptNode(*args: Any, q: bool, ire: bool) -> bool: ...
 @overload
-def scriptNode(*args: Any, **kwargs: Any) -> None: ...
-def scriptNode(*args: Any, **kwargs: Any) -> Any:
+def scriptNode(*args, **kwargs) -> None: ...
+def scriptNode(*args, **kwargs) -> None:
     """Flags:
     - `afterScript` `afterScript`: *str*
     - `beforeScript` `bs`: *str*
@@ -42861,8 +42861,8 @@ def scriptTable(*args: Any, q: bool, rowsRemovedCmd: bool) -> str: ...
 @overload
 def scriptTable(*args: Any, q: bool, rrc: bool) -> str: ...
 @overload
-def scriptTable(*args: Any, **kwargs: Any) -> str: ...
-def scriptTable(*args: Any, **kwargs: Any) -> Any:
+def scriptTable(*args, **kwargs) -> str: ...
+def scriptTable(*args, **kwargs) -> str:
     """Flags:
     - `afterCellChangedCmd` `acc`: *str*
     - `annotation` `ann`: *str*
@@ -43002,8 +43002,8 @@ def scriptedPanel(*args: Any, q: bool, tearOff: bool) -> bool: ...
 @overload
 def scriptedPanel(*args: Any, q: bool, to: bool) -> bool: ...
 @overload
-def scriptedPanel(*args: Any, **kwargs: Any) -> str: ...
-def scriptedPanel(*args: Any, **kwargs: Any) -> Any:
+def scriptedPanel(*args, **kwargs) -> str: ...
+def scriptedPanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -43093,8 +43093,8 @@ def scriptedPanelType(*args: Any, q: bool, unique: bool) -> bool: ...
 @overload
 def scriptedPanelType(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def scriptedPanelType(*args: Any, **kwargs: Any) -> str: ...
-def scriptedPanelType(*args: Any, **kwargs: Any) -> Any:
+def scriptedPanelType(*args, **kwargs) -> str: ...
+def scriptedPanelType(*args, **kwargs) -> str:
     """Flags:
     - `addCallback` `acb`: *str*
     - `copyStateCallback` `ocb`: *str*
@@ -43194,8 +43194,8 @@ def scrollField(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ...
 @overload
 def scrollField(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def scrollField(*args: Any, **kwargs: Any) -> str: ...
-def scrollField(*args: Any, **kwargs: Any) -> Any:
+def scrollField(*args, **kwargs) -> str: ...
+def scrollField(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -43318,8 +43318,8 @@ def scrollLayout(*args: Any, q: bool, childArray: bool) -> bool: ...
 @overload
 def scrollLayout(*args: Any, q: bool, ca: bool) -> bool: ...
 @overload
-def scrollLayout(*args: Any, **kwargs: Any) -> str: ...
-def scrollLayout(*args: Any, **kwargs: Any) -> Any:
+def scrollLayout(*args, **kwargs) -> str: ...
+def scrollLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -43444,8 +43444,8 @@ def sculpt(*args: Any, q: bool, gwl: bool) -> bool: ...
 @overload
 def sculpt(*args: Any, q: bool, ignoreSelected: bool) -> bool: ...
 @overload
-def sculpt(*args: Any, **kwargs: Any) -> list[str]: ...
-def sculpt(*args: Any, **kwargs: Any) -> Any:
+def sculpt(*args, **kwargs) -> list[str]: ...
+def sculpt(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -43557,8 +43557,8 @@ def sculptKeyCtx(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def sculptKeyCtx(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def sculptKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def sculptKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def sculptKeyCtx(*args, **kwargs) -> str: ...
+def sculptKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `activeMode` `am`: *int*
     - `affectsTime` `at`: *bool*
@@ -43585,12 +43585,12 @@ def sculptKeyCtx(*args: Any, **kwargs: Any) -> Any:
     - `strength` `s`: *float*
     - `strengthAll` `sa`: *str*
     """
-def sculptMeshCacheChangeCloneSource(*args: Any, blendShape: str = ..., bs: str = ..., target: str = ..., t: str = ..., **kwargs: Any) -> None:
+def sculptMeshCacheChangeCloneSource(*args, **kwargs) -> None:
     """Flags:
     - `blendShape` `bs`: *str*
     - `target` `t`: *str*
     """
-def sculptMeshCacheCtx(*args: Any, adjustSize: bool = ..., asz: bool = ..., adjustStrength: bool = ..., ast: bool = ..., affectAllLayers: bool = ..., aal: bool = ..., brushDirection: int = ..., bd: int = ..., brushSize: float = ..., bsz: float = ..., brushStrength: float = ..., bst: float = ..., buildUpRate: float = ..., bur: float = ..., cloneHideSource: bool = ..., chs: bool = ..., cloneMethod: int = ..., cm: int = ..., cloneShapeSource: str = ..., css: str = ..., cloneTargetSource: str = ..., cas: str = ..., constrainToSurface: bool = ..., cts: bool = ..., direction: int = ..., d: int = ..., displayFrozen: bool = ..., df: bool = ..., displayMask: bool = ..., dm: bool = ..., displayWireframe: bool = ..., dw: bool = ..., falloffType: int = ..., ft: int = ..., flood: float = ..., fl: float = ..., floodFreeze: float = ..., ff: float = ..., frame: bool = ..., frm: bool = ..., freezeSelection: bool = ..., fsl: bool = ..., grabFollowPath: bool = ..., gfp: bool = ..., grabSilhouette: bool = ..., gs: bool = ..., grabTwist: bool = ..., gtw: bool = ..., inverted: bool = ..., inv: bool = ..., lastMode: str = ..., lm: str = ..., lockShellBorder: bool = ..., lsb: bool = ..., makeStroke: Any = ..., mt: Any = ..., minSize: float = ..., msz: float = ..., minStrength: float = ..., mst: float = ..., mirror: int = ..., mr: int = ..., mode: str = ..., m: str = ..., orientToSurface: bool = ..., ots: bool = ..., recordStroke: bool = ..., rcs: bool = ..., sculptFalloffCurve: str = ..., sfc: str = ..., size: float = ..., sz: float = ..., stampDistance: float = ..., s: float = ..., stampFile: str = ..., stp: str = ..., stampFlipX: bool = ..., sfx: bool = ..., stampFlipY: bool = ..., sfy: bool = ..., stampOrientToStroke: bool = ..., sos: bool = ..., stampPlacement: int = ..., sp: int = ..., stampRandomization: bool = ..., srd: bool = ..., stampRandomizationSeed: int = ..., sre: int = ..., stampRandomizeFlipX: bool = ..., srx: bool = ..., stampRandomizeFlipY: bool = ..., sry: bool = ..., stampRandomizePosX: float = ..., spx: float = ..., stampRandomizePosY: float = ..., spy: float = ..., stampRandomizeRotation: float = ..., srr: float = ..., stampRandomizeScale: float = ..., src: float = ..., stampRandomizeStrength: float = ..., srs: float = ..., stampRotation: float = ..., sr: float = ..., steadyStrokeDistance: float = ..., ssd: float = ..., strength: float = ..., st: float = ..., updatePlane: bool = ..., upl: bool = ..., useGlobalSize: bool = ..., ugs: bool = ..., useScreenSpace: bool = ..., ssp: bool = ..., useStampDistance: bool = ..., usd: bool = ..., useStampImage: bool = ..., usi: bool = ..., useSteadyStroke: bool = ..., uss: bool = ..., wholeStroke: bool = ..., wst: bool = ..., wireframeAlpha: float = ..., wa: float = ..., wireframeColor: Any = ..., wc: Any = ..., **kwargs: Any) -> None:
+def sculptMeshCacheCtx(*args, **kwargs) -> None:
     """Flags:
     - `adjustSize` `asz`: *bool*
     - `adjustStrength` `ast`: *bool*
@@ -43735,8 +43735,8 @@ def sculptTarget(*args: Any, q: bool, regenerate: bool) -> bool: ...
 @overload
 def sculptTarget(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def sculptTarget(*args: Any, **kwargs: Any) -> None: ...
-def sculptTarget(*args: Any, **kwargs: Any) -> Any:
+def sculptTarget(*args, **kwargs) -> None: ...
+def sculptTarget(*args, **kwargs) -> None:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -43808,8 +43808,8 @@ def selLoadSettings(*args: Any, q: bool, unresolvedName: bool) -> bool: ...
 @overload
 def selLoadSettings(*args: Any, q: bool, un: bool) -> bool: ...
 @overload
-def selLoadSettings(*args: Any, **kwargs: Any) -> str: ...
-def selLoadSettings(*args: Any, **kwargs: Any) -> Any:
+def selLoadSettings(*args, **kwargs) -> str: ...
+def selLoadSettings(*args, **kwargs) -> str:
     """Flags:
     - `activeProxy` `ap`: *str*
     - `deferReference` `dr`: *bool*
@@ -43823,7 +43823,7 @@ def selLoadSettings(*args: Any, **kwargs: Any) -> Any:
     - `shortName` `shn`: *bool*
     - `unresolvedName` `un`: *bool*
     """
-def select(*args: Any, add: bool = ..., addFirst: bool = ..., af: bool = ..., all: bool = ..., allDagObjects: bool = ..., ado: bool = ..., allDependencyNodes: bool = ..., adn: bool = ..., clear: bool = ..., cl: bool = ..., containerCentric: bool = ..., cc: bool = ..., deselect: bool = ..., d: bool = ..., hierarchy: bool = ..., hi: bool = ..., noExpand: bool = ..., ne: bool = ..., replace: bool = ..., r: bool = ..., symmetry: bool = ..., sym: bool = ..., symmetrySide: int = ..., sys: int = ..., toggle: bool = ..., tgl: bool = ..., visible: bool = ..., vis: bool = ..., **kwargs: Any) -> None:
+def select(*args, **kwargs) -> None:
     """Flags:
     - `add` `add`: *bool*
     - `addFirst` `af`: *bool*
@@ -43866,8 +43866,8 @@ def selectContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def selectContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def selectContext(*args: Any, **kwargs: Any) -> str: ...
-def selectContext(*args: Any, **kwargs: Any) -> Any:
+def selectContext(*args, **kwargs) -> str: ...
+def selectContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -43876,7 +43876,7 @@ def selectContext(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def selectKey(*args: Any, addTo: bool = ..., add: bool = ..., animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., clear: bool = ..., cl: bool = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., hierarchy: str = ..., hi: str = ..., inTangent: bool = ..., it: bool = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., keyframe: bool = ..., k: bool = ..., outTangent: bool = ..., ot: bool = ..., remove: bool = ..., rm: bool = ..., replace: bool = ..., r: bool = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., toggle: bool = ..., tgl: bool = ..., unsnappedKeys: float = ..., uk: float = ..., **kwargs: Any) -> int:
+def selectKey(*args, **kwargs) -> int:
     """Flags:
     - `addTo` `add`: *bool*
     - `animation` `an`: *str*
@@ -43922,8 +43922,8 @@ def selectKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def selectKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def selectKeyCtx(*args: Any, **kwargs: Any) -> None: ...
-def selectKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def selectKeyCtx(*args, **kwargs) -> None: ...
+def selectKeyCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -43957,8 +43957,8 @@ def selectKeyframeRegionCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def selectKeyframeRegionCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def selectKeyframeRegionCtx(*args: Any, **kwargs: Any) -> None: ...
-def selectKeyframeRegionCtx(*args: Any, **kwargs: Any) -> Any:
+def selectKeyframeRegionCtx(*args, **kwargs) -> None: ...
+def selectKeyframeRegionCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -43996,8 +43996,8 @@ def selectMode(*args: Any, q: bool, template: bool) -> bool: ...
 @overload
 def selectMode(*args: Any, q: bool, t: bool) -> bool: ...
 @overload
-def selectMode(*args: Any, **kwargs: Any) -> bool: ...
-def selectMode(*args: Any, **kwargs: Any) -> Any:
+def selectMode(*args, **kwargs) -> bool: ...
+def selectMode(*args, **kwargs) -> bool:
     """Flags:
     - `component` `co`: *bool*
     - `hierarchical` `h`: *bool*
@@ -44088,8 +44088,8 @@ def selectPref(*args: Any, q: bool, preSelectBackfacing: bool) -> bool: ...
 @overload
 def selectPref(*args: Any, q: bool, psb: bool) -> bool: ...
 @overload
-def selectPref(*args: Any, **kwargs: Any) -> bool: ...
-def selectPref(*args: Any, **kwargs: Any) -> Any:
+def selectPref(*args, **kwargs) -> bool: ...
+def selectPref(*args, **kwargs) -> bool:
     """Flags:
     - `affectsActive` `aa`: *bool*
     - `allowHiliteSelection` `ahs`: *bool*
@@ -44201,8 +44201,8 @@ def selectPriority(*args: Any, q: bool, emitter: bool) -> int: ...
 @overload
 def selectPriority(*args: Any, q: bool, em: bool) -> int: ...
 @overload
-def selectPriority(*args: Any, **kwargs: Any) -> int: ...
-def selectPriority(*args: Any, **kwargs: Any) -> Any:
+def selectPriority(*args, **kwargs) -> int: ...
+def selectPriority(*args, **kwargs) -> int:
     """Flags:
     - `allComponents` `alc`: *int*
     - `allObjects` `alo`: *int*
@@ -44371,8 +44371,8 @@ def selectType(*args: Any, q: bool, editPoint: bool) -> bool: ...
 @overload
 def selectType(*args: Any, q: bool, ep: bool) -> bool: ...
 @overload
-def selectType(*args: Any, **kwargs: Any) -> bool: ...
-def selectType(*args: Any, **kwargs: Any) -> Any:
+def selectType(*args, **kwargs) -> bool: ...
+def selectType(*args, **kwargs) -> bool:
     """Flags:
     - `allComponents` `alc`: *bool*
     - `allObjects` `alo`: *bool*
@@ -44462,7 +44462,7 @@ def selectType(*args: Any, **kwargs: Any) -> Any:
     - `texture` `tx`: *bool*
     - `vertex` `v`: *bool*
     """
-def selectedNodes(*args: Any) -> Any: ...
+def selectedNodes(*args, **kwargs) -> Any: ...
 @overload
 def selectionConnection(*args: Any, q: bool, addScript: bool) -> str: ...
 @overload
@@ -44542,8 +44542,8 @@ def selectionConnection(*args: Any, q: bool, connectionList: bool) -> bool: ...
 @overload
 def selectionConnection(*args: Any, q: bool, lst: bool) -> bool: ...
 @overload
-def selectionConnection(*args: Any, **kwargs: Any) -> str: ...
-def selectionConnection(*args: Any, **kwargs: Any) -> Any:
+def selectionConnection(*args, **kwargs) -> str: ...
+def selectionConnection(*args, **kwargs) -> str:
     """Flags:
     - `activeCacheList` `atc`: *bool*
     - `activeCharacterList` `acl`: *bool*
@@ -44657,8 +44657,8 @@ def separator(*args: Any, q: bool, manage: bool) -> bool: ...
 @overload
 def separator(*args: Any, q: bool, m: bool) -> bool: ...
 @overload
-def separator(*args: Any, **kwargs: Any) -> str: ...
-def separator(*args: Any, **kwargs: Any) -> Any:
+def separator(*args, **kwargs) -> str: ...
+def separator(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -44737,8 +44737,8 @@ def sequenceManager(*args: Any, q: bool, listShots: bool) -> bool: ...
 @overload
 def sequenceManager(*args: Any, q: bool, lsh: bool) -> bool: ...
 @overload
-def sequenceManager(*args: Any, **kwargs: Any) -> None: ...
-def sequenceManager(*args: Any, **kwargs: Any) -> Any:
+def sequenceManager(*args, **kwargs) -> None: ...
+def sequenceManager(*args, **kwargs) -> None:
     """Flags:
     - `addSequencerAudio` `asa`: *str*
     - `attachSequencerAudio` `ata`: *str*
@@ -44790,8 +44790,8 @@ def setAttr(*args: Any, q: bool, lock: bool) -> bool: ...
 @overload
 def setAttr(*args: Any, q: bool, l: bool) -> bool: ...
 @overload
-def setAttr(*args: Any, **kwargs: Any) -> None: ...
-def setAttr(*args: Any, **kwargs: Any) -> Any:
+def setAttr(*args, **kwargs) -> None: ...
+def setAttr(*args, **kwargs) -> None:
     """Flags:
     - `alteredValue` `av`: *bool*
     - `caching` `ca`: *bool*
@@ -44803,7 +44803,7 @@ def setAttr(*args: Any, **kwargs: Any) -> Any:
     - `size` `s`: *int*
     - `type` `typ`: *str*
     """
-def setAttrMapping(*args: Any, absolute: bool = ..., a: bool = ..., attribute: str = ..., at: str = ..., axis: str = ..., ax: str = ..., clutch: str = ..., c: str = ..., device: str = ..., d: str = ..., offset: float = ..., o: float = ..., relative: bool = ..., r: bool = ..., scale: float = ..., s: float = ..., selection: bool = ..., sl: bool = ..., **kwargs: Any) -> None:
+def setAttrMapping(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `attribute` `at`: *str*
@@ -44815,7 +44815,7 @@ def setAttrMapping(*args: Any, absolute: bool = ..., a: bool = ..., attribute: s
     - `scale` `s`: *float*
     - `selection` `sl`: *bool*
     """
-def setDefaultShadingGroup(*args: Any) -> None: ...
+def setDefaultShadingGroup(*args, **kwargs) -> None: ...
 @overload
 def setDrivenKeyframe(*args: Any, q: bool, attribute: bool) -> str: ...
 @overload
@@ -44873,8 +44873,8 @@ def setDrivenKeyframe(*args: Any, q: bool, shape: bool) -> bool: ...
 @overload
 def setDrivenKeyframe(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def setDrivenKeyframe(*args: Any, **kwargs: Any) -> int: ...
-def setDrivenKeyframe(*args: Any, **kwargs: Any) -> Any:
+def setDrivenKeyframe(*args, **kwargs) -> int: ...
+def setDrivenKeyframe(*args, **kwargs) -> int:
     """Flags:
     - `attribute` `at`: *str*
     - `controlPoints` `cp`: *bool*
@@ -44916,8 +44916,8 @@ def setEditCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def setEditCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def setEditCtx(*args: Any, **kwargs: Any) -> str: ...
-def setEditCtx(*args: Any, **kwargs: Any) -> Any:
+def setEditCtx(*args, **kwargs) -> str: ...
+def setEditCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -44926,7 +44926,7 @@ def setEditCtx(*args: Any, **kwargs: Any) -> Any:
     - `image3` `i3`: *str*
     - `name` `n`: *str*
     """
-def setFocus(*args: Any) -> None: ...
+def setFocus(*args, **kwargs) -> None: ...
 @overload
 def setInfinity(*args: Any, q: bool, attribute: bool) -> str: ...
 @overload
@@ -44952,8 +44952,8 @@ def setInfinity(*args: Any, q: bool, shape: bool) -> bool: ...
 @overload
 def setInfinity(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def setInfinity(*args: Any, **kwargs: Any) -> None: ...
-def setInfinity(*args: Any, **kwargs: Any) -> Any:
+def setInfinity(*args, **kwargs) -> None: ...
+def setInfinity(*args, **kwargs) -> None:
     """Flags:
     - `attribute` `at`: *str*
     - `controlPoints` `cp`: *bool*
@@ -44962,7 +44962,7 @@ def setInfinity(*args: Any, **kwargs: Any) -> Any:
     - `preInfinite` `pri`: *str*
     - `shape` `s`: *bool*
     """
-def setInputDeviceMapping(*args: Any, absolute: bool = ..., a: bool = ..., axis: str = ..., ax: str = ..., device: str = ..., d: str = ..., offset: float = ..., o: float = ..., relative: bool = ..., r: bool = ..., scale: float = ..., s: float = ..., view: bool = ..., v: bool = ..., world: bool = ..., w: bool = ..., **kwargs: Any) -> None:
+def setInputDeviceMapping(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `axis` `ax`: *str*
@@ -45006,8 +45006,8 @@ def setKeyCtx(*args: Any, q: bool, preserveTangent: bool) -> bool: ...
 @overload
 def setKeyCtx(*args: Any, q: bool, pt: bool) -> bool: ...
 @overload
-def setKeyCtx(*args: Any, **kwargs: Any) -> bool: ...
-def setKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def setKeyCtx(*args, **kwargs) -> bool: ...
+def setKeyCtx(*args, **kwargs) -> bool:
     """Flags:
     - `breakdown` `bd`: *bool*
     - `exists` `ex`: *bool*
@@ -45018,7 +45018,7 @@ def setKeyCtx(*args: Any, **kwargs: Any) -> Any:
     - `name` `n`: *str*
     - `preserveTangent` `pt`: *bool*
     """
-def setKeyPath(*args: Any) -> list[str]: ...
+def setKeyPath(*args, **kwargs) -> list[str]: ...
 @overload
 def setKeyframe(*args: Any, q: bool, animLayer: bool) -> str: ...
 @overload
@@ -45100,8 +45100,8 @@ def setKeyframe(*args: Any, q: bool, preserveCurveShape: bool) -> bool: ...
 @overload
 def setKeyframe(*args: Any, q: bool, pcs: bool) -> bool: ...
 @overload
-def setKeyframe(*args: Any, **kwargs: Any) -> int: ...
-def setKeyframe(*args: Any, **kwargs: Any) -> Any:
+def setKeyframe(*args, **kwargs) -> int: ...
+def setKeyframe(*args, **kwargs) -> int:
     """Flags:
     - `adjustTangent` `adt`: *bool*
     - `animLayer` `al`: *str*
@@ -45127,8 +45127,8 @@ def setKeyframe(*args: Any, **kwargs: Any) -> Any:
     - `useCurrentLockedWeights` `lw`: *bool*
     - `value` `v`: *float*
     """
-def setKeyframeBlendshapeTargetWts(*args: Any) -> int: ...
-def setMenuMode(*args: Any) -> str: ...
+def setKeyframeBlendshapeTargetWts(*args, **kwargs) -> int: ...
+def setMenuMode(*args, **kwargs) -> str: ...
 @overload
 def setNodeTypeFlag(*args: Any, q: bool, display: bool) -> bool: ...
 @overload
@@ -45138,8 +45138,8 @@ def setNodeTypeFlag(*args: Any, q: bool, threadSafe: bool) -> bool: ...
 @overload
 def setNodeTypeFlag(*args: Any, q: bool, ts: bool) -> bool: ...
 @overload
-def setNodeTypeFlag(*args: Any, **kwargs: Any) -> bool: ...
-def setNodeTypeFlag(*args: Any, **kwargs: Any) -> Any:
+def setNodeTypeFlag(*args, **kwargs) -> bool: ...
+def setNodeTypeFlag(*args, **kwargs) -> bool:
     """Flags:
     - `display` `dsp`: *bool*
     - `threadSafe` `ts`: *bool*
@@ -45165,8 +45165,8 @@ def setParent(*args: Any, q: bool, upLevel: bool) -> bool: ...
 @overload
 def setParent(*args: Any, q: bool, u: bool) -> bool: ...
 @overload
-def setParent(*args: Any, **kwargs: Any) -> str: ...
-def setParent(*args: Any, **kwargs: Any) -> Any:
+def setParent(*args, **kwargs) -> str: ...
+def setParent(*args, **kwargs) -> str:
     """Flags:
     - `defineTemplate` `dt`: *str*
     - `menu` `m`: *bool*
@@ -45174,14 +45174,14 @@ def setParent(*args: Any, **kwargs: Any) -> Any:
     - `upLevel` `u`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def setRenderPassType(*args: Any, defaultDataType: bool = ..., d: bool = ..., numChannels: int = ..., n: int = ..., type: str = ..., t: str = ..., **kwargs: Any) -> bool:
+def setRenderPassType(*args, **kwargs) -> bool:
     """Flags:
     - `defaultDataType` `d`: *bool*
     - `numChannels` `n`: *int*
     - `type` `t`: *str*
     """
-def setStartupMessage(*args: Any) -> None: ...
-def setToolTo(*args: Any) -> None: ...
+def setStartupMessage(*args, **kwargs) -> None: ...
+def setToolTo(*args, **kwargs) -> None: ...
 @overload
 def setUITemplate(*args: Any, q: bool, popTemplate: bool) -> bool: ...
 @overload
@@ -45191,13 +45191,13 @@ def setUITemplate(*args: Any, q: bool, pushTemplate: bool) -> bool: ...
 @overload
 def setUITemplate(*args: Any, q: bool, pst: bool) -> bool: ...
 @overload
-def setUITemplate(*args: Any, **kwargs: Any) -> str: ...
-def setUITemplate(*args: Any, **kwargs: Any) -> Any:
+def setUITemplate(*args, **kwargs) -> str: ...
+def setUITemplate(*args, **kwargs) -> str:
     """Flags:
     - `popTemplate` `ppt`: *bool*
     - `pushTemplate` `pst`: *bool*
     """
-def setXformManip(*args: Any, showUnits: bool = ..., su: bool = ..., suppress: bool = ..., s: bool = ..., useRotatePivot: bool = ..., urp: bool = ..., worldSpace: bool = ..., ws: bool = ..., **kwargs: Any) -> None:
+def setXformManip(*args, **kwargs) -> None:
     """Flags:
     - `showUnits` `su`: *bool*
     - `suppress` `s`: *bool*
@@ -45283,8 +45283,8 @@ def sets(*args: Any, q: bool, edges: bool) -> bool: ...
 @overload
 def sets(*args: Any, q: bool, eg: bool) -> bool: ...
 @overload
-def sets(*args: Any, **kwargs: Any) -> str: ...
-def sets(*args: Any, **kwargs: Any) -> Any:
+def sets(*args, **kwargs) -> str: ...
+def sets(*args, **kwargs) -> str:
     """Flags:
     - `addElement` `add`: *str*
     - `afterFilters` `af`: *bool*
@@ -45325,12 +45325,12 @@ def shadingConnection(*args: Any, q: bool, connectionState: bool) -> bool: ...
 @overload
 def shadingConnection(*args: Any, q: bool, cs: bool) -> bool: ...
 @overload
-def shadingConnection(*args: Any, **kwargs: Any) -> None: ...
-def shadingConnection(*args: Any, **kwargs: Any) -> Any:
+def shadingConnection(*args, **kwargs) -> None: ...
+def shadingConnection(*args, **kwargs) -> None:
     """Flags:
     - `connectionState` `cs`: *bool*
     """
-def shadingGeometryRelCtx(*args: Any, exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., offCommand: str = ..., ofc: str = ..., onCommand: str = ..., onc: str = ..., shadingCentric: bool = ..., s: bool = ..., **kwargs: Any) -> str:
+def shadingGeometryRelCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -45342,7 +45342,7 @@ def shadingGeometryRelCtx(*args: Any, exists: bool = ..., ex: bool = ..., histor
     - `onCommand` `onc`: *str*
     - `shadingCentric` `s`: *bool*
     """
-def shadingLightRelCtx(*args: Any, exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., offCommand: str = ..., ofc: str = ..., onCommand: str = ..., onc: str = ..., shadingCentric: bool = ..., s: bool = ..., **kwargs: Any) -> str:
+def shadingLightRelCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -45381,8 +45381,8 @@ def shadingNetworkCompare(*args: Any, q: bool, upstreamOnly: bool) -> bool: ...
 @overload
 def shadingNetworkCompare(*args: Any, q: bool, up: bool) -> bool: ...
 @overload
-def shadingNetworkCompare(*args: Any, **kwargs: Any) -> list[Any] | Any | int: ...
-def shadingNetworkCompare(*args: Any, **kwargs: Any) -> Any:
+def shadingNetworkCompare(*args, **kwargs) -> list[Any] | Any | int: ...
+def shadingNetworkCompare(*args, **kwargs) -> list[Any] | Any | int:
     """Flags:
     - `byName` `nam`: *bool*
     - `byValue` `val`: *bool*
@@ -45392,7 +45392,7 @@ def shadingNetworkCompare(*args: Any, **kwargs: Any) -> Any:
     - `network2` `n2`: *bool*
     - `upstreamOnly` `up`: *bool*
     """
-def shadingNode(*args: Any, asLight: bool = ..., al: bool = ..., asPostProcess: bool = ..., app: bool = ..., asRendering: bool = ..., ar: bool = ..., asShader: bool = ..., asTexture: bool = ..., at: bool = ..., asUtility: bool = ..., au: bool = ..., isColorManaged: bool = ..., icm: bool = ..., name: str = ..., n: str = ..., parent: str = ..., p: str = ..., shared: bool = ..., s: bool = ..., skipSelect: bool = ..., ss: bool = ..., **kwargs: Any) -> str:
+def shadingNode(*args, **kwargs) -> str:
     """Flags:
     - `asLight` `al`: *bool*
     - `asPostProcess` `app`: *bool*
@@ -45406,8 +45406,8 @@ def shadingNode(*args: Any, asLight: bool = ..., al: bool = ..., asPostProcess: 
     - `shared` `s`: *bool*
     - `skipSelect` `ss`: *bool*
     """
-def shapeCompare(*args: Any) -> int: ...
-def shapeEditor(*args: Any, clearSelection: bool = ..., cs: bool = ..., control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., highlightConnection: str = ..., hlc: str = ..., lockMainConnection: bool = ..., lck: bool = ..., lowestSelection: bool = ..., ls: bool = ..., mainListConnection: str = ..., mlc: str = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectionConnection: str = ..., slc: str = ..., stateString: bool = ..., sts: bool = ..., targetControlList: bool = ..., tcl: bool = ..., targetList: bool = ..., tl: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., verticalSliders: bool = ..., vs: bool = ..., **kwargs: Any) -> str:
+def shapeCompare(*args, **kwargs) -> int: ...
+def shapeEditor(*args, **kwargs) -> str:
     """Flags:
     - `clearSelection` `cs`: *bool*
     - `control` `ctl`: *bool*
@@ -45432,7 +45432,7 @@ def shapeEditor(*args: Any, clearSelection: bool = ..., cs: bool = ..., control:
     - `useTemplate` `ut`: *str*
     - `verticalSliders` `vs`: *bool*
     """
-def shapePanel(*args: Any, control: bool = ..., ctl: bool = ..., copy: str = ..., cp: str = ..., createString: bool = ..., cs: bool = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., editString: bool = ..., es: bool = ..., exists: bool = ..., ex: bool = ..., init: bool = ..., isUnique: bool = ..., iu: bool = ..., label: str = ..., l: str = ..., menuBarRepeatLast: bool = ..., mrl: bool = ..., menuBarVisible: bool = ..., mbv: bool = ..., needsInit: bool = ..., ni: bool = ..., parent: str = ..., p: str = ..., popupMenuProcedure: str = ..., pmp: str = ..., replacePanel: str = ..., rp: str = ..., shapeEditor: bool = ..., se: bool = ..., tearOff: bool = ..., to: bool = ..., tearOffCopy: str = ..., toc: str = ..., tearOffRestore: bool = ..., tor: bool = ..., unParent: bool = ..., up: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def shapePanel(*args, **kwargs) -> str:
     """Flags:
     - `control` `ctl`: *bool*
     - `copy` `cp`: *str*
@@ -45538,8 +45538,8 @@ def shelfButton(*args: Any, q: bool, imageOverlayLabel: bool) -> str: ...
 @overload
 def shelfButton(*args: Any, q: bool, iol: bool) -> str: ...
 @overload
-def shelfButton(*args: Any, **kwargs: Any) -> str: ...
-def shelfButton(*args: Any, **kwargs: Any) -> Any:
+def shelfButton(*args, **kwargs) -> str: ...
+def shelfButton(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -45686,8 +45686,8 @@ def shelfLayout(*args: Any, q: bool, childArray: bool) -> bool: ...
 @overload
 def shelfLayout(*args: Any, q: bool, ca: bool) -> bool: ...
 @overload
-def shelfLayout(*args: Any, **kwargs: Any) -> str: ...
-def shelfLayout(*args: Any, **kwargs: Any) -> Any:
+def shelfLayout(*args, **kwargs) -> str: ...
+def shelfLayout(*args, **kwargs) -> str:
     """Flags:
     - `alignment` `aln`: *str*
     - `annotation` `ann`: *str*
@@ -45810,8 +45810,8 @@ def shelfTabLayout(*args: Any, q: bool, parent: bool) -> str: ...
 @overload
 def shelfTabLayout(*args: Any, q: bool, p: bool) -> str: ...
 @overload
-def shelfTabLayout(*args: Any, **kwargs: Any) -> str: ...
-def shelfTabLayout(*args: Any, **kwargs: Any) -> Any:
+def shelfTabLayout(*args, **kwargs) -> str: ...
+def shelfTabLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -45957,8 +45957,8 @@ def shot(*args: Any, q: bool, transitionInLength: bool) -> float: ...
 @overload
 def shot(*args: Any, q: bool, til: bool) -> float: ...
 @overload
-def shot(*args: Any, **kwargs: Any) -> str: ...
-def shot(*args: Any, **kwargs: Any) -> Any:
+def shot(*args, **kwargs) -> str: ...
+def shot(*args, **kwargs) -> str:
     """Flags:
     - `audio` `aud`: *str*
     - `clip` `cl`: *str*
@@ -46035,8 +46035,8 @@ def shotRipple(*args: Any, q: bool, deleted: bool) -> bool: ...
 @overload
 def shotRipple(*args: Any, q: bool, d: bool) -> bool: ...
 @overload
-def shotRipple(*args: Any, **kwargs: Any) -> None: ...
-def shotRipple(*args: Any, **kwargs: Any) -> Any:
+def shotRipple(*args, **kwargs) -> None: ...
+def shotRipple(*args, **kwargs) -> None:
     """Flags:
     - `deleted` `d`: *bool*
     - `endDelta` `ed`: *float*
@@ -46089,8 +46089,8 @@ def shotTrack(*args: Any, q: bool, unsolo: bool) -> bool: ...
 @overload
 def shotTrack(*args: Any, q: bool, uso: bool) -> bool: ...
 @overload
-def shotTrack(*args: Any, **kwargs: Any) -> None: ...
-def shotTrack(*args: Any, **kwargs: Any) -> Any:
+def shotTrack(*args, **kwargs) -> None: ...
+def shotTrack(*args, **kwargs) -> None:
     """Flags:
     - `insertTrack` `it`: *int*
     - `lock` `l`: *bool*
@@ -46122,15 +46122,15 @@ def showHelp(*args: Any, q: bool, version: bool) -> bool: ...
 @overload
 def showHelp(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def showHelp(*args: Any, **kwargs: Any) -> None: ...
-def showHelp(*args: Any, **kwargs: Any) -> Any:
+def showHelp(*args, **kwargs) -> None: ...
+def showHelp(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `docs` `d`: *bool*
     - `helpTable` `ht`: *bool*
     - `version` `v`: *bool*
     """
-def showHidden(*args: Any, above: bool = ..., a: bool = ..., allObjects: bool = ..., all: bool = ..., below: bool = ..., b: bool = ..., lastHidden: bool = ..., lh: bool = ..., **kwargs: Any) -> None:
+def showHidden(*args, **kwargs) -> None:
     """Flags:
     - `above` `a`: *bool*
     - `allObjects` `all`: *bool*
@@ -46218,8 +46218,8 @@ def showManipCtx(*args: Any, q: bool, selectedAttributes: bool) -> bool: ...
 @overload
 def showManipCtx(*args: Any, q: bool, sa: bool) -> bool: ...
 @overload
-def showManipCtx(*args: Any, **kwargs: Any) -> str: ...
-def showManipCtx(*args: Any, **kwargs: Any) -> Any:
+def showManipCtx(*args, **kwargs) -> str: ...
+def showManipCtx(*args, **kwargs) -> str:
     """Flags:
     - `addAttr` `aa`: *str*
     - `currentNodeName` `cnn`: *bool*
@@ -46299,8 +46299,8 @@ def showMetadata(*args: Any, q: bool, lvs: bool) -> bool: ...
 @overload
 def showMetadata(*args: Any, q: bool, off: bool) -> bool: ...
 @overload
-def showMetadata(*args: Any, **kwargs: Any) -> str: ...
-def showMetadata(*args: Any, **kwargs: Any) -> Any:
+def showMetadata(*args, **kwargs) -> str: ...
+def showMetadata(*args, **kwargs) -> str:
     """Flags:
     - `auto` `a`: *bool*
     - `dataType` `dt`: *str*
@@ -46317,10 +46317,10 @@ def showMetadata(*args: Any, **kwargs: Any) -> Any:
     - `rayScale` `rs`: *float*
     - `stream` `s`: *str*
     """
-def showSelectionInTitle(*args: Any) -> None: ...
-def showShadingGroupAttrEditor(*args: Any) -> bool: ...
-def showWindow(*args: Any) -> None: ...
-def simplify(*args: Any, animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., floatTolerance: float = ..., ft: float = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., timeTolerance: float = ..., tt: float = ..., valueTolerance: float = ..., vt: float = ..., **kwargs: Any) -> int:
+def showSelectionInTitle(*args, **kwargs) -> None: ...
+def showShadingGroupAttrEditor(*args, **kwargs) -> bool: ...
+def showWindow(*args, **kwargs) -> None: ...
+def simplify(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -46368,8 +46368,8 @@ def singleProfileBirailSurface(*args: Any, q: bool, tangentContinuityProfile1: b
 @overload
 def singleProfileBirailSurface(*args: Any, q: bool, tp1: bool) -> bool: ...
 @overload
-def singleProfileBirailSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def singleProfileBirailSurface(*args: Any, **kwargs: Any) -> Any:
+def singleProfileBirailSurface(*args, **kwargs) -> list[str]: ...
+def singleProfileBirailSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -46393,14 +46393,14 @@ def skeletonEmbed(*args: Any, q: bool, mergedMesh: bool) -> bool: ...
 @overload
 def skeletonEmbed(*args: Any, q: bool, mm: bool) -> bool: ...
 @overload
-def skeletonEmbed(*args: Any, **kwargs: Any) -> None: ...
-def skeletonEmbed(*args: Any, **kwargs: Any) -> Any:
+def skeletonEmbed(*args, **kwargs) -> None: ...
+def skeletonEmbed(*args, **kwargs) -> None:
     """Flags:
     - `mergedMesh` `mm`: *bool*
     - `segmentationMethod` `sm`: *int*
     - `segmentationResolution` `sr`: *int*
     """
-def skinBindCtx(*args: Any, about: str = ..., a: str = ..., axis: str = ..., ax: str = ..., colorRamp: str = ..., cr: str = ..., currentInfluence: str = ..., ci: str = ..., displayInactiveMode: int = ..., di: int = ..., displayNormalized: bool = ..., dn: bool = ..., exists: bool = ..., ex: bool = ..., falloffCurve: str = ..., fc: str = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., symmetry: bool = ..., s: bool = ..., tolerance: float = ..., t: float = ..., **kwargs: Any) -> str:
+def skinBindCtx(*args, **kwargs) -> str:
     """Flags:
     - `about` `a`: *str*
     - `axis` `ax`: *str*
@@ -46499,8 +46499,8 @@ def skinCluster(*args: Any, q: bool, volumeBind: bool) -> float: ...
 @overload
 def skinCluster(*args: Any, q: bool, vb: bool) -> float: ...
 @overload
-def skinCluster(*args: Any, **kwargs: Any) -> str: ...
-def skinCluster(*args: Any, **kwargs: Any) -> Any:
+def skinCluster(*args, **kwargs) -> str: ...
+def skinCluster(*args, **kwargs) -> str:
     """Flags:
     - `addInfluence` `ai`: *str*
     - `addToSelection` `ats`: *bool*
@@ -46600,8 +46600,8 @@ def skinPercent(*args: Any, q: bool, zeroRemainingInfluences: bool) -> bool: ...
 @overload
 def skinPercent(*args: Any, q: bool, zri: bool) -> bool: ...
 @overload
-def skinPercent(*args: Any, **kwargs: Any) -> None: ...
-def skinPercent(*args: Any, **kwargs: Any) -> Any:
+def skinPercent(*args, **kwargs) -> None: ...
+def skinPercent(*args, **kwargs) -> None:
     """Flags:
     - `ignoreBelow` `ib`: *float*
     - `layerId` `lid`: *int*
@@ -46644,8 +46644,8 @@ def smoothCurve(*args: Any, q: bool, replaceOriginal: bool) -> bool: ...
 @overload
 def smoothCurve(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def smoothCurve(*args: Any, **kwargs: Any) -> list[str]: ...
-def smoothCurve(*args: Any, **kwargs: Any) -> Any:
+def smoothCurve(*args, **kwargs) -> list[str]: ...
+def smoothCurve(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -46692,8 +46692,8 @@ def smoothTangentSurface(*args: Any, q: bool, replaceOriginal: bool) -> bool: ..
 @overload
 def smoothTangentSurface(*args: Any, q: bool, rpo: bool) -> bool: ...
 @overload
-def smoothTangentSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def smoothTangentSurface(*args: Any, **kwargs: Any) -> Any:
+def smoothTangentSurface(*args, **kwargs) -> list[str]: ...
+def smoothTangentSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -46705,7 +46705,7 @@ def smoothTangentSurface(*args: Any, **kwargs: Any) -> Any:
     - `replaceOriginal` `rpo`: *bool*
     - `smoothness` `s`: *int*
     """
-def snapKey(*args: Any, animation: str = ..., an: str = ..., attribute: str = ..., at: str = ..., controlPoints: bool = ..., cp: bool = ..., float: float = ..., f: float = ..., hierarchy: str = ..., hi: str = ..., includeUpperBound: bool = ..., iub: bool = ..., index: int = ..., mergeDuplicate: bool = ..., md: bool = ..., shape: bool = ..., s: bool = ..., time: float = ..., t: float = ..., timeMultiple: float = ..., tm: float = ..., valueMultiple: float = ..., vm: float = ..., **kwargs: Any) -> int:
+def snapKey(*args, **kwargs) -> int:
     """Flags:
     - `animation` `an`: *str*
     - `attribute` `at`: *str*
@@ -46781,8 +46781,8 @@ def snapMode(*args: Any, q: bool, viewPlane: bool) -> bool: ...
 @overload
 def snapMode(*args: Any, q: bool, vp: bool) -> bool: ...
 @overload
-def snapMode(*args: Any, **kwargs: Any) -> bool: ...
-def snapMode(*args: Any, **kwargs: Any) -> Any:
+def snapMode(*args, **kwargs) -> bool: ...
+def snapMode(*args, **kwargs) -> bool:
     """Flags:
     - `curve` `c`: *bool*
     - `distanceIncrement` `dsi`: *float*
@@ -46837,8 +46837,8 @@ def snapTogetherCtx(*args: Any, q: bool, snapPolygonFace: bool) -> bool: ...
 @overload
 def snapTogetherCtx(*args: Any, q: bool, spf: bool) -> bool: ...
 @overload
-def snapTogetherCtx(*args: Any, **kwargs: Any) -> str: ...
-def snapTogetherCtx(*args: Any, **kwargs: Any) -> Any:
+def snapTogetherCtx(*args, **kwargs) -> str: ...
+def snapTogetherCtx(*args, **kwargs) -> str:
     """Flags:
     - `clearSelection` `cs`: *bool*
     - `exists` `ex`: *bool*
@@ -46887,8 +46887,8 @@ def snapshot(*args: Any, q: bool, offsetParentMatrix: bool) -> bool: ...
 @overload
 def snapshot(*args: Any, q: bool, opm: bool) -> bool: ...
 @overload
-def snapshot(*args: Any, **kwargs: Any) -> list[str]: ...
-def snapshot(*args: Any, **kwargs: Any) -> Any:
+def snapshot(*args, **kwargs) -> list[str]: ...
+def snapshot(*args, **kwargs) -> list[str]:
     """Flags:
     - `anchorTransform` `at`: *str*
     - `constructionHistory` `ch`: *bool*
@@ -46933,8 +46933,8 @@ def snapshotBeadCtx(*args: Any, q: bool, outTangent: bool) -> bool: ...
 @overload
 def snapshotBeadCtx(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def snapshotBeadCtx(*args: Any, **kwargs: Any) -> str: ...
-def snapshotBeadCtx(*args: Any, **kwargs: Any) -> Any:
+def snapshotBeadCtx(*args, **kwargs) -> str: ...
+def snapshotBeadCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -46970,8 +46970,8 @@ def snapshotModifyKeyCtx(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def snapshotModifyKeyCtx(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def snapshotModifyKeyCtx(*args: Any, **kwargs: Any) -> str: ...
-def snapshotModifyKeyCtx(*args: Any, **kwargs: Any) -> Any:
+def snapshotModifyKeyCtx(*args, **kwargs) -> str: ...
+def snapshotModifyKeyCtx(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -47061,8 +47061,8 @@ def softMod(*args: Any, q: bool, falloffBasedOnY: bool) -> bool: ...
 @overload
 def softMod(*args: Any, q: bool, fby: bool) -> bool: ...
 @overload
-def softMod(*args: Any, **kwargs: Any) -> list[str]: ...
-def softMod(*args: Any, **kwargs: Any) -> Any:
+def softMod(*args, **kwargs) -> list[str]: ...
+def softMod(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -47138,8 +47138,8 @@ def softSelect(*args: Any, q: bool, softSelectReset: bool) -> bool: ...
 @overload
 def softSelect(*args: Any, q: bool, ssr: bool) -> bool: ...
 @overload
-def softSelect(*args: Any, **kwargs: Any) -> None: ...
-def softSelect(*args: Any, **kwargs: Any) -> Any:
+def softSelect(*args, **kwargs) -> None: ...
+def softSelect(*args, **kwargs) -> None:
     """Flags:
     - `compressUndo` `cu`: *int*
     - `enableFalseColor` `efc`: *int*
@@ -47151,14 +47151,14 @@ def softSelect(*args: Any, **kwargs: Any) -> Any:
     - `softSelectReset` `ssr`: *bool*
     - `softSelectUVDistance` `sud`: *float*
     """
-def soloMaterial(*args: Any, attr: str = ..., a: str = ..., last: bool = ..., l: bool = ..., node: str = ..., n: str = ..., unsolo: bool = ..., us: bool = ..., **kwargs: Any) -> bool:
+def soloMaterial(*args, **kwargs) -> bool:
     """Flags:
     - `attr` `a`: *str*
     - `last` `l`: *bool*
     - `node` `n`: *str*
     - `unsolo` `us`: *bool*
     """
-def sortCaseInsensitive(*args: Any) -> list[str]: ...
+def sortCaseInsensitive(*args, **kwargs) -> list[str]: ...
 @overload
 def sound(*args: Any, q: bool, endTime: bool) -> float: ...
 @overload
@@ -47192,8 +47192,8 @@ def sound(*args: Any, q: bool, mute: bool) -> bool: ...
 @overload
 def sound(*args: Any, q: bool, m: bool) -> bool: ...
 @overload
-def sound(*args: Any, **kwargs: Any) -> str: ...
-def sound(*args: Any, **kwargs: Any) -> Any:
+def sound(*args, **kwargs) -> str: ...
+def sound(*args, **kwargs) -> str:
     """Flags:
     - `endTime` `et`: *float*
     - `file` `f`: *str*
@@ -47285,8 +47285,8 @@ def soundControl(*args: Any, q: bool, beginScrub: bool) -> bool: ...
 @overload
 def soundControl(*args: Any, q: bool, bs: bool) -> bool: ...
 @overload
-def soundControl(*args: Any, **kwargs: Any) -> str: ...
-def soundControl(*args: Any, **kwargs: Any) -> Any:
+def soundControl(*args, **kwargs) -> str: ...
+def soundControl(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -47408,8 +47408,8 @@ def soundPopup(*args: Any, q: bool, numberOfPopupMenus: bool) -> bool: ...
 @overload
 def soundPopup(*args: Any, q: bool, npm: bool) -> bool: ...
 @overload
-def soundPopup(*args: Any, **kwargs: Any) -> str: ...
-def soundPopup(*args: Any, **kwargs: Any) -> Any:
+def soundPopup(*args, **kwargs) -> str: ...
+def soundPopup(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -47454,8 +47454,8 @@ def spaceLocator(*args: Any, q: bool, relative: bool) -> bool: ...
 @overload
 def spaceLocator(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def spaceLocator(*args: Any, **kwargs: Any) -> list[str]: ...
-def spaceLocator(*args: Any, **kwargs: Any) -> Any:
+def spaceLocator(*args, **kwargs) -> list[str]: ...
+def spaceLocator(*args, **kwargs) -> list[str]:
     """Flags:
     - `absolute` `a`: *bool*
     - `name` `n`: *str*
@@ -47531,8 +47531,8 @@ def sphere(*args: Any, q: bool, useTolerance: bool) -> bool: ...
 @overload
 def sphere(*args: Any, q: bool, ut: bool) -> bool: ...
 @overload
-def sphere(*args: Any, **kwargs: Any) -> list[str]: ...
-def sphere(*args: Any, **kwargs: Any) -> Any:
+def sphere(*args, **kwargs) -> list[str]: ...
+def sphere(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -47629,8 +47629,8 @@ def spotLight(*args: Any, q: bool, useRayTraceShadows: bool) -> bool: ...
 @overload
 def spotLight(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def spotLight(*args: Any, **kwargs: Any) -> str: ...
-def spotLight(*args: Any, **kwargs: Any) -> Any:
+def spotLight(*args, **kwargs) -> str: ...
+def spotLight(*args, **kwargs) -> str:
     """Flags:
     - `barnDoors` `bd`: *bool*
     - `bottomBarnDoorAngle` `bbd`: *float*
@@ -47654,7 +47654,7 @@ def spotLight(*args: Any, **kwargs: Any) -> Any:
     - `topBarnDoorAngle` `tbd`: *float*
     - `useRayTraceShadows` `rs`: *bool*
     """
-def spotLightPreviewPort(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., spotLight: str = ..., sl: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., widthHeight: Any = ..., wh: Any = ..., **kwargs: Any) -> str:
+def spotLightPreviewPort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -47765,8 +47765,8 @@ def spreadSheetEditor(*args: Any, q: bool, longNames: bool) -> bool: ...
 @overload
 def spreadSheetEditor(*args: Any, q: bool, ln: bool) -> bool: ...
 @overload
-def spreadSheetEditor(*args: Any, **kwargs: Any) -> str: ...
-def spreadSheetEditor(*args: Any, **kwargs: Any) -> Any:
+def spreadSheetEditor(*args, **kwargs) -> str: ...
+def spreadSheetEditor(*args, **kwargs) -> str:
     """Flags:
     - `allAttr` `aa`: *bool*
     - `attrRegExp` `are`: *str*
@@ -47861,8 +47861,8 @@ def squareSurface(*args: Any, q: bool, rebuildCurve4: bool) -> bool: ...
 @overload
 def squareSurface(*args: Any, q: bool, rc4: bool) -> bool: ...
 @overload
-def squareSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def squareSurface(*args: Any, **kwargs: Any) -> Any:
+def squareSurface(*args, **kwargs) -> list[str]: ...
+def squareSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -47906,8 +47906,8 @@ def srtContext(*args: Any, q: bool, history: bool) -> bool: ...
 @overload
 def srtContext(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def srtContext(*args: Any, **kwargs: Any) -> str: ...
-def srtContext(*args: Any, **kwargs: Any) -> Any:
+def srtContext(*args, **kwargs) -> str: ...
+def srtContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -47997,8 +47997,8 @@ def stitchSurface(*args: Any, q: bool, positionalContinuity: bool) -> bool: ...
 @overload
 def stitchSurface(*args: Any, q: bool, pc: bool) -> bool: ...
 @overload
-def stitchSurface(*args: Any, **kwargs: Any) -> list[str]: ...
-def stitchSurface(*args: Any, **kwargs: Any) -> Any:
+def stitchSurface(*args, **kwargs) -> list[str]: ...
+def stitchSurface(*args, **kwargs) -> list[str]:
     """Flags:
     - `bias` `b`: *float*
     - `caching` `cch`: *bool*
@@ -48107,8 +48107,8 @@ def stitchSurfacePoints(*args: Any, q: bool, tangentialContinuity: bool) -> bool
 @overload
 def stitchSurfacePoints(*args: Any, q: bool, tc: bool) -> bool: ...
 @overload
-def stitchSurfacePoints(*args: Any, **kwargs: Any) -> list[str]: ...
-def stitchSurfacePoints(*args: Any, **kwargs: Any) -> Any:
+def stitchSurfacePoints(*args, **kwargs) -> list[str]: ...
+def stitchSurfacePoints(*args, **kwargs) -> list[str]:
     """Flags:
     - `bias` `b`: *float*
     - `caching` `cch`: *bool*
@@ -48159,8 +48159,8 @@ def stringArrayIntersector(*args: Any, q: bool, reset: bool) -> bool: ...
 @overload
 def stringArrayIntersector(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def stringArrayIntersector(*args: Any, **kwargs: Any) -> str: ...
-def stringArrayIntersector(*args: Any, **kwargs: Any) -> Any:
+def stringArrayIntersector(*args, **kwargs) -> str: ...
+def stringArrayIntersector(*args, **kwargs) -> str:
     """Flags:
     - `allowDuplicates` `ad`: *bool*
     - `defineTemplate` `dt`: *str*
@@ -48218,8 +48218,8 @@ def subdAutoProjection(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def subdAutoProjection(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def subdAutoProjection(*args: Any, **kwargs: Any) -> str: ...
-def subdAutoProjection(*args: Any, **kwargs: Any) -> Any:
+def subdAutoProjection(*args, **kwargs) -> str: ...
+def subdAutoProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48234,7 +48234,7 @@ def subdAutoProjection(*args: Any, **kwargs: Any) -> Any:
     - `skipIntersect` `si`: *bool*
     - `worldSpace` `ws`: *bool*
     """
-def subdCleanTopology(*args: Any) -> bool: ...
+def subdCleanTopology(*args, **kwargs) -> bool: ...
 @overload
 def subdCollapse(*args: Any, q: bool, level: bool) -> int: ...
 @overload
@@ -48260,8 +48260,8 @@ def subdCollapse(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def subdCollapse(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def subdCollapse(*args: Any, **kwargs: Any) -> list[str]: ...
-def subdCollapse(*args: Any, **kwargs: Any) -> Any:
+def subdCollapse(*args, **kwargs) -> list[str]: ...
+def subdCollapse(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48270,7 +48270,7 @@ def subdCollapse(*args: Any, **kwargs: Any) -> Any:
     - `nodeState` `nds`: *int*
     - `object` `o`: *bool*
     """
-def subdDuplicateAndConnect(*args: Any) -> None: ...
+def subdDuplicateAndConnect(*args, **kwargs) -> None: ...
 @overload
 def subdEditUV(*args: Any, q: bool, angle: bool) -> float: ...
 @overload
@@ -48320,8 +48320,8 @@ def subdEditUV(*args: Any, q: bool, scale: bool) -> bool: ...
 @overload
 def subdEditUV(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def subdEditUV(*args: Any, **kwargs: Any) -> bool: ...
-def subdEditUV(*args: Any, **kwargs: Any) -> Any:
+def subdEditUV(*args, **kwargs) -> bool: ...
+def subdEditUV(*args, **kwargs) -> bool:
     """Flags:
     - `angle` `a`: *float*
     - `pivotU` `pu`: *float*
@@ -48385,8 +48385,8 @@ def subdLayoutUV(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def subdLayoutUV(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def subdLayoutUV(*args: Any, **kwargs: Any) -> str: ...
-def subdLayoutUV(*args: Any, **kwargs: Any) -> Any:
+def subdLayoutUV(*args, **kwargs) -> str: ...
+def subdLayoutUV(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48401,7 +48401,7 @@ def subdLayoutUV(*args: Any, **kwargs: Any) -> Any:
     - `separate` `se`: *int*
     - `worldSpace` `ws`: *bool*
     """
-def subdListComponentConversion(*args: Any, border: bool = ..., bo: bool = ..., fromEdge: bool = ..., fe: bool = ..., fromFace: bool = ..., ff: bool = ..., fromUV: bool = ..., fuv: bool = ..., fromVertex: bool = ..., fv: bool = ..., internal: bool = ..., toEdge: bool = ..., te: bool = ..., toFace: bool = ..., tf: bool = ..., toUV: bool = ..., tuv: bool = ..., toVertex: bool = ..., tv: bool = ..., uvShell: bool = ..., uvs: bool = ..., uvShellBorder: bool = ..., uvb: bool = ..., **kwargs: Any) -> list[str]:
+def subdListComponentConversion(*args, **kwargs) -> list[str]:
     """Flags:
     - `border` `bo`: *bool*
     - `fromEdge` `fe`: *bool*
@@ -48433,8 +48433,8 @@ def subdMapCut(*args: Any, q: bool, constructionHistory: bool) -> bool: ...
 @overload
 def subdMapCut(*args: Any, q: bool, ch: bool) -> bool: ...
 @overload
-def subdMapCut(*args: Any, **kwargs: Any) -> str: ...
-def subdMapCut(*args: Any, **kwargs: Any) -> Any:
+def subdMapCut(*args, **kwargs) -> str: ...
+def subdMapCut(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48470,8 +48470,8 @@ def subdMapSewMove(*args: Any, q: bool, worldSpace: bool) -> bool: ...
 @overload
 def subdMapSewMove(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def subdMapSewMove(*args: Any, **kwargs: Any) -> str: ...
-def subdMapSewMove(*args: Any, **kwargs: Any) -> Any:
+def subdMapSewMove(*args, **kwargs) -> str: ...
+def subdMapSewMove(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48481,7 +48481,7 @@ def subdMapSewMove(*args: Any, **kwargs: Any) -> Any:
     - `numberFaces` `nf`: *int*
     - `worldSpace` `ws`: *bool*
     """
-def subdMatchTopology(*args: Any, frontOfChain: bool = ..., foc: bool = ..., **kwargs: Any) -> bool:
+def subdMatchTopology(*args, **kwargs) -> bool:
     """Flags:
     - `frontOfChain` `foc`: *bool*
     """
@@ -48518,8 +48518,8 @@ def subdMirror(*args: Any, q: bool, zMirror: bool) -> bool: ...
 @overload
 def subdMirror(*args: Any, q: bool, zm: bool) -> bool: ...
 @overload
-def subdMirror(*args: Any, **kwargs: Any) -> list[str]: ...
-def subdMirror(*args: Any, **kwargs: Any) -> Any:
+def subdMirror(*args, **kwargs) -> list[str]: ...
+def subdMirror(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48611,8 +48611,8 @@ def subdPlanarProjection(*args: Any, q: bool, createNewMap: bool) -> bool: ...
 @overload
 def subdPlanarProjection(*args: Any, q: bool, cm: bool) -> bool: ...
 @overload
-def subdPlanarProjection(*args: Any, **kwargs: Any) -> str: ...
-def subdPlanarProjection(*args: Any, **kwargs: Any) -> Any:
+def subdPlanarProjection(*args, **kwargs) -> str: ...
+def subdPlanarProjection(*args, **kwargs) -> str:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -48643,7 +48643,7 @@ def subdPlanarProjection(*args: Any, **kwargs: Any) -> Any:
     - `smartFit` `sf`: *bool*
     - `worldSpace` `ws`: *bool*
     """
-def subdToBlind(*args: Any, absolutePosition: bool = ..., ap: bool = ..., includeCreases: bool = ..., ic: bool = ..., includeZeroOffsets: bool = ..., izo: bool = ..., **kwargs: Any) -> bool:
+def subdToBlind(*args, **kwargs) -> bool:
     """Flags:
     - `absolutePosition` `ap`: *bool*
     - `includeCreases` `ic`: *bool*
@@ -48730,8 +48730,8 @@ def subdToPoly(*args: Any, q: bool, preserveVertexOrdering: bool) -> bool: ...
 @overload
 def subdToPoly(*args: Any, q: bool, pvo: bool) -> bool: ...
 @overload
-def subdToPoly(*args: Any, **kwargs: Any) -> list[str]: ...
-def subdToPoly(*args: Any, **kwargs: Any) -> Any:
+def subdToPoly(*args, **kwargs) -> list[str]: ...
+def subdToPoly(*args, **kwargs) -> list[str]:
     """Flags:
     - `addUnderTransform` `aut`: *bool*
     - `applyMatrixToResult` `amr`: *bool*
@@ -48758,8 +48758,8 @@ def subdToPoly(*args: Any, **kwargs: Any) -> Any:
     - `shareUVs` `suv`: *bool*
     - `subdNormals` `un`: *bool*
     """
-def subdTransferUVsToCache(*args: Any) -> bool: ...
-def subdiv(*args: Any, currentLevel: bool = ..., cl: bool = ..., currentSubdLevel: bool = ..., csl: bool = ..., deepestLevel: int = ..., dl: int = ..., displayLoad: bool = ..., dsl: bool = ..., edgeStats: bool = ..., est: bool = ..., faceStats: bool = ..., fst: bool = ..., maxPossibleLevel: int = ..., mpl: int = ..., proxyMode: int = ..., pm: int = ..., smallOffsets: bool = ..., so: bool = ..., **kwargs: Any) -> None:
+def subdTransferUVsToCache(*args, **kwargs) -> bool: ...
+def subdiv(*args, **kwargs) -> None:
     """Flags:
     - `currentLevel` `cl`: *bool*
     - `currentSubdLevel` `csl`: *bool*
@@ -48771,16 +48771,16 @@ def subdiv(*args: Any, currentLevel: bool = ..., cl: bool = ..., currentSubdLeve
     - `proxyMode` `pm`: *int*
     - `smallOffsets` `so`: *bool*
     """
-def subdivCrease(*args: Any, sharpness: bool = ..., sh: bool = ..., **kwargs: Any) -> bool:
+def subdivCrease(*args, **kwargs) -> bool:
     """Flags:
     - `sharpness` `sh`: *bool*
     """
-def subdivDisplaySmoothness(*args: Any, all: bool = ..., smoothness: int = ..., s: int = ..., **kwargs: Any) -> bool:
+def subdivDisplaySmoothness(*args, **kwargs) -> bool:
     """Flags:
     - `all`: *bool*
     - `smoothness` `s`: *int*
     """
-def substituteGeometry(*args: Any, disableNonSkinDeformers: bool = ..., dnd: bool = ..., newGeometryToLayer: bool = ..., ngl: bool = ..., oldGeometryToLayer: bool = ..., ogl: bool = ..., reWeightDistTolerance: float = ..., wdt: float = ..., retainOldGeometry: bool = ..., rog: bool = ..., **kwargs: Any) -> str:
+def substituteGeometry(*args, **kwargs) -> str:
     """Flags:
     - `disableNonSkinDeformers` `dnd`: *bool*
     - `newGeometryToLayer` `ngl`: *bool*
@@ -48801,14 +48801,14 @@ def suitePrefs(*args: Any, q: bool, isCompleteSuite: bool) -> bool: ...
 @overload
 def suitePrefs(*args: Any, q: bool, ics: bool) -> bool: ...
 @overload
-def suitePrefs(*args: Any, **kwargs: Any) -> None: ...
-def suitePrefs(*args: Any, **kwargs: Any) -> Any:
+def suitePrefs(*args, **kwargs) -> None: ...
+def suitePrefs(*args, **kwargs) -> None:
     """Flags:
     - `applyToSuite` `ats`: *str*
     - `installedAsSuite` `ias`: *bool*
     - `isCompleteSuite` `ics`: *bool*
     """
-def surface(*args: Any, degreeU: int = ..., du: int = ..., degreeV: int = ..., dv: int = ..., formU: str = ..., fu: str = ..., formV: str = ..., fv: str = ..., knotU: float = ..., ku: float = ..., knotV: float = ..., kv: float = ..., name: str = ..., n: str = ..., objectSpace: bool = ..., ob: bool = ..., point: list[float] = ..., p: list[float] = ..., pointWeight: Any = ..., pw: Any = ..., worldSpace: bool = ..., ws: bool = ..., **kwargs: Any) -> str:
+def surface(*args, **kwargs) -> str:
     """Flags:
     - `degreeU` `du`: *int*
     - `degreeV` `dv`: *int*
@@ -48822,7 +48822,7 @@ def surface(*args: Any, degreeU: int = ..., du: int = ..., degreeV: int = ..., d
     - `pointWeight` `pw`: *Any*
     - `worldSpace` `ws`: *bool*
     """
-def surfaceSampler(*args: Any, camera: str = ..., cam: str = ..., fileFormat: str = ..., ff: str = ..., filename: str = ..., fn: str = ..., filterSize: float = ..., fs: float = ..., filterType: int = ..., ft: int = ..., flipU: bool = ..., fu: bool = ..., flipV: bool = ..., fv: bool = ..., ignoreMirroredFaces: bool = ..., imf: bool = ..., ignoreTransforms: bool = ..., it: bool = ..., mapHeight: int = ..., mh: int = ..., mapMaterials: bool = ..., mm: bool = ..., mapOutput: str = ..., mo: str = ..., mapSpace: str = ..., sp: str = ..., mapWidth: int = ..., mw: int = ..., maxSearchDistance: float = ..., msd: float = ..., maximumValue: float = ..., max: float = ..., overscan: int = ..., os: int = ..., searchCage: str = ..., sc: str = ..., searchMethod: int = ..., sm: int = ..., searchOffset: float = ..., so: float = ..., shadows: bool = ..., sh: bool = ..., source: str = ..., s: str = ..., sourceUVSpace: str = ..., sus: str = ..., superSampling: int = ..., ss: int = ..., target: str = ..., t: str = ..., targetUVSpace: str = ..., tus: str = ..., useGeometryNormals: bool = ..., ugn: bool = ..., uvSet: str = ..., uv: str = ..., **kwargs: Any) -> None:
+def surfaceSampler(*args, **kwargs) -> None:
     """Flags:
     - `camera` `cam`: *str*
     - `fileFormat` `ff`: *str*
@@ -48860,13 +48860,13 @@ def surfaceShaderList(*args: Any, q: bool, remove: bool) -> str: ...
 @overload
 def surfaceShaderList(*args: Any, q: bool, rm: bool) -> str: ...
 @overload
-def surfaceShaderList(*args: Any, **kwargs: Any) -> None: ...
-def surfaceShaderList(*args: Any, **kwargs: Any) -> Any:
+def surfaceShaderList(*args, **kwargs) -> None: ...
+def surfaceShaderList(*args, **kwargs) -> None:
     """Flags:
     - `add` `add`: *str*
     - `remove` `rm`: *str*
     """
-def swatchDisplayPort(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., borderColor: Any = ..., bc: Any = ..., borderWidth: int = ..., bw: int = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., pressCommand: str = ..., pc: str = ..., preventOverride: bool = ..., po: bool = ..., renderPriority: int = ..., rp: int = ..., renderSize: int = ..., rs: int = ..., shadingNode: str = ..., sn: str = ..., statusBarMessage: str = ..., sbm: str = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., widthHeight: Any = ..., wh: Any = ..., **kwargs: Any) -> str:
+def swatchDisplayPort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -48901,8 +48901,8 @@ def swatchDisplayPort(*args: Any, annotation: str = ..., ann: str = ..., backgro
     - `width` `w`: *int*
     - `widthHeight` `wh`: *Any*
     """
-def swatchRefresh(*args: Any) -> bool: ...
-def switchTable(*args: Any, annotation: str = ..., ann: str = ..., backgroundColor: Any = ..., bgc: Any = ..., defineTemplate: str = ..., dt: str = ..., docTag: str = ..., dtg: str = ..., dragCallback: str = ..., dgc: str = ..., dropCallback: str = ..., dpc: str = ..., enable: bool = ..., en: bool = ..., enableBackground: bool = ..., ebg: bool = ..., enableKeyboardFocus: bool = ..., ekf: bool = ..., exists: bool = ..., ex: bool = ..., fullPathName: bool = ..., fpn: bool = ..., height: int = ..., h: int = ..., highlightColor: Any = ..., hlc: Any = ..., isObscured: bool = ..., io: bool = ..., label1: str = ..., l1: str = ..., label2: str = ..., l2: str = ..., manage: bool = ..., m: bool = ..., noBackground: bool = ..., nbg: bool = ..., numberOfPopupMenus: bool = ..., npm: bool = ..., parent: str = ..., p: str = ..., popupMenuArray: bool = ..., pma: bool = ..., preventOverride: bool = ..., po: bool = ..., selectedRow: bool = ..., sr: bool = ..., statusBarMessage: str = ..., sbm: str = ..., switchNode: str = ..., sn: str = ..., underPointerRow: bool = ..., upr: bool = ..., useTemplate: str = ..., ut: str = ..., visible: bool = ..., vis: bool = ..., visibleChangeCommand: str = ..., vcc: str = ..., width: int = ..., w: int = ..., **kwargs: Any) -> str:
+def swatchRefresh(*args, **kwargs) -> bool: ...
+def switchTable(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -49016,8 +49016,8 @@ def symbolButton(*args: Any, q: bool, manage: bool) -> bool: ...
 @overload
 def symbolButton(*args: Any, q: bool, m: bool) -> bool: ...
 @overload
-def symbolButton(*args: Any, **kwargs: Any) -> str: ...
-def symbolButton(*args: Any, **kwargs: Any) -> Any:
+def symbolButton(*args, **kwargs) -> str: ...
+def symbolButton(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -49128,8 +49128,8 @@ def symbolCheckBox(*args: Any, q: bool, width: bool) -> int: ...
 @overload
 def symbolCheckBox(*args: Any, q: bool, w: bool) -> int: ...
 @overload
-def symbolCheckBox(*args: Any, **kwargs: Any) -> str: ...
-def symbolCheckBox(*args: Any, **kwargs: Any) -> Any:
+def symbolCheckBox(*args, **kwargs) -> str: ...
+def symbolCheckBox(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -49209,8 +49209,8 @@ def symmetricModelling(*args: Any, q: bool, topoSymmetry: bool) -> bool: ...
 @overload
 def symmetricModelling(*args: Any, q: bool, ts: bool) -> bool: ...
 @overload
-def symmetricModelling(*args: Any, **kwargs: Any) -> None: ...
-def symmetricModelling(*args: Any, **kwargs: Any) -> Any:
+def symmetricModelling(*args, **kwargs) -> None: ...
+def symmetricModelling(*args, **kwargs) -> None:
     """Flags:
     - `about` `a`: *str*
     - `allowPartial` `ap`: *bool*
@@ -49223,7 +49223,7 @@ def symmetricModelling(*args: Any, **kwargs: Any) -> Any:
     - `tolerance` `t`: *float*
     - `topoSymmetry` `ts`: *bool*
     """
-def sysFile(*args: Any, copy: str = ..., cp: str = ..., delete: bool = ..., makeDir: bool = ..., md: bool = ..., move: str = ..., mov: str = ..., removeEmptyDir: bool = ..., red: bool = ..., rename: str = ..., ren: str = ..., **kwargs: Any) -> bool:
+def sysFile(*args, **kwargs) -> bool:
     """Flags:
     - `copy` `cp`: *str*
     - `delete` `delete`: *bool*
@@ -49313,8 +49313,8 @@ def tabLayout(*args: Any, q: bool, parent: bool) -> str: ...
 @overload
 def tabLayout(*args: Any, q: bool, p: bool) -> str: ...
 @overload
-def tabLayout(*args: Any, **kwargs: Any) -> str: ...
-def tabLayout(*args: Any, **kwargs: Any) -> Any:
+def tabLayout(*args, **kwargs) -> str: ...
+def tabLayout(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -49412,8 +49412,8 @@ def tangentConstraint(*args: Any, q: bool, weightAliasList: bool) -> bool: ...
 @overload
 def tangentConstraint(*args: Any, q: bool, wal: bool) -> bool: ...
 @overload
-def tangentConstraint(*args: Any, **kwargs: Any) -> list[str]: ...
-def tangentConstraint(*args: Any, **kwargs: Any) -> Any:
+def tangentConstraint(*args, **kwargs) -> list[str]: ...
+def tangentConstraint(*args, **kwargs) -> list[str]:
     """Flags:
     - `aimVector` `aim`: *Any*
     - `layer` `l`: *str*
@@ -49427,7 +49427,7 @@ def tangentConstraint(*args: Any, **kwargs: Any) -> Any:
     - `worldUpType` `wut`: *str*
     - `worldUpVector` `wu`: *Any*
     """
-def targetWeldCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., mergeToCenter: bool = ..., mtc: bool = ..., preserveUV: bool = ..., puv: bool = ..., **kwargs: Any) -> None:
+def targetWeldCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -49515,8 +49515,8 @@ def tension(*args: Any, q: bool, parallel: bool) -> bool: ...
 @overload
 def tension(*args: Any, q: bool, par: bool) -> bool: ...
 @overload
-def tension(*args: Any, **kwargs: Any) -> str: ...
-def tension(*args: Any, **kwargs: Any) -> Any:
+def tension(*args, **kwargs) -> str: ...
+def tension(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -49545,7 +49545,7 @@ def tension(*args: Any, **kwargs: Any) -> Any:
     - `split` `sp`: *bool*
     - `useComponentTags` `uct`: *bool*
     """
-def texCutContext(*args: Any, adjustSize: bool = ..., asz: bool = ..., displayShellBorders: bool = ..., dsb: bool = ..., edgeSelectSensitive: float = ..., ess: float = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., mode: str = ..., m: str = ..., moveRatio: float = ..., mvr: float = ..., name: str = ..., n: str = ..., size: float = ..., sz: float = ..., steadyStroke: bool = ..., ss: bool = ..., steadyStrokeDistance: float = ..., ssd: float = ..., touchToSew: bool = ..., tts: bool = ..., **kwargs: Any) -> float:
+def texCutContext(*args, **kwargs) -> float:
     """Flags:
     - `adjustSize` `asz`: *bool*
     - `displayShellBorders` `dsb`: *bool*
@@ -49563,7 +49563,7 @@ def texCutContext(*args: Any, adjustSize: bool = ..., asz: bool = ..., displaySh
     - `steadyStrokeDistance` `ssd`: *float*
     - `touchToSew` `tts`: *bool*
     """
-def texLatticeDeformContext(*args: Any, envelope: float = ..., ev: float = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., latticeColumns: int = ..., lc: int = ..., latticeRows: int = ..., lr: int = ..., name: str = ..., n: str = ..., showMoveManipulator: bool = ..., smm: bool = ..., snapPixelMode: bool = ..., spm: bool = ..., useBoundingRect: bool = ..., ubr: bool = ..., **kwargs: Any) -> int:
+def texLatticeDeformContext(*args, **kwargs) -> int:
     """Flags:
     - `envelope` `ev`: *float*
     - `exists` `ex`: *bool*
@@ -49578,14 +49578,14 @@ def texLatticeDeformContext(*args: Any, envelope: float = ..., ev: float = ..., 
     - `snapPixelMode` `spm`: *bool*
     - `useBoundingRect` `ubr`: *bool*
     """
-def texManipContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def texManipContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def texMoveContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., position: bool = ..., p: bool = ..., snap: bool = ..., s: bool = ..., snapComponentsRelative: bool = ..., scr: bool = ..., snapPixelMode: int = ..., spm: int = ..., snapValue: float = ..., sv: float = ..., tweakMode: bool = ..., twk: bool = ..., **kwargs: Any) -> str:
+def texMoveContext(*args, **kwargs) -> str:
     """Flags:
     - `editPivotMode` `epm`: *bool*
     - `exists` `ex`: *bool*
@@ -49599,7 +49599,7 @@ def texMoveContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exist
     - `snapValue` `sv`: *float*
     - `tweakMode` `twk`: *bool*
     """
-def texMoveUVShellContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., iterations: int = ..., it: int = ..., mask: bool = ..., m: bool = ..., position: bool = ..., p: bool = ..., shellBorder: float = ..., sb: float = ..., **kwargs: Any) -> str:
+def texMoveUVShellContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -49610,7 +49610,7 @@ def texMoveUVShellContext(*args: Any, exists: bool = ..., ex: bool = ..., image1
     - `position` `p`: *bool*
     - `shellBorder` `sb`: *float*
     """
-def texRotateContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., position: bool = ..., p: bool = ..., snap: bool = ..., s: bool = ..., snapRelative: bool = ..., sr: bool = ..., snapValue: float = ..., sv: float = ..., tweakMode: bool = ..., twk: bool = ..., **kwargs: Any) -> str:
+def texRotateContext(*args, **kwargs) -> str:
     """Flags:
     - `editPivotMode` `epm`: *bool*
     - `exists` `ex`: *bool*
@@ -49623,7 +49623,7 @@ def texRotateContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exi
     - `snapValue` `sv`: *float*
     - `tweakMode` `twk`: *bool*
     """
-def texScaleContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., position: bool = ..., p: bool = ..., preventNegativeScale: bool = ..., pns: bool = ..., snap: bool = ..., s: bool = ..., snapRelative: bool = ..., sr: bool = ..., snapValue: float = ..., sv: float = ..., tweakMode: bool = ..., twk: bool = ..., **kwargs: Any) -> str:
+def texScaleContext(*args, **kwargs) -> str:
     """Flags:
     - `editPivotMode` `epm`: *bool*
     - `exists` `ex`: *bool*
@@ -49637,7 +49637,7 @@ def texScaleContext(*args: Any, editPivotMode: bool = ..., epm: bool = ..., exis
     - `snapValue` `sv`: *float*
     - `tweakMode` `twk`: *bool*
     """
-def texSculptCacheContext(*args: Any, adjustSize: bool = ..., asz: bool = ..., adjustStrength: bool = ..., ast: bool = ..., direction: int = ..., d: int = ..., falloffType: int = ..., ft: int = ..., floodPin: float = ..., fp: float = ..., grabTwist: bool = ..., gtw: bool = ..., inverted: bool = ..., inv: bool = ..., mode: str = ..., m: str = ..., sculptFalloffCurve: str = ..., sfc: str = ..., showBrushRingDuringStroke: bool = ..., sbr: bool = ..., size: float = ..., sz: float = ..., strength: float = ..., st: float = ..., **kwargs: Any) -> None:
+def texSculptCacheContext(*args, **kwargs) -> None:
     """Flags:
     - `adjustSize` `asz`: *bool*
     - `adjustStrength` `ast`: *bool*
@@ -49652,21 +49652,21 @@ def texSculptCacheContext(*args: Any, adjustSize: bool = ..., asz: bool = ..., a
     - `size` `sz`: *float*
     - `strength` `st`: *float*
     """
-def texSelectContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> str:
+def texSelectContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def texSelectShortestPathCtx(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., **kwargs: Any) -> None:
+def texSelectShortestPathCtx(*args, **kwargs) -> None:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
     - `image2` `i2`: *str*
     - `image3` `i3`: *str*
     """
-def texSmudgeUVContext(*args: Any, dragSlider: str = ..., ds: str = ..., effectType: str = ..., et: str = ..., exists: bool = ..., ex: bool = ..., functionType: str = ..., ft: str = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., pressure: float = ..., prs: float = ..., radius: float = ..., r: float = ..., smudgeIsMiddle: bool = ..., sim: bool = ..., **kwargs: Any) -> str:
+def texSmudgeUVContext(*args, **kwargs) -> str:
     """Flags:
     - `dragSlider` `ds`: *str*
     - `effectType` `et`: *str*
@@ -49681,7 +49681,7 @@ def texSmudgeUVContext(*args: Any, dragSlider: str = ..., ds: str = ..., effectT
     - `radius` `r`: *float*
     - `smudgeIsMiddle` `sim`: *bool*
     """
-def texTweakUVContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., position: bool = ..., p: bool = ..., tolerance: float = ..., t: float = ..., **kwargs: Any) -> str:
+def texTweakUVContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `image1` `i1`: *str*
@@ -49690,7 +49690,7 @@ def texTweakUVContext(*args: Any, exists: bool = ..., ex: bool = ..., image1: st
     - `position` `p`: *bool*
     - `tolerance` `t`: *float*
     """
-def texWinToolCtx(*args: Any, alternateContext: bool = ..., ac: bool = ..., boxzoom: bool = ..., bz: bool = ..., dolly: bool = ..., do: bool = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., toolName: str = ..., tn: str = ..., track: bool = ..., tr: bool = ..., **kwargs: Any) -> str:
+def texWinToolCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `boxzoom` `bz`: *bool*
@@ -49785,8 +49785,8 @@ def text(*args: Any, q: bool, fullPathName: bool) -> bool: ...
 @overload
 def text(*args: Any, q: bool, fpn: bool) -> bool: ...
 @overload
-def text(*args: Any, **kwargs: Any) -> str: ...
-def text(*args: Any, **kwargs: Any) -> Any:
+def text(*args, **kwargs) -> str: ...
+def text(*args, **kwargs) -> str:
     """Flags:
     - `align` `al`: *str*
     - `annotation` `ann`: *str*
@@ -49838,8 +49838,8 @@ def textCurves(*args: Any, q: bool, object: bool) -> bool: ...
 @overload
 def textCurves(*args: Any, q: bool, o: bool) -> bool: ...
 @overload
-def textCurves(*args: Any, **kwargs: Any) -> list[str]: ...
-def textCurves(*args: Any, **kwargs: Any) -> Any:
+def textCurves(*args, **kwargs) -> list[str]: ...
+def textCurves(*args, **kwargs) -> list[str]:
     """Flags:
     - `font` `f`: *str*
     - `name` `n`: *str*
@@ -49927,8 +49927,8 @@ def textField(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ...
 @overload
 def textField(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def textField(*args: Any, **kwargs: Any) -> str: ...
-def textField(*args: Any, **kwargs: Any) -> Any:
+def textField(*args, **kwargs) -> str: ...
+def textField(*args, **kwargs) -> str:
     """Flags:
     - `alwaysInvokeEnterCommandOnReturn` `aie`: *bool*
     - `annotation` `ann`: *str*
@@ -50054,8 +50054,8 @@ def textFieldButtonGrp(*args: Any, q: bool, insertText: bool) -> str: ...
 @overload
 def textFieldButtonGrp(*args: Any, q: bool, it: bool) -> str: ...
 @overload
-def textFieldButtonGrp(*args: Any, **kwargs: Any) -> str: ...
-def textFieldButtonGrp(*args: Any, **kwargs: Any) -> Any:
+def textFieldButtonGrp(*args, **kwargs) -> str: ...
+def textFieldButtonGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -50208,8 +50208,8 @@ def textFieldGrp(*args: Any, q: bool, label: bool) -> str: ...
 @overload
 def textFieldGrp(*args: Any, q: bool, l: bool) -> str: ...
 @overload
-def textFieldGrp(*args: Any, **kwargs: Any) -> str: ...
-def textFieldGrp(*args: Any, **kwargs: Any) -> Any:
+def textFieldGrp(*args, **kwargs) -> str: ...
+def textFieldGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -50278,7 +50278,7 @@ def textFieldGrp(*args: Any, **kwargs: Any) -> Any:
     - `visibleChangeCommand` `vcc`: *str*
     - `width` `w`: *int*
     """
-def textManip(*args: Any, visible: bool = ..., v: bool = ..., **kwargs: Any) -> None:
+def textManip(*args, **kwargs) -> None:
     """Flags:
     - `visible` `v`: *bool*
     """
@@ -50363,8 +50363,8 @@ def textScrollList(*args: Any, q: bool, selectItem: bool) -> str: ...
 @overload
 def textScrollList(*args: Any, q: bool, si: bool) -> str: ...
 @overload
-def textScrollList(*args: Any, **kwargs: Any) -> str: ...
-def textScrollList(*args: Any, **kwargs: Any) -> Any:
+def textScrollList(*args, **kwargs) -> str: ...
+def textScrollList(*args, **kwargs) -> str:
     """Flags:
     - `allItems` `ai`: *bool*
     - `allItemsUniqueTags` `ait`: *bool*
@@ -50501,8 +50501,8 @@ def textureDeformer(*args: Any, q: bool, includeHiddenSelections: bool) -> bool:
 @overload
 def textureDeformer(*args: Any, q: bool, ihs: bool) -> bool: ...
 @overload
-def textureDeformer(*args: Any, **kwargs: Any) -> str: ...
-def textureDeformer(*args: Any, **kwargs: Any) -> Any:
+def textureDeformer(*args, **kwargs) -> str: ...
+def textureDeformer(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -50533,7 +50533,7 @@ def textureDeformer(*args: Any, **kwargs: Any) -> Any:
     - `vectorSpace` `vsp`: *str*
     - `vectorStrength` `vs`: *Any*
     """
-def texturePlacementContext(*args: Any, exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., labelMapping: bool = ..., lm: bool = ..., name: str = ..., n: str = ..., **kwargs: Any) -> str:
+def texturePlacementContext(*args, **kwargs) -> str:
     """Flags:
     - `exists` `ex`: *bool*
     - `history` `ch`: *bool*
@@ -50622,8 +50622,8 @@ def textureWindow(*args: Any, q: bool, mainListConnection: bool) -> str: ...
 @overload
 def textureWindow(*args: Any, q: bool, mlc: bool) -> str: ...
 @overload
-def textureWindow(*args: Any, **kwargs: Any) -> str: ...
-def textureWindow(*args: Any, **kwargs: Any) -> Any:
+def textureWindow(*args, **kwargs) -> str: ...
+def textureWindow(*args, **kwargs) -> str:
     """Flags:
     - `activeSelectionOnTop` `ast`: *bool*
     - `axesColor` `axc`: *Any*
@@ -50759,12 +50759,12 @@ def threadCount(*args: Any, q: bool, numberOfThreads: bool) -> int: ...
 @overload
 def threadCount(*args: Any, q: bool, n: bool) -> int: ...
 @overload
-def threadCount(*args: Any, **kwargs: Any) -> None: ...
-def threadCount(*args: Any, **kwargs: Any) -> Any:
+def threadCount(*args, **kwargs) -> None: ...
+def threadCount(*args, **kwargs) -> None:
     """Flags:
     - `numberOfThreads` `n`: *int*
     """
-def threePointArcCtx(*args: Any, degree: int = ..., d: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., spans: int = ..., s: int = ..., **kwargs: Any) -> str:
+def threePointArcCtx(*args, **kwargs) -> str:
     """Flags:
     - `degree` `d`: *int*
     - `exists` `ex`: *bool*
@@ -50824,8 +50824,8 @@ def thumbnailCaptureComponent(*args: Any, q: bool, previewPath: bool) -> bool: .
 @overload
 def thumbnailCaptureComponent(*args: Any, q: bool, pp: bool) -> bool: ...
 @overload
-def thumbnailCaptureComponent(*args: Any, **kwargs: Any) -> None: ...
-def thumbnailCaptureComponent(*args: Any, **kwargs: Any) -> Any:
+def thumbnailCaptureComponent(*args, **kwargs) -> None: ...
+def thumbnailCaptureComponent(*args, **kwargs) -> None:
     """Flags:
     - `capture` `c`: *bool*
     - `capturedFrameCount` `cfc`: *bool*
@@ -50861,8 +50861,8 @@ def timeCode(*args: Any, q: bool, productionStartSecond: bool) -> float: ...
 @overload
 def timeCode(*args: Any, q: bool, pss: bool) -> float: ...
 @overload
-def timeCode(*args: Any, **kwargs: Any) -> float: ...
-def timeCode(*args: Any, **kwargs: Any) -> Any:
+def timeCode(*args, **kwargs) -> float: ...
+def timeCode(*args, **kwargs) -> float:
     """Flags:
     - `mayaStartFrame` `msf`: *float*
     - `productionStartFrame` `psf`: *float*
@@ -50951,8 +50951,8 @@ def timeControl(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ...
 @overload
 def timeControl(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def timeControl(*args: Any, **kwargs: Any) -> str: ...
-def timeControl(*args: Any, **kwargs: Any) -> Any:
+def timeControl(*args, **kwargs) -> str: ...
+def timeControl(*args, **kwargs) -> str:
     """Flags:
     - `animCurveNames` `acn`: *bool*
     - `animLayerFilterOptions` `alf`: *str*
@@ -51008,7 +51008,7 @@ def timeControl(*args: Any, **kwargs: Any) -> Any:
     - `waveform` `wf`: *str*
     - `width` `w`: *int*
     """
-def timeEditor(*args: Any, allClips: str = ..., alc: str = ..., clipId: int = ..., id: int = ..., commonParentTrack: bool = ..., cpt: bool = ..., composition: str = ..., cp: str = ..., drivingClipsForAttr: str = ..., dca: str = ..., drivingClipsForObj: Any = ..., dco: Any = ..., includeParent: bool = ..., ip: bool = ..., mute: bool = ..., m: bool = ..., muteAudio: bool = ..., ma: bool = ..., selectedClips: str = ..., sc: str = ..., topLevelClips: str = ..., tlc: str = ..., **kwargs: Any) -> str:
+def timeEditor(*args, **kwargs) -> str:
     """Flags:
     - `allClips` `alc`: *str*
     - `clipId` `id`: *int*
@@ -51022,7 +51022,7 @@ def timeEditor(*args: Any, allClips: str = ..., alc: str = ..., clipId: int = ..
     - `selectedClips` `sc`: *str*
     - `topLevelClips` `tlc`: *str*
     """
-def timeEditorAnimSource(*args: Any, addObjects: str = ..., ao: str = ..., addRelatedKG: bool = ..., akg: bool = ..., addSelectedObjects: bool = ..., aso: bool = ..., addSource: str = ..., asc: str = ..., apply: bool = ..., ap: bool = ..., attribute: str = ..., at: str = ..., bakeToAnimSource: str = ..., bas: str = ..., calculateTiming: bool = ..., ct: bool = ..., copyAnimation: bool = ..., cp: bool = ..., drivenClips: bool = ..., dc: bool = ..., exclusive: bool = ..., exc: bool = ..., export: str = ..., ex: str = ..., importAllFbxTakes: bool = ..., aft: bool = ..., importFbx: str = ..., fbx: str = ..., importFbxTakes: str = ..., ft: str = ..., importMayaFile: str = ..., mf: str = ..., importOption: str = ..., io: str = ..., importPopulateOption: str = ..., ipo: str = ..., importedContainerNames: str = ..., icn: str = ..., includeRoot: bool = ..., irt: bool = ..., isUnique: bool = ..., iu: bool = ..., populateImportedAnimSources: str = ..., pia: str = ..., poseClip: bool = ..., poc: bool = ..., recursively: bool = ..., rec: bool = ..., removeSceneAnimation: bool = ..., rsa: bool = ..., removeSource: str = ..., rs: str = ..., showAnimSourceRemapping: bool = ..., sar: bool = ..., takeList: str = ..., tl: str = ..., takesToImport: str = ..., toi: str = ..., targetIndex: str = ..., ti: str = ..., targets: bool = ..., trg: bool = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> str:
+def timeEditorAnimSource(*args, **kwargs) -> str:
     """Flags:
     - `addObjects` `ao`: *str*
     - `addRelatedKG` `akg`: *bool*
@@ -51057,7 +51057,7 @@ def timeEditorAnimSource(*args: Any, addObjects: str = ..., ao: str = ..., addRe
     - `targets` `trg`: *bool*
     - `type` `typ`: *str*
     """
-def timeEditorBakeClips(*args: Any, bakeToAnimSource: str = ..., bas: str = ..., bakeToClip: str = ..., btc: str = ..., clipId: int = ..., id: int = ..., combineLayers: bool = ..., cl: bool = ..., forceSampling: bool = ..., fs: bool = ..., keepOriginalClip: bool = ..., koc: bool = ..., path: str = ..., pt: str = ..., sampleBy: float = ..., sb: float = ..., targetTrackIndex: int = ..., tti: int = ..., targetTracksNode: str = ..., ttn: str = ..., **kwargs: Any) -> int:
+def timeEditorBakeClips(*args, **kwargs) -> int:
     """Flags:
     - `bakeToAnimSource` `bas`: *str*
     - `bakeToClip` `btc`: *str*
@@ -51070,7 +51070,7 @@ def timeEditorBakeClips(*args: Any, bakeToAnimSource: str = ..., bas: str = ...,
     - `targetTrackIndex` `tti`: *int*
     - `targetTracksNode` `ttn`: *str*
     """
-def timeEditorClip(*args: Any, absolute: bool = ..., abs: bool = ..., addAttribute: str = ..., aa: str = ..., addObjects: str = ..., ao: str = ..., addRelatedKG: bool = ..., akg: bool = ..., addSelectedObjects: bool = ..., aso: bool = ..., allowShrinking: bool = ..., eas: bool = ..., animSource: str = ..., asr: str = ..., attribute: str = ..., at: str = ..., audio: str = ..., au: str = ..., blendMode: int = ..., bm: int = ..., children: int = ..., chl: int = ..., clipAfter: bool = ..., ca: bool = ..., clipBefore: bool = ..., cb: bool = ..., clipDataType: bool = ..., cdt: bool = ..., clipId: int = ..., id: int = ..., clipIdFromNodeName: int = ..., idn: int = ..., clipIdFromPath: bool = ..., idp: bool = ..., clipNode: bool = ..., cln: bool = ..., clipPath: bool = ..., clp: bool = ..., copyClip: bool = ..., ccl: bool = ..., crossfadeMode: int = ..., cfm: int = ..., crossfadePlug: bool = ..., cfp: bool = ..., curveTime: float = ..., cvt: float = ..., defaultGhostRoot: bool = ..., dgr: bool = ..., drivenAttributes: bool = ..., dat: bool = ..., drivenClipsBySource: str = ..., dcs: str = ..., drivenObjects: bool = ..., dos: bool = ..., drivenRootObjects: bool = ..., dro: bool = ..., drivingSources: str = ..., dsc: str = ..., duplicateClip: bool = ..., dcl: bool = ..., duration: float = ..., d: float = ..., emptySource: bool = ..., ems: bool = ..., endTime: float = ..., et: float = ..., exclusive: bool = ..., exc: bool = ..., existingOnly: bool = ..., exo: bool = ..., exists: bool = ..., exs: bool = ..., explode: int = ..., epl: int = ..., exportAllClips: bool = ..., eac: bool = ..., exportFbx: str = ..., ef: str = ..., extend: bool = ..., ex: bool = ..., extendParent: bool = ..., exp: bool = ..., ghost: bool = ..., gh: bool = ..., ghostRootAdd: str = ..., gra: str = ..., ghostRootRemove: str = ..., grr: str = ..., group: bool = ..., grp: bool = ..., holdEnd: float = ..., he: float = ..., holdStart: float = ..., hs: float = ..., importAllFbxTakes: bool = ..., aft: bool = ..., importFbx: str = ..., fbx: str = ..., importFbxTakes: str = ..., ft: str = ..., importMayaFile: str = ..., mf: str = ..., importOption: str = ..., io: str = ..., importPopulateOption: str = ..., ipo: str = ..., importTakeDestination: int = ..., itd: int = ..., importedContainerNames: str = ..., icn: str = ..., includeRoot: bool = ..., irt: bool = ..., isContainer: bool = ..., ict: bool = ..., listUserGhostRoot: bool = ..., lug: bool = ..., loopEnd: float = ..., le: float = ..., loopStart: float = ..., ls: float = ..., minClipDuration: bool = ..., mcd: bool = ..., modifyAnimSource: bool = ..., mas: bool = ..., moveClip: float = ..., mcl: float = ..., mute: bool = ..., m: bool = ..., name: str = ..., n: str = ..., parent: int = ..., p: int = ..., parentClipId: int = ..., pid: int = ..., parentGroupId: bool = ..., pgd: bool = ..., pasteClip: float = ..., pcl: float = ..., path: str = ..., pt: str = ..., populateImportedAnimSources: str = ..., pia: str = ..., poseClip: bool = ..., poc: bool = ..., preserveAnimationTiming: bool = ..., pat: bool = ..., razorClip: float = ..., rcl: float = ..., recursively: bool = ..., rec: bool = ..., remap: Any = ..., rmp: Any = ..., remapNamespace: Any = ..., rns: Any = ..., remapSource: Any = ..., rs: Any = ..., remappedSourceAttrs: bool = ..., rms: bool = ..., remappedTargetAttrs: bool = ..., rmt: bool = ..., removeAttribute: str = ..., ra: str = ..., removeClip: bool = ..., rmc: bool = ..., removeCrossfade: bool = ..., rcf: bool = ..., removeSceneAnimation: bool = ..., rsa: bool = ..., removeWeightCurve: bool = ..., rwc: bool = ..., resetTiming: bool = ..., rt: bool = ..., resetTransition: bool = ..., rtr: bool = ..., ripple: bool = ..., rpl: bool = ..., rootClipId: int = ..., rti: int = ..., rootPath: str = ..., rpt: str = ..., scaleEnd: float = ..., sce: float = ..., scalePivot: float = ..., scp: float = ..., scaleStart: float = ..., scs: float = ..., setKeyframe: str = ..., k: str = ..., showAnimSourceRemapping: bool = ..., sar: bool = ..., speedRamping: int = ..., src: int = ..., startTime: float = ..., s: float = ..., takeList: str = ..., tl: str = ..., takesToImport: str = ..., toi: str = ..., timeWarp: bool = ..., tw: bool = ..., timeWarpCurve: bool = ..., twc: bool = ..., timeWarpType: int = ..., twt: int = ..., track: str = ..., trk: str = ..., tracksNode: bool = ..., trn: bool = ..., transition: bool = ..., tra: bool = ..., trimEnd: float = ..., tre: float = ..., trimStart: float = ..., trs: float = ..., truncated: bool = ..., trc: bool = ..., type: str = ..., typ: str = ..., uniqueAnimSource: bool = ..., uas: bool = ..., userGhostRoot: bool = ..., ugr: bool = ..., weightCurve: bool = ..., wc: bool = ..., zeroKeying: bool = ..., zk: bool = ..., **kwargs: Any) -> str:
+def timeEditorClip(*args, **kwargs) -> str:
     """Flags:
     - `absolute` `abs`: *bool*
     - `addAttribute` `aa`: *str*
@@ -51186,7 +51186,7 @@ def timeEditorClip(*args: Any, absolute: bool = ..., abs: bool = ..., addAttribu
     - `weightCurve` `wc`: *bool*
     - `zeroKeying` `zk`: *bool*
     """
-def timeEditorClipLayer(*args: Any, addAttribute: str = ..., aa: str = ..., addLayer: str = ..., al: str = ..., addObject: str = ..., ao: str = ..., allLayers: bool = ..., all: bool = ..., attribute: str = ..., a: str = ..., attributeKeyable: str = ..., ak: str = ..., clipId: int = ..., cid: int = ..., index: int = ..., idx: int = ..., keySiblings: bool = ..., ks: bool = ..., layerId: int = ..., lid: int = ..., layerName: str = ..., ln: str = ..., mode: int = ..., m: int = ..., mute: bool = ..., mu: bool = ..., name: bool = ..., n: bool = ..., path: str = ..., pt: str = ..., removeAttribute: str = ..., ra: str = ..., removeLayer: bool = ..., rl: bool = ..., removeObject: str = ..., ro: str = ..., resetSolo: bool = ..., rs: bool = ..., setKeyframe: bool = ..., k: bool = ..., solo: bool = ..., sl: bool = ..., zeroKeying: bool = ..., zk: bool = ..., **kwargs: Any) -> str:
+def timeEditorClipLayer(*args, **kwargs) -> str:
     """Flags:
     - `addAttribute` `aa`: *str*
     - `addLayer` `al`: *str*
@@ -51211,7 +51211,7 @@ def timeEditorClipLayer(*args: Any, addAttribute: str = ..., aa: str = ..., addL
     - `solo` `sl`: *bool*
     - `zeroKeying` `zk`: *bool*
     """
-def timeEditorClipOffset(*args: Any, applyToAllRoots: bool = ..., atr: bool = ..., clipId: int = ..., id: int = ..., matchClipId: int = ..., mci: int = ..., matchDstTime: float = ..., mdt: float = ..., matchObj: str = ..., mob: str = ..., matchOffsetRot: bool = ..., mor: bool = ..., matchOffsetTrans: bool = ..., mot: bool = ..., matchPath: str = ..., mpt: str = ..., matchRotOp: int = ..., mro: int = ..., matchSrcTime: float = ..., mst: float = ..., matchTransOp: int = ..., mto: int = ..., offsetTransform: bool = ..., oft: bool = ..., path: str = ..., pt: str = ..., resetMatch: int = ..., rsm: int = ..., resetMatchPath: str = ..., rmp: str = ..., rootObj: str = ..., rob: str = ..., upVectorX: float = ..., upx: float = ..., upVectorY: float = ..., upy: float = ..., upVectorZ: float = ..., upz: float = ..., **kwargs: Any) -> None:
+def timeEditorClipOffset(*args, **kwargs) -> None:
     """Flags:
     - `applyToAllRoots` `atr`: *bool*
     - `clipId` `id`: *int*
@@ -51233,7 +51233,7 @@ def timeEditorClipOffset(*args: Any, applyToAllRoots: bool = ..., atr: bool = ..
     - `upVectorY` `upy`: *float*
     - `upVectorZ` `upz`: *float*
     """
-def timeEditorComposition(*args: Any, active: bool = ..., act: bool = ..., allCompositions: bool = ..., acp: bool = ..., createTrack: bool = ..., ct: bool = ..., delete: bool = ..., duplicateFrom: str = ..., df: str = ..., rename: Any = ..., ren: Any = ..., tracksNode: bool = ..., tn: bool = ..., **kwargs: Any) -> str:
+def timeEditorComposition(*args, **kwargs) -> str:
     """Flags:
     - `active` `act`: *bool*
     - `allCompositions` `acp`: *bool*
@@ -51243,7 +51243,7 @@ def timeEditorComposition(*args: Any, active: bool = ..., act: bool = ..., allCo
     - `rename` `ren`: *Any*
     - `tracksNode` `tn`: *bool*
     """
-def timeEditorPanel(*args: Any, activeClipEditMode: int = ..., ace: int = ..., activeTabRootClipId: bool = ..., atr: bool = ..., activeTabTime: bool = ..., att: bool = ..., activeTabView: int = ..., atv: int = ..., autoFit: str = ..., af: str = ..., autoFitTime: str = ..., aft: str = ..., control: bool = ..., ctl: bool = ..., defineTemplate: str = ..., dt: str = ..., displayActiveKeyTangents: str = ..., dat: str = ..., displayActiveKeys: str = ..., dak: str = ..., displayInfinities: str = ..., di: str = ..., displayKeys: str = ..., dk: str = ..., displayTangents: str = ..., dtn: str = ..., displayValues: str = ..., dv: str = ..., docTag: str = ..., dtg: str = ..., exists: bool = ..., ex: bool = ..., filter: str = ..., f: str = ..., forceMainConnection: str = ..., fmc: str = ..., groupIdForTabView: int = ..., gtv: int = ..., highlightConnection: str = ..., hlc: str = ..., keyingTarget: int = ..., kt: int = ..., layerId: int = ..., l: int = ..., lockMainConnection: bool = ..., lck: bool = ..., lookAt: str = ..., la: str = ..., mainListConnection: str = ..., mlc: str = ..., menu: str = ..., m: str = ..., minClipWidth: int = ..., mcw: int = ..., panel: str = ..., pnl: str = ..., parent: str = ..., p: str = ..., selectionConnection: str = ..., slc: str = ..., setToPrevClipEditMode: bool = ..., spe: bool = ..., snapTime: str = ..., st: str = ..., snapToClip: bool = ..., stc: bool = ..., snapToFrame: bool = ..., stf: bool = ..., snapTolerance: int = ..., sto: int = ..., snapValue: str = ..., sv: str = ..., stateString: bool = ..., sts: bool = ..., tabView: int = ..., tv: int = ..., timeCursor: bool = ..., tc: bool = ..., unParent: bool = ..., up: bool = ..., unlockMainConnection: bool = ..., ulk: bool = ..., updateMainConnection: bool = ..., upd: bool = ..., useTemplate: str = ..., ut: str = ..., **kwargs: Any) -> str:
+def timeEditorPanel(*args, **kwargs) -> str:
     """Flags:
     - `activeClipEditMode` `ace`: *int*
     - `activeTabRootClipId` `atr`: *bool*
@@ -51289,7 +51289,7 @@ def timeEditorPanel(*args: Any, activeClipEditMode: int = ..., ace: int = ..., a
     - `updateMainConnection` `upd`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def timeEditorTracks(*args: Any, activeClipWeight: float = ..., acw: float = ..., activeClipWeightId: float = ..., aci: float = ..., addTrack: int = ..., at: int = ..., allClips: bool = ..., ac: bool = ..., allTracks: bool = ..., atc: bool = ..., allTracksRecursive: bool = ..., atr: bool = ..., composition: bool = ..., cp: bool = ..., path: str = ..., pt: str = ..., plugIndex: int = ..., pi: int = ..., removeTrack: int = ..., rt: int = ..., removeTrackByPath: str = ..., rtp: str = ..., reorderTrack: Any = ..., rot: Any = ..., resetMute: bool = ..., rm: bool = ..., resetSolo: bool = ..., rs: bool = ..., selectedTracks: bool = ..., st: bool = ..., trackGhost: bool = ..., tgh: bool = ..., trackIndex: int = ..., ti: int = ..., trackMuted: bool = ..., tm: bool = ..., trackName: str = ..., tn: str = ..., trackSolo: bool = ..., ts: bool = ..., trackType: int = ..., tt: int = ..., **kwargs: Any) -> Any:
+def timeEditorTracks(*args, **kwargs) -> Any:
     """Flags:
     - `activeClipWeight` `acw`: *float*
     - `activeClipWeightId` `aci`: *float*
@@ -51394,8 +51394,8 @@ def timeField(*args: Any, q: bool, editable: bool) -> bool: ...
 @overload
 def timeField(*args: Any, q: bool, ed: bool) -> bool: ...
 @overload
-def timeField(*args: Any, **kwargs: Any) -> str: ...
-def timeField(*args: Any, **kwargs: Any) -> Any:
+def timeField(*args, **kwargs) -> str: ...
+def timeField(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `autoUnitWidth` `auw`: *int*
@@ -51513,8 +51513,8 @@ def timeFieldGrp(*args: Any, q: bool, numberOfFields: bool) -> int: ...
 @overload
 def timeFieldGrp(*args: Any, q: bool, nf: bool) -> int: ...
 @overload
-def timeFieldGrp(*args: Any, **kwargs: Any) -> str: ...
-def timeFieldGrp(*args: Any, **kwargs: Any) -> Any:
+def timeFieldGrp(*args, **kwargs) -> str: ...
+def timeFieldGrp(*args, **kwargs) -> str:
     """Flags:
     - `adjustableColumn` `adj`: *int*
     - `adjustableColumn2` `ad2`: *int*
@@ -51670,8 +51670,8 @@ def timePort(*args: Any, q: bool, noBackground: bool) -> bool: ...
 @overload
 def timePort(*args: Any, q: bool, nbg: bool) -> bool: ...
 @overload
-def timePort(*args: Any, **kwargs: Any) -> str: ...
-def timePort(*args: Any, **kwargs: Any) -> Any:
+def timePort(*args, **kwargs) -> str: ...
+def timePort(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `backgroundColor` `bgc`: *Any*
@@ -51712,8 +51712,8 @@ def timeWarp(*args: Any, q: bool, f: bool) -> float: ...
 @overload
 def timeWarp(*args: Any, q: bool, g: bool) -> bool: ...
 @overload
-def timeWarp(*args: Any, **kwargs: Any) -> str: ...
-def timeWarp(*args: Any, **kwargs: Any) -> Any:
+def timeWarp(*args, **kwargs) -> str: ...
+def timeWarp(*args, **kwargs) -> str:
     """Flags:
     - `deleteFrame` `df`: *int*
     - `frame` `f`: *float*
@@ -51721,14 +51721,14 @@ def timeWarp(*args: Any, **kwargs: Any) -> Any:
     - `interpType` `it`: *Any*
     - `moveFrame` `mf`: *Any*
     """
-def timer(*args: Any, endTimer: bool = ..., e: bool = ..., lapTime: bool = ..., lap: bool = ..., name: str = ..., n: str = ..., startTimer: bool = ..., s: bool = ..., **kwargs: Any) -> None:
+def timer(*args, **kwargs) -> None:
     """Flags:
     - `endTimer` `e`: *bool*
     - `lapTime` `lap`: *bool*
     - `name` `n`: *str*
     - `startTimer` `s`: *bool*
     """
-def timerX(*args: Any, startTime: float = ..., st: float = ..., **kwargs: Any) -> float:
+def timerX(*args, **kwargs) -> float:
     """Flags:
     - `startTime` `st`: *float*
     """
@@ -51811,8 +51811,8 @@ def toggle(*args: Any, q: bool, normal: bool) -> bool: ...
 @overload
 def toggle(*args: Any, q: bool, nr: bool) -> bool: ...
 @overload
-def toggle(*args: Any, **kwargs: Any) -> bool: ...
-def toggle(*args: Any, **kwargs: Any) -> Any:
+def toggle(*args, **kwargs) -> bool: ...
+def toggle(*args, **kwargs) -> bool:
     """Flags:
     - `above` `a`: *bool*
     - `below` `b`: *bool*
@@ -51856,14 +51856,14 @@ def toggleAxis(*args: Any, q: bool, view: bool) -> bool: ...
 @overload
 def toggleAxis(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def toggleAxis(*args: Any, **kwargs: Any) -> bool: ...
-def toggleAxis(*args: Any, **kwargs: Any) -> Any:
+def toggleAxis(*args, **kwargs) -> bool: ...
+def toggleAxis(*args, **kwargs) -> bool:
     """Flags:
     - `origin` `o`: *bool*
     - `view` `v`: *bool*
     """
-def toggleDisplacement(*args: Any) -> None: ...
-def toggleWindowVisibility(*args: Any) -> None: ...
+def toggleDisplacement(*args, **kwargs) -> None: ...
+def toggleWindowVisibility(*args, **kwargs) -> None: ...
 @overload
 def tolerance(*args: Any, q: bool, angular: bool) -> float: ...
 @overload
@@ -51873,8 +51873,8 @@ def tolerance(*args: Any, q: bool, linear: bool) -> float: ...
 @overload
 def tolerance(*args: Any, q: bool, l: bool) -> float: ...
 @overload
-def tolerance(*args: Any, **kwargs: Any) -> None: ...
-def tolerance(*args: Any, **kwargs: Any) -> Any:
+def tolerance(*args, **kwargs) -> None: ...
+def tolerance(*args, **kwargs) -> None:
     """Flags:
     - `angular` `a`: *float*
     - `linear` `l`: *float*
@@ -51960,8 +51960,8 @@ def toolBar(*args: Any, q: bool, fullPathName: bool) -> bool: ...
 @overload
 def toolBar(*args: Any, q: bool, fpn: bool) -> bool: ...
 @overload
-def toolBar(*args: Any, **kwargs: Any) -> str: ...
-def toolBar(*args: Any, **kwargs: Any) -> Any:
+def toolBar(*args, **kwargs) -> str: ...
+def toolBar(*args, **kwargs) -> str:
     """Flags:
     - `allowedArea` `aa`: *str*
     - `annotation` `ann`: *str*
@@ -52074,8 +52074,8 @@ def toolButton(*args: Any, q: bool, useTemplate: bool) -> str: ...
 @overload
 def toolButton(*args: Any, q: bool, ut: bool) -> str: ...
 @overload
-def toolButton(*args: Any, **kwargs: Any) -> str: ...
-def toolButton(*args: Any, **kwargs: Any) -> Any:
+def toolButton(*args, **kwargs) -> str: ...
+def toolButton(*args, **kwargs) -> str:
     """Flags:
     - `allowMultipleTools` `amt`: *bool*
     - `annotation` `ann`: *str*
@@ -52159,8 +52159,8 @@ def toolCollection(*args: Any, q: bool, numberOfCollectionItems: bool) -> bool: 
 @overload
 def toolCollection(*args: Any, q: bool, nci: bool) -> bool: ...
 @overload
-def toolCollection(*args: Any, **kwargs: Any) -> str: ...
-def toolCollection(*args: Any, **kwargs: Any) -> Any:
+def toolCollection(*args, **kwargs) -> str: ...
+def toolCollection(*args, **kwargs) -> str:
     """Flags:
     - `clear` `cl`: *bool*
     - `collectionItemArray` `cia`: *bool*
@@ -52172,8 +52172,8 @@ def toolCollection(*args: Any, **kwargs: Any) -> Any:
     - `select` `sl`: *str*
     - `useTemplate` `ut`: *str*
     """
-def toolDropped(*args: Any) -> None: ...
-def toolHasOptions(*args: Any) -> bool: ...
+def toolDropped(*args, **kwargs) -> None: ...
+def toolHasOptions(*args, **kwargs) -> bool: ...
 @overload
 def toolPropertyWindow(*args: Any, q: bool, field: bool) -> str: ...
 @overload
@@ -52215,8 +52215,8 @@ def toolPropertyWindow(*args: Any, q: bool, restore: bool) -> bool: ...
 @overload
 def toolPropertyWindow(*args: Any, q: bool, rs: bool) -> bool: ...
 @overload
-def toolPropertyWindow(*args: Any, **kwargs: Any) -> None: ...
-def toolPropertyWindow(*args: Any, **kwargs: Any) -> Any:
+def toolPropertyWindow(*args, **kwargs) -> None: ...
+def toolPropertyWindow(*args, **kwargs) -> None:
     """Flags:
     - `field` `fld`: *str*
     - `helpButton` `hb`: *str*
@@ -52302,8 +52302,8 @@ def torus(*args: Any, q: bool, useTolerance: bool) -> bool: ...
 @overload
 def torus(*args: Any, q: bool, ut: bool) -> bool: ...
 @overload
-def torus(*args: Any, **kwargs: Any) -> list[str]: ...
-def torus(*args: Any, **kwargs: Any) -> Any:
+def torus(*args, **kwargs) -> list[str]: ...
+def torus(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `caching` `cch`: *bool*
@@ -52324,7 +52324,7 @@ def torus(*args: Any, **kwargs: Any) -> Any:
     - `tolerance` `tol`: *float*
     - `useTolerance` `ut`: *bool*
     """
-def track(*args: Any, down: float = ..., d: float = ..., left: float = ..., l: float = ..., right: float = ..., r: float = ..., upDistance01: float = ..., u: float = ..., upDistance02: float = ..., up: float = ..., **kwargs: Any) -> None:
+def track(*args, **kwargs) -> None:
     """Flags:
     - `down` `d`: *float*
     - `left` `l`: *float*
@@ -52373,8 +52373,8 @@ def trackCtx(*args: Any, q: bool, trackGeometry: bool) -> bool: ...
 @overload
 def trackCtx(*args: Any, q: bool, tg: bool) -> bool: ...
 @overload
-def trackCtx(*args: Any, **kwargs: Any) -> str: ...
-def trackCtx(*args: Any, **kwargs: Any) -> Any:
+def trackCtx(*args, **kwargs) -> str: ...
+def trackCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `exists` `ex`: *bool*
@@ -52468,8 +52468,8 @@ def transferAttributes(*args: Any, q: bool, transferNormals: bool) -> int: ...
 @overload
 def transferAttributes(*args: Any, q: bool, nml: bool) -> int: ...
 @overload
-def transferAttributes(*args: Any, **kwargs: Any) -> str: ...
-def transferAttributes(*args: Any, **kwargs: Any) -> Any:
+def transferAttributes(*args, **kwargs) -> str: ...
+def transferAttributes(*args, **kwargs) -> str:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -52520,13 +52520,13 @@ def transferShadingSets(*args: Any, q: bool, searchMethod: bool) -> int: ...
 @overload
 def transferShadingSets(*args: Any, q: bool, sm: bool) -> int: ...
 @overload
-def transferShadingSets(*args: Any, **kwargs: Any) -> None: ...
-def transferShadingSets(*args: Any, **kwargs: Any) -> Any:
+def transferShadingSets(*args, **kwargs) -> None: ...
+def transferShadingSets(*args, **kwargs) -> None:
     """Flags:
     - `sampleSpace` `spa`: *int*
     - `searchMethod` `sm`: *int*
     """
-def transformCompare(*args: Any, root: bool = ..., r: bool = ..., **kwargs: Any) -> int:
+def transformCompare(*args, **kwargs) -> int:
     """Flags:
     - `root` `r`: *bool*
     """
@@ -52535,8 +52535,8 @@ def transformLimits(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def transformLimits(*args: Any, q: bool, rm: bool) -> bool: ...
 @overload
-def transformLimits(*args: Any, **kwargs: Any) -> None: ...
-def transformLimits(*args: Any, **kwargs: Any) -> Any:
+def transformLimits(*args, **kwargs) -> None: ...
+def transformLimits(*args, **kwargs) -> None:
     """Flags:
     - `enableRotationX` `erx`: *Any*
     - `enableRotationY` `ery`: *Any*
@@ -52603,8 +52603,8 @@ def translator(*args: Any, q: bool, writeSupport: bool) -> bool: ...
 @overload
 def translator(*args: Any, q: bool, ws: bool) -> bool: ...
 @overload
-def translator(*args: Any, **kwargs: Any) -> Any: ...
-def translator(*args: Any, **kwargs: Any) -> Any:
+def translator(*args, **kwargs) -> Any: ...
+def translator(*args, **kwargs) -> Any:
     """Flags:
     - `defaultFileRule` `dfr`: *bool*
     - `defaultOptions` `do`: *str*
@@ -52700,8 +52700,8 @@ def treeLister(*args: Any, q: bool, statusBarMessage: bool) -> str: ...
 @overload
 def treeLister(*args: Any, q: bool, sbm: bool) -> str: ...
 @overload
-def treeLister(*args: Any, **kwargs: Any) -> str: ...
-def treeLister(*args: Any, **kwargs: Any) -> Any:
+def treeLister(*args, **kwargs) -> str: ...
+def treeLister(*args, **kwargs) -> str:
     """Flags:
     - `addFavorite` `af`: *str*
     - `addItem` `add`: *Any*
@@ -52829,8 +52829,8 @@ def treeView(*args: Any, q: bool, itemExists: bool) -> str: ...
 @overload
 def treeView(*args: Any, q: bool, iex: bool) -> str: ...
 @overload
-def treeView(*args: Any, **kwargs: Any) -> str: ...
-def treeView(*args: Any, **kwargs: Any) -> Any:
+def treeView(*args, **kwargs) -> str: ...
+def treeView(*args, **kwargs) -> str:
     """Flags:
     - `addItem` `ai`: *Any*
     - `allowDragAndDrop` `adr`: *bool*
@@ -52966,8 +52966,8 @@ def trim(*args: Any, q: bool, shrink: bool) -> bool: ...
 @overload
 def trim(*args: Any, q: bool, sh: bool) -> bool: ...
 @overload
-def trim(*args: Any, **kwargs: Any) -> list[str]: ...
-def trim(*args: Any, **kwargs: Any) -> Any:
+def trim(*args, **kwargs) -> list[str]: ...
+def trim(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -52980,7 +52980,7 @@ def trim(*args: Any, **kwargs: Any) -> Any:
     - `shrink` `sh`: *bool*
     - `tolerance` `tol`: *float*
     """
-def tumble(*args: Any, azimuthAngle: float = ..., aa: float = ..., elevationAngle: float = ..., ea: float = ..., localTumble: int = ..., lt: int = ..., pivotPoint: list[float] = ..., pp: list[float] = ..., rotationAngles: Any = ..., ra: Any = ..., **kwargs: Any) -> None:
+def tumble(*args, **kwargs) -> None:
     """Flags:
     - `azimuthAngle` `aa`: *float*
     - `elevationAngle` `ea`: *float*
@@ -53049,8 +53049,8 @@ def tumbleCtx(*args: Any, q: bool, orthoLock: bool) -> bool: ...
 @overload
 def tumbleCtx(*args: Any, q: bool, ol: bool) -> bool: ...
 @overload
-def tumbleCtx(*args: Any, **kwargs: Any) -> str: ...
-def tumbleCtx(*args: Any, **kwargs: Any) -> Any:
+def tumbleCtx(*args, **kwargs) -> str: ...
+def tumbleCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `autoOrthoConstrain` `aoc`: *bool*
@@ -53068,7 +53068,7 @@ def tumbleCtx(*args: Any, **kwargs: Any) -> Any:
     - `toolName` `tn`: *str*
     - `tumbleScale` `ts`: *float*
     """
-def twoPointArcCtx(*args: Any, degree: int = ..., d: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., spans: int = ..., s: int = ..., **kwargs: Any) -> str:
+def twoPointArcCtx(*args, **kwargs) -> str:
     """Flags:
     - `degree` `d`: *int*
     - `exists` `ex`: *bool*
@@ -53079,7 +53079,7 @@ def twoPointArcCtx(*args: Any, degree: int = ..., d: int = ..., exists: bool = .
     - `name` `n`: *str*
     - `spans` `s`: *int*
     """
-def ubercam(*args: Any) -> str: ...
+def ubercam(*args, **kwargs) -> str: ...
 @overload
 def uiTemplate(*args: Any, q: bool, defineTemplate: bool) -> str: ...
 @overload
@@ -53093,19 +53093,19 @@ def uiTemplate(*args: Any, q: bool, exists: bool) -> bool: ...
 @overload
 def uiTemplate(*args: Any, q: bool, ex: bool) -> bool: ...
 @overload
-def uiTemplate(*args: Any, **kwargs: Any) -> str: ...
-def uiTemplate(*args: Any, **kwargs: Any) -> Any:
+def uiTemplate(*args, **kwargs) -> str: ...
+def uiTemplate(*args, **kwargs) -> str:
     """Flags:
     - `defineTemplate` `dt`: *str*
     - `exists` `ex`: *bool*
     - `useTemplate` `ut`: *str*
     """
-def unassignInputDevice(*args: Any, clutch: str = ..., c: str = ..., device: str = ..., d: str = ..., **kwargs: Any) -> None:
+def unassignInputDevice(*args, **kwargs) -> None:
     """Flags:
     - `clutch` `c`: *str*
     - `device` `d`: *str*
     """
-def undo(*args: Any) -> None: ...
+def undo(*args, **kwargs) -> None: ...
 @overload
 def undoInfo(*args: Any, q: bool, chunkName: bool) -> str: ...
 @overload
@@ -53157,8 +53157,8 @@ def undoInfo(*args: Any, q: bool, undoQueueEmpty: bool) -> bool: ...
 @overload
 def undoInfo(*args: Any, q: bool, uqe: bool) -> bool: ...
 @overload
-def undoInfo(*args: Any, **kwargs: Any) -> str: ...
-def undoInfo(*args: Any, **kwargs: Any) -> Any:
+def undoInfo(*args, **kwargs) -> str: ...
+def undoInfo(*args, **kwargs) -> str:
     """Flags:
     - `chunkName` `cn`: *str*
     - `closeChunk` `cck`: *bool*
@@ -53174,7 +53174,7 @@ def undoInfo(*args: Any, **kwargs: Any) -> Any:
     - `undoName` `un`: *str*
     - `undoQueueEmpty` `uqe`: *bool*
     """
-def unfold(*args: Any, applyToShell: bool = ..., areaWeight: float = ..., aw: float = ..., globalBlend: float = ..., gb: float = ..., globalMethodBlend: float = ..., gmb: float = ..., iterations: int = ..., i: int = ..., optimizeAxis: int = ..., oa: int = ..., pinSelected: bool = ..., ps: bool = ..., pinUvBorder: bool = ..., pub: bool = ..., scale: float = ..., s: float = ..., stoppingThreshold: float = ..., ss: float = ..., useScale: bool = ..., us: bool = ..., **kwargs: Any) -> int:
+def unfold(*args, **kwargs) -> int:
     """Flags:
     - `applyToShell` `applyToShell`: *bool*
     - `areaWeight` `aw`: *float*
@@ -53188,7 +53188,7 @@ def unfold(*args: Any, applyToShell: bool = ..., areaWeight: float = ..., aw: fl
     - `stoppingThreshold` `ss`: *float*
     - `useScale` `us`: *bool*
     """
-def ungroup(*args: Any, absolute: bool = ..., a: bool = ..., parent: str = ..., p: str = ..., relative: bool = ..., r: bool = ..., world: bool = ..., w: bool = ..., **kwargs: Any) -> None:
+def ungroup(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `parent` `p`: *str*
@@ -53208,8 +53208,8 @@ def unknownNode(*args: Any, q: bool, realClassTag: bool) -> bool: ...
 @overload
 def unknownNode(*args: Any, q: bool, rct: bool) -> bool: ...
 @overload
-def unknownNode(*args: Any, **kwargs: Any) -> list[str]: ...
-def unknownNode(*args: Any, **kwargs: Any) -> Any:
+def unknownNode(*args, **kwargs) -> list[str]: ...
+def unknownNode(*args, **kwargs) -> list[str]:
     """Flags:
     - `plugin` `p`: *bool*
     - `realClassName` `rcn`: *bool*
@@ -53236,8 +53236,8 @@ def unknownPlugin(*args: Any, q: bool, version: bool) -> bool: ...
 @overload
 def unknownPlugin(*args: Any, q: bool, v: bool) -> bool: ...
 @overload
-def unknownPlugin(*args: Any, **kwargs: Any) -> list[str]: ...
-def unknownPlugin(*args: Any, **kwargs: Any) -> Any:
+def unknownPlugin(*args, **kwargs) -> list[str]: ...
+def unknownPlugin(*args, **kwargs) -> list[str]:
     """Flags:
     - `dataTypes` `dt`: *bool*
     - `list` `l`: *bool*
@@ -53245,13 +53245,13 @@ def unknownPlugin(*args: Any, **kwargs: Any) -> Any:
     - `remove` `r`: *bool*
     - `version` `v`: *bool*
     """
-def unloadPlugin(*args: Any, addCallback: str = ..., ac: str = ..., force: bool = ..., f: bool = ..., removeCallback: str = ..., rc: str = ..., **kwargs: Any) -> list[str]:
+def unloadPlugin(*args, **kwargs) -> list[str]:
     """Flags:
     - `addCallback` `ac`: *str*
     - `force` `f`: *bool*
     - `removeCallback` `rc`: *str*
     """
-def untangleUV(*args: Any, mapBorder: str = ..., mb: str = ..., maxRelaxIterations: int = ..., mri: int = ..., pinBorder: bool = ..., pb: bool = ..., pinSelected: bool = ..., ps: bool = ..., pinUnselected: bool = ..., pu: bool = ..., relax: str = ..., r: str = ..., relaxTolerance: float = ..., rt: float = ..., shapeDetail: float = ..., sd: float = ..., **kwargs: Any) -> int:
+def untangleUV(*args, **kwargs) -> int:
     """Flags:
     - `mapBorder` `mb`: *str*
     - `maxRelaxIterations` `mri`: *int*
@@ -53299,8 +53299,8 @@ def untrim(*args: Any, q: bool, untrimAll: bool) -> bool: ...
 @overload
 def untrim(*args: Any, q: bool, all: bool) -> bool: ...
 @overload
-def untrim(*args: Any, **kwargs: Any) -> list[str]: ...
-def untrim(*args: Any, **kwargs: Any) -> Any:
+def untrim(*args, **kwargs) -> list[str]: ...
+def untrim(*args, **kwargs) -> list[str]:
     """Flags:
     - `caching` `cch`: *bool*
     - `constructionHistory` `ch`: *bool*
@@ -53321,13 +53321,13 @@ def upAxis(*args: Any, q: bool, rotateView: bool) -> bool: ...
 @overload
 def upAxis(*args: Any, q: bool, rv: bool) -> bool: ...
 @overload
-def upAxis(*args: Any, **kwargs: Any) -> None: ...
-def upAxis(*args: Any, **kwargs: Any) -> Any:
+def upAxis(*args, **kwargs) -> None: ...
+def upAxis(*args, **kwargs) -> None:
     """Flags:
     - `axis` `ax`: *str*
     - `rotateView` `rv`: *bool*
     """
-def userCtx(*args: Any) -> Any: ...
+def userCtx(*args, **kwargs) -> Any: ...
 @overload
 def uvLink(*args: Any, q: bool, queryObject: bool) -> str: ...
 @overload
@@ -53351,8 +53351,8 @@ def uvLink(*args: Any, q: bool, make: bool) -> bool: ...
 @overload
 def uvLink(*args: Any, q: bool, m: bool) -> bool: ...
 @overload
-def uvLink(*args: Any, **kwargs: Any) -> str: ...
-def uvLink(*args: Any, **kwargs: Any) -> Any:
+def uvLink(*args, **kwargs) -> str: ...
+def uvLink(*args, **kwargs) -> str:
     """Flags:
     - `b` `b`: *bool*
     - `isValid` `iv`: *bool*
@@ -53361,7 +53361,7 @@ def uvLink(*args: Any, **kwargs: Any) -> Any:
     - `texture` `t`: *str*
     - `uvSet` `uvs`: *str*
     """
-def uvSnapshot(*args: Any, antiAliased: bool = ..., aa: bool = ..., blueColor: int = ..., b: int = ..., entireUVRange: bool = ..., euv: bool = ..., fileFormat: str = ..., ff: str = ..., greenColor: int = ..., g: int = ..., name: str = ..., n: str = ..., overwrite: bool = ..., o: bool = ..., redColor: int = ..., r: int = ..., uMax: float = ..., umx: float = ..., uMin: float = ..., umn: float = ..., uvSetName: str = ..., uvs: str = ..., vMax: float = ..., vmx: float = ..., vMin: float = ..., vmn: float = ..., xResolution: int = ..., xr: int = ..., yResolution: int = ..., yr: int = ..., **kwargs: Any) -> None:
+def uvSnapshot(*args, **kwargs) -> None:
     """Flags:
     - `antiAliased` `aa`: *bool*
     - `blueColor` `b`: *int*
@@ -53379,7 +53379,7 @@ def uvSnapshot(*args: Any, antiAliased: bool = ..., aa: bool = ..., blueColor: i
     - `xResolution` `xr`: *int*
     - `yResolution` `yr`: *int*
     """
-def view2dToolCtx(*args: Any, alternateContext: bool = ..., ac: bool = ..., boxzoom: bool = ..., bz: bool = ..., dolly: bool = ..., do: bool = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., toolName: str = ..., tn: str = ..., track: bool = ..., tr: bool = ..., **kwargs: Any) -> str:
+def view2dToolCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `boxzoom` `bz`: *bool*
@@ -53393,7 +53393,7 @@ def view2dToolCtx(*args: Any, alternateContext: bool = ..., ac: bool = ..., boxz
     - `toolName` `tn`: *str*
     - `track` `tr`: *bool*
     """
-def viewCamera(*args: Any, move: str = ..., m: str = ..., sideView: bool = ..., s: bool = ..., topView: bool = ..., t: bool = ..., **kwargs: Any) -> None:
+def viewCamera(*args, **kwargs) -> None:
     """Flags:
     - `move` `m`: *str*
     - `sideView` `s`: *bool*
@@ -53416,15 +53416,15 @@ def viewClipPlane(*args: Any, q: bool, surfacesOnly: bool) -> bool: ...
 @overload
 def viewClipPlane(*args: Any, q: bool, so: bool) -> bool: ...
 @overload
-def viewClipPlane(*args: Any, **kwargs: Any) -> None: ...
-def viewClipPlane(*args: Any, **kwargs: Any) -> Any:
+def viewClipPlane(*args, **kwargs) -> None: ...
+def viewClipPlane(*args, **kwargs) -> None:
     """Flags:
     - `autoClipPlane` `acp`: *bool*
     - `farClipPlane` `fcp`: *float*
     - `nearClipPlane` `ncp`: *float*
     - `surfacesOnly` `so`: *bool*
     """
-def viewFit(*args: Any, allObjects: bool = ..., all: bool = ..., animate: bool = ..., an: bool = ..., center: bool = ..., c: bool = ..., fitClipPlanes: bool = ..., fcp: bool = ..., fitFactor: float = ..., f: float = ..., namespace: str = ..., ns: str = ..., noChildren: bool = ..., noc: bool = ..., **kwargs: Any) -> None:
+def viewFit(*args, **kwargs) -> None:
     """Flags:
     - `allObjects` `all`: *bool*
     - `animate` `an`: *bool*
@@ -53434,12 +53434,12 @@ def viewFit(*args: Any, allObjects: bool = ..., all: bool = ..., animate: bool =
     - `namespace` `ns`: *str*
     - `noChildren` `noc`: *bool*
     """
-def viewHeadOn(*args: Any) -> None: ...
-def viewLookAt(*args: Any, position: list[float] = ..., pos: list[float] = ..., **kwargs: Any) -> None:
+def viewHeadOn(*args, **kwargs) -> None: ...
+def viewLookAt(*args, **kwargs) -> None:
     """Flags:
     - `position` `pos`: *list[float]*
     """
-def viewManip(*args: Any, bottomLeft: bool = ..., bl: bool = ..., bottomRight: bool = ..., br: bool = ..., compassAngle: float = ..., ca: float = ..., dragSnap: bool = ..., ds: bool = ..., drawCompass: bool = ..., dc: bool = ..., fitToView: bool = ..., ftv: bool = ..., frontParameters: str = ..., fp: str = ..., goDefault: bool = ..., gd: bool = ..., goHome: bool = ..., gh: bool = ..., homeParameters: str = ..., hp: str = ..., levelCamera: bool = ..., lc: bool = ..., minOpacity: float = ..., mo: float = ..., namespace: str = ..., ns: str = ..., postCommand: str = ..., p: str = ..., preCommand: str = ..., pr: str = ..., preserveSceneUp: bool = ..., psu: bool = ..., resetFront: bool = ..., rf: bool = ..., resetHome: bool = ..., rh: bool = ..., restoreCenter: bool = ..., rc: bool = ..., selectionLockParameters: str = ..., slp: str = ..., setFront: bool = ..., sf: bool = ..., setHome: bool = ..., sh: bool = ..., size: str = ..., s: str = ..., toggleSelectionLock: bool = ..., tsl: bool = ..., topLeft: bool = ..., tl: bool = ..., topRight: bool = ..., tr: bool = ..., visible: bool = ..., v: bool = ..., zoomToFitScene: bool = ..., zf: bool = ..., **kwargs: Any) -> None:
+def viewManip(*args, **kwargs) -> None:
     """Flags:
     - `bottomLeft` `bl`: *bool*
     - `bottomRight` `br`: *bool*
@@ -53470,7 +53470,7 @@ def viewManip(*args: Any, bottomLeft: bool = ..., bl: bool = ..., bottomRight: b
     - `visible` `v`: *bool*
     - `zoomToFitScene` `zf`: *bool*
     """
-def viewPlace(*args: Any, animate: bool = ..., an: bool = ..., eyePoint: list[float] = ..., eye: list[float] = ..., fieldOfView: float = ..., fov: float = ..., lookAt: list[float] = ..., la: list[float] = ..., ortho: bool = ..., o: bool = ..., perspective: bool = ..., p: bool = ..., upDirection: list[float] = ..., up: list[float] = ..., viewDirection: list[float] = ..., vd: list[float] = ..., **kwargs: Any) -> None:
+def viewPlace(*args, **kwargs) -> None:
     """Flags:
     - `animate` `an`: *bool*
     - `eyePoint` `eye`: *list[float]*
@@ -53560,8 +53560,8 @@ def viewSet(*args: Any, q: bool, viewX: bool) -> bool: ...
 @overload
 def viewSet(*args: Any, q: bool, vx: bool) -> bool: ...
 @overload
-def viewSet(*args: Any, **kwargs: Any) -> None: ...
-def viewSet(*args: Any, **kwargs: Any) -> Any:
+def viewSet(*args, **kwargs) -> None: ...
+def viewSet(*args, **kwargs) -> None:
     """Flags:
     - `animate` `an`: *bool*
     - `back` `b`: *bool*
@@ -53586,7 +53586,7 @@ def viewSet(*args: Any, **kwargs: Any) -> Any:
     - `viewY` `vy`: *bool*
     - `viewZ` `vz`: *bool*
     """
-def visor(*args: Any, addFolder: bool = ..., add: bool = ..., addNodes: str = ..., adn: str = ..., allowPanningInX: bool = ..., apx: bool = ..., allowPanningInY: bool = ..., apy: bool = ..., allowZooming: bool = ..., az: bool = ..., command: str = ..., cmd: str = ..., deleteFolder: str = ..., editFolder: str = ..., edf: str = ..., folderList: str = ..., fl: str = ..., menu: str = ..., mn: str = ..., name: str = ..., n: str = ..., nodeType: str = ..., ntp: str = ..., openDirectories: bool = ..., opd: bool = ..., openFolder: bool = ..., opf: bool = ..., parent: str = ..., p: str = ..., path: str = ..., pth: str = ..., popupMenuScript: str = ..., pms: str = ..., rebuild: bool = ..., re: bool = ..., refreshAllSwatches: bool = ..., ras: bool = ..., refreshSelectedSwatches: bool = ..., rss: bool = ..., refreshSwatch: str = ..., rs: str = ..., reset: bool = ..., rst: bool = ..., restrictPanAndZoom: bool = ..., rpz: bool = ..., saveSwatches: bool = ..., ss: bool = ..., scrollBar: str = ..., sb: str = ..., scrollPercent: float = ..., sp: float = ..., selectedGadgets: str = ..., sg: str = ..., showDividers: bool = ..., sd: bool = ..., showFiles: bool = ..., sfi: bool = ..., showFolders: bool = ..., sfo: bool = ..., showNodes: bool = ..., sn: bool = ..., stateString: bool = ..., sts: bool = ..., style: str = ..., stl: str = ..., transform: str = ..., trn: str = ..., type: str = ..., typ: str = ..., **kwargs: Any) -> str:
+def visor(*args, **kwargs) -> str:
     """Flags:
     - `addFolder` `add`: *bool*
     - `addNodes` `adn`: *str*
@@ -53633,8 +53633,8 @@ def volumeBind(*args: Any, q: bool, name: bool) -> str: ...
 @overload
 def volumeBind(*args: Any, q: bool, n: bool) -> str: ...
 @overload
-def volumeBind(*args: Any, **kwargs: Any) -> list[str]: ...
-def volumeBind(*args: Any, **kwargs: Any) -> Any:
+def volumeBind(*args, **kwargs) -> list[str]: ...
+def volumeBind(*args, **kwargs) -> list[str]:
     """Flags:
     - `influence` `inf`: *str*
     - `name` `n`: *str*
@@ -53644,8 +53644,8 @@ def waitCursor(*args: Any, q: bool, state: bool) -> bool: ...
 @overload
 def waitCursor(*args: Any, q: bool, st: bool) -> bool: ...
 @overload
-def waitCursor(*args: Any, **kwargs: Any) -> bool: ...
-def waitCursor(*args: Any, **kwargs: Any) -> Any:
+def waitCursor(*args, **kwargs) -> bool: ...
+def waitCursor(*args, **kwargs) -> bool:
     """Flags:
     - `state` `st`: *bool*
     """
@@ -53702,8 +53702,8 @@ def walkCtx(*args: Any, q: bool, walkToolHud: bool) -> bool: ...
 @overload
 def walkCtx(*args: Any, q: bool, wth: bool) -> bool: ...
 @overload
-def walkCtx(*args: Any, **kwargs: Any) -> str: ...
-def walkCtx(*args: Any, **kwargs: Any) -> Any:
+def walkCtx(*args, **kwargs) -> str: ...
+def walkCtx(*args, **kwargs) -> str:
     """Flags:
     - `alternateContext` `ac`: *bool*
     - `crouchCount` `wcc`: *float*
@@ -53719,7 +53719,7 @@ def walkCtx(*args: Any, **kwargs: Any) -> Any:
     - `walkSpeed` `ws`: *float*
     - `walkToolHud` `wth`: *bool*
     """
-def warning(*args: Any, noContext: bool = ..., n: bool = ..., showLineNumber: bool = ..., sl: bool = ..., **kwargs: Any) -> None:
+def warning(*args, **kwargs) -> None:
     """Flags:
     - `noContext` `n`: *bool*
     - `showLineNumber` `sl`: *bool*
@@ -53805,8 +53805,8 @@ def webBrowser(*args: Any, q: bool, forward: bool) -> bool: ...
 @overload
 def webBrowser(*args: Any, q: bool, fwd: bool) -> bool: ...
 @overload
-def webBrowser(*args: Any, **kwargs: Any) -> str: ...
-def webBrowser(*args: Any, **kwargs: Any) -> Any:
+def webBrowser(*args, **kwargs) -> str: ...
+def webBrowser(*args, **kwargs) -> str:
     """Flags:
     - `annotation` `ann`: *str*
     - `back` `bk`: *bool*
@@ -53846,8 +53846,8 @@ def webBrowser(*args: Any, **kwargs: Any) -> Any:
     - `width` `w`: *int*
     - `wrap` `wr`: *bool*
     """
-def webBrowserPrefs(*args: Any) -> Any: ...
-def weightsColor(*args: Any, colorRamp: str = ..., cr: str = ..., deformer: str = ..., dfm: str = ..., falseColor: bool = ..., fc: bool = ..., outOfRangeColor: Any = ..., orc: Any = ..., rampMaxColor: Any = ..., rxc: Any = ..., rampMinColor: Any = ..., rmc: Any = ..., useColorRamp: bool = ..., ucr: bool = ..., useMaxMinColor: bool = ..., umc: bool = ..., **kwargs: Any) -> list[str]:
+def webBrowserPrefs(*args, **kwargs) -> Any: ...
+def weightsColor(*args, **kwargs) -> list[str]:
     """Flags:
     - `colorRamp` `cr`: *str*
     - `deformer` `dfm`: *str*
@@ -53867,8 +53867,8 @@ def whatsNewHighlight(*args: Any, q: bool, showStartupDialog: bool) -> bool: ...
 @overload
 def whatsNewHighlight(*args: Any, q: bool, ssd: bool) -> bool: ...
 @overload
-def whatsNewHighlight(*args: Any, **kwargs: Any) -> None: ...
-def whatsNewHighlight(*args: Any, **kwargs: Any) -> Any:
+def whatsNewHighlight(*args, **kwargs) -> None: ...
+def whatsNewHighlight(*args, **kwargs) -> None:
     """Flags:
     - `highlightColor` `hc`: *Any*
     - `highlightOn` `ho`: *bool*
@@ -53953,8 +53953,8 @@ def window(*args: Any, q: bool, iconify: bool) -> bool: ...
 @overload
 def window(*args: Any, q: bool, i: bool) -> bool: ...
 @overload
-def window(*args: Any, **kwargs: Any) -> str: ...
-def window(*args: Any, **kwargs: Any) -> Any:
+def window(*args, **kwargs) -> str: ...
+def window(*args, **kwargs) -> str:
     """Flags:
     - `backgroundColor` `bgc`: *Any*
     - `closeCommand` `cc`: *str*
@@ -54059,8 +54059,8 @@ def windowPref(*args: Any, q: bool, saveAll: bool) -> bool: ...
 @overload
 def windowPref(*args: Any, q: bool, sa: bool) -> bool: ...
 @overload
-def windowPref(*args: Any, **kwargs: Any) -> None: ...
-def windowPref(*args: Any, **kwargs: Any) -> Any:
+def windowPref(*args, **kwargs) -> None: ...
+def windowPref(*args, **kwargs) -> None:
     """Flags:
     - `enableAll` `ea`: *bool*
     - `exists` `ex`: *bool*
@@ -54158,8 +54158,8 @@ def wire(*args: Any, q: bool, includeHiddenSelections: bool) -> bool: ...
 @overload
 def wire(*args: Any, q: bool, ihs: bool) -> bool: ...
 @overload
-def wire(*args: Any, **kwargs: Any) -> list[str]: ...
-def wire(*args: Any, **kwargs: Any) -> Any:
+def wire(*args, **kwargs) -> list[str]: ...
+def wire(*args, **kwargs) -> list[str]:
     """Flags:
     - `after` `af`: *bool*
     - `afterReference` `ar`: *bool*
@@ -54190,7 +54190,7 @@ def wire(*args: Any, **kwargs: Any) -> Any:
     - `wire` `w`: *str*
     - `wireCount` `wc`: *int*
     """
-def wireContext(*args: Any, crossingEffect: float = ..., ce: float = ..., deformationOrder: str = ..., do: str = ..., dropoffDistance: float = ..., dds: float = ..., envelope: float = ..., en: float = ..., exclusive: bool = ..., exc: bool = ..., exclusivePartition: str = ..., ep: str = ..., exists: bool = ..., ex: bool = ..., groupWithBase: bool = ..., gw: bool = ..., history: bool = ..., ch: bool = ..., holder: bool = ..., ho: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., localInfluence: float = ..., li: float = ..., name: str = ..., n: str = ..., **kwargs: Any) -> str:
+def wireContext(*args, **kwargs) -> str:
     """Flags:
     - `crossingEffect` `ce`: *float*
     - `deformationOrder` `do`: *str*
@@ -54289,8 +54289,8 @@ def workspace(*args: Any, q: bool, objectTypeList: bool) -> bool: ...
 @overload
 def workspace(*args: Any, q: bool, otl: bool) -> bool: ...
 @overload
-def workspace(*args: Any, **kwargs: Any) -> Any | Any | Any | Any: ...
-def workspace(*args: Any, **kwargs: Any) -> Any:
+def workspace(*args, **kwargs) -> Any | Any | Any | Any: ...
+def workspace(*args, **kwargs) -> Any | Any | Any | Any:
     """Flags:
     - `active` `act`: *bool*
     - `baseWorkspace` `bw`: *str*
@@ -54406,8 +54406,8 @@ def workspaceControl(*args: Any, q: bool, visibleChangeCommand: bool) -> str: ..
 @overload
 def workspaceControl(*args: Any, q: bool, vcc: bool) -> str: ...
 @overload
-def workspaceControl(*args: Any, **kwargs: Any) -> str: ...
-def workspaceControl(*args: Any, **kwargs: Any) -> Any:
+def workspaceControl(*args, **kwargs) -> str: ...
+def workspaceControl(*args, **kwargs) -> str:
     """Flags:
     - `actLikeMayaUIElement` `alm`: *bool*
     - `checksPlugins` `cp`: *bool*
@@ -54480,8 +54480,8 @@ def workspaceControlState(*args: Any, q: bool, remove: bool) -> bool: ...
 @overload
 def workspaceControlState(*args: Any, q: bool, r: bool) -> bool: ...
 @overload
-def workspaceControlState(*args: Any, **kwargs: Any) -> None: ...
-def workspaceControlState(*args: Any, **kwargs: Any) -> Any:
+def workspaceControlState(*args, **kwargs) -> None: ...
+def workspaceControlState(*args, **kwargs) -> None:
     """Flags:
     - `defaultTopLeftCorner` `dc`: *Any*
     - `defaultWidthHeight` `dwh`: *Any*
@@ -54558,8 +54558,8 @@ def workspaceLayoutManager(*args: Any, q: bool, save: bool) -> bool: ...
 @overload
 def workspaceLayoutManager(*args: Any, q: bool, s: bool) -> bool: ...
 @overload
-def workspaceLayoutManager(*args: Any, **kwargs: Any) -> list[str]: ...
-def workspaceLayoutManager(*args: Any, **kwargs: Any) -> Any:
+def workspaceLayoutManager(*args, **kwargs) -> list[str]: ...
+def workspaceLayoutManager(*args, **kwargs) -> list[str]:
     """Flags:
     - `collapseMainWindowControls` `cmw`: *Any*
     - `current` `cu`: *bool*
@@ -54579,7 +54579,7 @@ def workspaceLayoutManager(*args: Any, **kwargs: Any) -> Any:
     - `setModifiedCallback` `smc`: *str*
     - `type` `t`: *str*
     """
-def wrinkle(*args: Any, axis: list[float] = ..., ax: list[float] = ..., branchCount: int = ..., brc: int = ..., branchDepth: int = ..., bd: int = ..., center: list[float] = ..., ct: list[float] = ..., crease: str = ..., cr: str = ..., dropoffDistance: float = ..., dds: float = ..., envelope: float = ..., en: float = ..., randomness: float = ..., rnd: float = ..., style: str = ..., st: str = ..., thickness: float = ..., th: float = ..., uvSpace: Any = ..., uv: Any = ..., wrinkleCount: int = ..., wc: int = ..., wrinkleIntensity: float = ..., wi: float = ..., **kwargs: Any) -> list[str]:
+def wrinkle(*args, **kwargs) -> list[str]:
     """Flags:
     - `axis` `ax`: *list[float]*
     - `branchCount` `brc`: *int*
@@ -54595,7 +54595,7 @@ def wrinkle(*args: Any, axis: list[float] = ..., ax: list[float] = ..., branchCo
     - `wrinkleCount` `wc`: *int*
     - `wrinkleIntensity` `wi`: *float*
     """
-def wrinkleContext(*args: Any, branchCount: int = ..., brc: int = ..., branchDepth: int = ..., bd: int = ..., exists: bool = ..., ex: bool = ..., history: bool = ..., ch: bool = ..., image1: str = ..., i1: str = ..., image2: str = ..., i2: str = ..., image3: str = ..., i3: str = ..., name: str = ..., n: str = ..., randomness: float = ..., rnd: float = ..., style: str = ..., st: str = ..., thickness: float = ..., th: float = ..., wrinkleCount: int = ..., wc: int = ..., wrinkleIntensity: float = ..., wi: float = ..., **kwargs: Any) -> str:
+def wrinkleContext(*args, **kwargs) -> str:
     """Flags:
     - `branchCount` `brc`: *int*
     - `branchDepth` `bd`: *int*
@@ -54611,7 +54611,7 @@ def wrinkleContext(*args: Any, branchCount: int = ..., brc: int = ..., branchDep
     - `wrinkleCount` `wc`: *int*
     - `wrinkleIntensity` `wi`: *float*
     """
-def writeTake(*args: Any, angle: str = ..., a: str = ..., device: str = ..., d: str = ..., linear: str = ..., l: str = ..., noTime: bool = ..., nt: bool = ..., precision: int = ..., pre: int = ..., take: str = ..., t: str = ..., virtualDevice: str = ..., vd: str = ..., **kwargs: Any) -> None:
+def writeTake(*args, **kwargs) -> None:
     """Flags:
     - `angle` `a`: *str*
     - `device` `d`: *str*
@@ -54702,8 +54702,8 @@ def xform(*args: Any, q: bool, euler: bool) -> bool: ...
 @overload
 def xform(*args: Any, q: bool, eu: bool) -> bool: ...
 @overload
-def xform(*args: Any, **kwargs: Any) -> None: ...
-def xform(*args: Any, **kwargs: Any) -> Any:
+def xform(*args, **kwargs) -> None: ...
+def xform(*args, **kwargs) -> None:
     """Flags:
     - `absolute` `a`: *bool*
     - `boundingBox` `bb`: *bool*
@@ -54753,14 +54753,14 @@ def xformConstraint(*args: Any, q: bool, live: bool) -> bool: ...
 @overload
 def xformConstraint(*args: Any, q: bool, l: bool) -> bool: ...
 @overload
-def xformConstraint(*args: Any, **kwargs: Any) -> None: ...
-def xformConstraint(*args: Any, **kwargs: Any) -> Any:
+def xformConstraint(*args, **kwargs) -> None: ...
+def xformConstraint(*args, **kwargs) -> None:
     """Flags:
     - `alongNormal` `n`: *int*
     - `live` `l`: *bool*
     - `type` `t`: *str*
     """
-def xpmPicker(*args: Any, fileName: str = ..., fn: str = ..., parent: str = ..., p: str = ..., **kwargs: Any) -> str:
+def xpmPicker(*args, **kwargs) -> str:
     """Flags:
     - `fileName` `fn`: *str*
     - `parent` `p`: *str*

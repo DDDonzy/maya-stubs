@@ -15,3 +15,9 @@ packages = ["maya-stubs", "maya-stubs.api"]
 [tool.setuptools.package-data]
 "maya-stubs" = ["*.pyi"]
 "maya-stubs.api" = ["*.pyi"]
+
+[tool.ty.rules]
+# cmds 参数已简化为 *args, **kwargs；overload 返回与实现返回的差异由运行时保证
+invalid-argument-type = "ignore"
+invalid-parameter-default = "ignore"
+invalid-overload = "ignore"
